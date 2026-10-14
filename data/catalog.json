@@ -1,0 +1,797 @@
+{
+ "groups": [
+  "Foundation models & agents",
+  "Segmentation & frameworks",
+  "Neuroimaging",
+  "Viewers & toolkits",
+  "DICOM/PACS & deployment",
+  "Pathology",
+  "Clinical NLP",
+  "EHR & data"
+ ],
+ "tools": [
+  {
+   "name": "Pillar-0 (finetune code + HF weights)",
+   "slug": "pillar-0",
+   "group": "Foundation models & agents",
+   "category": "Foundation model",
+   "modality_specialty": "Radiology: CT (chest, abd-pelvis, head), breast MRI",
+   "what_it_does": "Open 3D radiology foundation model; finetuning framework, weights on Hugging Face",
+   "license": "ECL-2.0",
+   "license_note": "Repo LICENSE is Educational Community License 2.0 (Apache 2.0 with a narrowed patent grant). Hugging Face weights (Pillar0-ChestCT, -AbdomenCT, -HeadCT, -BreastMRI) are tagged ecl-2.0.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-12",
+   "maintainer": "YalaLab",
+   "urls": [
+    "https://github.com/YalaLab/pillar-finetune",
+    "https://huggingface.co/collections/YalaLab/pillar-0"
+   ]
+  },
+  {
+   "name": "Pillar-0 pretraining",
+   "slug": "pillar-0-pretraining",
+   "group": "Foundation models & agents",
+   "category": "Foundation model",
+   "modality_specialty": "Radiology CT/MRI",
+   "what_it_does": "Vision-language pretraining code for Pillar-0",
+   "license": "ECL-2.0",
+   "license_note": "Repo LICENSE is Educational Community License 2.0.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-01-13",
+   "maintainer": "YalaLab",
+   "urls": [
+    "https://github.com/YalaLab/pillar-pretrain"
+   ]
+  },
+  {
+   "name": "RATE",
+   "slug": "rate",
+   "group": "Foundation models & agents",
+   "category": "Evaluation / report labeling",
+   "modality_specialty": "Radiology reports",
+   "what_it_does": "Uses an LLM (Qwen3 via sglang) to extract structured labels for 366 findings from radiology reports",
+   "license": "ECL-2.0",
+   "license_note": "Repo LICENSE is Educational Community License 2.0.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-05-20",
+   "maintainer": "YalaLab",
+   "urls": [
+    "https://github.com/YalaLab/rate"
+   ]
+  },
+  {
+   "name": "Merlin",
+   "slug": "merlin",
+   "group": "Foundation models & agents",
+   "category": "Foundation model",
+   "modality_specialty": "Radiology: CT",
+   "what_it_does": "3D vision-language model for CT that uses structured EHR and report supervision",
+   "license": "MIT",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-09-24",
+   "maintainer": "Stanford MIMI",
+   "urls": [
+    "https://github.com/StanfordMIMI/Merlin"
+   ]
+  },
+  {
+   "name": "MedGemma",
+   "slug": "medgemma",
+   "group": "Foundation models & agents",
+   "category": "Foundation model",
+   "modality_specialty": "Multimodal medical (imaging + text)",
+   "what_it_does": "Google's open medical model family; repo has notebooks and code",
+   "license": "Apache-2.0 (code)",
+   "license_note": "Code is Apache-2.0. Weights on Hugging Face are under the Health AI Developer Foundations terms: https://developers.google.com/health-ai-developer-foundations/terms",
+   "commercial": "Verify",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-06-19",
+   "maintainer": "Google Health",
+   "urls": [
+    "https://github.com/Google-Health/medgemma"
+   ]
+  },
+  {
+   "name": "CheXagent",
+   "slug": "chexagent",
+   "group": "Foundation models & agents",
+   "category": "Foundation model",
+   "modality_specialty": "Radiology: chest X-ray",
+   "what_it_does": "Foundation model for chest X-ray interpretation",
+   "license": "CC BY-NC-ND 4.0",
+   "license_note": "Repo LICENSE is Creative Commons Attribution-NonCommercial-NoDerivatives 4.0.",
+   "commercial": "Non-commercial",
+   "maintenance": "Stale",
+   "last_push_utc": "2025-01-07",
+   "maintainer": "Stanford AIMI",
+   "urls": [
+    "https://github.com/Stanford-AIMI/CheXagent"
+   ]
+  },
+  {
+   "name": "MedRAX",
+   "slug": "medrax",
+   "group": "Foundation models & agents",
+   "category": "AI agent",
+   "modality_specialty": "Radiology: chest X-ray",
+   "what_it_does": "Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025)",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2025-10-31",
+   "maintainer": "Bo Wang Lab",
+   "urls": [
+    "https://github.com/bowang-lab/MedRAX"
+   ]
+  },
+  {
+   "name": "LLaVA-Med",
+   "slug": "llava-med",
+   "group": "Foundation models & agents",
+   "category": "Vision-language model",
+   "modality_specialty": "Biomedical multimodal",
+   "what_it_does": "Biomedical vision-language assistant for image Q&A",
+   "license": "Microsoft Research License",
+   "license_note": "Repo LICENSE is the Microsoft Research License Terms, covering code, models and data. Read the terms before any use beyond research.",
+   "commercial": "Verify",
+   "maintenance": "Stale",
+   "last_push_utc": "2025-06-04",
+   "maintainer": "Microsoft",
+   "urls": [
+    "https://github.com/microsoft/LLaVA-Med"
+   ]
+  },
+  {
+   "name": "MONAI",
+   "slug": "monai",
+   "group": "Segmentation & frameworks",
+   "category": "Framework",
+   "modality_specialty": "Medical imaging (all)",
+   "what_it_does": "PyTorch-based AI toolkit for healthcare imaging",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "Project MONAI (NVIDIA + academic)",
+   "urls": [
+    "https://github.com/Project-MONAI/MONAI"
+   ]
+  },
+  {
+   "name": "MONAI Label",
+   "slug": "monai-label",
+   "group": "Segmentation & frameworks",
+   "category": "Annotation",
+   "modality_specialty": "Medical imaging",
+   "what_it_does": "AI-assisted image labeling and active learning; integrates with 3D Slicer and OHIF",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-12",
+   "maintainer": "Project MONAI",
+   "urls": [
+    "https://github.com/Project-MONAI/MONAILabel"
+   ]
+  },
+  {
+   "name": "nnU-Net",
+   "slug": "nnu-net",
+   "group": "Segmentation & frameworks",
+   "category": "Segmentation",
+   "modality_specialty": "Medical imaging (all)",
+   "what_it_does": "Self-configuring segmentation framework",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "DKFZ (MIC)",
+   "urls": [
+    "https://github.com/MIC-DKFZ/nnUNet"
+   ]
+  },
+  {
+   "name": "TotalSegmentator",
+   "slug": "totalsegmentator",
+   "group": "Segmentation & frameworks",
+   "category": "Segmentation",
+   "modality_specialty": "Radiology: CT/MR",
+   "what_it_does": "Segments more than 100 anatomical structures in CT and MR",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-06",
+   "maintainer": "J. Wasserthal",
+   "urls": [
+    "https://github.com/wasserth/TotalSegmentator"
+   ]
+  },
+  {
+   "name": "MedSAM",
+   "slug": "medsam",
+   "group": "Segmentation & frameworks",
+   "category": "Segmentation",
+   "modality_specialty": "Medical imaging (2D)",
+   "what_it_does": "Segment Anything adapted for medical images",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Stale",
+   "last_push_utc": "2025-05-07",
+   "maintainer": "Bo Wang Lab",
+   "urls": [
+    "https://github.com/bowang-lab/MedSAM"
+   ]
+  },
+  {
+   "name": "MedSAM2",
+   "slug": "medsam2",
+   "group": "Segmentation & frameworks",
+   "category": "Segmentation",
+   "modality_specialty": "3D imaging and video",
+   "what_it_does": "Promptable segmentation of 3D medical images and videos",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Stale",
+   "last_push_utc": "2025-07-11",
+   "maintainer": "Bo Wang Lab",
+   "urls": [
+    "https://github.com/bowang-lab/MedSAM2"
+   ]
+  },
+  {
+   "name": "HD-BET",
+   "slug": "hd-bet",
+   "group": "Neuroimaging",
+   "category": "Neuro preprocessing",
+   "modality_specialty": "Neuroradiology: brain MRI",
+   "what_it_does": "Deep-learning brain extraction (skull stripping) for MRI",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Stale",
+   "last_push_utc": "2024-12-18",
+   "maintainer": "DKFZ (MIC)",
+   "urls": [
+    "https://github.com/MIC-DKFZ/HD-BET"
+   ]
+  },
+  {
+   "name": "BrainChop",
+   "slug": "brainchop",
+   "group": "Neuroimaging",
+   "category": "Segmentation",
+   "modality_specialty": "Neuroradiology: brain MRI",
+   "what_it_does": "In-browser 3D MRI rendering and segmentation",
+   "license": "MIT",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-02-24",
+   "maintainer": "neuroneural",
+   "urls": [
+    "https://github.com/neuroneural/brainchop"
+   ]
+  },
+  {
+   "name": "FreeSurfer",
+   "slug": "freesurfer",
+   "group": "Neuroimaging",
+   "category": "Neuroimaging suite",
+   "modality_specialty": "Neuroradiology: brain MRI",
+   "what_it_does": "Neuroimaging analysis and visualization suite",
+   "license": "FreeSurfer License",
+   "license_note": "Repo LICENSE.txt is the FreeSurfer Software License Agreement v1.0 (MGH), a custom license.",
+   "commercial": "Verify",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "MGH Martinos Center",
+   "urls": [
+    "https://github.com/freesurfer/freesurfer"
+   ]
+  },
+  {
+   "name": "fMRIPrep",
+   "slug": "fmriprep",
+   "group": "Neuroimaging",
+   "category": "Neuro preprocessing",
+   "modality_specialty": "Neuroradiology: fMRI",
+   "what_it_does": "Robust preprocessing pipeline for fMRI",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "NiPreps",
+   "urls": [
+    "https://github.com/nipreps/fmriprep"
+   ]
+  },
+  {
+   "name": "DIPY",
+   "slug": "dipy",
+   "group": "Neuroimaging",
+   "category": "Neuroimaging library",
+   "modality_specialty": "Diffusion MRI",
+   "what_it_does": "Python library for diffusion MRI, tractography and registration",
+   "license": "BSD-3-Clause",
+   "license_note": "Repo LICENSE is BSD 3-clause unless individual files say otherwise.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "DIPY team",
+   "urls": [
+    "https://github.com/dipy/dipy"
+   ]
+  },
+  {
+   "name": "nilearn",
+   "slug": "nilearn",
+   "group": "Neuroimaging",
+   "category": "Neuroimaging library",
+   "modality_specialty": "Neuroimaging",
+   "what_it_does": "Machine learning for neuroimaging in Python",
+   "license": "BSD-3-Clause",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "nilearn",
+   "urls": [
+    "https://github.com/nilearn/nilearn"
+   ]
+  },
+  {
+   "name": "ANTsPy",
+   "slug": "antspy",
+   "group": "Neuroimaging",
+   "category": "Registration",
+   "modality_specialty": "Medical imaging",
+   "what_it_does": "Python library for registration, segmentation and analysis",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "ANTsX",
+   "urls": [
+    "https://github.com/ANTsX/ANTsPy"
+   ]
+  },
+  {
+   "name": "TorchIO",
+   "slug": "torchio",
+   "group": "Segmentation & frameworks",
+   "category": "Data / preprocessing",
+   "modality_specialty": "Medical imaging (3D)",
+   "what_it_does": "Medical image loading, preprocessing and augmentation for PyTorch",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-06",
+   "maintainer": "TorchIO project",
+   "urls": [
+    "https://github.com/TorchIO-project/torchio"
+   ]
+  },
+  {
+   "name": "PyRadiomics",
+   "slug": "pyradiomics",
+   "group": "Segmentation & frameworks",
+   "category": "Radiomics",
+   "modality_specialty": "Radiology",
+   "what_it_does": "Extracts radiomics features from 2D/3D images",
+   "license": "BSD-3-Clause",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2025-10-27",
+   "maintainer": "AIM-Harvard",
+   "urls": [
+    "https://github.com/AIM-Harvard/pyradiomics"
+   ]
+  },
+  {
+   "name": "3D Slicer",
+   "slug": "3d-slicer",
+   "group": "Viewers & toolkits",
+   "category": "Viewer / workstation",
+   "modality_specialty": "Medical imaging",
+   "what_it_does": "Open platform for visualization, segmentation and image computing",
+   "license": "Slicer License (BSD-style)",
+   "license_note": "Repo License.txt describes a BSD-style license with Slicer-specific extensions.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "Slicer community",
+   "urls": [
+    "https://github.com/Slicer/Slicer"
+   ]
+  },
+  {
+   "name": "OHIF Viewer",
+   "slug": "ohif-viewer",
+   "group": "Viewers & toolkits",
+   "category": "Viewer (web)",
+   "modality_specialty": "Radiology DICOM",
+   "what_it_does": "Zero-footprint web DICOM viewer",
+   "license": "MIT",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-14",
+   "maintainer": "OHIF",
+   "urls": [
+    "https://github.com/OHIF/Viewers"
+   ]
+  },
+  {
+   "name": "ITK",
+   "slug": "itk",
+   "group": "Viewers & toolkits",
+   "category": "Image toolkit",
+   "modality_specialty": "Medical imaging",
+   "what_it_does": "C++/Python toolkit for segmentation and registration",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-14",
+   "maintainer": "Insight Software Consortium",
+   "urls": [
+    "https://github.com/InsightSoftwareConsortium/ITK"
+   ]
+  },
+  {
+   "name": "MITK",
+   "slug": "mitk",
+   "group": "Viewers & toolkits",
+   "category": "Image toolkit",
+   "modality_specialty": "Medical imaging",
+   "what_it_does": "Medical Imaging Interaction Toolkit for building imaging applications",
+   "license": "BSD-3-Clause",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-10",
+   "maintainer": "DKFZ / MITK",
+   "urls": [
+    "https://github.com/MITK/MITK"
+   ]
+  },
+  {
+   "name": "pydicom",
+   "slug": "pydicom",
+   "group": "DICOM/PACS & deployment",
+   "category": "DICOM infrastructure",
+   "modality_specialty": "DICOM",
+   "what_it_does": "Read, modify and write DICOM files in Python",
+   "license": "MIT (+ noted portions)",
+   "license_note": "Repo LICENSE is MIT except for portions listed in the file.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "pydicom",
+   "urls": [
+    "https://github.com/pydicom/pydicom"
+   ]
+  },
+  {
+   "name": "DCMTK",
+   "slug": "dcmtk",
+   "group": "DICOM/PACS & deployment",
+   "category": "DICOM infrastructure",
+   "modality_specialty": "DICOM",
+   "what_it_does": "Comprehensive set of DICOM libraries and tools (C++)",
+   "license": "BSD-3-Clause (OFFIS)",
+   "license_note": "COPYRIGHT file is a BSD-style license from OFFIS e.V.; some bundled parts carry other notices.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-10",
+   "maintainer": "OFFIS",
+   "urls": [
+    "https://github.com/DCMTK/dcmtk"
+   ]
+  },
+  {
+   "name": "Orthanc",
+   "slug": "orthanc",
+   "group": "DICOM/PACS & deployment",
+   "category": "PACS / DICOM server",
+   "modality_specialty": "DICOM",
+   "what_it_does": "Lightweight DICOM server; this repo builds the Docker images and installers",
+   "license": "AGPL-3.0",
+   "license_note": "",
+   "commercial": "Copyleft",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-09-28",
+   "maintainer": "Orthanc team",
+   "urls": [
+    "https://github.com/orthanc-server/orthanc-builder"
+   ]
+  },
+  {
+   "name": "mercure",
+   "slug": "mercure",
+   "group": "DICOM/PACS & deployment",
+   "category": "AI deployment / orchestration",
+   "modality_specialty": "DICOM routing",
+   "what_it_does": "DICOM orchestrator that routes studies to AI processing pipelines",
+   "license": "MIT",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-07",
+   "maintainer": "mercure (NYU origin)",
+   "urls": [
+    "https://github.com/mercure-imaging/mercure"
+   ]
+  },
+  {
+   "name": "Kaapana",
+   "slug": "kaapana",
+   "group": "DICOM/PACS & deployment",
+   "category": "AI platform",
+   "modality_specialty": "Radiology",
+   "what_it_does": "Platform toolkit for medical imaging AI (federated, workflows)",
+   "license": "AGPL-3.0",
+   "license_note": "",
+   "commercial": "Copyleft",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "DKFZ",
+   "urls": [
+    "https://github.com/kaapana/kaapana"
+   ]
+  },
+  {
+   "name": "TIAToolbox",
+   "slug": "tiatoolbox",
+   "group": "Pathology",
+   "category": "Pathology",
+   "modality_specialty": "Digital pathology (WSI)",
+   "what_it_does": "Computational pathology toolbox: whole-slide image I/O, stain normalization, models",
+   "license": "BSD-3-Clause",
+   "license_note": "Code is BSD 3-clause. LICENSE says the model weights are under a different license (see TIAToolbox pretrained-model docs).",
+   "commercial": "Verify",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-12",
+   "maintainer": "TIA Centre, Warwick",
+   "urls": [
+    "https://github.com/TissueImageAnalytics/tiatoolbox"
+   ]
+  },
+  {
+   "name": "PathML",
+   "slug": "pathml",
+   "group": "Pathology",
+   "category": "Pathology",
+   "modality_specialty": "Digital pathology",
+   "what_it_does": "Tools for computational pathology",
+   "license": "GPL-2.0",
+   "license_note": "",
+   "commercial": "Copyleft",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-08-14",
+   "maintainer": "Dana-Farber AIOS",
+   "urls": [
+    "https://github.com/Dana-Farber-AIOS/pathml"
+   ]
+  },
+  {
+   "name": "CLAM",
+   "slug": "clam",
+   "group": "Pathology",
+   "category": "Pathology",
+   "modality_specialty": "Digital pathology (WSI)",
+   "what_it_does": "Weakly supervised whole-slide classification",
+   "license": "GPL-3.0",
+   "license_note": "",
+   "commercial": "Copyleft",
+   "maintenance": "Stale",
+   "last_push_utc": "2025-04-14",
+   "maintainer": "Mahmood Lab",
+   "urls": [
+    "https://github.com/mahmoodlab/CLAM"
+   ]
+  },
+  {
+   "name": "UNI",
+   "slug": "uni",
+   "group": "Pathology",
+   "category": "Foundation model",
+   "modality_specialty": "Digital pathology",
+   "what_it_does": "Pathology foundation model (Nature Medicine)",
+   "license": "CC BY-NC-ND 4.0",
+   "license_note": "Repo LICENSE and Hugging Face weights (MahmoodLab/UNI) are CC BY-NC-ND 4.0.",
+   "commercial": "Non-commercial",
+   "maintenance": "Stale",
+   "last_push_utc": "2025-03-26",
+   "maintainer": "Mahmood Lab",
+   "urls": [
+    "https://github.com/mahmoodlab/UNI"
+   ]
+  },
+  {
+   "name": "QuPath",
+   "slug": "qupath",
+   "group": "Pathology",
+   "category": "Pathology viewer / analysis",
+   "modality_specialty": "Digital pathology",
+   "what_it_does": "Open-source bioimage and whole-slide analysis",
+   "license": "GPL-3.0",
+   "license_note": "",
+   "commercial": "Copyleft",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-12",
+   "maintainer": "QuPath team",
+   "urls": [
+    "https://github.com/qupath/qupath"
+   ]
+  },
+  {
+   "name": "Apache cTAKES",
+   "slug": "apache-ctakes",
+   "group": "Clinical NLP",
+   "category": "Clinical NLP",
+   "modality_specialty": "Clinical text",
+   "what_it_does": "NLP platform for clinical text",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-08-12",
+   "maintainer": "Apache Software Foundation",
+   "urls": [
+    "https://github.com/apache/ctakes"
+   ]
+  },
+  {
+   "name": "medspaCy",
+   "slug": "medspacy",
+   "group": "Clinical NLP",
+   "category": "Clinical NLP",
+   "modality_specialty": "Clinical text",
+   "what_it_does": "Clinical NLP library built on spaCy",
+   "license": "MIT",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-06-04",
+   "maintainer": "medspaCy",
+   "urls": [
+    "https://github.com/medspacy/medspacy"
+   ]
+  },
+  {
+   "name": "scispaCy",
+   "slug": "scispacy",
+   "group": "Clinical NLP",
+   "category": "Clinical NLP",
+   "modality_specialty": "Biomedical text",
+   "what_it_does": "spaCy pipelines and models for biomedical text",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2025-12-04",
+   "maintainer": "AllenAI",
+   "urls": [
+    "https://github.com/allenai/scispacy"
+   ]
+  },
+  {
+   "name": "QuickUMLS",
+   "slug": "quickumls",
+   "group": "Clinical NLP",
+   "category": "Clinical NLP",
+   "modality_specialty": "Clinical text",
+   "what_it_does": "Medical concept extraction and UMLS linking",
+   "license": "MIT",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Stale",
+   "last_push_utc": "2024-08-12",
+   "maintainer": "Georgetown IR Lab",
+   "urls": [
+    "https://github.com/Georgetown-IR-Lab/QuickUMLS"
+   ]
+  },
+  {
+   "name": "HAPI FHIR",
+   "slug": "hapi-fhir",
+   "group": "EHR & data",
+   "category": "EHR interoperability",
+   "modality_specialty": "EHR / FHIR",
+   "what_it_does": "Java API for HL7 FHIR clients and servers",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-14",
+   "maintainer": "HAPI FHIR",
+   "urls": [
+    "https://github.com/hapifhir/hapi-fhir"
+   ]
+  },
+  {
+   "name": "Synthea",
+   "slug": "synthea",
+   "group": "EHR & data",
+   "category": "Synthetic data",
+   "modality_specialty": "EHR",
+   "what_it_does": "Synthetic patient population simulator",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-08-18",
+   "maintainer": "MITRE / Synthetic Health",
+   "urls": [
+    "https://github.com/synthetichealth/synthea"
+   ]
+  },
+  {
+   "name": "MIMIC code",
+   "slug": "mimic-code",
+   "group": "EHR & data",
+   "category": "EHR datasets/code",
+   "modality_specialty": "ICU EHR",
+   "what_it_does": "Community code for the MIMIC databases",
+   "license": "MIT",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-09-01",
+   "maintainer": "MIT LCP",
+   "urls": [
+    "https://github.com/MIT-LCP/mimic-code"
+   ]
+  },
+  {
+   "name": "OHDSI ATLAS",
+   "slug": "ohdsi-atlas",
+   "group": "EHR & data",
+   "category": "EHR analytics",
+   "modality_specialty": "OMOP CDM",
+   "what_it_does": "Web tool for observational analyses on OMOP data",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-09-16",
+   "maintainer": "OHDSI",
+   "urls": [
+    "https://github.com/OHDSI/Atlas"
+   ]
+  },
+  {
+   "name": "OHDSI WhiteRabbit",
+   "slug": "ohdsi-whiterabbit",
+   "group": "EHR & data",
+   "category": "EHR / ETL",
+   "modality_specialty": "OMOP CDM",
+   "what_it_does": "Profiles source databases to plan ETL into OMOP",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-13",
+   "maintainer": "OHDSI",
+   "urls": [
+    "https://github.com/OHDSI/WhiteRabbit"
+   ]
+  }
+ ]
+}

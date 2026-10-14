@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Suggest a tool · Hounsfield Lab</title><meta name="description" content="Suggest an open-source medical AI tool or a correction for the Hounsfield Lab directory."><link rel="canonical" href="https://hounsfieldlab.com/suggest.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Hounsfield Lab"><meta property="og:title" content="Suggest a tool · Hounsfield Lab"><meta property="og:description" content="Suggest an open-source medical AI tool or a correction for the Hounsfield Lab directory."><meta property="og:url" content="https://hounsfieldlab.com/suggest.html"><meta property="og:image" content="https://hounsfieldlab.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Suggest a tool · Hounsfield Lab"><meta name="twitter:description" content="Suggest an open-source medical AI tool or a correction for the Hounsfield Lab directory."><meta name="twitter:image" content="https://hounsfieldlab.com/assets/og.png">
+<link rel="icon" href="assets/logo.svg"><link rel="stylesheet" href="assets/style.css"></head><body data-root="">
+<header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="32" height="32">Hounsfield Lab</a>
+<button class="menu" aria-label="Menu" onclick="document.body.classList.toggle('navopen')">☰</button>
+<nav><a href="directory.html">Directory</a><a href="pipeline-orthanc-mercure.html">Pipeline guide</a><a href="suggest.html">Suggest a tool</a><a href="about.html">About</a><a href="index.html#newsletter">Newsletter</a></nav></div></header><main>
+<section><div class="wrap prose"><h1 class="h2">Suggest a tool or a correction</h1><p>Know an open-source or downloadable medical AI tool we should list, or spotted an error? Tell us. Every submission is reviewed by hand before anything is published.</p>
+<!-- TODO(launch): point action at a form backend (e.g. Formspree / Netlify Forms / a GitHub issue template) and remove data-placeholder. -->
+<form class="ph-form stack" action="#" method="post" data-placeholder="suggest">
+<label>Tool name<input name="name" required></label><label>Repository or download URL<input name="url" type="url" placeholder="https://github.com/…" required></label>
+<label>Type<select name="kind"><option>New tool</option><option>Correction to a listing</option></select></label>
+<label>Why it’s useful / what to fix<textarea name="notes" rows="5"></textarea></label><label>Your email (optional)<input name="email" type="email"></label>
+<button class="btn" type="submit">Submit suggestion</button><p class="note formmsg" aria-live="polite">Submissions aren’t live yet. Nothing is sent or stored.</p></form></div></section></main><footer><div class="wrap">Hounsfield Lab · Open-source medical AI, curated by a practicing neuroradiologist. Listings are for research and development reference: not medical advice, not an endorsement, not legal advice on licensing, and not a statement of regulatory clearance. Repository data snapshot: Oct 13, 2026.</div></footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="box"><button class="close" aria-label="Close">×</button><div class="content"></div></div></div>
+<script src="assets/app.js"></script></body></html>
