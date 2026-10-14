@@ -5,7 +5,7 @@ from urllib.parse import quote
 from datetime import date
 from pathlib import Path
 
-SITE_URL = "https://hounsfieldlab.com"  # TODO: set to real domain before launch (not yet registered)
+SITE_URL = "https://xray5100.github.io/hounsfieldlab"  # TODO: switch to custom domain once registered
 SNAPSHOT = date(2026, 10, 13)
 ROOT = Path(__file__).parent
 E = html.escape
