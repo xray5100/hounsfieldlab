@@ -117,7 +117,7 @@
    "name": "MedRAX",
    "slug": "medrax",
    "group": "Foundation models & agents",
-   "category": "AI agent",
+   "category": "Agent",
    "modality_specialty": "Radiology: chest X-ray",
    "what_it_does": "Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025)",
    "license": "Apache-2.0",

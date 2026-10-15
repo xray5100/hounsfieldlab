@@ -37,3 +37,4 @@ a.tile{display:block;text-decoration:none;color:var(--ink)}a.tile .n{font:13px u
 @media(max-width:760px){.menu{display:block}.nav{flex-wrap:wrap;height:auto;min-height:60px}.nav nav{display:none;width:100%;flex-direction:column;gap:0;margin:0 0 10px}.navopen .nav nav{display:flex}.nav nav a{padding:10px 0;border-top:1px solid var(--line)}
 .hero{padding:44px 0 30px}.filters select,.filters input{flex:1 1 100%}dl{grid-template-columns:1fr}dt{margin-top:6px}.tt{font-size:28px}.feature{padding:18px}}
 .filters select,.filters input{max-width:100%;min-width:0;text-overflow:ellipsis}@media(max-width:760px){.filters input{min-width:0}}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}form.sent .formmsg{color:#0f7a4a;font-weight:600}footer a{color:var(--mut)}

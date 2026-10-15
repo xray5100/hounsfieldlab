@@ -24,3 +24,9 @@ function render(){const ql=f.q.trim().toLowerCase();const r=d.map((t,i)=>[t,i]).
 document.getElementById('count').textContent=`${r.length} of ${d.length} tools`;list.innerHTML=r.map(([t,i])=>card(t,i)).join('');document.getElementById('empty').hidden=r.length>0;
 const u=new URLSearchParams();keys.forEach(k=>f[k]&&u.set(k,f[k]));f.q&&u.set('q',f.q);history.replaceState(null,'',u.toString()?'?'+u:location.pathname)}
 render()}
+document.querySelectorAll('form.live-form').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const msg=f.querySelector('.formmsg'),btn=f.querySelector('button[type=submit]');
+if(f.querySelector('[name=_honey]').value){msg.textContent='Thanks!';return}
+btn.disabled=true;msg.textContent='Sending…';
+try{const r=await fetch(f.dataset.endpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));
+if(r.ok&&String(j.success)==='true'){f.reset();f.classList.add('sent');msg.textContent='Thank you! Your message was received.'}else throw 0}
+catch(_){msg.textContent='Sorry, that didn’t go through. Please try again in a moment.'}finally{btn.disabled=false}}));
