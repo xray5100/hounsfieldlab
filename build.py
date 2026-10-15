@@ -92,12 +92,14 @@ def foot(root, script=""):
 <div class="modal" id="modal" role="dialog" aria-modal="true"><div class="box"><button class="close" aria-label="Close">×</button><div class="content"></div></div></div>
 <script src="{root}assets/app.js"></script>{script}</body></html>'''
 
-def bh_embed():
+def bh_embed(lazy=False):
+    if lazy:  # loaded by app.js when the section scrolls near the viewport
+        return f'<div class="bh-embed" data-bh-lazy="{BEEHIIV_FORM}"><noscript><a href="{ARCHIVE_URL}">Subscribe on our newsletter page</a></noscript></div>'
     return f'<div class="bh-embed"><script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="{BEEHIIV_FORM}"></script></div>'
 
 def newsletter(root):
     return f'''<section id="newsletter"><div class="wrap"><div class="signup"><h2>The weekly open medical AI briefing</h2><p>New open models, weights and tools worth knowing, in five minutes. Free, and you can unsubscribe anytime.</p>
-{bh_embed()}<p class="note">Read past issues in the <a href="{ARCHIVE_URL}" target="_blank" rel="noopener">archive</a> · <a href="{root}newsletter.html">What you get</a> · <a href="{root}privacy.html">Privacy</a></p></div></div></section>'''
+{bh_embed(lazy=True)}<p class="note">Read past issues in the <a href="{ARCHIVE_URL}" target="_blank" rel="noopener">archive</a> · <a href="{root}newsletter.html">What you get</a> · <a href="{root}privacy.html">Privacy</a></p></div></div></section>'''
 
 def badges(t):
     m='ok' if t['maintenance']=='Maintained' else 'warn'

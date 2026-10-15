@@ -29,3 +29,7 @@ btn.disabled=true;msg.textContent='Sending…';
 try{const r=await fetch(f.dataset.endpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));
 if(r.ok&&String(j.success)==='true'){f.reset();f.classList.add('sent');msg.textContent='Thank you! Your message was received.'}else throw 0}
 catch(_){msg.textContent='Sorry, that didn’t go through. Please try again in a moment.'}finally{btn.disabled=false}}));
+(function(){const tag=()=>document.querySelectorAll('.bh-embed iframe:not([title])').forEach(f=>f.title='Newsletter signup form');
+new MutationObserver(tag).observe(document.body,{childList:true,subtree:true});
+document.querySelectorAll('[data-bh-lazy]').forEach(el=>{const load=()=>{if(el.dataset.loaded)return;el.dataset.loaded=1;const s=document.createElement('script');s.async=true;s.src='https://subscribe-forms.beehiiv.com/v3/loader.js';s.dataset.beehiivForm=el.dataset.bhLazy;el.appendChild(s)};
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){load();io.disconnect()}},{rootMargin:'400px'});io.observe(el)}else load()})})();
