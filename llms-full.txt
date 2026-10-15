@@ -1,0 +1,549 @@
+# Hounsfield Lab
+
+> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 46 tools. Repository data snapshot: 2026-10-13.
+
+Badges: LIC = license (license files reviewed by hand where GitHub could not detect them); UPD = last repository push (UTC); STATUS = Maintained if updated within 12 months of the snapshot, else Stale; COMM = Permissive, Copyleft (GPL/AGPL), Non-commercial, or Verify (custom terms or separate model-weight terms). Not legal or medical advice.
+
+## Pages
+
+- [Directory](https://hounsfieldlab.com/directory.html): filterable list of all tools
+- [Pipeline guide](https://hounsfieldlab.com/pipeline-orthanc-mercure.html): Orthanc → mercure → TotalSegmentator → OHIF
+- [About](https://hounsfieldlab.com/about.html): curation method
+- [Full catalog for LLMs](https://hounsfieldlab.com/llms-full.txt)
+- [Catalog JSON](https://hounsfieldlab.com/data/catalog.json)
+
+## Foundation models & agents
+
+### Pillar-0 (finetune code + HF weights)
+- What it does: Open 3D radiology foundation model; finetuning framework, weights on Hugging Face
+- Type: Foundation model
+- Modality/specialty: Radiology: CT (chest, abd-pelvis, head), breast MRI
+- Maintainer: YalaLab
+- License: ECL-2.0
+- Commercial use: Permissive
+- License note: Repo LICENSE is Educational Community License 2.0 (Apache 2.0 with a narrowed patent grant). Hugging Face weights (Pillar0-ChestCT, -AbdomenCT, -HeadCT, -BreastMRI) are tagged ecl-2.0.
+- Last repository update: 2026-10-12 (Maintained)
+- Links: https://github.com/YalaLab/pillar-finetune, https://huggingface.co/collections/YalaLab/pillar-0
+- Page: https://hounsfieldlab.com/tools/pillar-0.html
+
+### Pillar-0 pretraining
+- What it does: Vision-language pretraining code for Pillar-0
+- Type: Foundation model
+- Modality/specialty: Radiology CT/MRI
+- Maintainer: YalaLab
+- License: ECL-2.0
+- Commercial use: Permissive
+- License note: Repo LICENSE is Educational Community License 2.0.
+- Last repository update: 2026-01-13 (Maintained)
+- Links: https://github.com/YalaLab/pillar-pretrain
+- Page: https://hounsfieldlab.com/tools/pillar-0-pretraining.html
+
+### RATE
+- What it does: Uses an LLM (Qwen3 via sglang) to extract structured labels for 366 findings from radiology reports
+- Type: Evaluation / report labeling
+- Modality/specialty: Radiology reports
+- Maintainer: YalaLab
+- License: ECL-2.0
+- Commercial use: Permissive
+- License note: Repo LICENSE is Educational Community License 2.0.
+- Last repository update: 2026-05-20 (Maintained)
+- Links: https://github.com/YalaLab/rate
+- Page: https://hounsfieldlab.com/tools/rate.html
+
+### Merlin
+- What it does: 3D vision-language model for CT that uses structured EHR and report supervision
+- Type: Foundation model
+- Modality/specialty: Radiology: CT
+- Maintainer: Stanford MIMI
+- License: MIT
+- Commercial use: Permissive
+- Last repository update: 2026-09-24 (Maintained)
+- Links: https://github.com/StanfordMIMI/Merlin
+- Page: https://hounsfieldlab.com/tools/merlin.html
+
+### MedGemma
+- What it does: Google's open medical model family; repo has notebooks and code
+- Type: Foundation model
+- Modality/specialty: Multimodal medical (imaging + text)
+- Maintainer: Google Health
+- License: Apache-2.0 (code)
+- Commercial use: Verify
+- License note: Code is Apache-2.0. Weights on Hugging Face are under the Health AI Developer Foundations terms: https://developers.google.com/health-ai-developer-foundations/terms
+- Last repository update: 2026-06-19 (Maintained)
+- Links: https://github.com/Google-Health/medgemma
+- Page: https://hounsfieldlab.com/tools/medgemma.html
+
+### CheXagent
+- What it does: Foundation model for chest X-ray interpretation
+- Type: Foundation model
+- Modality/specialty: Radiology: chest X-ray
+- Maintainer: Stanford AIMI
+- License: CC BY-NC-ND 4.0
+- Commercial use: Non-commercial
+- License note: Repo LICENSE is Creative Commons Attribution-NonCommercial-NoDerivatives 4.0.
+- Last repository update: 2025-01-07 (Stale)
+- Links: https://github.com/Stanford-AIMI/CheXagent
+- Page: https://hounsfieldlab.com/tools/chexagent.html
+
+### MedRAX
+- What it does: Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025)
+- Type: Agent
+- Modality/specialty: Radiology: chest X-ray
+- Maintainer: Bo Wang Lab
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2025-10-31 (Maintained)
+- Links: https://github.com/bowang-lab/MedRAX
+- Page: https://hounsfieldlab.com/tools/medrax.html
+
+### LLaVA-Med
+- What it does: Biomedical vision-language assistant for image Q&A
+- Type: Vision-language model
+- Modality/specialty: Biomedical multimodal
+- Maintainer: Microsoft
+- License: Microsoft Research License
+- Commercial use: Verify
+- License note: Repo LICENSE is the Microsoft Research License Terms, covering code, models and data. Read the terms before any use beyond research.
+- Last repository update: 2025-06-04 (Stale)
+- Links: https://github.com/microsoft/LLaVA-Med
+- Page: https://hounsfieldlab.com/tools/llava-med.html
+
+## Segmentation & frameworks
+
+### MONAI
+- What it does: PyTorch-based AI toolkit for healthcare imaging
+- Type: Framework
+- Modality/specialty: Medical imaging (all)
+- Maintainer: Project MONAI (NVIDIA + academic)
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/Project-MONAI/MONAI
+- Page: https://hounsfieldlab.com/tools/monai.html
+
+### MONAI Label
+- What it does: AI-assisted image labeling and active learning; integrates with 3D Slicer and OHIF
+- Type: Annotation
+- Modality/specialty: Medical imaging
+- Maintainer: Project MONAI
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-12 (Maintained)
+- Links: https://github.com/Project-MONAI/MONAILabel
+- Page: https://hounsfieldlab.com/tools/monai-label.html
+
+### nnU-Net
+- What it does: Self-configuring segmentation framework
+- Type: Segmentation
+- Modality/specialty: Medical imaging (all)
+- Maintainer: DKFZ (MIC)
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/MIC-DKFZ/nnUNet
+- Page: https://hounsfieldlab.com/tools/nnu-net.html
+
+### TotalSegmentator
+- What it does: Segments more than 100 anatomical structures in CT and MR
+- Type: Segmentation
+- Modality/specialty: Radiology: CT/MR
+- Maintainer: J. Wasserthal
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-06 (Maintained)
+- Links: https://github.com/wasserth/TotalSegmentator
+- Page: https://hounsfieldlab.com/tools/totalsegmentator.html
+
+### MedSAM
+- What it does: Segment Anything adapted for medical images
+- Type: Segmentation
+- Modality/specialty: Medical imaging (2D)
+- Maintainer: Bo Wang Lab
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2025-05-07 (Stale)
+- Links: https://github.com/bowang-lab/MedSAM
+- Page: https://hounsfieldlab.com/tools/medsam.html
+
+### MedSAM2
+- What it does: Promptable segmentation of 3D medical images and videos
+- Type: Segmentation
+- Modality/specialty: 3D imaging and video
+- Maintainer: Bo Wang Lab
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2025-07-11 (Stale)
+- Links: https://github.com/bowang-lab/MedSAM2
+- Page: https://hounsfieldlab.com/tools/medsam2.html
+
+### TorchIO
+- What it does: Medical image loading, preprocessing and augmentation for PyTorch
+- Type: Data / preprocessing
+- Modality/specialty: Medical imaging (3D)
+- Maintainer: TorchIO project
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-06 (Maintained)
+- Links: https://github.com/TorchIO-project/torchio
+- Page: https://hounsfieldlab.com/tools/torchio.html
+
+### PyRadiomics
+- What it does: Extracts radiomics features from 2D/3D images
+- Type: Radiomics
+- Modality/specialty: Radiology
+- Maintainer: AIM-Harvard
+- License: BSD-3-Clause
+- Commercial use: Permissive
+- Last repository update: 2025-10-27 (Maintained)
+- Links: https://github.com/AIM-Harvard/pyradiomics
+- Page: https://hounsfieldlab.com/tools/pyradiomics.html
+
+## Neuroimaging
+
+### HD-BET
+- What it does: Deep-learning brain extraction (skull stripping) for MRI
+- Type: Neuro preprocessing
+- Modality/specialty: Neuroradiology: brain MRI
+- Maintainer: DKFZ (MIC)
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2024-12-18 (Stale)
+- Links: https://github.com/MIC-DKFZ/HD-BET
+- Page: https://hounsfieldlab.com/tools/hd-bet.html
+
+### BrainChop
+- What it does: In-browser 3D MRI rendering and segmentation
+- Type: Segmentation
+- Modality/specialty: Neuroradiology: brain MRI
+- Maintainer: neuroneural
+- License: MIT
+- Commercial use: Permissive
+- Last repository update: 2026-02-24 (Maintained)
+- Links: https://github.com/neuroneural/brainchop
+- Page: https://hounsfieldlab.com/tools/brainchop.html
+
+### FreeSurfer
+- What it does: Neuroimaging analysis and visualization suite
+- Type: Neuroimaging suite
+- Modality/specialty: Neuroradiology: brain MRI
+- Maintainer: MGH Martinos Center
+- License: FreeSurfer License
+- Commercial use: Verify
+- License note: Repo LICENSE.txt is the FreeSurfer Software License Agreement v1.0 (MGH), a custom license.
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/freesurfer/freesurfer
+- Page: https://hounsfieldlab.com/tools/freesurfer.html
+
+### fMRIPrep
+- What it does: Robust preprocessing pipeline for fMRI
+- Type: Neuro preprocessing
+- Modality/specialty: Neuroradiology: fMRI
+- Maintainer: NiPreps
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/nipreps/fmriprep
+- Page: https://hounsfieldlab.com/tools/fmriprep.html
+
+### DIPY
+- What it does: Python library for diffusion MRI, tractography and registration
+- Type: Neuroimaging library
+- Modality/specialty: Diffusion MRI
+- Maintainer: DIPY team
+- License: BSD-3-Clause
+- Commercial use: Permissive
+- License note: Repo LICENSE is BSD 3-clause unless individual files say otherwise.
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/dipy/dipy
+- Page: https://hounsfieldlab.com/tools/dipy.html
+
+### nilearn
+- What it does: Machine learning for neuroimaging in Python
+- Type: Neuroimaging library
+- Modality/specialty: Neuroimaging
+- Maintainer: nilearn
+- License: BSD-3-Clause
+- Commercial use: Permissive
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/nilearn/nilearn
+- Page: https://hounsfieldlab.com/tools/nilearn.html
+
+### ANTsPy
+- What it does: Python library for registration, segmentation and analysis
+- Type: Registration
+- Modality/specialty: Medical imaging
+- Maintainer: ANTsX
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/ANTsX/ANTsPy
+- Page: https://hounsfieldlab.com/tools/antspy.html
+
+## Viewers & toolkits
+
+### 3D Slicer
+- What it does: Open platform for visualization, segmentation and image computing
+- Type: Viewer / workstation
+- Modality/specialty: Medical imaging
+- Maintainer: Slicer community
+- License: Slicer License (BSD-style)
+- Commercial use: Permissive
+- License note: Repo License.txt describes a BSD-style license with Slicer-specific extensions.
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/Slicer/Slicer
+- Page: https://hounsfieldlab.com/tools/3d-slicer.html
+
+### OHIF Viewer
+- What it does: Zero-footprint web DICOM viewer
+- Type: Viewer (web)
+- Modality/specialty: Radiology DICOM
+- Maintainer: OHIF
+- License: MIT
+- Commercial use: Permissive
+- Last repository update: 2026-10-14 (Maintained)
+- Links: https://github.com/OHIF/Viewers
+- Page: https://hounsfieldlab.com/tools/ohif-viewer.html
+
+### ITK
+- What it does: C++/Python toolkit for segmentation and registration
+- Type: Image toolkit
+- Modality/specialty: Medical imaging
+- Maintainer: Insight Software Consortium
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-14 (Maintained)
+- Links: https://github.com/InsightSoftwareConsortium/ITK
+- Page: https://hounsfieldlab.com/tools/itk.html
+
+### MITK
+- What it does: Medical Imaging Interaction Toolkit for building imaging applications
+- Type: Image toolkit
+- Modality/specialty: Medical imaging
+- Maintainer: DKFZ / MITK
+- License: BSD-3-Clause
+- Commercial use: Permissive
+- Last repository update: 2026-10-10 (Maintained)
+- Links: https://github.com/MITK/MITK
+- Page: https://hounsfieldlab.com/tools/mitk.html
+
+## DICOM/PACS & deployment
+
+### pydicom
+- What it does: Read, modify and write DICOM files in Python
+- Type: DICOM infrastructure
+- Modality/specialty: DICOM
+- Maintainer: pydicom
+- License: MIT (+ noted portions)
+- Commercial use: Permissive
+- License note: Repo LICENSE is MIT except for portions listed in the file.
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/pydicom/pydicom
+- Page: https://hounsfieldlab.com/tools/pydicom.html
+
+### DCMTK
+- What it does: Comprehensive set of DICOM libraries and tools (C++)
+- Type: DICOM infrastructure
+- Modality/specialty: DICOM
+- Maintainer: OFFIS
+- License: BSD-3-Clause (OFFIS)
+- Commercial use: Permissive
+- License note: COPYRIGHT file is a BSD-style license from OFFIS e.V.; some bundled parts carry other notices.
+- Last repository update: 2026-10-10 (Maintained)
+- Links: https://github.com/DCMTK/dcmtk
+- Page: https://hounsfieldlab.com/tools/dcmtk.html
+
+### Orthanc
+- What it does: Lightweight DICOM server; this repo builds the Docker images and installers
+- Type: PACS / DICOM server
+- Modality/specialty: DICOM
+- Maintainer: Orthanc team
+- License: AGPL-3.0
+- Commercial use: Copyleft
+- Last repository update: 2026-09-28 (Maintained)
+- Links: https://github.com/orthanc-server/orthanc-builder
+- Page: https://hounsfieldlab.com/tools/orthanc.html
+
+### mercure
+- What it does: DICOM orchestrator that routes studies to AI processing pipelines
+- Type: AI deployment / orchestration
+- Modality/specialty: DICOM routing
+- Maintainer: mercure (NYU origin)
+- License: MIT
+- Commercial use: Permissive
+- Last repository update: 2026-10-07 (Maintained)
+- Links: https://github.com/mercure-imaging/mercure
+- Page: https://hounsfieldlab.com/tools/mercure.html
+
+### Kaapana
+- What it does: Platform toolkit for medical imaging AI (federated, workflows)
+- Type: AI platform
+- Modality/specialty: Radiology
+- Maintainer: DKFZ
+- License: AGPL-3.0
+- Commercial use: Copyleft
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/kaapana/kaapana
+- Page: https://hounsfieldlab.com/tools/kaapana.html
+
+## Pathology
+
+### TIAToolbox
+- What it does: Computational pathology toolbox: whole-slide image I/O, stain normalization, models
+- Type: Pathology
+- Modality/specialty: Digital pathology (WSI)
+- Maintainer: TIA Centre, Warwick
+- License: BSD-3-Clause
+- Commercial use: Verify
+- License note: Code is BSD 3-clause. LICENSE says the model weights are under a different license (see TIAToolbox pretrained-model docs).
+- Last repository update: 2026-10-12 (Maintained)
+- Links: https://github.com/TissueImageAnalytics/tiatoolbox
+- Page: https://hounsfieldlab.com/tools/tiatoolbox.html
+
+### PathML
+- What it does: Tools for computational pathology
+- Type: Pathology
+- Modality/specialty: Digital pathology
+- Maintainer: Dana-Farber AIOS
+- License: GPL-2.0
+- Commercial use: Copyleft
+- Last repository update: 2026-08-14 (Maintained)
+- Links: https://github.com/Dana-Farber-AIOS/pathml
+- Page: https://hounsfieldlab.com/tools/pathml.html
+
+### CLAM
+- What it does: Weakly supervised whole-slide classification
+- Type: Pathology
+- Modality/specialty: Digital pathology (WSI)
+- Maintainer: Mahmood Lab
+- License: GPL-3.0
+- Commercial use: Copyleft
+- Last repository update: 2025-04-14 (Stale)
+- Links: https://github.com/mahmoodlab/CLAM
+- Page: https://hounsfieldlab.com/tools/clam.html
+
+### UNI
+- What it does: Pathology foundation model (Nature Medicine)
+- Type: Foundation model
+- Modality/specialty: Digital pathology
+- Maintainer: Mahmood Lab
+- License: CC BY-NC-ND 4.0
+- Commercial use: Non-commercial
+- License note: Repo LICENSE and Hugging Face weights (MahmoodLab/UNI) are CC BY-NC-ND 4.0.
+- Last repository update: 2025-03-26 (Stale)
+- Links: https://github.com/mahmoodlab/UNI
+- Page: https://hounsfieldlab.com/tools/uni.html
+
+### QuPath
+- What it does: Open-source bioimage and whole-slide analysis
+- Type: Pathology viewer / analysis
+- Modality/specialty: Digital pathology
+- Maintainer: QuPath team
+- License: GPL-3.0
+- Commercial use: Copyleft
+- Last repository update: 2026-10-12 (Maintained)
+- Links: https://github.com/qupath/qupath
+- Page: https://hounsfieldlab.com/tools/qupath.html
+
+## Clinical NLP
+
+### Apache cTAKES
+- What it does: NLP platform for clinical text
+- Type: Clinical NLP
+- Modality/specialty: Clinical text
+- Maintainer: Apache Software Foundation
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-08-12 (Maintained)
+- Links: https://github.com/apache/ctakes
+- Page: https://hounsfieldlab.com/tools/apache-ctakes.html
+
+### medspaCy
+- What it does: Clinical NLP library built on spaCy
+- Type: Clinical NLP
+- Modality/specialty: Clinical text
+- Maintainer: medspaCy
+- License: MIT
+- Commercial use: Permissive
+- Last repository update: 2026-06-04 (Maintained)
+- Links: https://github.com/medspacy/medspacy
+- Page: https://hounsfieldlab.com/tools/medspacy.html
+
+### scispaCy
+- What it does: spaCy pipelines and models for biomedical text
+- Type: Clinical NLP
+- Modality/specialty: Biomedical text
+- Maintainer: AllenAI
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2025-12-04 (Maintained)
+- Links: https://github.com/allenai/scispacy
+- Page: https://hounsfieldlab.com/tools/scispacy.html
+
+### QuickUMLS
+- What it does: Medical concept extraction and UMLS linking
+- Type: Clinical NLP
+- Modality/specialty: Clinical text
+- Maintainer: Georgetown IR Lab
+- License: MIT
+- Commercial use: Permissive
+- Last repository update: 2024-08-12 (Stale)
+- Links: https://github.com/Georgetown-IR-Lab/QuickUMLS
+- Page: https://hounsfieldlab.com/tools/quickumls.html
+
+## EHR & data
+
+### HAPI FHIR
+- What it does: Java API for HL7 FHIR clients and servers
+- Type: EHR interoperability
+- Modality/specialty: EHR / FHIR
+- Maintainer: HAPI FHIR
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-14 (Maintained)
+- Links: https://github.com/hapifhir/hapi-fhir
+- Page: https://hounsfieldlab.com/tools/hapi-fhir.html
+
+### Synthea
+- What it does: Synthetic patient population simulator
+- Type: Synthetic data
+- Modality/specialty: EHR
+- Maintainer: MITRE / Synthetic Health
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-08-18 (Maintained)
+- Links: https://github.com/synthetichealth/synthea
+- Page: https://hounsfieldlab.com/tools/synthea.html
+
+### MIMIC code
+- What it does: Community code for the MIMIC databases
+- Type: EHR datasets/code
+- Modality/specialty: ICU EHR
+- Maintainer: MIT LCP
+- License: MIT
+- Commercial use: Permissive
+- Last repository update: 2026-09-01 (Maintained)
+- Links: https://github.com/MIT-LCP/mimic-code
+- Page: https://hounsfieldlab.com/tools/mimic-code.html
+
+### OHDSI ATLAS
+- What it does: Web tool for observational analyses on OMOP data
+- Type: EHR analytics
+- Modality/specialty: OMOP CDM
+- Maintainer: OHDSI
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-09-16 (Maintained)
+- Links: https://github.com/OHDSI/Atlas
+- Page: https://hounsfieldlab.com/tools/ohdsi-atlas.html
+
+### OHDSI WhiteRabbit
+- What it does: Profiles source databases to plan ETL into OMOP
+- Type: EHR / ETL
+- Modality/specialty: OMOP CDM
+- Maintainer: OHDSI
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-13 (Maintained)
+- Links: https://github.com/OHDSI/WhiteRabbit
+- Page: https://hounsfieldlab.com/tools/ohdsi-whiterabbit.html
+

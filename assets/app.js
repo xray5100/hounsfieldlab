@@ -2,7 +2,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const ROOT=document.body.dataset.root||'';
 function badges(t){const m=t.maintenance==='Maintained'?'ok':'warn',c={Permissive:'ok',Verify:'warn'}[t.commercial]||'bad';
 return `<div class="labs"><span class="lab"><b>LIC</b><span>${esc(t.license)}</span></span><span class="lab"><b>UPD</b><span>${esc(t.last_push_utc)}</span></span><span class="lab ${m}"><b>STATUS</b><span>${t.maintenance}</span></span><span class="lab ${c}"><b>COMM</b><span>${esc(t.commercial)}</span></span></div>`}
-function card(t,i){return `<article class="card" data-i="${i}" tabindex="0" role="button" aria-label="Details for ${esc(t.name)}"><h3><a href="tools/${t.slug}.html">${esc(t.name)}</a></h3><p>${esc(t.what_it_does)}</p>${badges(t)}</article>`}
+function card(t,i){return `<article class="card" data-i="${i}"><h2 class="ct"><a href="tools/${t.slug}.html">${esc(t.name)}</a></h2><p>${esc(t.what_it_does)}</p>${badges(t)}<button class="qv" type="button">Quick view</button></article>`}
 let lastFocus=null;
 function openModal(t){const m=document.getElementById('modal');lastFocus=document.activeElement;
 m.querySelector('.content').innerHTML=`<h2>${esc(t.name)}</h2><p>${esc(t.what_it_does)}</p>${badges(t)}<dl style="margin-top:16px"><dt>Category</dt><dd>${esc(t.group)}</dd><dt>Modality</dt><dd>${esc(t.modality_specialty)}</dd><dt>Maintainer</dt><dd>${esc(t.maintainer)}</dd><dt>License</dt><dd>${esc(t.license)}</dd><dt>Last update</dt><dd>${esc(t.last_push_utc)} (last repo push, UTC)</dd><dt>Links</dt><dd>${t.urls.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace('https://',''))}</a>`).join('<br>')}</dd></dl>${t.license_note?`<p class="note"><strong>License review:</strong> ${esc(t.license_note)}</p>`:''}<p><a class="btn" href="tools/${t.slug}.html">Full page →</a></p>`;
@@ -19,7 +19,6 @@ const q=document.getElementById('q');q.value=f.q;q.oninput=()=>{f.q=q.value;rend
 document.getElementById('reset').onclick=()=>{keys.forEach(k=>{f[k]='';document.getElementById(k).value=''});f.q='';q.value='';render()};
 const list=document.getElementById('list');
 list.addEventListener('click',e=>{if(e.target.closest('a'))return;const c=e.target.closest('.card[data-i]');if(c)openModal(d[c.dataset.i])});
-list.addEventListener('keydown',e=>{const c=e.target.closest('.card[data-i]');if(c&&e.target===c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openModal(d[c.dataset.i])}});
 function render(){const ql=f.q.trim().toLowerCase();const r=d.map((t,i)=>[t,i]).filter(([t])=>keys.every(k=>!f[k]||t[field[k]]===f[k])&&(!ql||[t.name,t.what_it_does,t.maintainer,t.modality_specialty,t.category].join(' ').toLowerCase().includes(ql)));
 document.getElementById('count').textContent=`${r.length} of ${d.length} tools`;list.innerHTML=r.map(([t,i])=>card(t,i)).join('');document.getElementById('empty').hidden=r.length>0;
 const u=new URLSearchParams();keys.forEach(k=>f[k]&&u.set(k,f[k]));f.q&&u.set('q',f.q);history.replaceState(null,'',u.toString()?'?'+u:location.pathname)}

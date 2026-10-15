@@ -43,6 +43,19 @@ LIC = {
  "MedGemma": ("Apache-2.0 (code)","Verify","Code is Apache-2.0. Weights on Hugging Face are under the Health AI Developer Foundations terms: https://developers.google.com/health-ai-developer-foundations/terms"),
 }
 
+SPDX = {"Apache-2.0","MIT","BSD-3-Clause","GPL-2.0","GPL-3.0","AGPL-3.0","ECL-2.0"}
+def lic_url(l):
+    k=l.split(' ')[0]
+    if k in SPDX: return f"https://spdx.org/licenses/{k}.html"
+    if l.startswith("CC BY-NC-ND 4.0"): return "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+    return None
+
+def jsonld(obj): return '<script type="application/ld+json">'+json.dumps(obj,ensure_ascii=False).replace("</","<\\/")+'</script>'
+
+def card_html(t,i,prefix=""):
+    return (f'<article class="card" data-i="{i}"><h2 class="ct"><a href="{prefix}tools/{t["slug"]}.html">{E(t["name"])}</a></h2><p>{E(t["what_it_does"])}</p>{badges(t)}'
+            f'<button class="qv" type="button">Quick view</button></article>')
+
 def slug(s): return re.sub(r'-+','-',re.sub(r'[^a-z0-9]+','-',s.lower())).strip('-')
 
 def load():
@@ -61,13 +74,13 @@ def load():
     assert len({t['slug'] for t in out})==len(out)
     return out
 
-def head(title, desc, path, root, og_img="assets/og.png"):
+def head(title, desc, path, root, og_img="assets/og.png", extra=""):
     url=f"{SITE_URL}/{path}"
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Hounsfield Lab"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE_URL}/{og_img}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{E(title)}"><meta name="twitter:description" content="{E(desc)}"><meta name="twitter:image" content="{SITE_URL}/{og_img}">
-<link rel="icon" href="{root}assets/logo.svg"><link rel="stylesheet" href="{root}assets/style.css"></head><body data-root="{root}">
+<link rel="icon" href="{root}assets/logo.svg" type="image/svg+xml"><link rel="icon" href="{root}assets/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="{root}assets/apple-touch-icon.png"><meta name="theme-color" content="#0b2e6b">{extra}<link rel="stylesheet" href="{root}assets/style.css"></head><body data-root="{root}">
 <header><div class="wrap nav"><a class="brand" href="{root}index.html"><img src="{root}assets/logo.svg" alt="" width="32" height="32">Hounsfield Lab</a>
 <button class="menu" aria-label="Menu" onclick="document.body.classList.toggle('navopen')">☰</button>
 <nav><a href="{root}directory.html">Directory</a><a href="{root}pipeline-orthanc-mercure.html">Pipeline guide</a><a href="{root}suggest.html">Suggest a tool</a><a href="{root}about.html">About</a><a href="{root}contact.html">Contact</a><a href="{root}index.html#newsletter">Newsletter</a></nav></div></header><main>'''
@@ -88,34 +101,62 @@ def badges(t):
     return (f'<div class="labs"><span class="lab"><b>LIC</b><span>{E(t["license"])}</span></span><span class="lab"><b>UPD</b><span>{E(t["last_push_utc"])}</span></span>'
             f'<span class="lab {m}"><b>STATUS</b><span>{t["maintenance"]}</span></span><span class="lab {c}"><b>COMM</b><span>{E(t["commercial"])}</span></span></div>')
 
-def tool_page(t):
+def tool_page(t, tools):
     root="../"; desc=f'{t["name"]}: {t["what_it_does"]}. License {t["license"]}, last updated {t["last_push_utc"]}.'
     links="".join(f'<li><a href="{E(u)}" target="_blank" rel="noopener">{E(u.replace("https://",""))}</a></li>' for u in t['urls'])
     note=f'<p class="note"><strong>License review:</strong> {E(t["license_note"])}</p>' if t['license_note'] else ''
     warn='' if t['commercial']=='Permissive' else '<p class="note">Commercial use: read the project’s license (and any model-weight terms) yourself before relying on it. This isn’t legal advice.</p>'
-    return head(f'{t["name"]} · Hounsfield Lab', desc[:300], f'tools/{t["slug"]}.html', root)+f'''
-<section><div class="wrap prose"><p class="crumb"><a href="../directory.html">Directory</a> › <a href="../directory.html?group={quote(t["group"])}">{E(t["group"])}</a></p>
+    rel=[x for x in tools if x['group']==t['group'] and x is not t][:6]
+    related="".join(f'<li><a href="{x["slug"]}.html">{E(x["name"])}</a>: {E(x["what_it_does"])}</li>' for x in rel)
+    repo=next((u for u in t['urls'] if 'github.com' in u), t['urls'][0])
+    ld={"@context":"https://schema.org","@type":"SoftwareSourceCode","name":t["name"],"description":t["what_it_does"],"codeRepository":repo,
+        "url":f"{SITE_URL}/tools/{t['slug']}.html","dateModified":t["last_push_utc"],"applicationCategory":t["group"],"keywords":[t["category"],t["modality_specialty"]],
+        "license":lic_url(t["license"]) or t["license"],"maintainer":{"@type":"Organization","name":t["maintainer"]},"sameAs":t["urls"]}
+    bc={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Directory","item":f"{SITE_URL}/directory.html"},
+        {"@type":"ListItem","position":2,"name":t["group"],"item":f"{SITE_URL}/directory.html?group={quote(t['group'])}"},
+        {"@type":"ListItem","position":3,"name":t["name"],"item":f"{SITE_URL}/tools/{t['slug']}.html"}]}
+    title=f'{t["name"]}: {t["category"]} for {t["modality_specialty"]} · Hounsfield Lab'
+    return head(title, desc[:300], f'tools/{t["slug"]}.html', root, extra=jsonld(ld)+jsonld(bc))+f'''
+<section><div class="wrap prose"><nav class="crumb" aria-label="Breadcrumb"><a href="../directory.html">Directory</a> › <a href="../directory.html?group={quote(t["group"])}">{E(t["group"])}</a> › <span aria-current="page">{E(t["name"])}</span></nav>
 <h1 class="tt">{E(t["name"])}</h1><p class="lead">{E(t["what_it_does"])}</p>{badges(t)}
 <dl style="margin-top:22px"><dt>Group</dt><dd>{E(t["group"])}</dd><dt>Type</dt><dd>{E(t["category"])}</dd><dt>Modality</dt><dd>{E(t["modality_specialty"])}</dd><dt>Maintainer</dt><dd>{E(t["maintainer"])}</dd><dt>License</dt><dd>{E(t["license"])}</dd><dt>Last update</dt><dd>{E(t["last_push_utc"])} (last repository push, UTC)</dd></dl>
-<h3>Links</h3><ul>{links}</ul>{note}{warn}<p><a class="btn ghost" href="../directory.html">← Back to directory</a></p></div></section>'''+foot(root)
+<h2 class="h3">Links</h2><ul class="links">{links}</ul>{note}{warn}
+<h2 class="h3">Related tools in {E(t["group"])}</h2><ul class="links">{related}</ul>
+<p><a class="btn ghost" href="../directory.html">← Back to directory</a></p></div></section>'''+foot(root)
+
+def write_llms(tools):
+    intro=(f"# Hounsfield Lab\n\n> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. "
+           f"Radiology-first, plus pathology, clinical NLP and EHR tooling. {len(tools)} tools. Repository data snapshot: {SNAPSHOT}.\n\n"
+           "Badges: LIC = license (license files reviewed by hand where GitHub could not detect them); UPD = last repository push (UTC); "
+           "STATUS = Maintained if updated within 12 months of the snapshot, else Stale; COMM = Permissive, Copyleft (GPL/AGPL), Non-commercial, or Verify (custom terms or separate model-weight terms). Not legal or medical advice.\n\n")
+    pages=("## Pages\n\n"+f"- [Directory]({SITE_URL}/directory.html): filterable list of all tools\n- [Pipeline guide]({SITE_URL}/pipeline-orthanc-mercure.html): Orthanc → mercure → TotalSegmentator → OHIF\n"
+           f"- [About]({SITE_URL}/about.html): curation method\n- [Full catalog for LLMs]({SITE_URL}/llms-full.txt)\n- [Catalog JSON]({SITE_URL}/data/catalog.json)\n\n")
+    short=pages+"".join(f"## {g}\n\n"+"".join(f"- [{t['name']}]({SITE_URL}/tools/{t['slug']}.html): {t['what_it_does']} ({t['license']}; {t['maintenance']})\n" for t in tools if t['group']==g)+"\n" for g in GROUPS)
+    (ROOT/'llms.txt').write_text(intro+short)
+    full="".join(f"## {g}\n\n"+"".join(
+        f"### {t['name']}\n- What it does: {t['what_it_does']}\n- Type: {t['category']}\n- Modality/specialty: {t['modality_specialty']}\n- Maintainer: {t['maintainer']}\n"
+        f"- License: {t['license']}\n- Commercial use: {t['commercial']}\n"+(f"- License note: {t['license_note']}\n" if t['license_note'] else "")+
+        f"- Last repository update: {t['last_push_utc']} ({t['maintenance']})\n- Links: {', '.join(t['urls'])}\n- Page: {SITE_URL}/tools/{t['slug']}.html\n\n" for t in tools if t['group']==g) for g in GROUPS)
+    (ROOT/'llms-full.txt').write_text(intro+pages+full)
 
 def main():
     tools=load(); (ROOT/'data').mkdir(exist_ok=True); (ROOT/'tools').mkdir(exist_ok=True)
     pub=[{k:t[k] for k in ('name','slug','group','category','modality_specialty','what_it_does','license','license_note','commercial','maintenance','last_push_utc','maintainer','urls')} for t in tools]
     json.dump({"groups":list(GROUPS),"tools":pub},open(ROOT/'data/catalog.json','w'),indent=1)
-    for t in tools: (ROOT/f'tools/{t["slug"]}.html').write_text(tool_page(t))
+    for t in tools: (ROOT/f'tools/{t["slug"]}.html').write_text(tool_page(t,tools))
     counts={g:sum(t['group']==g for t in tools) for g in GROUPS}
     pillar=next(t for t in tools if t['slug']=='pillar-0')
     tiles="".join(f'<a class="card tile" href="directory.html?group={quote(g)}"><h3>{E(g)}</h3><span class="n">n = {n}</span></a>' for g,n in counts.items())
     pages={}
-    pages['index.html']=head('Hounsfield Lab · Open-source medical AI directory','A neuroradiologist-curated directory of open-source medical AI models, toolkits and infrastructure, with license, update and maintenance status at a glance.','', '')+f'''
+    pages['index.html']=head('Hounsfield Lab · Open-source medical AI directory','A neuroradiologist-curated directory of open-source medical AI models, toolkits and infrastructure, with license, update and maintenance status at a glance.','', '', extra=jsonld({'@context':'https://schema.org','@type':'WebSite','name':'Hounsfield Lab','url':SITE_URL+'/','description':'Open-source medical AI directory, curated by a practicing neuroradiologist.','potentialAction':{'@type':'SearchAction','target':{'@type':'EntryPoint','urlTemplate':SITE_URL+'/directory.html?q={search_term_string}'},'query-input':'required name=search_term_string'}}))+f'''
 <div class="hero"><div class="wrap"><div class="curator">Curated by a practicing neuroradiologist</div><h1>Open-source medical AI, measured like a lab value.</h1><p>A clinician-curated directory of downloadable models, toolkits and infrastructure for building medical AI, with license, update and maintenance status at a glance.</p><p class="cta"><a class="btn" href="directory.html">Browse {len(tools)} tools</a> <a class="btn ghost" href="pipeline-orthanc-mercure.html">See a pipeline guide</a></p></div></div>
 <section><div class="wrap"><h2>Featured: Pillar-0</h2><div class="feature"><div><p><strong>An open radiology foundation model from YalaLab.</strong> Pretrained on 42,990 abdomen-pelvis CTs, 86,411 chest CTs, 14,348 head CTs and 11,543 breast MRIs, with RATE, an LLM-based framework that extracts labels for 366 radiologic findings from reports. The authors release code, weights and evaluation tools.</p><p><a href="https://yalalab.github.io/pillar-0/" target="_blank" rel="noopener">Project page</a> · <a href="https://arxiv.org/abs/2511.17803" target="_blank" rel="noopener">Paper</a> · <a href="https://huggingface.co/collections/YalaLab/pillar-0" target="_blank" rel="noopener">Weights</a></p></div><div>{badges(pillar)}<p style="margin-top:16px"><a class="btn" href="tools/pillar-0.html">View details</a></p></div></div></div></section>
 <section><div class="wrap"><h2>Browse by category</h2><div class="grid cats">{tiles}</div></div></section>'''+newsletter('')+foot('')
-    pages['directory.html']=head('Directory · Hounsfield Lab',f'Filter {len(tools)} open-source medical AI tools by category, modality, license and maintenance status.','directory.html','')+'''
-<section><div class="wrap"><h1 class="h2">Directory</h1><p class="note">STATUS: “Maintained” = repo updated within 12 months of the Oct 13, 2026 snapshot. COMM: “Permissive” = permissive open-source license; “Copyleft” = GPL/AGPL obligations; “Non-commercial” = license forbids commercial use; “Verify” = custom terms or separate weight terms. Always read the license yourself.</p>
+    pages['directory.html']=head('Open-source medical AI tools directory: filter by license, modality and status · Hounsfield Lab',f'Filter {len(tools)} open-source medical AI tools by category, modality, license and maintenance status.','directory.html','', extra=jsonld({'@context':'https://schema.org','@type':'ItemList','name':'Open-source medical AI tools','numberOfItems':len(tools),'itemListElement':[{'@type':'ListItem','position':i+1,'name':t['name'],'url':f"{SITE_URL}/tools/{t['slug']}.html"} for i,t in enumerate(tools)]}))+'''
+<section><div class="wrap"><h1 class="h2">Open-source medical AI directory</h1><p class="note">STATUS: “Maintained” = repo updated within 12 months of the Oct 13, 2026 snapshot. COMM: “Permissive” = permissive open-source license; “Copyleft” = GPL/AGPL obligations; “Non-commercial” = license forbids commercial use; “Verify” = custom terms or separate weight terms. Always read the license yourself.</p>
 <div class="filters"><input id="q" type="search" placeholder="Search tools, maintainers…" aria-label="Search"><select id="group" aria-label="Category"><option value="">All categories</option></select><select id="modality" aria-label="Modality"><option value="">All modalities</option></select><select id="commercial" aria-label="License type"><option value="">Any license type</option></select><select id="maintenance" aria-label="Status"><option value="">Any status</option></select><button class="btn ghost small" id="reset" type="button">Reset</button></div>
-<div class="count" id="count" aria-live="polite"></div><div class="grid" id="list"></div><p id="empty" class="note" hidden>No tools match these filters.</p></div></section>'''+foot('','<script>initDirectory()</script>')
+<div class="count" id="count" aria-live="polite">'+f'{len(tools)} of {len(tools)} tools'+'</div><div class="grid" id="list">'+''.join(card_html(t,i) for i,t in enumerate(tools))+'</div><p id="empty" class="note" hidden>No tools match these filters.</p></div></section>'''+foot('','<script>initDirectory()</script>')
     pages['suggest.html']=head('Suggest a tool · Hounsfield Lab','Suggest an open-source medical AI tool or a correction for the Hounsfield Lab directory.','suggest.html','')+'''
 <section><div class="wrap prose"><h1 class="h2">Suggest a tool or a correction</h1><p>Know an open-source or downloadable medical AI tool we should list, or spotted an error? Tell us. Every submission is reviewed by hand before anything is published.</p>
 <form class="live-form stack" action="'+FORM_ENDPOINT+'" method="post" data-endpoint="'+FORM_ENDPOINT+'"><input type="hidden" name="_subject" value="Hounsfield Lab: tool suggestion"><input type="hidden" name="form" value="suggest"><div class="hp" aria-hidden="true"><label>Leave this empty<input name="_honey" tabindex="-1" autocomplete="off"></label></div><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><label>Tool name<input name="tool_name" required maxlength="200"></label><label>Repository or download URL<input name="url" type="url" placeholder="https://github.com/…" required></label><label>Type<select name="kind"><option>New tool</option><option>Correction to a listing</option></select></label><label>Why it’s useful / what to fix<textarea name="notes" rows="5" maxlength="4000"></textarea></label><label>Your email (optional, only if you want a reply)<input name="email" type="email"></label><button class="btn" type="submit">Submit suggestion</button><p class="note">By submitting you agree to our <a href="privacy.html">privacy notice</a>.</p><p class="note formmsg" role="status" aria-live="polite"></p></form></div></section>'''+foot('')
@@ -138,6 +179,8 @@ def main():
     for p,h in pages.items(): (ROOT/p).write_text(h)
     urls=['','directory.html','pipeline-orthanc-mercure.html','about.html','suggest.html','contact.html','privacy.html']+[f'tools/{t["slug"]}.html' for t in tools]
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{SITE_URL}/{u}</loc><lastmod>{SNAPSHOT}</lastmod></url>\n' for u in urls)+'</urlset>\n')
-    (ROOT/'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n')
+    bots=["GPTBot","OAI-SearchBot","ChatGPT-User","ClaudeBot","Claude-User","Claude-SearchBot","anthropic-ai","PerplexityBot","Perplexity-User","Google-Extended","Googlebot","Bingbot","Applebot","Applebot-Extended","CCBot"]
+    (ROOT/'robots.txt').write_text("".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots)+f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
+    write_llms(tools)
     print(len(tools),'tools', counts)
 main()
