@@ -41,3 +41,4 @@ a.tile{display:block;text-decoration:none;color:var(--ink)}a.tile .n{font:13px u
 .card h2.ct{margin:0 0 6px;font-size:17px;color:var(--ink)}.card h2.ct a{color:inherit;text-decoration:none;display:inline-block;padding:3px 0}.card h2.ct a:hover{text-decoration:underline}
 .qv{margin-top:12px;background:none;border:1px solid var(--line);border-radius:7px;padding:6px 10px;font-size:13px;color:var(--blue2);cursor:pointer;min-height:32px}.qv:hover{border-color:var(--blue2)}
 .signup .note{color:#cfe0ff}.h3{font-size:19px;color:var(--ink);margin:26px 0 8px}ul.links li{margin:6px 0}ul.links a{display:inline-block;padding:2px 0}
+.bh-embed{margin:8px 0;min-height:60px}.signup .note a{color:#fff}

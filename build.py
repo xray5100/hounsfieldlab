@@ -6,6 +6,8 @@ from datetime import date
 from pathlib import Path
 
 SITE_URL = "https://hounsfieldlab.com"
+BEEHIIV_FORM = "ac9b5485-be11-4149-9a23-58c583248e6a"
+ARCHIVE_URL = "https://hounsfieldlab.beehiiv.com"
 FORM_ENDPOINT = "https://formsubmit.co/ajax/676d89d9edc7b8fe301931545b3a4a15"  # FormSubmit alias (activated)
 SNAPSHOT = date(2026, 10, 13)
 ROOT = Path(__file__).parent
@@ -83,17 +85,19 @@ def head(title, desc, path, root, og_img="assets/og.png", extra=""):
 <link rel="icon" href="{root}assets/logo.svg" type="image/svg+xml"><link rel="icon" href="{root}assets/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="{root}assets/apple-touch-icon.png"><meta name="theme-color" content="#0b2e6b">{extra}<link rel="stylesheet" href="{root}assets/style.css"></head><body data-root="{root}">
 <header><div class="wrap nav"><a class="brand" href="{root}index.html"><img src="{root}assets/logo.svg" alt="" width="32" height="32">Hounsfield Lab</a>
 <button class="menu" aria-label="Menu" onclick="document.body.classList.toggle('navopen')">☰</button>
-<nav><a href="{root}directory.html">Directory</a><a href="{root}pipeline-orthanc-mercure.html">Pipeline guide</a><a href="{root}suggest.html">Suggest a tool</a><a href="{root}about.html">About</a><a href="{root}contact.html">Contact</a><a href="{root}index.html#newsletter">Newsletter</a></nav></div></header><main>'''
+<nav><a href="{root}directory.html">Directory</a><a href="{root}pipeline-orthanc-mercure.html">Pipeline guide</a><a href="{root}suggest.html">Suggest a tool</a><a href="{root}about.html">About</a><a href="{root}contact.html">Contact</a><a href="{root}newsletter.html">Newsletter</a></nav></div></header><main>'''
 
 def foot(root, script=""):
-    return f'''</main><footer><div class="wrap">Hounsfield Lab · Open-source medical AI, curated by a practicing neuroradiologist. Listings are for research and development reference: not medical advice, not an endorsement, not legal advice on licensing, and not a statement of regulatory clearance. Repository data snapshot: Oct 13, 2026. · <a href="{root}privacy.html">Privacy</a> · <a href="{root}contact.html">Contact</a></div></footer>
+    return f'''</main><footer><div class="wrap">Hounsfield Lab · Open-source medical AI, curated by a practicing neuroradiologist. Listings are for research and development reference: not medical advice, not an endorsement, not legal advice on licensing, and not a statement of regulatory clearance. Repository data snapshot: Oct 13, 2026. · <a href="{root}newsletter.html">Newsletter</a> · <a href="{root}privacy.html">Privacy</a> · <a href="{root}contact.html">Contact</a></div></footer>
 <div class="modal" id="modal" role="dialog" aria-modal="true"><div class="box"><button class="close" aria-label="Close">×</button><div class="content"></div></div></div>
 <script src="{root}assets/app.js"></script>{script}</body></html>'''
 
+def bh_embed():
+    return f'<div class="bh-embed"><script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="{BEEHIIV_FORM}"></script></div>'
+
 def newsletter(root):
-    return f'''<section id="newsletter"><div class="wrap"><div class="signup"><h2>The weekly open medical AI briefing</h2><p>New open models, weights and tools worth knowing, in five minutes.</p>
-<!-- TODO(launch): set action to your newsletter provider's form endpoint (e.g. Buttondown/ConvertKit/Beehiiv) and remove data-placeholder. -->
-<form class="ph-form" action="#" method="post" data-placeholder="newsletter"><label class="sr" for="nl-email">Email</label><input id="nl-email" name="email" type="email" placeholder="you@hospital.org" required><button class="btn" type="submit">Notify me</button><p class="note formmsg" aria-live="polite">Coming soon. Signup isn’t live yet, so nothing is sent or stored.</p></form></div></div></section>'''
+    return f'''<section id="newsletter"><div class="wrap"><div class="signup"><h2>The weekly open medical AI briefing</h2><p>New open models, weights and tools worth knowing, in five minutes. Free, and you can unsubscribe anytime.</p>
+{bh_embed()}<p class="note">Read past issues in the <a href="{ARCHIVE_URL}" target="_blank" rel="noopener">archive</a> · <a href="{root}newsletter.html">What you get</a> · <a href="{root}privacy.html">Privacy</a></p></div></div></section>'''
 
 def badges(t):
     m='ok' if t['maintenance']=='Maintained' else 'warn'
@@ -165,11 +169,19 @@ def main():
 <form class="live-form stack" action="'''+FORM_ENDPOINT+'''" method="post" data-endpoint="'''+FORM_ENDPOINT+'''"><input type="hidden" name="_subject" value="Hounsfield Lab: contact message"><input type="hidden" name="form" value="contact"><div class="hp" aria-hidden="true"><label>Leave this empty<input name="_honey" tabindex="-1" autocomplete="off"></label></div><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
 <label>Name<input name="name" required maxlength="200"></label><label>Email<input name="email" type="email" required></label><label>Message<textarea name="message" rows="6" required maxlength="5000"></textarea></label>
 <button class="btn" type="submit">Send message</button><p class="note">By submitting you agree to our <a href="privacy.html">privacy notice</a>.</p><p class="note formmsg" role="status" aria-live="polite"></p></form></div></section>'''+foot('')
+    pages['newsletter.html']=head('Newsletter: the weekly open medical AI briefing · Hounsfield Lab','A free weekly email on new open-source medical AI models, weights and tools, curated by a practicing neuroradiologist.','newsletter.html','')+f'''
+<section><div class="wrap prose"><div class="curator">Curated by a practicing neuroradiologist</div><h1 class="h2">The weekly open medical AI briefing</h1>
+<p class="lead">A free, five-minute email for people building medical AI with open-source tools.</p>
+<h2 class="h3">What you get each week</h2><ul class="links"><li><strong>New and notable releases:</strong> open models, weights, toolkits and infrastructure worth knowing, with links to the source.</li>
+<li><strong>Directory updates:</strong> tools added to Hounsfield Lab, plus changes in license or maintenance status.</li><li><strong>One practical pick:</strong> a tool, workflow or pipeline tip with a short, honest verdict.</li>
+<li><strong>Clear labels:</strong> any sponsored content is always marked as sponsored.</li></ul>
+<div class="signup" style="margin-top:24px"><h2>Subscribe</h2>{bh_embed()}<p class="note">Unsubscribe anytime with the link in every email. See our <a href="privacy.html">privacy notice</a>.</p></div>
+<p style="margin-top:22px"><a class="btn ghost" href="{ARCHIVE_URL}" target="_blank" rel="noopener">Browse the archive →</a></p></div></section>'''+foot('')
     pages['privacy.html']=head('Privacy · Hounsfield Lab','How Hounsfield Lab handles information you submit through its forms.','privacy.html','')+'''
-<section><div class="wrap prose"><h1 class="h2">Privacy notice</h1><p class="note">Last updated: October 14, 2026</p>
-<h3>What we collect</h3><p>This site has no accounts, cookies, or analytics. We only receive information you choose to send through the Contact or Suggest a tool forms: the fields you fill in (for example name, email, message, tool name and URL).</p>
+<section><div class="wrap prose"><h1 class="h2">Privacy notice</h1><p class="note">Last updated: October 14, 2026 (newsletter added)</p>
+<h3>What we collect</h3><p>This site has no accounts or analytics of its own. We only receive information you choose to send through the Contact or Suggest a tool forms or the newsletter signup: the fields you fill in (for example name, email, message, tool name and URL).</p>
 <h3>How forms are processed</h3><p>Form submissions are delivered to us by email through <a href="https://formsubmit.co/" target="_blank" rel="noopener">FormSubmit</a>, a third-party form service, which processes the data to deliver it. The site itself is hosted on GitHub Pages, which may log basic technical data such as IP addresses for security and operations.</p>
-<h3>How we use it</h3><p>We use submissions only to review tool suggestions and corrections and to reply to you. We don’t sell your information or add you to any mailing list. The newsletter isn’t live yet.</p>
+<h3>How we use it</h3><p>We use form submissions only to review tool suggestions and corrections and to reply to you. We don’t sell your information, and a form submission never adds you to the newsletter.</p>\n<h3>Newsletter</h3><p>Newsletter signups are handled by <a href=\"https://www.beehiiv.com/\" target=\"_blank\" rel=\"noopener\">beehiiv</a>, which stores your email address and sends the newsletter on our behalf. The signup form is loaded from beehiiv. See <a href=\"https://www.beehiiv.com/privacy\" target=\"_blank\" rel=\"noopener\">beehiiv’s privacy policy</a>. You can unsubscribe anytime using the link at the bottom of every issue.</p>
 <h3>Retention and your choices</h3><p>We keep submissions only as long as needed to handle them. To ask us to delete something you sent, use the <a href="contact.html">contact form</a>.</p>
 <h3>Please don’t send patient information</h3><p>These forms aren’t for protected health information or any identifiable patient data.</p></div></section>'''+foot('')
     for p in ['pipeline-orthanc-mercure.html','about.html']:
@@ -177,7 +189,7 @@ def main():
         title,desc=src.split('\n',2)[:2]
         pages[p]=head(title,desc,p,'')+src.split('\n',2)[2]+foot('')
     for p,h in pages.items(): (ROOT/p).write_text(h)
-    urls=['','directory.html','pipeline-orthanc-mercure.html','about.html','suggest.html','contact.html','privacy.html']+[f'tools/{t["slug"]}.html' for t in tools]
+    urls=['','directory.html','pipeline-orthanc-mercure.html','about.html','suggest.html','contact.html','privacy.html','newsletter.html']+[f'tools/{t["slug"]}.html' for t in tools]
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{SITE_URL}/{u}</loc><lastmod>{SNAPSHOT}</lastmod></url>\n' for u in urls)+'</urlset>\n')
     bots=["GPTBot","OAI-SearchBot","ChatGPT-User","ClaudeBot","Claude-User","Claude-SearchBot","anthropic-ai","PerplexityBot","Perplexity-User","Google-Extended","Googlebot","Bingbot","Applebot","Applebot-Extended","CCBot"]
     (ROOT/'robots.txt').write_text("".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots)+f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
