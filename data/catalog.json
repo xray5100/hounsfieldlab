@@ -209,7 +209,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-06",
+   "last_push_utc": "2026-10-14",
    "maintainer": "J. Wasserthal",
    "urls": [
     "https://github.com/wasserth/TotalSegmentator"
@@ -430,7 +430,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-14",
+   "last_push_utc": "2026-10-15",
    "maintainer": "OHIF",
    "urls": [
     "https://github.com/OHIF/Viewers"
@@ -791,6 +791,41 @@
    "maintainer": "OHDSI",
    "urls": [
     "https://github.com/OHDSI/WhiteRabbit"
+   ]
+  },
+  {
+   "name": "ContiLNN",
+   "slug": "contilnn",
+   "group": "Segmentation & frameworks",
+   "category": "Data / preprocessing",
+   "modality_specialty": "Radiology: CT; MRI; PET",
+   "what_it_does": "Adds bidirectional liquid-neural modules along the slice axis to 2D restoration backbones; pretrained checkpoints for CT denoising, MRI super-resolution and low-count PET",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-09",
+   "maintainer": "ContiLNN authors (Kunming UST / collaborators)",
+   "urls": [
+    "https://github.com/Noah-hjl/ContiLNN"
+   ]
+  },
+  {
+   "name": "RadKev",
+   "slug": "radkev",
+   "group": "Foundation models & agents",
+   "category": "Foundation model",
+   "modality_specialty": "Radiology (report and case decision tasks)",
+   "what_it_does": "Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text",
+   "license": "Apache-2.0 (code); CC BY-NC-SA 4.0 (weights)",
+   "license_note": "Code is Apache-2.0. Hugging Face adapters (ramu9703/radkev-27b, radkev-9b) are CC BY-NC-SA 4.0 for non-commercial research; gated access requires accepting those terms. Not a medical device.",
+   "commercial": "Non-commercial",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-07",
+   "maintainer": "U. Wisconsin\u2013Madison (Ram / Zhang)",
+   "urls": [
+    "https://github.com/udiram/RadKev",
+    "https://huggingface.co/ramu9703/radkev-27b"
    ]
   }
  ]

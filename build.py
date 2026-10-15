@@ -43,6 +43,7 @@ LIC = {
  "TIAToolbox": ("BSD-3-Clause","Verify","Code is BSD 3-clause. LICENSE says the model weights are under a different license (see TIAToolbox pretrained-model docs)."),
  "UNI": ("CC BY-NC-ND 4.0","Non-commercial","Repo LICENSE and Hugging Face weights (MahmoodLab/UNI) are CC BY-NC-ND 4.0."),
  "MedGemma": ("Apache-2.0 (code)","Verify","Code is Apache-2.0. Weights on Hugging Face are under the Health AI Developer Foundations terms: https://developers.google.com/health-ai-developer-foundations/terms"),
+ "RadKev": ("Apache-2.0 (code); CC BY-NC-SA 4.0 (weights)","Non-commercial","Code is Apache-2.0. Hugging Face adapters (ramu9703/radkev-27b, radkev-9b) are CC BY-NC-SA 4.0 for non-commercial research; gated access requires accepting those terms. Not a medical device."),
 }
 
 SPDX = {"Apache-2.0","MIT","BSD-3-Clause","GPL-2.0","GPL-3.0","AGPL-3.0","ECL-2.0"}
@@ -50,6 +51,7 @@ def lic_url(l):
     k=l.split(' ')[0]
     if k in SPDX: return f"https://spdx.org/licenses/{k}.html"
     if l.startswith("CC BY-NC-ND 4.0"): return "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+    if "CC BY-NC-SA 4.0" in l: return "https://creativecommons.org/licenses/by-nc-sa/4.0/"
     return None
 
 def jsonld(obj): return '<script type="application/ld+json">'+json.dumps(obj,ensure_ascii=False).replace("</","<\\/")+'</script>'

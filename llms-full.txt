@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 46 tools. Repository data snapshot: 2026-10-13.
+> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 48 tools. Repository data snapshot: 2026-10-13.
 
 Badges: LIC = license (license files reviewed by hand where GitHub could not detect them); UPD = last repository push (UTC); STATUS = Maintained if updated within 12 months of the snapshot, else Stale; COMM = Permissive, Copyleft (GPL/AGPL), Non-commercial, or Verify (custom terms or separate model-weight terms). Not legal or medical advice.
 
@@ -108,6 +108,18 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Links: https://github.com/microsoft/LLaVA-Med
 - Page: https://hounsfieldlab.com/tools/llava-med.html
 
+### RadKev
+- What it does: Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text
+- Type: Foundation model
+- Modality/specialty: Radiology (report and case decision tasks)
+- Maintainer: U. Wisconsin–Madison (Ram / Zhang)
+- License: Apache-2.0 (code); CC BY-NC-SA 4.0 (weights)
+- Commercial use: Non-commercial
+- License note: Code is Apache-2.0. Hugging Face adapters (ramu9703/radkev-27b, radkev-9b) are CC BY-NC-SA 4.0 for non-commercial research; gated access requires accepting those terms. Not a medical device.
+- Last repository update: 2026-10-07 (Maintained)
+- Links: https://github.com/udiram/RadKev, https://huggingface.co/ramu9703/radkev-27b
+- Page: https://hounsfieldlab.com/tools/radkev.html
+
 ## Segmentation & frameworks
 
 ### MONAI
@@ -150,7 +162,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Maintainer: J. Wasserthal
 - License: Apache-2.0
 - Commercial use: Permissive
-- Last repository update: 2026-10-06 (Maintained)
+- Last repository update: 2026-10-14 (Maintained)
 - Links: https://github.com/wasserth/TotalSegmentator
 - Page: https://hounsfieldlab.com/tools/totalsegmentator.html
 
@@ -197,6 +209,17 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last repository update: 2025-10-27 (Maintained)
 - Links: https://github.com/AIM-Harvard/pyradiomics
 - Page: https://hounsfieldlab.com/tools/pyradiomics.html
+
+### ContiLNN
+- What it does: Adds bidirectional liquid-neural modules along the slice axis to 2D restoration backbones; pretrained checkpoints for CT denoising, MRI super-resolution and low-count PET
+- Type: Data / preprocessing
+- Modality/specialty: Radiology: CT; MRI; PET
+- Maintainer: ContiLNN authors (Kunming UST / collaborators)
+- License: Apache-2.0
+- Commercial use: Permissive
+- Last repository update: 2026-10-09 (Maintained)
+- Links: https://github.com/Noah-hjl/ContiLNN
+- Page: https://hounsfieldlab.com/tools/contilnn.html
 
 ## Neuroimaging
 
@@ -300,7 +323,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Maintainer: OHIF
 - License: MIT
 - Commercial use: Permissive
-- Last repository update: 2026-10-14 (Maintained)
+- Last repository update: 2026-10-15 (Maintained)
 - Links: https://github.com/OHIF/Viewers
 - Page: https://hounsfieldlab.com/tools/ohif-viewer.html
 

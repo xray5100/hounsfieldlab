@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 46 tools. Repository data snapshot: 2026-10-13.
+> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 48 tools. Repository data snapshot: 2026-10-13.
 
 Badges: LIC = license (license files reviewed by hand where GitHub could not detect them); UPD = last repository push (UTC); STATUS = Maintained if updated within 12 months of the snapshot, else Stale; COMM = Permissive, Copyleft (GPL/AGPL), Non-commercial, or Verify (custom terms or separate model-weight terms). Not legal or medical advice.
 
@@ -22,6 +22,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [CheXagent](https://hounsfieldlab.com/tools/chexagent.html): Foundation model for chest X-ray interpretation (CC BY-NC-ND 4.0; Stale)
 - [MedRAX](https://hounsfieldlab.com/tools/medrax.html): Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025) (Apache-2.0; Maintained)
 - [LLaVA-Med](https://hounsfieldlab.com/tools/llava-med.html): Biomedical vision-language assistant for image Q&A (Microsoft Research License; Stale)
+- [RadKev](https://hounsfieldlab.com/tools/radkev.html): Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text (Apache-2.0 (code); CC BY-NC-SA 4.0 (weights); Maintained)
 
 ## Segmentation & frameworks
 
@@ -33,6 +34,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [MedSAM2](https://hounsfieldlab.com/tools/medsam2.html): Promptable segmentation of 3D medical images and videos (Apache-2.0; Stale)
 - [TorchIO](https://hounsfieldlab.com/tools/torchio.html): Medical image loading, preprocessing and augmentation for PyTorch (Apache-2.0; Maintained)
 - [PyRadiomics](https://hounsfieldlab.com/tools/pyradiomics.html): Extracts radiomics features from 2D/3D images (BSD-3-Clause; Maintained)
+- [ContiLNN](https://hounsfieldlab.com/tools/contilnn.html): Adds bidirectional liquid-neural modules along the slice axis to 2D restoration backbones; pretrained checkpoints for CT denoising, MRI super-resolution and low-count PET (Apache-2.0; Maintained)
 
 ## Neuroimaging
 
