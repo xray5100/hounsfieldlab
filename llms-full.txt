@@ -1,16 +1,18 @@
 # Hounsfield Lab
 
-> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 48 tools. Repository data snapshot: 2026-10-13.
+> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 48 tools. Repository data snapshot: 2026-10-13. Also a directory of 59 public DICOM and NIfTI imaging datasets.
 
 Badges: LIC = license (license files reviewed by hand where GitHub could not detect them); UPD = last repository push (UTC); STATUS = Maintained if updated within 12 months of the snapshot, else Stale; COMM = Permissive, Copyleft (GPL/AGPL), Non-commercial, or Verify (custom terms or separate model-weight terms). Not legal or medical advice.
 
 ## Pages
 
 - [Directory](https://hounsfieldlab.com/directory.html): filterable list of all tools
+- [DICOM datasets](https://hounsfieldlab.com/datasets.html): public imaging datasets with license, access, and normals
 - [Pipeline guide](https://hounsfieldlab.com/pipeline-orthanc-mercure.html): Orthanc → mercure → TotalSegmentator → OHIF
 - [About](https://hounsfieldlab.com/about.html): curation method
 - [Full catalog for LLMs](https://hounsfieldlab.com/llms-full.txt)
 - [Catalog JSON](https://hounsfieldlab.com/data/catalog.json)
+- [Dataset JSON](https://hounsfieldlab.com/data/datasets.json)
 
 ## Foundation models & agents
 
@@ -569,4 +571,1127 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last repository update: 2026-10-13 (Maintained)
 - Links: https://github.com/OHDSI/WhiteRabbit
 - Page: https://hounsfieldlab.com/tools/ohdsi-whiterabbit.html
+
+## DICOM datasets
+
+### B-mode-and-CEUS-Liver
+- URL: https://www.cancerimagingarchive.net/collection/b-mode-and-ceus-liver/
+- Area: ultrasound
+- Modality: US
+- Pathology: Focal liver lesions on B-mode and contrast-enhanced ultrasound
+- Normals included: no
+- Format: DICOM
+- Size: 120 subjects
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Liver-lesion cohort (the TCIA diagnosis list is liver cancer). It is not a normal-liver screening set. CEUS clips and B-mode stills are different series. Confirm which diagnoses are malignant versus benign in the clinical table.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-b-mode-and-ceus-liver
+
+### BrainMetShare
+- URL: https://stanford.redivis.com/datasets/1emj-bjxt3p6s0
+- Area: neuro
+- Modality: MR
+- Pathology: Brain metastases with radiologist segmentations on a subset
+- Normals included: no
+- Format: Check source
+- Size: 156 MRI studies; about 5.6 GB. Masks for 105 studies.
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. Every case has at least one metastasis. Images are skull-stripped and co-registered, not raw DICOM. Confirm the container format (often processed volumes rather than DICOM) on download. 51 cases are held out without public masks.
+- Citation: Yes. DOI 10.71718/z66c-qr59, as printed on the AIMI BrainMetShare page.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-brainmetshare
+
+### Breast-Cancer-Screening-DBT (BCS-DBT)
+- URL: https://www.cancerimagingarchive.net/collection/breast-cancer-screening-dbt/
+- Area: breast
+- Modality: MG
+- Pathology: Screening digital breast tomosynthesis, with cancer cases and normal/benign exams
+- Normals included: yes
+- Format: DICOM
+- Size: 5,060 subjects
+- License: CC BY-NC 4.0
+- Commercial use allowed: no
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Non-commercial only. Large screening tomosynthesis set, so most exams are not cancer. Boxes and labels are not a substitute for the full radiology report. Files are large.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-breast-cancer-screening-dbt-bcs-dbt
+
+### Burdenko-GBM-Progression
+- URL: https://www.cancerimagingarchive.net/collection/burdenko-gbm-progression/
+- Area: neuro
+- Modality: MR; CT
+- Pathology: Glioblastoma radiotherapy planning and follow-up, with RTSTRUCT/RTDOSE/RTPLAN
+- Normals included: no
+- Format: DICOM
+- Size: 180 subjects; about 131 GB of imaging
+- License: NIH Controlled Data Access Policy (images); CC BY 4.0 (clinical and genomic CSV)
+- Commercial use allowed: check
+- Access: credentialed
+- How to access: The images can reconstruct a face, so they are not an open download. Follow the NIH Controlled Data Access Policy link on the collection page. The clinical and genomic CSV is listed separately under CC BY 4.0.
+- Limitations: Do not assume the whole collection is CC BY. Only the small clinical/genomic table is CC BY 4.0. Imaging requires controlled access. Some MRIs are not in a canonical orientation. Registration between MRI and planning CT is not included; the submitters point to an external alignment container.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy. Imaging access is governed by the NIH policy, not only by CC BY.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-burdenko-gbm-progression
+
+### C4KC-KiTS
+- URL: https://www.cancerimagingarchive.net/collection/c4kc-kits/
+- Area: body
+- Modality: CT
+- Pathology: Kidney tumors (KiTS) with segmentations
+- Normals included: no
+- Format: DICOM
+- Size: 210 subjects
+- License: CC BY 3.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Nephron-sparing and radical nephrectomy cohort from the KiTS challenge lineage, not healthy kidneys. Segmentations are included; confirm the SEG objects on download. Later KiTS challenges are not this exact TCIA release.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-c4kc-kits
+
+### CBIS-DDSM
+- URL: https://www.cancerimagingarchive.net/collection/cbis-ddsm/
+- Area: breast
+- Modality: MG
+- Pathology: Curated mammography masses and calcifications, benign and malignant
+- Normals included: partial
+- Format: DICOM
+- Size: 1,566 subjects
+- License: CC BY 3.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: A curated, decompressed subset of DDSM with updated ROIs, not a modern screening archive and not digital breast tomosynthesis. Includes benign (non-cancer) cases. Pathology labels are not a full clinical report.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-cbis-ddsm
+
+### CheXpert Plus
+- URL: https://stanford.redivis.com/datasets/5yyj-1a9f6ap0x
+- Area: chest
+- Modality: DX; CR
+- Pathology: Chest radiographs with full reports and 14 CheXpert pathology labels, including studies without those findings
+- Normals included: partial
+- Format: DICOM
+- Size: 223,462 radiograph–report pairs; 187,711 studies; 64,725 patients; about 6.8 TB
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. DICOM plus the report text, split into sections. Labels include an uncertain class. This is the plus release (reports and DICOM), not the original CheXpert JPEG label release. A hospital mix, not healthy volunteers.
+- Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-chexpert-plus
+
+### CMMD
+- URL: https://www.cancerimagingarchive.net/collection/cmmd/
+- Area: breast
+- Modality: MG
+- Pathology: Chinese mammography dataset with benign and malignant cases and molecular subtypes
+- Normals included: partial
+- Format: DICOM
+- Size: 1,775 subjects
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Clinical mammograms from China, including benign and malignant disease rather than a pure normal-screening sample. Molecular subtype is not present for every case. Check the clinical table for which labels you can actually use.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-cmmd
+
+### COCA
+- URL: https://stanford.redivis.com/datasets/1vm9-30b7p5srg
+- Area: cardiac; chest
+- Modality: CT
+- Pathology: Coronary artery calcium on gated coronary CT and non-gated chest CT
+- Normals included: partial
+- Format: DICOM
+- Size: About 29 GB on the AIMI listing (gated coronary CT plus non-gated chest CT)
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. Two subsets: gated coronary CT with calcium segmentations and scores, and non-gated chest CT with scores. A calcium score of zero is not a full normal chest CT.
+- Citation: Yes. DOI 10.71718/ge5g-ds80, as printed on the AIMI COCA page.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-coca
+
+### Colorectal-Liver-Metastases
+- URL: https://www.cancerimagingarchive.net/collection/colorectal-liver-metastases/
+- Area: body
+- Modality: CT
+- Pathology: Colorectal liver metastases with segmentations
+- Normals included: no
+- Format: DICOM
+- Size: 197 subjects
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Preoperative CT in patients with colorectal liver metastases. Not a general abdominal CT set and not healthy liver.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-colorectal-liver-metastases
+
+### CPAISD
+- URL: https://zenodo.org/records/10892316
+- Area: neuro
+- Modality: CT
+- Pathology: Hyperacute ischemic stroke on non-contrast head CT, with core and penumbra outlines
+- Normals included: no
+- Format: DICOM
+- Size: 112 non-contrast head CT scans
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the Zenodo record and download the files. No account is required for the public files. The record names Kitware DicomAnonymizer as the de-identification tool.
+- Limitations: Stroke cases only, single-center (City Hospital 40, Saint Petersburg). Core and penumbra contours are on slices where the readers marked them. Not a hemorrhage dataset and not a normal-CT dataset.
+- Citation: Yes. Cite Umerenkov, Kudin, Peksheva, and Pavlov, CPAISD, Zenodo, https://doi.org/10.5281/zenodo.10892316
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-cpaisd
+
+### CQ500
+- URL: https://academictorrents.com/details/47e9d8aab761e75fd0a81982fa62bddf3a173831
+- Area: neuro
+- Modality: CT
+- Pathology: Non-contrast head CT with radiologist reads for critical findings (hemorrhage, fracture, and others)
+- Normals included: partial
+- Format: DICOM
+- Size: 491 studies (Qure.ai release, redistributed on Academic Torrents)
+- License: CC BY-NC-SA 4.0
+- Commercial use allowed: no
+- Access: open
+- How to access: Install a BitTorrent client and open the Academic Torrents page for hash 47e9d8aab761e75fd0a81982fa62bddf3a173831. The original headctstudy.qure.ai host is archived; confirm the license text on the torrent page and the archive of the Qure dataset page.
+- Limitations: Non-commercial and share-alike. Reads are image-level labels, not full narrative reports. The original download site has gone offline, so this torrent is the practical public copy. De-identification was done by the releasing group; do not try to re-identify anyone.
+- Citation: Yes. Cite Chilamkurthy et al., Deep learning algorithms for detection of critical findings in head CT scans, The Lancet 2018, and the CC BY-NC-SA 4.0 license.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-cq500
+
+### CT Colonography
+- URL: https://www.cancerimagingarchive.net/collection/ct-colonography/
+- Area: body
+- Modality: CT
+- Pathology: CT colonography with and without colorectal neoplasia
+- Normals included: partial
+- Format: DICOM
+- Size: 825 subjects
+- License: CC BY 3.0 and CC BY 4.0 (see the file table)
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: The collection mixes CC BY 3.0 and CC BY 4.0 files. Both allow commercial use with attribution, but credit the version you used. Includes non-cancer examinations. Prone/supine series and stool tagging vary.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-ct-colonography
+
+### CT-ICH
+- URL: https://physionet.org/content/ct-ich/
+- Area: neuro
+- Modality: CT
+- Pathology: Traumatic brain injury head CT with hemorrhage masks and slice labels; some scans have no hemorrhage
+- Normals included: partial
+- Format: NIfTI
+- Size: 75 public NIfTI subjects (82 collected; subjects 59–65 are missing from the image folder)
+- License: PhysioNet Restricted Health Data License 1.5.0
+- Commercial use allowed: no
+- Access: credentialed
+- How to access: Create a PhysioNet account and sign the Restricted Health Data Use Agreement 1.5.0 on the project (current version 1.3.1). Research use only. An older 1.2.0 release was CC BY 4.0; do not assume that still applies.
+- Limitations: The current release is not DICOM and is not the old CC BY package. Scans were saved from windowed AVI files into NIfTI, so Hounsfield units are not preserved. Faces were blurred. All subjects had traumatic brain injury; 36 of 82 had hemorrhage. Two radiologists marked hemorrhage type, fracture, and outlines.
+- Citation: Yes. Cite the PhysioNet CT-ICH record (Hssayeni et al.) for the version you download.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-ct-ich
+
+### CT-ORG
+- URL: https://www.cancerimagingarchive.net/collection/ct-org/
+- Area: body
+- Modality: CT
+- Pathology: CT with liver lesions and metastases, labeled for lung, bone, liver, kidney, and bladder
+- Normals included: no
+- Format: NIfTI
+- Size: 140 volumes; 16.9 GB
+- License: CC BY 3.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use. Download uses the Aspera plugin named on the page. Images are NIfTI, not DICOM.
+- Limitations: Organ-segmentation set, not a pediatric set (see Pediatric-CT-SEG for pediatric chest/abdomen/pelvis contours). Many volumes come from LiTS and contain liver lesions. A few volumes are left-right flipped. Training labels for lung and bone were partly automatic.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-ct-org
+
+### Duke-Breast-Cancer-MRI
+- URL: https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/
+- Area: breast
+- Modality: MR
+- Pathology: Invasive breast cancer MRI with segmentations, radiomics, and outcomes
+- Normals included: no
+- Format: DICOM
+- Size: 922 subjects
+- License: CC BY-NC 4.0
+- Commercial use allowed: no
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Non-commercial only. Invasive-cancer cohort, not screening normals. Some genomic fields are sparse. CC BY-NC is not the same as the CC BY used on many other TCIA collections.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-duke-breast-cancer-mri
+
+### EchoNet-Dynamic
+- URL: https://stanford.redivis.com/datasets/66s1-2hsmzj5rn
+- Area: cardiac; ultrasound
+- Modality: US
+- Pathology: Echocardiogram videos with ejection-fraction labels and tracings, across a range of function
+- Normals included: partial
+- Format: video
+- Size: 10,030 labeled videos; about 7 GB on the AIMI listing
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. Video clips (apical four-chamber), not DICOM. Includes reduced and preserved function rather than a healthy-only cohort. EchoNet-LVH and EchoNet-Pediatric are separate Redivis datasets.
+- Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-echonet-dynamic
+
+### FDG-PET-CT-Lesions (autoPET)
+- URL: https://www.cancerimagingarchive.net/collection/fdg-pet-ct-lesions/
+- Area: nuclear medicine
+- Modality: PT; CT
+- Pathology: Whole-body FDG-PET/CT in lymphoma, melanoma, and NSCLC, plus studies with no PET-positive malignancy
+- Normals included: yes
+- Format: DICOM
+- Size: 900 subjects; 1,014 studies. Defaced DICOM about 419 GB. Original images are a separate controlled download.
+- License: CC BY 4.0 (defaced images and clinical CSV); NIH Controlled Data Access Policy (original images)
+- Commercial use allowed: yes
+- Access: open
+- How to access: Download the defaced DICOM and the clinical CSV from the collection page; those rows are CC BY 4.0 and do not need an application. Original images that include the head are under the NIH Controlled Data Access Policy linked on the page. The autoPET challenge site is a separate entry point and may not be this exact file release.
+- Limitations: The openly downloadable images are defaced (head blacked out from the skull base up). If you need the face-containing originals, that is controlled access, not CC BY. Negative controls mean no PET-positive malignant lesion, not healthy volunteers. Manual tumor masks are on the PET-positive studies.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-fdg-pet-ct-lesions-autopet
+
+### INSPECT
+- URL: https://stanford.redivis.com/datasets/2n96-d71hggrbf
+- Area: chest
+- Modality: CT
+- Pathology: Pulmonary embolism cohort with CT, report sections, and structured EHR
+- Normals included: no
+- Format: Check source
+- Size: 19,402 patients; 23,248 CT exams; about 2.1 TB
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. The dataset page describes a PE cohort, report sections, and EHR tables. It does not, in the summary, promise raw DICOM versus NIfTI. Confirm the image format before you build a loader. Not the RSNA-STR PE challenge.
+- Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-inspect
+
+### ISLES'24
+- URL: https://zenodo.org/records/16970401
+- Area: neuro
+- Modality: CT; MR
+- Pathology: Acute ischemic stroke with admission CT/CTA/CTP and follow-up MRI infarct masks
+- Normals included: no
+- Format: NIfTI
+- Size: 149 training cases (BIDS NIfTI)
+- License: CC BY-NC-SA 4.0
+- Commercial use allowed: no
+- Access: open
+- How to access: Open the Zenodo record (DOI 10.5281/zenodo.16970401) and download the archive. No account is required for the public files.
+- Limitations: Non-commercial and share-alike. Training split of the ISLES 2024 challenge, not the hidden test set. Stroke only. NIfTI in BIDS, with clinical variables, not DICOM. Multimodal series are not a single CT.
+- Citation: Yes. Cite Riedel et al., ISLES'24, Zenodo. https://doi.org/10.5281/zenodo.16970401
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-isles-24
+
+### IXI
+- URL: https://brain-development.org/ixi-dataset/
+- Area: neuro
+- Modality: MR
+- Pathology: Normal, healthy adult brain MRI (T1, T2, PD, MRA, diffusion)
+- Normals included: yes
+- Format: NIfTI
+- Size: Nearly 600 subjects; about 27 GB across T1, T2, PD, MRA, and DTI archives
+- License: CC BY-SA 3.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the IXI page and download the NIfTI archives and the demographic spreadsheet. No account. The project text makes the data available under CC BY-SA 3.0 and asks you to acknowledge the IXI website.
+- Limitations: Healthy volunteers only, three London hospitals, NIfTI rather than DICOM. Share-alike: if you redistribute an adaptation of the dataset, that adaptation stays under CC BY-SA 3.0. The license sentence is easy to miss on the short download page; re-read it before a commercial project.
+- Citation: Yes. Acknowledge the IXI dataset, https://brain-development.org/ixi-dataset/ (EPSRC GR/S21533/02).
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-ixi
+
+### LERA
+- URL: https://stanford.redivis.com/datasets/0jyf-46kmqh2vf
+- Area: msk
+- Modality: DX; CR
+- Pathology: Lower-extremity radiographs (foot, knee, ankle, or hip)
+- Normals included: partial
+- Format: Check source
+- Size: 182 patients
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. The Redivis abstract does not state file format or how many studies are normal. Check both on the dataset page before you plan a pipeline.
+- Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-lera
+
+### LIDC-IDRI
+- URL: https://www.cancerimagingarchive.net/collection/lidc-idri/
+- Area: chest
+- Modality: CT; CR; DX
+- Pathology: Lung nodules marked by four readers; includes nodules that were not cancer
+- Normals included: partial
+- Format: DICOM
+- Size: 1,010 subjects
+- License: CC BY 3.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Thoracic CT with nodule marks, plus some chest radiographs. It includes scans without lung cancer, but it is not a healthy-volunteer set. XML annotations are part of the collection. Later DICOM-SEG conversions exist as separate TCIA collections.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-lidc-idri
+
+### Merlin Abdominal CT
+- URL: https://stanford.redivis.com/datasets/exfv-e8h3kvfhs
+- Area: body
+- Modality: CT
+- Pathology: Emergency abdominal and pelvic CT paired with report findings
+- Normals included: partial
+- Format: NIfTI
+- Size: 25,494 scans from 18,317 patients; about 3 TB
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. One series per exam was converted from DICOM to NIfTI, so this is not the full study and not DICOM. Reports are the findings section. Emergency-department mix, not a single disease and not healthy volunteers.
+- Citation: Yes. Blankemeier et al., and the Redivis DOI 10.57761/jgnb-5m88.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-merlin-abdominal-ct
+
+### MIDRC
+- URL: https://data.midrc.org/
+- Area: chest
+- Modality: CT; DX; CR; MR
+- Pathology: Medical imaging, especially chest and COVID-era collections, with clinical data and reports where contributors included them
+- Normals included: partial
+- Format: DICOM
+- Size: Portal; size depends on the collections you select
+- License: University of Chicago data-use agreement (non-commercial research by default; a separate commercial agreement exists)
+- Commercial use allowed: no
+- Access: credentialed
+- How to access: Register at data.midrc.org (InCommon or ORCID, as the login page offers) and accept the data-use agreement. The current text is linked from https://www.midrc.org/midrc-data-use-agreement and from the portal. Download only after the agreement is accepted.
+- Limitations: The default academic agreement is personal, non-commercial research at a non-profit or government institution. It forbids redistributing the data, and it is not a Creative Commons license. A commercial agreement is a different document. Collections can include reports and clinical fields; do not treat every row as images alone. RICORD on TCIA is CC BY-NC and is not this portal.
+- Citation: Yes. Acknowledge MIDRC in presentations and papers, using the wording on https://www.midrc.org/midrc-acknowledgements
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-midrc
+
+### MIDRC-RICORD (1A, 1B, 1C)
+- URL: https://www.cancerimagingarchive.net/collection/midrc-ricord-1a/
+- Area: chest
+- Modality: CT; DX; CR
+- Pathology: COVID-19 chest CT and radiography, with non-COVID controls in 1B and 1C
+- Normals included: partial
+- Format: DICOM
+- Size: 1A: 110 CT subjects. 1B: 117 CT subjects. 1C: 361 chest radiograph subjects.
+- License: CC BY-NC 4.0
+- Commercial use allowed: no
+- Access: open
+- How to access: Start at the 1A page, then download 1B (https://www.cancerimagingarchive.net/collection/midrc-ricord-1b/) and 1C (https://www.cancerimagingarchive.net/collection/midrc-ricord-1c/) the same way. Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Non-commercial only. 1A is COVID-19 chest CT. 1B adds CT controls. 1C is chest radiographs with COVID and non-COVID labels. These TCIA collections are the RICORD challenge sets, not the whole MIDRC portal. Pixel labels are not full reports.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-midrc-ricord-1a-1b-1c
+
+### MIMIC-CXR
+- URL: https://physionet.org/content/mimic-cxr/
+- Area: chest
+- Modality: DX; CR
+- Pathology: Emergency and inpatient chest radiographs with free-text reports, across many findings and no-finding studies
+- Normals included: partial
+- Format: DICOM
+- Size: 377,110 images; 227,835 studies (version 2.1.0)
+- License: PhysioNet Credentialed Health Data License 1.5.0
+- Commercial use allowed: no
+- Access: credentialed
+- How to access: Create a PhysioNet account, complete CITI “Data or Specimens Only Research” training, and sign the Credentialed Health Data Use Agreement 1.5.0. Download the DICOM release (version 2.1.0), not only MIMIC-CXR-JPG, if you need DICOM.
+- Limitations: Credentialed research use only. No sharing, no re-identification, and code from papers that use the data should be shared back. Reports are included and were de-identified (PHI replaced with ___). Images had burned-in text removed. This is a hospital population, so “normal” means no acute finding was described, not a healthy-volunteer study. JPEG derivatives are a different PhysioNet project.
+- Citation: Yes. Johnson et al., MIMIC-CXR Database (version 2.1.0), PhysioNet. https://doi.org/10.13026/4jqj-jw95
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-mimic-cxr
+
+### MRNet
+- URL: https://stanford.redivis.com/datasets/4a2c-4cpkzrn2c
+- Area: msk
+- Modality: MR
+- Pathology: Knee MRI exams labeled for abnormality, ACL tear, and meniscal tear
+- Normals included: partial
+- Format: NumPy
+- Size: 1,370 exams; about 7.7 GB on the AIMI listing
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. The public release is exam volumes as arrays, not a DICOM PACS export. About 19% of exams were read as normal. Labels were taken from reports; the reports themselves are not the dataset.
+- Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-mrnet
+
+### MURA
+- URL: https://stanford.redivis.com/datasets/cv1a-apytk3j44
+- Area: msk
+- Modality: DX; CR
+- Pathology: Musculoskeletal radiographs labeled normal or abnormal (elbow, finger, forearm, hand, humerus, shoulder, wrist)
+- Normals included: yes
+- Format: PNG/JPEG
+- Size: About 3.4 GB on the AIMI Redivis listing
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. Images are radiographs in standard image files, not DICOM. The label is normal versus abnormal, not a specific fracture grade.
+- Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-mura
+
+### NCI Imaging Data Commons
+- URL: https://portal.imaging.datacommons.cancer.gov/collections/
+- Area: neuro; chest; body; breast; nuclear medicine
+- Modality: CT; MR; PT; MG; CR
+- Pathology: Many cancer collections (TCGA, TCIA, CPTAC, NLST, LIDC, and others), harmonized to DICOM
+- Normals included: partial
+- Format: DICOM
+- Size: Portal of public cancer imaging, described by NCI as over 100 TB
+- License: Mostly CC BY; a minority of files are CC-NC (each file is tagged)
+- Commercial use allowed: check
+- Access: open
+- How to access: Browse collections in the portal. No registration. Files are in Google and AWS public buckets. Filter or inspect the license tag on each file before a commercial project.
+- Limitations: This is a portal, not one cohort. More than 95% of files are described as CC BY, which allows commercial reuse with attribution, but a subset is CC-NC. De-identification and face-reconstruction risk still apply to head imaging. Not a substitute for reading the license on the files you actually download.
+- Citation: Yes. Cite IDC and the underlying collection.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-nci-imaging-data-commons
+
+### NLST (TCIA imaging subset)
+- URL: https://www.cancerimagingarchive.net/collection/nlst/
+- Area: chest
+- Modality: CT
+- Pathology: Lung-cancer screening low-dose CT, mostly without cancer, plus cancer cases
+- Normals included: yes
+- Format: DICOM
+- Size: 26,254 subjects; CT package about 11.3 TB
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use. The full NLST clinical dataset is still requested through the Cancer Data Access System (CDAS). TCIA hosts the CT images and a public subset of the clinical data.
+- Limitations: The TCIA copy is the public imaging release and a limited clinical subset, not every NLST variable. Screening CTs are low-dose and include a large majority of examinations without cancer. Histopathology slides are a separate download. Cite NLST as well as TCIA.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy. Also cite the NLST trial when you use the cohort.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-nlst-tcia-imaging-subset
+
+### Open POCUS
+- URL: https://stanford.redivis.com/datasets/9e5t-a8ppjpsfd
+- Area: ultrasound
+- Modality: US
+- Pathology: Lung point-of-care ultrasound, including clips with no abnormality, B-lines, and consolidation
+- Normals included: partial
+- Format: video
+- Size: 226 adults; 1,871 clips (paper). AIMI copy is the Redivis dataset.
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use DOI https://doi.org/10.57761/cqps-7z09 resolves to this record.
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. About half the patients had COVID-19 pneumonia, and about two-thirds of clips were read as having no abnormality. Frames were extracted and resized, so this is not a DICOM ultrasound export. GitHub and Academic Torrents mirrors may not carry the same terms; use the Redivis agreement for the AIMI copy.
+- Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI. The companion paper is Kumar et al., POCUS Journal 2026.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-open-pocus
+
+### OpenNeuro
+- URL: https://openneuro.org/
+- Area: neuro
+- Modality: MR
+- Pathology: Many brain MRI studies, including healthy controls and disease cohorts, in BIDS
+- Normals included: partial
+- Format: NIfTI
+- Size: Repository of public BIDS datasets (size is per dataset)
+- License: Per dataset, usually CC0 after a 36-month grace period (check source)
+- Commercial use allowed: check
+- Access: open
+- How to access: Search OpenNeuro and open a dataset. Public versions download without a data-use agreement. Read that dataset’s license, README, and version DOI. New uploads can sit in a grace period before they are public.
+- Limitations: Almost all current releases are CC0, but the license is per dataset and older uploads varied. These are BIDS NIfTI, not clinical DICOM. Many datasets are small research cohorts. Facial features on structural MRI are supposed to be removed; still do not try to re-identify subjects.
+- Citation: Yes. Cite the version DOI. A HowToAcknowledge field, when present, is the authors’ requested wording. CC0 itself does not legally require attribution.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-openneuro
+
+### Pancreas-CT
+- URL: https://www.cancerimagingarchive.net/collection/pancreas-ct/
+- Area: body
+- Modality: CT
+- Pathology: Healthy / non-cancer abdominal CT with pancreas segmentations
+- Normals included: yes
+- Format: DICOM
+- Size: 82 subjects
+- License: CC BY 3.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Normal pancreas anatomy for segmentation, not a tumor set. Confirm whether the label files you need are DICOM or an accompanying analysis format on the current download.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-pancreas-ct
+
+### Pedi-Cranial-CT-Healthy
+- URL: https://www.cancerimagingarchive.net/collection/pedi-cranial-ct-healthy/
+- Area: neuro
+- Modality: CT
+- Pathology: Healthy pediatric cranial CT (normative)
+- Normals included: yes
+- Format: MHA
+- Size: 100 subjects; 3.2 GB
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use. The image package is MetaImage (MHA), not DICOM, and uses the Aspera download named on the page.
+- Limitations: Explicitly healthy controls, ages about one month to ten years. Not DICOM. No lesion masks. Demographics are in a TSV. Useful as a normal reference, not as a hemorrhage or fracture dataset.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-pedi-cranial-ct-healthy
+
+### Pediatric-CT-SEG
+- URL: https://www.cancerimagingarchive.net/collection/pediatric-ct-seg/
+- Area: body; chest
+- Modality: CT
+- Pathology: Routine pediatric chest-abdomen-pelvis or abdomen-pelvis CT with expert organ contours
+- Normals included: partial
+- Format: DICOM
+- Size: 359 exams; 65.7 GB
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Ages range from 5 days to 16 years. Indications are routine clinical care, so some exams have disease and some do not; labels are organ contours, not diagnoses. Up to 29 structures, but structures outside the scan range are missing. Some series were reformatted to 2 mm and can have edge artifacts. Version 2 corrected skin contours.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-pediatric-ct-seg
+
+### Prostate-MRI-US-Biopsy
+- URL: https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/
+- Area: body; ultrasound
+- Modality: MR; US
+- Pathology: Prostate MRI and ultrasound fusion biopsy, including benign biopsy results
+- Normals included: partial
+- Format: DICOM
+- Size: 1,151 subjects
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Men referred for prostate biopsy, so the set includes cancers and benign histology, not asymptomatic screening normals. Ultrasound is targeted biopsy imaging, not a general ultrasound atlas. STL and segmentation side files may accompany DICOM.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-prostate-mri-us-biopsy
+
+### PSMA-PET-CT-Lesions
+- URL: https://www.cancerimagingarchive.net/collection/psma-pet-ct-lesions/
+- Area: nuclear medicine; body
+- Modality: PT; CT
+- Pathology: PSMA PET/CT in prostate cancer with lesion segmentations
+- Normals included: no
+- Format: DICOM
+- Size: 378 subjects
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Prostate-cancer cohort. Confirm on the clinical table whether any studies have no PSMA-avid lesion before you treat them as negatives. Not FDG-PET-CT-Lesions.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-psma-pet-ct-lesions
+
+### QIN-SARCOMA
+- URL: https://www.cancerimagingarchive.net/collection/qin-sarcoma/
+- Area: body
+- Modality: MR
+- Pathology: Soft-tissue sarcoma DCE-MRI, before and during preoperative chemoradiation
+- Normals included: no
+- Format: DICOM
+- Size: 15 subjects; 10.3 GB
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Formerly limited-access. The collection page says that as of April 2026, after discussion with the PI, it is public under CC BY 4.0. DCE-MRI only, three time points, and not every patient completed all visits. Acknowledge NIH award U01 CA154602 as the page requests. Not the same files as Soft-tissue-Sarcoma.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy. Also acknowledge U01 CA154602.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-qin-sarcoma
+
+### ReMIND (preoperative MRI and intraoperative ultrasound)
+- URL: https://www.cancerimagingarchive.net/collection/remind/
+- Area: neuro; ultrasound
+- Modality: MR; US
+- Pathology: Brain tumors treated with resection, including intraoperative ultrasound
+- Normals included: no
+- Format: DICOM
+- Size: 114 subjects
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: One collection covers preoperative MRI, segmentations, and intraoperative ultrasound (the ReMIND intraop ultrasound set). It is a surgical brain-tumor cohort. Ultrasound is intraoperative, not a screening exam. Pair images with the clinical table using the IDs on the collection page.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-remind-preoperative-mri-and-intraoperative-ultrasound
+
+### RSNA 2022 Cervical Spine Fracture Detection
+- URL: https://www.kaggle.com/competitions/rsna-2022-cervical-spine-fracture-detection
+- Area: msk
+- Modality: CT
+- Pathology: Cervical spine fractures on CT, including studies without fracture
+- Normals included: yes
+- Format: DICOM
+- Size: See the competition Data tab
+- License: Kaggle competition rules (non-commercial)
+- Commercial use allowed: no
+- Access: account
+- How to access: Create a free Kaggle account, open this competition, accept the rules, then download from the Data tab. Do not pass the files to anyone who has not accepted the rules.
+- Limitations: Competition Data may be used only for the competition, academic research, and education. Commercial use and redistribution are prohibited. These competitions use Kaggle’s standard rules template; re-read this competition’s rules page before you rely on it. Post-challenge copies sometimes add a separate citation line. Fracture labels are not a full radiology report.
+- Citation: Yes. Cite the RSNA 2022 cervical spine fracture competition. Check the rules page for the requested wording.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-2022-cervical-spine-fracture-detection
+
+### RSNA 2023 Abdominal Trauma Detection
+- URL: https://www.kaggle.com/competitions/rsna-2023-abdominal-trauma-detection
+- Area: body
+- Modality: CT
+- Pathology: Traumatic abdominal injury on CT, including exams without injury
+- Normals included: yes
+- Format: DICOM
+- Size: See the competition Data tab
+- License: Kaggle competition rules (non-commercial)
+- Commercial use allowed: no
+- Access: account
+- How to access: Create a free Kaggle account, open this competition, accept the rules, then download from the Data tab. Do not pass the files to anyone who has not accepted the rules.
+- Limitations: Competition Data may be used only for the competition, academic research, and education. Commercial use and redistribution are prohibited. These competitions use Kaggle’s standard rules template; re-read this competition’s rules page before you rely on it. Post-challenge copies sometimes add a separate citation line. Organ-injury labels from a trauma cohort. Not a cancer-staging CT set.
+- Citation: Yes. Cite the RSNA 2023 abdominal trauma competition. Check the rules page for the requested wording.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-2023-abdominal-trauma-detection
+
+### RSNA 2024 Lumbar Spine Degenerative Classification
+- URL: https://www.kaggle.com/competitions/rsna-2024-lumbar-spine-degenerative-classification
+- Area: msk
+- Modality: MR
+- Pathology: Lumbar spine degenerative findings on MRI
+- Normals included: partial
+- Format: DICOM
+- Size: See the competition Data tab
+- License: Kaggle competition rules (non-commercial)
+- Commercial use allowed: no
+- Access: account
+- How to access: Create a free Kaggle account, open this competition, accept the rules, then download from the Data tab. Do not pass the files to anyone who has not accepted the rules.
+- Limitations: Competition Data may be used only for the competition, academic research, and education. Commercial use and redistribution are prohibited. These competitions use Kaggle’s standard rules template; re-read this competition’s rules page before you rely on it. Post-challenge copies sometimes add a separate citation line. Cases are graded for degenerative disease. This is not a healthy-volunteer MRI set.
+- Citation: Yes. Cite the RSNA 2024 lumbar spine competition. Check the rules page for the requested wording.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-2024-lumbar-spine-degenerative-classification
+
+### RSNA Intracranial Aneurysm Detection
+- URL: https://www.kaggle.com/competitions/rsna-intracranial-aneurysm-detection
+- Area: neuro
+- Modality: CT
+- Pathology: Intracranial aneurysms on brain CT, including studies without an aneurysm
+- Normals included: yes
+- Format: DICOM
+- Size: Over 4,000 CT angiography studies (RSNA-ICA description)
+- License: Kaggle competition rules (non-commercial)
+- Commercial use allowed: no
+- Access: account
+- How to access: Create a free Kaggle account, open this competition, accept the rules, then download from the Data tab. Do not pass the files to anyone who has not accepted the rules. An AWS Open Data copy is documented at https://registry.opendata.aws/rsna-intracranial-aneurysm-detection-dataset/ and is also non-commercial.
+- Limitations: Kaggle rules: non-commercial, no redistribution to people who have not agreed. The AWS registry text (checked 2026-10-18) allows non-commercial academic and educational use, forbids re-identification, and requires a citation; one version of that text also restricts redistribution. Read the copy you actually download. About 200 studies have AI segmentations. The AWS description calls these CT brain scans.
+- Citation: Yes. Cite the Radiological Society of North America Intracranial Aneurysm Detection (RSNA-ICA) Dataset, July 2025. https://doi.org/10.1148/dataset.ica.2025
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-intracranial-aneurysm-detection
+
+### RSNA Intracranial Hemorrhage Detection
+- URL: https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection
+- Area: neuro
+- Modality: CT
+- Pathology: Acute intracranial hemorrhage subtypes on head CT, including exams without hemorrhage
+- Normals included: yes
+- Format: DICOM
+- Size: Over 25,000 head CT exams (RSNA description of the 2019 challenge)
+- License: Kaggle competition rules (non-commercial)
+- Commercial use allowed: no
+- Access: account
+- How to access: Create a free Kaggle account, open this competition, accept the rules, then download from the Data tab. Do not pass the files to anyone who has not accepted the rules.
+- Limitations: The rules page states non-commercial use only, and forbids redistribution and re-identification. Labels are slice- and exam-level hemorrhage subtypes, not segmentations and not reports. An RSNA terms PDF and the RSNA AI-Challenge-Data description repeat the non-commercial limit and ask for a specific citation if you share results.
+- Citation: Yes. Flanders et al., Construction of a Machine Learning Dataset through Collaboration: The RSNA 2019 Brain CT Hemorrhage Challenge. Radiology: Artificial Intelligence. https://doi.org/10.1148/ryai.2020190211
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-intracranial-hemorrhage-detection
+
+### RSNA Pneumonia Detection Challenge
+- URL: https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge
+- Area: chest
+- Modality: DX; CR
+- Pathology: Lung opacities concerning for pneumonia on chest radiographs, including exams without opacity
+- Normals included: yes
+- Format: DICOM
+- Size: See the competition Data tab (DICOM export derived from NIH chest radiographs)
+- License: Kaggle competition rules (non-commercial)
+- Commercial use allowed: no
+- Access: account
+- How to access: Create a free Kaggle account, open this competition, accept the rules, then download from the Data tab. Do not pass the files to anyone who has not accepted the rules.
+- Limitations: Competition Data may be used only for the competition, academic research, and education. Commercial use and redistribution are prohibited. These competitions use Kaggle’s standard rules template; re-read this competition’s rules page before you rely on it. Post-challenge copies sometimes add a separate citation line. Bounding boxes mark lung opacity, which is not a clinical diagnosis of pneumonia by itself. The underlying NIH chest radiograph release has its own history; use the Kaggle rules for this DICOM copy.
+- Citation: Yes. Cite the RSNA Pneumonia Detection Challenge and the NIH ChestX-ray paper it builds on.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-pneumonia-detection-challenge
+
+### RSNA Screening Mammography Breast Cancer Detection
+- URL: https://www.kaggle.com/competitions/rsna-breast-cancer-detection
+- Area: breast
+- Modality: MG
+- Pathology: Screening mammography with cancer and non-cancer exams
+- Normals included: yes
+- Format: DICOM
+- Size: See the competition Data tab
+- License: Kaggle competition rules (non-commercial)
+- Commercial use allowed: no
+- Access: account
+- How to access: Create a free Kaggle account, open this competition, accept the rules, then download from the Data tab. Do not pass the files to anyone who has not accepted the rules.
+- Limitations: Competition Data may be used only for the competition, academic research, and education. Commercial use and redistribution are prohibited. These competitions use Kaggle’s standard rules template; re-read this competition’s rules page before you rely on it. Post-challenge copies sometimes add a separate citation line. Cancer labels are not a full report and are not tomosynthesis (see BCS-DBT for a CC BY-NC tomosynthesis set).
+- Citation: Yes. Cite the RSNA screening mammography competition. Check the rules page for the requested wording.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-screening-mammography-breast-cancer-detection
+
+### RSNA-MICCAI Brain Tumor Radiogenomic Classification
+- URL: https://www.kaggle.com/competitions/rsna-miccai-brain-tumor-radiogenomic-classification
+- Area: neuro
+- Modality: MR
+- Pathology: Glioma MRI labeled for MGMT promoter methylation
+- Normals included: no
+- Format: DICOM
+- Size: See the competition Data tab (glioma MRI volumes)
+- License: Kaggle competition rules (non-commercial)
+- Commercial use allowed: no
+- Access: account
+- How to access: Create a free Kaggle account, open this competition, accept the rules, then download from the Data tab. Do not pass the files to anyone who has not accepted the rules.
+- Limitations: Competition Data may be used only for the competition, academic research, and education. Commercial use and redistribution are prohibited. These competitions use Kaggle’s standard rules template; re-read this competition’s rules page before you rely on it. Post-challenge copies sometimes add a separate citation line. Glioma patients only. The task is a radiogenomic label, not tumor segmentation.
+- Citation: Yes. Cite the RSNA-MICCAI brain tumor competition and its dataset paper. Check the rules page for the requested wording.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-miccai-brain-tumor-radiogenomic-classification
+
+### RSNA-STR Pulmonary Embolism Detection
+- URL: https://www.kaggle.com/competitions/rsna-str-pulmonary-embolism-detection
+- Area: chest
+- Modality: CT
+- Pathology: Pulmonary embolism on CT pulmonary angiography, including negative studies
+- Normals included: yes
+- Format: DICOM
+- Size: See the competition Data tab
+- License: Kaggle competition rules (non-commercial)
+- Commercial use allowed: no
+- Access: account
+- How to access: Create a free Kaggle account, open this competition, accept the rules, then download from the Data tab. Do not pass the files to anyone who has not accepted the rules.
+- Limitations: Competition Data may be used only for the competition, academic research, and education. Commercial use and redistribution are prohibited. These competitions use Kaggle’s standard rules template; re-read this competition’s rules page before you rely on it. Post-challenge copies sometimes add a separate citation line. Study-level PE labels and some image-quality flags. Not full reports. A different, larger PE cohort with reports is INSPECT, under a Stanford agreement.
+- Citation: Yes. Cite the RSNA-STR PE competition. Check the rules page for the requested wording.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-str-pulmonary-embolism-detection
+
+### SIIM-ACR Pneumothorax Segmentation
+- URL: https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation
+- Area: chest
+- Modality: DX; CR
+- Pathology: Pneumothorax on chest radiographs, with masks, including exams without pneumothorax
+- Normals included: yes
+- Format: DICOM
+- Size: See the competition Data tab
+- License: Kaggle competition rules (non-commercial)
+- Commercial use allowed: no
+- Access: account
+- How to access: Create a free Kaggle account, open this competition, accept the rules, then download from the Data tab. Do not pass the files to anyone who has not accepted the rules.
+- Limitations: A Kaggle DICOM chest-radiograph set with pixel masks. It is a competition download, not a CC0 dump. Competition Data may be used only for the competition, academic research, and education. Commercial use and redistribution are prohibited. These competitions use Kaggle’s standard rules template; re-read this competition’s rules page before you rely on it. Post-challenge copies sometimes add a separate citation line.
+- Citation: Yes. Cite the SIIM-ACR pneumothorax segmentation challenge. Check the rules page for the requested wording.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-siim-acr-pneumothorax-segmentation
+
+### Soft-tissue-Sarcoma
+- URL: https://www.cancerimagingarchive.net/collection/soft-tissue-sarcoma/
+- Area: body; nuclear medicine
+- Modality: MR; CT; PT
+- Pathology: Extremity soft-tissue sarcoma with FDG-PET/CT and MRI
+- Normals included: no
+- Format: DICOM
+- Size: 51 subjects
+- License: CC BY 3.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Small limb-sarcoma cohort. Modalities are not complete for every subject. Different collection from QIN-SARCOMA.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-soft-tissue-sarcoma
+
+### SPADe
+- URL: https://stanford.redivis.com/datasets/ddvj-f3019dwey
+- Area: nuclear medicine
+- Modality: PT; CT
+- Pathology: Whole-body FDG-PET/CT for abnormality detection
+- Normals included: no
+- Format: Check source
+- Size: About 135 GB on the AIMI listing
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. Oncology PET/CT. The listing does not state whether negative scans are included or whether files are DICOM. Check the dataset page. Not the TCIA FDG-PET-CT-Lesions collection.
+- Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-spade
+
+### Spine-Mets-CT-SEG
+- URL: https://www.cancerimagingarchive.net/collection/spine-mets-ct-seg/
+- Area: msk
+- Modality: CT
+- Pathology: Spinal metastases with vertebral and lesion segmentations
+- Normals included: no
+- Format: DICOM
+- Size: 55 CT scans
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Radiotherapy-planning CTs in metastatic spine disease. Multiple primary cancers. Not a fracture or degenerative-spine set, and not healthy spine.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-spine-mets-ct-seg
+
+### Sunnybrook Cardiac Data
+- URL: https://www.cardiacatlas.org/sunnybrook-cardiac-data/
+- Area: cardiac
+- Modality: MR
+- Pathology: Cine cardiac MRI: healthy, hypertrophy, heart failure with infarction, and heart failure without infarction
+- Normals included: partial
+- Format: DICOM
+- Size: 45 cine-MRI cases, in five zip batches (hundreds of MB each)
+- License: CC0 1.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the Cardiac Atlas page and download the DICOM zip batches, contours, and the patient CSV. The page states a public-domain license. IDs were remapped; use the CSV to match 2009 challenge IDs.
+- Limitations: Small challenge set. Pathologies are mixed with healthy cases. Contours are the left ventricle from the 2009 short-axis segmentation challenge. CC0 does not require attribution, but the page asks you to cite Radau et al. if you publish.
+- Citation: Requested, not required by CC0. Radau et al., Evaluation Framework for Algorithms Segmenting Short Axis Cardiac MRI. The MIDAS Journal. http://hdl.handle.net/10380/3070
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-sunnybrook-cardiac-data
+
+### Thyroid Ultrasound Cine-clip
+- URL: https://stanford.redivis.com/datasets/2n5z-4m99zdpyp
+- Area: ultrasound
+- Modality: US
+- Pathology: Biopsy-confirmed thyroid nodules with cine clips, segmentations, and TI-RADS descriptors
+- Normals included: no
+- Format: video
+- Size: 167 patients; 192 nodules; about 36 GB
+- License: Stanford AIMI research use agreement (non-commercial; commercial license sold separately)
+- Commercial use allowed: no
+- Access: account
+- How to access: Sign in on Redivis, open this dataset, and apply for access. Accept the Stanford research-use terms for this dataset (each dataset is a separate request). Non-commercial research is free. Commercial use needs a separate AIMI license: https://aimi.stanford.edu/datasets-commercial-use
+- Limitations: Free access is for non-commercial research under a data-use agreement. Do not redistribute the files or the download link. Do not attempt to re-identify anyone. A paid commercial license is a different contract; check the current fee and terms on the AIMI commercial-use page. Every case has a nodule. Cine clips, not a DICOM still-image teaching file. Histopathology labels are included.
+- Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-thyroid-ultrasound-cine-clip
+
+### UPENN-GBM
+- URL: https://www.cancerimagingarchive.net/collection/upenn-gbm/
+- Area: neuro
+- Modality: MR
+- Pathology: Newly diagnosed glioblastoma, with segmentations and clinical/genomic tables
+- Normals included: no
+- Format: DICOM; NIfTI
+- Size: 630 subjects; about 357 GB (DICOM, NIfTI, and histopathology slides)
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Glioblastoma cohort, not healthy controls. NIfTI volumes are registered to an atlas and do not align with the DICOM by design. Histopathology is NDPI, not radiology. Skull-stripped NIfTI is a different object from the DICOM.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-upenn-gbm
+
+### Vestibular-Schwannoma-MC-RC
+- URL: https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-mc-rc/
+- Area: neuro
+- Modality: MR
+- Pathology: Sporadic vestibular schwannoma, longitudinal MRI from multiple UK sites
+- Normals included: no
+- Format: DICOM
+- Size: 124 subjects
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Disease cohort only. Not every time point has both T1 and T2. This is a different collection from Vestibular-Schwannoma-SEG.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-vestibular-schwannoma-mc-rc
+
+### Vestibular-Schwannoma-SEG
+- URL: https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-seg/
+- Area: neuro
+- Modality: MR
+- Pathology: Vestibular schwannoma treated with Gamma Knife, with contours
+- Normals included: no
+- Format: DICOM
+- Size: 242 subjects
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Single-center radiosurgery cohort (contrast T1 and related RT structures), not a diagnostic screening set and not healthy controls. A separate multi-center set is Vestibular-Schwannoma-MC-RC.
+- Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-vestibular-schwannoma-seg
+
+### VinDr-CXR
+- URL: https://physionet.org/content/vindr-cxr/
+- Area: chest
+- Modality: DX; CR
+- Pathology: Adult chest radiographs with radiologist bounding boxes and image-level diagnoses, including no-finding exams
+- Normals included: yes
+- Format: DICOM
+- Size: 18,000 PA radiographs (15,000 train, 3,000 test)
+- License: PhysioNet Credentialed Health Data License 1.5.0
+- Commercial use allowed: no
+- Access: credentialed
+- How to access: Create a PhysioNet account, complete CITI “Data or Specimens Only Research” training, and sign the Credentialed Health Data Use Agreement 1.5.0. Then download version 1.0.0 from the Files section.
+- Limitations: Credentialed research use. You may not share the files or re-identify anyone. Labels are boxes and global findings from 17 radiologists, not full narrative reports. Training labels are three independent readers; the test set is a five-reader consensus.
+- Citation: Yes. Cite the PhysioNet record and the VinDr-CXR paper named on that page. PhysioNet also asks you to contribute code with publications that use the data.
+- Status: VERIFIED
+- Added: 2026-10-18
+- Last checked: 2026-10-18
+- Page: https://hounsfieldlab.com/datasets.html#ds-vindr-cxr
 

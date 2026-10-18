@@ -23,6 +23,24 @@ function render(){const ql=f.q.trim().toLowerCase();const r=d.map((t,i)=>[t,i]).
 document.getElementById('count').textContent=`${r.length} of ${d.length} tools`;list.innerHTML=r.map(([t,i])=>card(t,i)).join('');document.getElementById('empty').hidden=r.length>0;
 const u=new URLSearchParams();keys.forEach(k=>f[k]&&u.set(k,f[k]));f.q&&u.set('q',f.q);history.replaceState(null,'',u.toString()?'?'+u:location.pathname)}
 render()}
+function initDatasets(){const list=document.getElementById('list');if(!list)return;
+const cards=[...list.querySelectorAll('.dcard')];
+const keys=['area','modality','commercial','access','normals','format'];
+const labels={commercial:{yes:'Commercial use allowed',no:'Non-commercial only',check:'Check source'},access:{open:'Open',account:'Account',credentialed:'Credentialed DUA'},normals:{yes:'Normals included',no:'No normals',partial:'Normals partial'}};
+const order={area:['neuro','chest','body','msk','breast','nuclear medicine','ultrasound','cardiac'],commercial:['yes','no','check'],access:['open','account','credentialed'],normals:['yes','partial','no']};
+const areaLabel={neuro:'Neuro',chest:'Chest',body:'Body',msk:'MSK',breast:'Breast','nuclear medicine':'Nuclear medicine',ultrasound:'Ultrasound',cardiac:'Cardiac'};
+const tokens=(card,k)=>(card.dataset[k]||'').split(';').filter(Boolean);
+const P=new URLSearchParams(location.search),f={q:P.get('q')||''};
+keys.forEach(k=>{const s=document.getElementById(k);const present=new Set(cards.flatMap(c=>tokens(c,k)));
+const vals=(order[k]||[...present].sort()).filter(v=>present.has(v));
+vals.forEach(v=>s.add(new Option((labels[k]&&labels[k][v])||areaLabel[v]||v,v)));
+f[k]=P.get(k)||'';if(!vals.includes(f[k]))f[k]='';s.value=f[k];s.onchange=()=>{f[k]=s.value;render()}});
+const q=document.getElementById('q');q.value=f.q;q.oninput=()=>{f.q=q.value;render()};
+document.getElementById('reset').onclick=()=>{keys.forEach(k=>{f[k]='';document.getElementById(k).value=''});f.q='';q.value='';render()};
+function render(){const ql=f.q.trim().toLowerCase();let n=0;cards.forEach(c=>{const ok=keys.every(k=>!f[k]||tokens(c,k).includes(f[k]))&&(!ql||c.innerText.toLowerCase().includes(ql));c.hidden=!ok;if(ok)n++});
+document.getElementById('count').textContent=`${n} of ${cards.length} datasets`;document.getElementById('empty').hidden=n>0;
+const u=new URLSearchParams();keys.forEach(k=>f[k]&&u.set(k,f[k]));f.q&&u.set('q',f.q);history.replaceState(null,'',u.toString()?'?'+u:location.pathname)}
+render()}
 document.querySelectorAll('form.live-form').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const msg=f.querySelector('.formmsg'),btn=f.querySelector('button[type=submit]');
 if(f.querySelector('[name=_honey]').value){msg.textContent='Thanks!';return}
 btn.disabled=true;msg.textContent='Sending…';

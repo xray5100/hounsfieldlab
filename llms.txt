@@ -1,16 +1,18 @@
 # Hounsfield Lab
 
-> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 48 tools. Repository data snapshot: 2026-10-13.
+> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 48 tools. Repository data snapshot: 2026-10-13. Also a directory of 59 public DICOM and NIfTI imaging datasets.
 
 Badges: LIC = license (license files reviewed by hand where GitHub could not detect them); UPD = last repository push (UTC); STATUS = Maintained if updated within 12 months of the snapshot, else Stale; COMM = Permissive, Copyleft (GPL/AGPL), Non-commercial, or Verify (custom terms or separate model-weight terms). Not legal or medical advice.
 
 ## Pages
 
 - [Directory](https://hounsfieldlab.com/directory.html): filterable list of all tools
+- [DICOM datasets](https://hounsfieldlab.com/datasets.html): public imaging datasets with license, access, and normals
 - [Pipeline guide](https://hounsfieldlab.com/pipeline-orthanc-mercure.html): Orthanc → mercure → TotalSegmentator → OHIF
 - [About](https://hounsfieldlab.com/about.html): curation method
 - [Full catalog for LLMs](https://hounsfieldlab.com/llms-full.txt)
 - [Catalog JSON](https://hounsfieldlab.com/data/catalog.json)
+- [Dataset JSON](https://hounsfieldlab.com/data/datasets.json)
 
 ## Foundation models & agents
 
@@ -83,4 +85,66 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [MIMIC code](https://hounsfieldlab.com/tools/mimic-code.html): Community code for the MIMIC databases (MIT; Maintained)
 - [OHDSI ATLAS](https://hounsfieldlab.com/tools/ohdsi-atlas.html): Web tool for observational analyses on OMOP data (Apache-2.0; Maintained)
 - [OHDSI WhiteRabbit](https://hounsfieldlab.com/tools/ohdsi-whiterabbit.html): Profiles source databases to plan ETL into OMOP (Apache-2.0; Maintained)
+
+## DICOM datasets
+
+- [B-mode-and-CEUS-Liver](https://www.cancerimagingarchive.net/collection/b-mode-and-ceus-liver/): Focal liver lesions on B-mode and contrast-enhanced ultrasound (CC BY 4.0; access open; normals no; DICOM; VERIFIED)
+- [BrainMetShare](https://stanford.redivis.com/datasets/1emj-bjxt3p6s0): Brain metastases with radiologist segmentations on a subset (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals no; Check source; VERIFIED)
+- [Breast-Cancer-Screening-DBT (BCS-DBT)](https://www.cancerimagingarchive.net/collection/breast-cancer-screening-dbt/): Screening digital breast tomosynthesis, with cancer cases and normal/benign exams (CC BY-NC 4.0; access open; normals yes; DICOM; VERIFIED)
+- [Burdenko-GBM-Progression](https://www.cancerimagingarchive.net/collection/burdenko-gbm-progression/): Glioblastoma radiotherapy planning and follow-up, with RTSTRUCT/RTDOSE/RTPLAN (NIH Controlled Data Access Policy (images); CC BY 4.0 (clinical and genomic CSV); access credentialed; normals no; DICOM; VERIFIED)
+- [C4KC-KiTS](https://www.cancerimagingarchive.net/collection/c4kc-kits/): Kidney tumors (KiTS) with segmentations (CC BY 3.0; access open; normals no; DICOM; VERIFIED)
+- [CBIS-DDSM](https://www.cancerimagingarchive.net/collection/cbis-ddsm/): Curated mammography masses and calcifications, benign and malignant (CC BY 3.0; access open; normals partial; DICOM; VERIFIED)
+- [CheXpert Plus](https://stanford.redivis.com/datasets/5yyj-1a9f6ap0x): Chest radiographs with full reports and 14 CheXpert pathology labels, including studies without those findings (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals partial; DICOM; VERIFIED)
+- [CMMD](https://www.cancerimagingarchive.net/collection/cmmd/): Chinese mammography dataset with benign and malignant cases and molecular subtypes (CC BY 4.0; access open; normals partial; DICOM; VERIFIED)
+- [COCA](https://stanford.redivis.com/datasets/1vm9-30b7p5srg): Coronary artery calcium on gated coronary CT and non-gated chest CT (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals partial; DICOM; VERIFIED)
+- [Colorectal-Liver-Metastases](https://www.cancerimagingarchive.net/collection/colorectal-liver-metastases/): Colorectal liver metastases with segmentations (CC BY 4.0; access open; normals no; DICOM; VERIFIED)
+- [CPAISD](https://zenodo.org/records/10892316): Hyperacute ischemic stroke on non-contrast head CT, with core and penumbra outlines (CC BY 4.0; access open; normals no; DICOM; VERIFIED)
+- [CQ500](https://academictorrents.com/details/47e9d8aab761e75fd0a81982fa62bddf3a173831): Non-contrast head CT with radiologist reads for critical findings (hemorrhage, fracture, and others) (CC BY-NC-SA 4.0; access open; normals partial; DICOM; VERIFIED)
+- [CT Colonography](https://www.cancerimagingarchive.net/collection/ct-colonography/): CT colonography with and without colorectal neoplasia (CC BY 3.0 and CC BY 4.0 (see the file table); access open; normals partial; DICOM; VERIFIED)
+- [CT-ICH](https://physionet.org/content/ct-ich/): Traumatic brain injury head CT with hemorrhage masks and slice labels; some scans have no hemorrhage (PhysioNet Restricted Health Data License 1.5.0; access credentialed; normals partial; NIfTI; VERIFIED)
+- [CT-ORG](https://www.cancerimagingarchive.net/collection/ct-org/): CT with liver lesions and metastases, labeled for lung, bone, liver, kidney, and bladder (CC BY 3.0; access open; normals no; NIfTI; VERIFIED)
+- [Duke-Breast-Cancer-MRI](https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/): Invasive breast cancer MRI with segmentations, radiomics, and outcomes (CC BY-NC 4.0; access open; normals no; DICOM; VERIFIED)
+- [EchoNet-Dynamic](https://stanford.redivis.com/datasets/66s1-2hsmzj5rn): Echocardiogram videos with ejection-fraction labels and tracings, across a range of function (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals partial; video; VERIFIED)
+- [FDG-PET-CT-Lesions (autoPET)](https://www.cancerimagingarchive.net/collection/fdg-pet-ct-lesions/): Whole-body FDG-PET/CT in lymphoma, melanoma, and NSCLC, plus studies with no PET-positive malignancy (CC BY 4.0 (defaced images and clinical CSV); NIH Controlled Data Access Policy (original images); access open; normals yes; DICOM; VERIFIED)
+- [INSPECT](https://stanford.redivis.com/datasets/2n96-d71hggrbf): Pulmonary embolism cohort with CT, report sections, and structured EHR (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals no; Check source; VERIFIED)
+- [ISLES'24](https://zenodo.org/records/16970401): Acute ischemic stroke with admission CT/CTA/CTP and follow-up MRI infarct masks (CC BY-NC-SA 4.0; access open; normals no; NIfTI; VERIFIED)
+- [IXI](https://brain-development.org/ixi-dataset/): Normal, healthy adult brain MRI (T1, T2, PD, MRA, diffusion) (CC BY-SA 3.0; access open; normals yes; NIfTI; VERIFIED)
+- [LERA](https://stanford.redivis.com/datasets/0jyf-46kmqh2vf): Lower-extremity radiographs (foot, knee, ankle, or hip) (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals partial; Check source; VERIFIED)
+- [LIDC-IDRI](https://www.cancerimagingarchive.net/collection/lidc-idri/): Lung nodules marked by four readers; includes nodules that were not cancer (CC BY 3.0; access open; normals partial; DICOM; VERIFIED)
+- [Merlin Abdominal CT](https://stanford.redivis.com/datasets/exfv-e8h3kvfhs): Emergency abdominal and pelvic CT paired with report findings (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals partial; NIfTI; VERIFIED)
+- [MIDRC](https://data.midrc.org/): Medical imaging, especially chest and COVID-era collections, with clinical data and reports where contributors included them (University of Chicago data-use agreement (non-commercial research by default; a separate commercial agreement exists); access credentialed; normals partial; DICOM; VERIFIED)
+- [MIDRC-RICORD (1A, 1B, 1C)](https://www.cancerimagingarchive.net/collection/midrc-ricord-1a/): COVID-19 chest CT and radiography, with non-COVID controls in 1B and 1C (CC BY-NC 4.0; access open; normals partial; DICOM; VERIFIED)
+- [MIMIC-CXR](https://physionet.org/content/mimic-cxr/): Emergency and inpatient chest radiographs with free-text reports, across many findings and no-finding studies (PhysioNet Credentialed Health Data License 1.5.0; access credentialed; normals partial; DICOM; VERIFIED)
+- [MRNet](https://stanford.redivis.com/datasets/4a2c-4cpkzrn2c): Knee MRI exams labeled for abnormality, ACL tear, and meniscal tear (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals partial; NumPy; VERIFIED)
+- [MURA](https://stanford.redivis.com/datasets/cv1a-apytk3j44): Musculoskeletal radiographs labeled normal or abnormal (elbow, finger, forearm, hand, humerus, shoulder, wrist) (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals yes; PNG/JPEG; VERIFIED)
+- [NCI Imaging Data Commons](https://portal.imaging.datacommons.cancer.gov/collections/): Many cancer collections (TCGA, TCIA, CPTAC, NLST, LIDC, and others), harmonized to DICOM (Mostly CC BY; a minority of files are CC-NC (each file is tagged); access open; normals partial; DICOM; VERIFIED)
+- [NLST (TCIA imaging subset)](https://www.cancerimagingarchive.net/collection/nlst/): Lung-cancer screening low-dose CT, mostly without cancer, plus cancer cases (CC BY 4.0; access open; normals yes; DICOM; VERIFIED)
+- [Open POCUS](https://stanford.redivis.com/datasets/9e5t-a8ppjpsfd): Lung point-of-care ultrasound, including clips with no abnormality, B-lines, and consolidation (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals partial; video; VERIFIED)
+- [OpenNeuro](https://openneuro.org/): Many brain MRI studies, including healthy controls and disease cohorts, in BIDS (Per dataset, usually CC0 after a 36-month grace period (check source); access open; normals partial; NIfTI; VERIFIED)
+- [Pancreas-CT](https://www.cancerimagingarchive.net/collection/pancreas-ct/): Healthy / non-cancer abdominal CT with pancreas segmentations (CC BY 3.0; access open; normals yes; DICOM; VERIFIED)
+- [Pedi-Cranial-CT-Healthy](https://www.cancerimagingarchive.net/collection/pedi-cranial-ct-healthy/): Healthy pediatric cranial CT (normative) (CC BY 4.0; access open; normals yes; MHA; VERIFIED)
+- [Pediatric-CT-SEG](https://www.cancerimagingarchive.net/collection/pediatric-ct-seg/): Routine pediatric chest-abdomen-pelvis or abdomen-pelvis CT with expert organ contours (CC BY 4.0; access open; normals partial; DICOM; VERIFIED)
+- [Prostate-MRI-US-Biopsy](https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/): Prostate MRI and ultrasound fusion biopsy, including benign biopsy results (CC BY 4.0; access open; normals partial; DICOM; VERIFIED)
+- [PSMA-PET-CT-Lesions](https://www.cancerimagingarchive.net/collection/psma-pet-ct-lesions/): PSMA PET/CT in prostate cancer with lesion segmentations (CC BY 4.0; access open; normals no; DICOM; VERIFIED)
+- [QIN-SARCOMA](https://www.cancerimagingarchive.net/collection/qin-sarcoma/): Soft-tissue sarcoma DCE-MRI, before and during preoperative chemoradiation (CC BY 4.0; access open; normals no; DICOM; VERIFIED)
+- [ReMIND (preoperative MRI and intraoperative ultrasound)](https://www.cancerimagingarchive.net/collection/remind/): Brain tumors treated with resection, including intraoperative ultrasound (CC BY 4.0; access open; normals no; DICOM; VERIFIED)
+- [RSNA 2022 Cervical Spine Fracture Detection](https://www.kaggle.com/competitions/rsna-2022-cervical-spine-fracture-detection): Cervical spine fractures on CT, including studies without fracture (Kaggle competition rules (non-commercial); access account; normals yes; DICOM; VERIFIED)
+- [RSNA 2023 Abdominal Trauma Detection](https://www.kaggle.com/competitions/rsna-2023-abdominal-trauma-detection): Traumatic abdominal injury on CT, including exams without injury (Kaggle competition rules (non-commercial); access account; normals yes; DICOM; VERIFIED)
+- [RSNA 2024 Lumbar Spine Degenerative Classification](https://www.kaggle.com/competitions/rsna-2024-lumbar-spine-degenerative-classification): Lumbar spine degenerative findings on MRI (Kaggle competition rules (non-commercial); access account; normals partial; DICOM; VERIFIED)
+- [RSNA Intracranial Aneurysm Detection](https://www.kaggle.com/competitions/rsna-intracranial-aneurysm-detection): Intracranial aneurysms on brain CT, including studies without an aneurysm (Kaggle competition rules (non-commercial); access account; normals yes; DICOM; VERIFIED)
+- [RSNA Intracranial Hemorrhage Detection](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection): Acute intracranial hemorrhage subtypes on head CT, including exams without hemorrhage (Kaggle competition rules (non-commercial); access account; normals yes; DICOM; VERIFIED)
+- [RSNA Pneumonia Detection Challenge](https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge): Lung opacities concerning for pneumonia on chest radiographs, including exams without opacity (Kaggle competition rules (non-commercial); access account; normals yes; DICOM; VERIFIED)
+- [RSNA Screening Mammography Breast Cancer Detection](https://www.kaggle.com/competitions/rsna-breast-cancer-detection): Screening mammography with cancer and non-cancer exams (Kaggle competition rules (non-commercial); access account; normals yes; DICOM; VERIFIED)
+- [RSNA-MICCAI Brain Tumor Radiogenomic Classification](https://www.kaggle.com/competitions/rsna-miccai-brain-tumor-radiogenomic-classification): Glioma MRI labeled for MGMT promoter methylation (Kaggle competition rules (non-commercial); access account; normals no; DICOM; VERIFIED)
+- [RSNA-STR Pulmonary Embolism Detection](https://www.kaggle.com/competitions/rsna-str-pulmonary-embolism-detection): Pulmonary embolism on CT pulmonary angiography, including negative studies (Kaggle competition rules (non-commercial); access account; normals yes; DICOM; VERIFIED)
+- [SIIM-ACR Pneumothorax Segmentation](https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation): Pneumothorax on chest radiographs, with masks, including exams without pneumothorax (Kaggle competition rules (non-commercial); access account; normals yes; DICOM; VERIFIED)
+- [Soft-tissue-Sarcoma](https://www.cancerimagingarchive.net/collection/soft-tissue-sarcoma/): Extremity soft-tissue sarcoma with FDG-PET/CT and MRI (CC BY 3.0; access open; normals no; DICOM; VERIFIED)
+- [SPADe](https://stanford.redivis.com/datasets/ddvj-f3019dwey): Whole-body FDG-PET/CT for abnormality detection (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals no; Check source; VERIFIED)
+- [Spine-Mets-CT-SEG](https://www.cancerimagingarchive.net/collection/spine-mets-ct-seg/): Spinal metastases with vertebral and lesion segmentations (CC BY 4.0; access open; normals no; DICOM; VERIFIED)
+- [Sunnybrook Cardiac Data](https://www.cardiacatlas.org/sunnybrook-cardiac-data/): Cine cardiac MRI: healthy, hypertrophy, heart failure with infarction, and heart failure without infarction (CC0 1.0; access open; normals partial; DICOM; VERIFIED)
+- [Thyroid Ultrasound Cine-clip](https://stanford.redivis.com/datasets/2n5z-4m99zdpyp): Biopsy-confirmed thyroid nodules with cine clips, segmentations, and TI-RADS descriptors (Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals no; video; VERIFIED)
+- [UPENN-GBM](https://www.cancerimagingarchive.net/collection/upenn-gbm/): Newly diagnosed glioblastoma, with segmentations and clinical/genomic tables (CC BY 4.0; access open; normals no; DICOM; NIfTI; VERIFIED)
+- [Vestibular-Schwannoma-MC-RC](https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-mc-rc/): Sporadic vestibular schwannoma, longitudinal MRI from multiple UK sites (CC BY 4.0; access open; normals no; DICOM; VERIFIED)
+- [Vestibular-Schwannoma-SEG](https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-seg/): Vestibular schwannoma treated with Gamma Knife, with contours (CC BY 4.0; access open; normals no; DICOM; VERIFIED)
+- [VinDr-CXR](https://physionet.org/content/vindr-cxr/): Adult chest radiographs with radiologist bounding boxes and image-level diagnoses, including no-finding exams (PhysioNet Credentialed Health Data License 1.5.0; access credentialed; normals yes; DICOM; VERIFIED)
 
