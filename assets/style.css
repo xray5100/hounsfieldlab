@@ -58,3 +58,6 @@ a.tile{display:block;text-decoration:none;color:var(--ink)}a.tile .n{font:13px u
 .stack label.check{display:flex;gap:10px;align-items:flex-start;color:var(--ink)}
 .stack label.check input{width:auto;margin-top:4px}
 .recent li{margin:6px 0}
+.skip{position:absolute;left:-9999px;top:0;z-index:20;background:var(--blue);color:#fff;padding:10px 14px;border-radius:0 0 8px 0;font-weight:600}.skip:focus{left:0}
+.nav nav a[aria-current=page],.nav nav a.here{color:var(--blue);font-weight:600}
+.dcard .dlinks{margin-top:10px;font-size:14px;font-weight:600}.updated{margin:-6px 0 14px}

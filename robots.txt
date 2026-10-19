@@ -43,6 +43,21 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 User-agent: *
 Allow: /
 

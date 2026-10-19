@@ -1,584 +1,704 @@
 # Hounsfield Lab
 
-> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 48 tools. Repository data snapshot: 2026-10-13. Also a directory of 59 public DICOM and NIfTI imaging datasets.
+> Hounsfield Lab is a directory of 48 open-source medical AI software tools and 59 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-13; dataset list last updated 2026-10-18.
 
-Badges: LIC = license (license files reviewed by hand where GitHub could not detect them); UPD = last repository push (UTC); STATUS = Maintained if updated within 12 months of the snapshot, else Stale; COMM = Permissive, Copyleft (GPL/AGPL), Non-commercial, or Verify (custom terms or separate model-weight terms). Not legal or medical advice.
+Key facts:
+- Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
+- Dataset entries record area, modality, format, size, license, commercial use, access route, whether normals are included, limitations, citation, and the date the source page was last checked.
+- Hounsfield Lab links to original sources and does not host code, weights or images.
+- Reader-suggested datasets are marked UNVERIFIED until the source page is reviewed.
+- Listings are research and development references, not medical, legal or regulatory advice.
+
+Badges: LIC = license (license files reviewed by hand where GitHub could not detect them); UPD = last repository push (UTC); STATUS = Maintained if updated within 12 months of the snapshot, else Stale; COMM = Permissive, Copyleft (GPL/AGPL), Non-commercial, or Verify (custom terms or separate model-weight terms).
 
 ## Pages
 
-- [Directory](https://hounsfieldlab.com/directory.html): filterable list of all tools
-- [DICOM datasets](https://hounsfieldlab.com/datasets.html): public imaging datasets with license, access, and normals
+- [Tool directory](https://hounsfieldlab.com/directory.html): filterable list of all tools
+- [DICOM datasets](https://hounsfieldlab.com/datasets.html): public imaging datasets with license, access and normals; each has its own page under /datasets/
 - [Pipeline guide](https://hounsfieldlab.com/pipeline-orthanc-mercure.html): Orthanc → mercure → TotalSegmentator → OHIF
 - [About](https://hounsfieldlab.com/about.html): curation method
 - [Full catalog for LLMs](https://hounsfieldlab.com/llms-full.txt)
-- [Catalog JSON](https://hounsfieldlab.com/data/catalog.json)
+- [Tool catalog JSON](https://hounsfieldlab.com/data/catalog.json)
 - [Dataset JSON](https://hounsfieldlab.com/data/datasets.json)
 
-## Foundation models & agents
+## Tools: Foundation models & agents
 
 ### Pillar-0 (finetune code + HF weights)
-- What it does: Open 3D radiology foundation model; finetuning framework, weights on Hugging Face
+- What it is: Open 3D radiology foundation model; finetuning framework, weights on Hugging Face
 - Type: Foundation model
 - Modality/specialty: Radiology: CT (chest, abd-pelvis, head), breast MRI
 - Maintainer: YalaLab
 - License: ECL-2.0
 - Commercial use: Permissive
 - License note: Repo LICENSE is Educational Community License 2.0 (Apache 2.0 with a narrowed patent grant). Hugging Face weights (Pillar0-ChestCT, -AbdomenCT, -HeadCT, -BreastMRI) are tagged ecl-2.0.
+- Access: free public source repository
 - Last repository update: 2026-10-12 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/YalaLab/pillar-finetune, https://huggingface.co/collections/YalaLab/pillar-0
 - Page: https://hounsfieldlab.com/tools/pillar-0.html
+- Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, Duke-Breast-Cancer-MRI, LIDC-IDRI
 
 ### Pillar-0 pretraining
-- What it does: Vision-language pretraining code for Pillar-0
+- What it is: Vision-language pretraining code for Pillar-0
 - Type: Foundation model
 - Modality/specialty: Radiology CT/MRI
 - Maintainer: YalaLab
 - License: ECL-2.0
 - Commercial use: Permissive
 - License note: Repo LICENSE is Educational Community License 2.0.
+- Access: free public source repository
 - Last repository update: 2026-01-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/YalaLab/pillar-pretrain
 - Page: https://hounsfieldlab.com/tools/pillar-0-pretraining.html
 
 ### RATE
-- What it does: Uses an LLM (Qwen3 via sglang) to extract structured labels for 366 findings from radiology reports
+- What it is: Uses an LLM (Qwen3 via sglang) to extract structured labels for 366 findings from radiology reports
 - Type: Evaluation / report labeling
 - Modality/specialty: Radiology reports
 - Maintainer: YalaLab
 - License: ECL-2.0
 - Commercial use: Permissive
 - License note: Repo LICENSE is Educational Community License 2.0.
+- Access: free public source repository
 - Last repository update: 2026-05-20 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/YalaLab/rate
 - Page: https://hounsfieldlab.com/tools/rate.html
 
 ### Merlin
-- What it does: 3D vision-language model for CT that uses structured EHR and report supervision
+- What it is: 3D vision-language model for CT that uses structured EHR and report supervision
 - Type: Foundation model
 - Modality/specialty: Radiology: CT
 - Maintainer: Stanford MIMI
 - License: MIT
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-09-24 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/StanfordMIMI/Merlin
 - Page: https://hounsfieldlab.com/tools/merlin.html
+- Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, Pancreas-CT, Pediatric-CT-SEG
 
 ### MedGemma
-- What it does: Google's open medical model family; repo has notebooks and code
+- What it is: Google's open medical model family; repo has notebooks and code
 - Type: Foundation model
 - Modality/specialty: Multimodal medical (imaging + text)
 - Maintainer: Google Health
 - License: Apache-2.0 (code)
 - Commercial use: Verify
 - License note: Code is Apache-2.0. Weights on Hugging Face are under the Health AI Developer Foundations terms: https://developers.google.com/health-ai-developer-foundations/terms
+- Access: free public source repository
 - Last repository update: 2026-06-19 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/Google-Health/medgemma
 - Page: https://hounsfieldlab.com/tools/medgemma.html
 
 ### CheXagent
-- What it does: Foundation model for chest X-ray interpretation
+- What it is: Foundation model for chest X-ray interpretation
 - Type: Foundation model
 - Modality/specialty: Radiology: chest X-ray
 - Maintainer: Stanford AIMI
 - License: CC BY-NC-ND 4.0
 - Commercial use: Non-commercial
 - License note: Repo LICENSE is Creative Commons Attribution-NonCommercial-NoDerivatives 4.0.
+- Access: free public source repository
 - Last repository update: 2025-01-07 (Stale)
+- Last checked: 2026-10-13
 - Links: https://github.com/Stanford-AIMI/CheXagent
 - Page: https://hounsfieldlab.com/tools/chexagent.html
+- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NCI Imaging Data Commons, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
 
 ### MedRAX
-- What it does: Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025)
+- What it is: Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025)
 - Type: Agent
 - Modality/specialty: Radiology: chest X-ray
 - Maintainer: Bo Wang Lab
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2025-10-31 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/bowang-lab/MedRAX
 - Page: https://hounsfieldlab.com/tools/medrax.html
+- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NCI Imaging Data Commons, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
 
 ### LLaVA-Med
-- What it does: Biomedical vision-language assistant for image Q&A
+- What it is: Biomedical vision-language assistant for image Q&A
 - Type: Vision-language model
 - Modality/specialty: Biomedical multimodal
 - Maintainer: Microsoft
 - License: Microsoft Research License
 - Commercial use: Verify
 - License note: Repo LICENSE is the Microsoft Research License Terms, covering code, models and data. Read the terms before any use beyond research.
+- Access: free public source repository
 - Last repository update: 2025-06-04 (Stale)
+- Last checked: 2026-10-13
 - Links: https://github.com/microsoft/LLaVA-Med
 - Page: https://hounsfieldlab.com/tools/llava-med.html
 
 ### RadKev
-- What it does: Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text
+- What it is: Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text
 - Type: Foundation model
 - Modality/specialty: Radiology (report and case decision tasks)
 - Maintainer: U. Wisconsin–Madison (Ram / Zhang)
 - License: Apache-2.0 (code); CC BY-NC-SA 4.0 (weights)
 - Commercial use: Non-commercial
 - License note: Code is Apache-2.0. Hugging Face adapters (ramu9703/radkev-27b, radkev-9b) are CC BY-NC-SA 4.0 for non-commercial research; gated access requires accepting those terms. Not a medical device.
+- Access: free public source repository
 - Last repository update: 2026-10-07 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/udiram/RadKev, https://huggingface.co/ramu9703/radkev-27b
 - Page: https://hounsfieldlab.com/tools/radkev.html
 
-## Segmentation & frameworks
+## Tools: Segmentation & frameworks
 
 ### MONAI
-- What it does: PyTorch-based AI toolkit for healthcare imaging
+- What it is: PyTorch-based AI toolkit for healthcare imaging
 - Type: Framework
 - Modality/specialty: Medical imaging (all)
 - Maintainer: Project MONAI (NVIDIA + academic)
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/Project-MONAI/MONAI
 - Page: https://hounsfieldlab.com/tools/monai.html
+- Related datasets: B-mode-and-CEUS-Liver, Prostate-MRI-US-Biopsy, ReMIND (preoperative MRI and intraoperative ultrasound), Sunnybrook Cardiac Data, COCA, EchoNet-Dynamic
 
 ### MONAI Label
-- What it does: AI-assisted image labeling and active learning; integrates with 3D Slicer and OHIF
+- What it is: AI-assisted image labeling and active learning; integrates with 3D Slicer and OHIF
 - Type: Annotation
 - Modality/specialty: Medical imaging
 - Maintainer: Project MONAI
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-12 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/Project-MONAI/MONAILabel
 - Page: https://hounsfieldlab.com/tools/monai-label.html
+- Related datasets: B-mode-and-CEUS-Liver, Prostate-MRI-US-Biopsy, ReMIND (preoperative MRI and intraoperative ultrasound), EchoNet-Dynamic, Open POCUS, Thyroid Ultrasound Cine-clip
 
 ### nnU-Net
-- What it does: Self-configuring segmentation framework
+- What it is: Self-configuring segmentation framework
 - Type: Segmentation
 - Modality/specialty: Medical imaging (all)
 - Maintainer: DKFZ (MIC)
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/MIC-DKFZ/nnUNet
 - Page: https://hounsfieldlab.com/tools/nnu-net.html
+- Related datasets: Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases, CT Colonography
 
 ### TotalSegmentator
-- What it does: Segments more than 100 anatomical structures in CT and MR
+- What it is: Segments more than 100 anatomical structures in CT and MR
 - Type: Segmentation
 - Modality/specialty: Radiology: CT/MR
 - Maintainer: J. Wasserthal
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-14 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/wasserth/TotalSegmentator
 - Page: https://hounsfieldlab.com/tools/totalsegmentator.html
+- Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, FDG-PET-CT-Lesions (autoPET), LIDC-IDRI
 
 ### MedSAM
-- What it does: Segment Anything adapted for medical images
+- What it is: Segment Anything adapted for medical images
 - Type: Segmentation
 - Modality/specialty: Medical imaging (2D)
 - Maintainer: Bo Wang Lab
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2025-05-07 (Stale)
+- Last checked: 2026-10-13
 - Links: https://github.com/bowang-lab/MedSAM
 - Page: https://hounsfieldlab.com/tools/medsam.html
 
 ### MedSAM2
-- What it does: Promptable segmentation of 3D medical images and videos
+- What it is: Promptable segmentation of 3D medical images and videos
 - Type: Segmentation
 - Modality/specialty: 3D imaging and video
 - Maintainer: Bo Wang Lab
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2025-07-11 (Stale)
+- Last checked: 2026-10-13
 - Links: https://github.com/bowang-lab/MedSAM2
 - Page: https://hounsfieldlab.com/tools/medsam2.html
 
 ### TorchIO
-- What it does: Medical image loading, preprocessing and augmentation for PyTorch
+- What it is: Medical image loading, preprocessing and augmentation for PyTorch
 - Type: Data / preprocessing
 - Modality/specialty: Medical imaging (3D)
 - Maintainer: TorchIO project
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-06 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/TorchIO-project/torchio
 - Page: https://hounsfieldlab.com/tools/torchio.html
+- Related datasets: CT-ORG, ISLES'24, IXI, OpenNeuro, UPENN-GBM, Merlin Abdominal CT
 
 ### PyRadiomics
-- What it does: Extracts radiomics features from 2D/3D images
+- What it is: Extracts radiomics features from 2D/3D images
 - Type: Radiomics
 - Modality/specialty: Radiology
 - Maintainer: AIM-Harvard
 - License: BSD-3-Clause
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2025-10-27 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/AIM-Harvard/pyradiomics
 - Page: https://hounsfieldlab.com/tools/pyradiomics.html
 
 ### ContiLNN
-- What it does: Adds bidirectional liquid-neural modules along the slice axis to 2D restoration backbones; pretrained checkpoints for CT denoising, MRI super-resolution and low-count PET
+- What it is: Adds bidirectional liquid-neural modules along the slice axis to 2D restoration backbones; pretrained checkpoints for CT denoising, MRI super-resolution and low-count PET
 - Type: Data / preprocessing
 - Modality/specialty: Radiology: CT; MRI; PET
 - Maintainer: ContiLNN authors (Kunming UST / collaborators)
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-09 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/Noah-hjl/ContiLNN
 - Page: https://hounsfieldlab.com/tools/contilnn.html
 
-## Neuroimaging
+## Tools: Neuroimaging
 
 ### HD-BET
-- What it does: Deep-learning brain extraction (skull stripping) for MRI
+- What it is: Deep-learning brain extraction (skull stripping) for MRI
 - Type: Neuro preprocessing
 - Modality/specialty: Neuroradiology: brain MRI
 - Maintainer: DKFZ (MIC)
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2024-12-18 (Stale)
+- Last checked: 2026-10-13
 - Links: https://github.com/MIC-DKFZ/HD-BET
 - Page: https://hounsfieldlab.com/tools/hd-bet.html
+- Related datasets: ISLES'24, IXI, NCI Imaging Data Commons, OpenNeuro, ReMIND (preoperative MRI and intraoperative ultrasound), UPENN-GBM
 
 ### BrainChop
-- What it does: In-browser 3D MRI rendering and segmentation
+- What it is: In-browser 3D MRI rendering and segmentation
 - Type: Segmentation
 - Modality/specialty: Neuroradiology: brain MRI
 - Maintainer: neuroneural
 - License: MIT
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-02-24 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/neuroneural/brainchop
 - Page: https://hounsfieldlab.com/tools/brainchop.html
+- Related datasets: ISLES'24, IXI, NCI Imaging Data Commons, OpenNeuro, ReMIND (preoperative MRI and intraoperative ultrasound), UPENN-GBM
 
 ### FreeSurfer
-- What it does: Neuroimaging analysis and visualization suite
+- What it is: Neuroimaging analysis and visualization suite
 - Type: Neuroimaging suite
 - Modality/specialty: Neuroradiology: brain MRI
 - Maintainer: MGH Martinos Center
 - License: FreeSurfer License
 - Commercial use: Verify
 - License note: Repo LICENSE.txt is the FreeSurfer Software License Agreement v1.0 (MGH), a custom license.
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/freesurfer/freesurfer
 - Page: https://hounsfieldlab.com/tools/freesurfer.html
+- Related datasets: ISLES'24, IXI, NCI Imaging Data Commons, OpenNeuro, ReMIND (preoperative MRI and intraoperative ultrasound), UPENN-GBM
 
 ### fMRIPrep
-- What it does: Robust preprocessing pipeline for fMRI
+- What it is: Robust preprocessing pipeline for fMRI
 - Type: Neuro preprocessing
 - Modality/specialty: Neuroradiology: fMRI
 - Maintainer: NiPreps
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/nipreps/fmriprep
 - Page: https://hounsfieldlab.com/tools/fmriprep.html
 
 ### DIPY
-- What it does: Python library for diffusion MRI, tractography and registration
+- What it is: Python library for diffusion MRI, tractography and registration
 - Type: Neuroimaging library
 - Modality/specialty: Diffusion MRI
 - Maintainer: DIPY team
 - License: BSD-3-Clause
 - Commercial use: Permissive
 - License note: Repo LICENSE is BSD 3-clause unless individual files say otherwise.
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/dipy/dipy
 - Page: https://hounsfieldlab.com/tools/dipy.html
 
 ### nilearn
-- What it does: Machine learning for neuroimaging in Python
+- What it is: Machine learning for neuroimaging in Python
 - Type: Neuroimaging library
 - Modality/specialty: Neuroimaging
 - Maintainer: nilearn
 - License: BSD-3-Clause
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/nilearn/nilearn
 - Page: https://hounsfieldlab.com/tools/nilearn.html
 
 ### ANTsPy
-- What it does: Python library for registration, segmentation and analysis
+- What it is: Python library for registration, segmentation and analysis
 - Type: Registration
 - Modality/specialty: Medical imaging
 - Maintainer: ANTsX
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/ANTsX/ANTsPy
 - Page: https://hounsfieldlab.com/tools/antspy.html
 
-## Viewers & toolkits
+## Tools: Viewers & toolkits
 
 ### 3D Slicer
-- What it does: Open platform for visualization, segmentation and image computing
+- What it is: Open platform for visualization, segmentation and image computing
 - Type: Viewer / workstation
 - Modality/specialty: Medical imaging
 - Maintainer: Slicer community
 - License: Slicer License (BSD-style)
 - Commercial use: Permissive
 - License note: Repo License.txt describes a BSD-style license with Slicer-specific extensions.
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/Slicer/Slicer
 - Page: https://hounsfieldlab.com/tools/3d-slicer.html
+- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), CBIS-DDSM, CMMD, Duke-Breast-Cancer-MRI, FDG-PET-CT-Lesions (autoPET)
 
 ### OHIF Viewer
-- What it does: Zero-footprint web DICOM viewer
+- What it is: Zero-footprint web DICOM viewer
 - Type: Viewer (web)
 - Modality/specialty: Radiology DICOM
 - Maintainer: OHIF
 - License: MIT
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-15 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/OHIF/Viewers
 - Page: https://hounsfieldlab.com/tools/ohif-viewer.html
+- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases
 
 ### ITK
-- What it does: C++/Python toolkit for segmentation and registration
+- What it is: C++/Python toolkit for segmentation and registration
 - Type: Image toolkit
 - Modality/specialty: Medical imaging
 - Maintainer: Insight Software Consortium
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-14 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/InsightSoftwareConsortium/ITK
 - Page: https://hounsfieldlab.com/tools/itk.html
+- Related datasets: CT-ORG, ISLES'24, IXI, OpenNeuro, Merlin Abdominal CT, CT-ICH
 
 ### MITK
-- What it does: Medical Imaging Interaction Toolkit for building imaging applications
+- What it is: Medical Imaging Interaction Toolkit for building imaging applications
 - Type: Image toolkit
 - Modality/specialty: Medical imaging
 - Maintainer: DKFZ / MITK
 - License: BSD-3-Clause
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-10 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/MITK/MITK
 - Page: https://hounsfieldlab.com/tools/mitk.html
 
-## DICOM/PACS & deployment
+## Tools: DICOM/PACS & deployment
 
 ### pydicom
-- What it does: Read, modify and write DICOM files in Python
+- What it is: Read, modify and write DICOM files in Python
 - Type: DICOM infrastructure
 - Modality/specialty: DICOM
 - Maintainer: pydicom
 - License: MIT (+ noted portions)
 - Commercial use: Permissive
 - License note: Repo LICENSE is MIT except for portions listed in the file.
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/pydicom/pydicom
 - Page: https://hounsfieldlab.com/tools/pydicom.html
+- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases
 
 ### DCMTK
-- What it does: Comprehensive set of DICOM libraries and tools (C++)
+- What it is: Comprehensive set of DICOM libraries and tools (C++)
 - Type: DICOM infrastructure
 - Modality/specialty: DICOM
 - Maintainer: OFFIS
 - License: BSD-3-Clause (OFFIS)
 - Commercial use: Permissive
 - License note: COPYRIGHT file is a BSD-style license from OFFIS e.V.; some bundled parts carry other notices.
+- Access: free public source repository
 - Last repository update: 2026-10-10 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/DCMTK/dcmtk
 - Page: https://hounsfieldlab.com/tools/dcmtk.html
 
 ### Orthanc
-- What it does: Lightweight DICOM server; this repo builds the Docker images and installers
+- What it is: Lightweight DICOM server; this repo builds the Docker images and installers
 - Type: PACS / DICOM server
 - Modality/specialty: DICOM
 - Maintainer: Orthanc team
 - License: AGPL-3.0
 - Commercial use: Copyleft
+- Access: free public source repository
 - Last repository update: 2026-09-28 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/orthanc-server/orthanc-builder
 - Page: https://hounsfieldlab.com/tools/orthanc.html
+- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases
 
 ### mercure
-- What it does: DICOM orchestrator that routes studies to AI processing pipelines
+- What it is: DICOM orchestrator that routes studies to AI processing pipelines
 - Type: AI deployment / orchestration
 - Modality/specialty: DICOM routing
 - Maintainer: mercure (NYU origin)
 - License: MIT
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-07 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/mercure-imaging/mercure
 - Page: https://hounsfieldlab.com/tools/mercure.html
 
 ### Kaapana
-- What it does: Platform toolkit for medical imaging AI (federated, workflows)
+- What it is: Platform toolkit for medical imaging AI (federated, workflows)
 - Type: AI platform
 - Modality/specialty: Radiology
 - Maintainer: DKFZ
 - License: AGPL-3.0
 - Commercial use: Copyleft
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/kaapana/kaapana
 - Page: https://hounsfieldlab.com/tools/kaapana.html
 
-## Pathology
+## Tools: Pathology
 
 ### TIAToolbox
-- What it does: Computational pathology toolbox: whole-slide image I/O, stain normalization, models
+- What it is: Computational pathology toolbox: whole-slide image I/O, stain normalization, models
 - Type: Pathology
 - Modality/specialty: Digital pathology (WSI)
 - Maintainer: TIA Centre, Warwick
 - License: BSD-3-Clause
 - Commercial use: Verify
 - License note: Code is BSD 3-clause. LICENSE says the model weights are under a different license (see TIAToolbox pretrained-model docs).
+- Access: free public source repository
 - Last repository update: 2026-10-12 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/TissueImageAnalytics/tiatoolbox
 - Page: https://hounsfieldlab.com/tools/tiatoolbox.html
 
 ### PathML
-- What it does: Tools for computational pathology
+- What it is: Tools for computational pathology
 - Type: Pathology
 - Modality/specialty: Digital pathology
 - Maintainer: Dana-Farber AIOS
 - License: GPL-2.0
 - Commercial use: Copyleft
+- Access: free public source repository
 - Last repository update: 2026-08-14 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/Dana-Farber-AIOS/pathml
 - Page: https://hounsfieldlab.com/tools/pathml.html
 
 ### CLAM
-- What it does: Weakly supervised whole-slide classification
+- What it is: Weakly supervised whole-slide classification
 - Type: Pathology
 - Modality/specialty: Digital pathology (WSI)
 - Maintainer: Mahmood Lab
 - License: GPL-3.0
 - Commercial use: Copyleft
+- Access: free public source repository
 - Last repository update: 2025-04-14 (Stale)
+- Last checked: 2026-10-13
 - Links: https://github.com/mahmoodlab/CLAM
 - Page: https://hounsfieldlab.com/tools/clam.html
 
 ### UNI
-- What it does: Pathology foundation model (Nature Medicine)
+- What it is: Pathology foundation model (Nature Medicine)
 - Type: Foundation model
 - Modality/specialty: Digital pathology
 - Maintainer: Mahmood Lab
 - License: CC BY-NC-ND 4.0
 - Commercial use: Non-commercial
 - License note: Repo LICENSE and Hugging Face weights (MahmoodLab/UNI) are CC BY-NC-ND 4.0.
+- Access: free public source repository
 - Last repository update: 2025-03-26 (Stale)
+- Last checked: 2026-10-13
 - Links: https://github.com/mahmoodlab/UNI
 - Page: https://hounsfieldlab.com/tools/uni.html
 
 ### QuPath
-- What it does: Open-source bioimage and whole-slide analysis
+- What it is: Open-source bioimage and whole-slide analysis
 - Type: Pathology viewer / analysis
 - Modality/specialty: Digital pathology
 - Maintainer: QuPath team
 - License: GPL-3.0
 - Commercial use: Copyleft
+- Access: free public source repository
 - Last repository update: 2026-10-12 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/qupath/qupath
 - Page: https://hounsfieldlab.com/tools/qupath.html
 
-## Clinical NLP
+## Tools: Clinical NLP
 
 ### Apache cTAKES
-- What it does: NLP platform for clinical text
+- What it is: NLP platform for clinical text
 - Type: Clinical NLP
 - Modality/specialty: Clinical text
 - Maintainer: Apache Software Foundation
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-08-12 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/apache/ctakes
 - Page: https://hounsfieldlab.com/tools/apache-ctakes.html
 
 ### medspaCy
-- What it does: Clinical NLP library built on spaCy
+- What it is: Clinical NLP library built on spaCy
 - Type: Clinical NLP
 - Modality/specialty: Clinical text
 - Maintainer: medspaCy
 - License: MIT
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-06-04 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/medspacy/medspacy
 - Page: https://hounsfieldlab.com/tools/medspacy.html
 
 ### scispaCy
-- What it does: spaCy pipelines and models for biomedical text
+- What it is: spaCy pipelines and models for biomedical text
 - Type: Clinical NLP
 - Modality/specialty: Biomedical text
 - Maintainer: AllenAI
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2025-12-04 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/allenai/scispacy
 - Page: https://hounsfieldlab.com/tools/scispacy.html
 
 ### QuickUMLS
-- What it does: Medical concept extraction and UMLS linking
+- What it is: Medical concept extraction and UMLS linking
 - Type: Clinical NLP
 - Modality/specialty: Clinical text
 - Maintainer: Georgetown IR Lab
 - License: MIT
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2024-08-12 (Stale)
+- Last checked: 2026-10-13
 - Links: https://github.com/Georgetown-IR-Lab/QuickUMLS
 - Page: https://hounsfieldlab.com/tools/quickumls.html
 
-## EHR & data
+## Tools: EHR & data
 
 ### HAPI FHIR
-- What it does: Java API for HL7 FHIR clients and servers
+- What it is: Java API for HL7 FHIR clients and servers
 - Type: EHR interoperability
 - Modality/specialty: EHR / FHIR
 - Maintainer: HAPI FHIR
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-14 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/hapifhir/hapi-fhir
 - Page: https://hounsfieldlab.com/tools/hapi-fhir.html
 
 ### Synthea
-- What it does: Synthetic patient population simulator
+- What it is: Synthetic patient population simulator
 - Type: Synthetic data
 - Modality/specialty: EHR
 - Maintainer: MITRE / Synthetic Health
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-08-18 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/synthetichealth/synthea
 - Page: https://hounsfieldlab.com/tools/synthea.html
 
 ### MIMIC code
-- What it does: Community code for the MIMIC databases
+- What it is: Community code for the MIMIC databases
 - Type: EHR datasets/code
 - Modality/specialty: ICU EHR
 - Maintainer: MIT LCP
 - License: MIT
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-09-01 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/MIT-LCP/mimic-code
 - Page: https://hounsfieldlab.com/tools/mimic-code.html
 
 ### OHDSI ATLAS
-- What it does: Web tool for observational analyses on OMOP data
+- What it is: Web tool for observational analyses on OMOP data
 - Type: EHR analytics
 - Modality/specialty: OMOP CDM
 - Maintainer: OHDSI
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-09-16 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/OHDSI/Atlas
 - Page: https://hounsfieldlab.com/tools/ohdsi-atlas.html
 
 ### OHDSI WhiteRabbit
-- What it does: Profiles source databases to plan ETL into OMOP
+- What it is: Profiles source databases to plan ETL into OMOP
 - Type: EHR / ETL
 - Modality/specialty: OMOP CDM
 - Maintainer: OHDSI
 - License: Apache-2.0
 - Commercial use: Permissive
+- Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
+- Last checked: 2026-10-13
 - Links: https://github.com/OHDSI/WhiteRabbit
 - Page: https://hounsfieldlab.com/tools/ohdsi-whiterabbit.html
 
 ## DICOM datasets
 
 ### B-mode-and-CEUS-Liver
-- URL: https://www.cancerimagingarchive.net/collection/b-mode-and-ceus-liver/
+- What it is: Focal liver lesions on B-mode and contrast-enhanced ultrasound
+- Source: https://www.cancerimagingarchive.net/collection/b-mode-and-ceus-liver/
 - Area: ultrasound
 - Modality: US
-- Pathology: Focal liver lesions on B-mode and contrast-enhanced ultrasound
 - Normals included: no
 - Format: DICOM
 - Size: 120 subjects
@@ -591,13 +711,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-b-mode-and-ceus-liver
+- Page: https://hounsfieldlab.com/datasets/b-mode-and-ceus-liver.html
 
 ### BrainMetShare
-- URL: https://stanford.redivis.com/datasets/1emj-bjxt3p6s0
+- What it is: Brain metastases with radiologist segmentations on a subset
+- Source: https://stanford.redivis.com/datasets/1emj-bjxt3p6s0
 - Area: neuro
 - Modality: MR
-- Pathology: Brain metastases with radiologist segmentations on a subset
 - Normals included: no
 - Format: Check source
 - Size: 156 MRI studies; about 5.6 GB. Masks for 105 studies.
@@ -610,13 +730,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-brainmetshare
+- Page: https://hounsfieldlab.com/datasets/brainmetshare.html
 
 ### Breast-Cancer-Screening-DBT (BCS-DBT)
-- URL: https://www.cancerimagingarchive.net/collection/breast-cancer-screening-dbt/
+- What it is: Screening digital breast tomosynthesis, with cancer cases and normal/benign exams
+- Source: https://www.cancerimagingarchive.net/collection/breast-cancer-screening-dbt/
 - Area: breast
 - Modality: MG
-- Pathology: Screening digital breast tomosynthesis, with cancer cases and normal/benign exams
 - Normals included: yes
 - Format: DICOM
 - Size: 5,060 subjects
@@ -629,13 +749,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-breast-cancer-screening-dbt-bcs-dbt
+- Page: https://hounsfieldlab.com/datasets/breast-cancer-screening-dbt-bcs-dbt.html
 
 ### Burdenko-GBM-Progression
-- URL: https://www.cancerimagingarchive.net/collection/burdenko-gbm-progression/
+- What it is: Glioblastoma radiotherapy planning and follow-up, with RTSTRUCT/RTDOSE/RTPLAN
+- Source: https://www.cancerimagingarchive.net/collection/burdenko-gbm-progression/
 - Area: neuro
 - Modality: MR; CT
-- Pathology: Glioblastoma radiotherapy planning and follow-up, with RTSTRUCT/RTDOSE/RTPLAN
 - Normals included: no
 - Format: DICOM
 - Size: 180 subjects; about 131 GB of imaging
@@ -648,13 +768,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-burdenko-gbm-progression
+- Page: https://hounsfieldlab.com/datasets/burdenko-gbm-progression.html
 
 ### C4KC-KiTS
-- URL: https://www.cancerimagingarchive.net/collection/c4kc-kits/
+- What it is: Kidney tumors (KiTS) with segmentations
+- Source: https://www.cancerimagingarchive.net/collection/c4kc-kits/
 - Area: body
 - Modality: CT
-- Pathology: Kidney tumors (KiTS) with segmentations
 - Normals included: no
 - Format: DICOM
 - Size: 210 subjects
@@ -667,13 +787,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-c4kc-kits
+- Page: https://hounsfieldlab.com/datasets/c4kc-kits.html
 
 ### CBIS-DDSM
-- URL: https://www.cancerimagingarchive.net/collection/cbis-ddsm/
+- What it is: Curated mammography masses and calcifications, benign and malignant
+- Source: https://www.cancerimagingarchive.net/collection/cbis-ddsm/
 - Area: breast
 - Modality: MG
-- Pathology: Curated mammography masses and calcifications, benign and malignant
 - Normals included: partial
 - Format: DICOM
 - Size: 1,566 subjects
@@ -686,13 +806,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-cbis-ddsm
+- Page: https://hounsfieldlab.com/datasets/cbis-ddsm.html
 
 ### CheXpert Plus
-- URL: https://stanford.redivis.com/datasets/5yyj-1a9f6ap0x
+- What it is: Chest radiographs with full reports and 14 CheXpert pathology labels, including studies without those findings
+- Source: https://stanford.redivis.com/datasets/5yyj-1a9f6ap0x
 - Area: chest
 - Modality: DX; CR
-- Pathology: Chest radiographs with full reports and 14 CheXpert pathology labels, including studies without those findings
 - Normals included: partial
 - Format: DICOM
 - Size: 223,462 radiograph–report pairs; 187,711 studies; 64,725 patients; about 6.8 TB
@@ -705,13 +825,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-chexpert-plus
+- Page: https://hounsfieldlab.com/datasets/chexpert-plus.html
 
 ### CMMD
-- URL: https://www.cancerimagingarchive.net/collection/cmmd/
+- What it is: Chinese mammography dataset with benign and malignant cases and molecular subtypes
+- Source: https://www.cancerimagingarchive.net/collection/cmmd/
 - Area: breast
 - Modality: MG
-- Pathology: Chinese mammography dataset with benign and malignant cases and molecular subtypes
 - Normals included: partial
 - Format: DICOM
 - Size: 1,775 subjects
@@ -724,13 +844,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-cmmd
+- Page: https://hounsfieldlab.com/datasets/cmmd.html
 
 ### COCA
-- URL: https://stanford.redivis.com/datasets/1vm9-30b7p5srg
+- What it is: Coronary artery calcium on gated coronary CT and non-gated chest CT
+- Source: https://stanford.redivis.com/datasets/1vm9-30b7p5srg
 - Area: cardiac; chest
 - Modality: CT
-- Pathology: Coronary artery calcium on gated coronary CT and non-gated chest CT
 - Normals included: partial
 - Format: DICOM
 - Size: About 29 GB on the AIMI listing (gated coronary CT plus non-gated chest CT)
@@ -743,13 +863,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-coca
+- Page: https://hounsfieldlab.com/datasets/coca.html
 
 ### Colorectal-Liver-Metastases
-- URL: https://www.cancerimagingarchive.net/collection/colorectal-liver-metastases/
+- What it is: Colorectal liver metastases with segmentations
+- Source: https://www.cancerimagingarchive.net/collection/colorectal-liver-metastases/
 - Area: body
 - Modality: CT
-- Pathology: Colorectal liver metastases with segmentations
 - Normals included: no
 - Format: DICOM
 - Size: 197 subjects
@@ -762,13 +882,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-colorectal-liver-metastases
+- Page: https://hounsfieldlab.com/datasets/colorectal-liver-metastases.html
 
 ### CPAISD
-- URL: https://zenodo.org/records/10892316
+- What it is: Hyperacute ischemic stroke on non-contrast head CT, with core and penumbra outlines
+- Source: https://zenodo.org/records/10892316
 - Area: neuro
 - Modality: CT
-- Pathology: Hyperacute ischemic stroke on non-contrast head CT, with core and penumbra outlines
 - Normals included: no
 - Format: DICOM
 - Size: 112 non-contrast head CT scans
@@ -781,13 +901,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-cpaisd
+- Page: https://hounsfieldlab.com/datasets/cpaisd.html
 
 ### CQ500
-- URL: https://academictorrents.com/details/47e9d8aab761e75fd0a81982fa62bddf3a173831
+- What it is: Non-contrast head CT with radiologist reads for critical findings (hemorrhage, fracture, and others)
+- Source: https://academictorrents.com/details/47e9d8aab761e75fd0a81982fa62bddf3a173831
 - Area: neuro
 - Modality: CT
-- Pathology: Non-contrast head CT with radiologist reads for critical findings (hemorrhage, fracture, and others)
 - Normals included: partial
 - Format: DICOM
 - Size: 491 studies (Qure.ai release, redistributed on Academic Torrents)
@@ -800,13 +920,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-cq500
+- Page: https://hounsfieldlab.com/datasets/cq500.html
 
 ### CT Colonography
-- URL: https://www.cancerimagingarchive.net/collection/ct-colonography/
+- What it is: CT colonography with and without colorectal neoplasia
+- Source: https://www.cancerimagingarchive.net/collection/ct-colonography/
 - Area: body
 - Modality: CT
-- Pathology: CT colonography with and without colorectal neoplasia
 - Normals included: partial
 - Format: DICOM
 - Size: 825 subjects
@@ -819,13 +939,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-ct-colonography
+- Page: https://hounsfieldlab.com/datasets/ct-colonography.html
 
 ### CT-ICH
-- URL: https://physionet.org/content/ct-ich/
+- What it is: Traumatic brain injury head CT with hemorrhage masks and slice labels; some scans have no hemorrhage
+- Source: https://physionet.org/content/ct-ich/
 - Area: neuro
 - Modality: CT
-- Pathology: Traumatic brain injury head CT with hemorrhage masks and slice labels; some scans have no hemorrhage
 - Normals included: partial
 - Format: NIfTI
 - Size: 75 public NIfTI subjects (82 collected; subjects 59–65 are missing from the image folder)
@@ -838,13 +958,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-ct-ich
+- Page: https://hounsfieldlab.com/datasets/ct-ich.html
 
 ### CT-ORG
-- URL: https://www.cancerimagingarchive.net/collection/ct-org/
+- What it is: CT with liver lesions and metastases, labeled for lung, bone, liver, kidney, and bladder
+- Source: https://www.cancerimagingarchive.net/collection/ct-org/
 - Area: body
 - Modality: CT
-- Pathology: CT with liver lesions and metastases, labeled for lung, bone, liver, kidney, and bladder
 - Normals included: no
 - Format: NIfTI
 - Size: 140 volumes; 16.9 GB
@@ -857,13 +977,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-ct-org
+- Page: https://hounsfieldlab.com/datasets/ct-org.html
 
 ### Duke-Breast-Cancer-MRI
-- URL: https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/
+- What it is: Invasive breast cancer MRI with segmentations, radiomics, and outcomes
+- Source: https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/
 - Area: breast
 - Modality: MR
-- Pathology: Invasive breast cancer MRI with segmentations, radiomics, and outcomes
 - Normals included: no
 - Format: DICOM
 - Size: 922 subjects
@@ -876,13 +996,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-duke-breast-cancer-mri
+- Page: https://hounsfieldlab.com/datasets/duke-breast-cancer-mri.html
 
 ### EchoNet-Dynamic
-- URL: https://stanford.redivis.com/datasets/66s1-2hsmzj5rn
+- What it is: Echocardiogram videos with ejection-fraction labels and tracings, across a range of function
+- Source: https://stanford.redivis.com/datasets/66s1-2hsmzj5rn
 - Area: cardiac; ultrasound
 - Modality: US
-- Pathology: Echocardiogram videos with ejection-fraction labels and tracings, across a range of function
 - Normals included: partial
 - Format: video
 - Size: 10,030 labeled videos; about 7 GB on the AIMI listing
@@ -895,13 +1015,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-echonet-dynamic
+- Page: https://hounsfieldlab.com/datasets/echonet-dynamic.html
 
 ### FDG-PET-CT-Lesions (autoPET)
-- URL: https://www.cancerimagingarchive.net/collection/fdg-pet-ct-lesions/
+- What it is: Whole-body FDG-PET/CT in lymphoma, melanoma, and NSCLC, plus studies with no PET-positive malignancy
+- Source: https://www.cancerimagingarchive.net/collection/fdg-pet-ct-lesions/
 - Area: nuclear medicine
 - Modality: PT; CT
-- Pathology: Whole-body FDG-PET/CT in lymphoma, melanoma, and NSCLC, plus studies with no PET-positive malignancy
 - Normals included: yes
 - Format: DICOM
 - Size: 900 subjects; 1,014 studies. Defaced DICOM about 419 GB. Original images are a separate controlled download.
@@ -914,13 +1034,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-fdg-pet-ct-lesions-autopet
+- Page: https://hounsfieldlab.com/datasets/fdg-pet-ct-lesions-autopet.html
 
 ### INSPECT
-- URL: https://stanford.redivis.com/datasets/2n96-d71hggrbf
+- What it is: Pulmonary embolism cohort with CT, report sections, and structured EHR
+- Source: https://stanford.redivis.com/datasets/2n96-d71hggrbf
 - Area: chest
 - Modality: CT
-- Pathology: Pulmonary embolism cohort with CT, report sections, and structured EHR
 - Normals included: no
 - Format: Check source
 - Size: 19,402 patients; 23,248 CT exams; about 2.1 TB
@@ -933,13 +1053,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-inspect
+- Page: https://hounsfieldlab.com/datasets/inspect.html
 
 ### ISLES'24
-- URL: https://zenodo.org/records/16970401
+- What it is: Acute ischemic stroke with admission CT/CTA/CTP and follow-up MRI infarct masks
+- Source: https://zenodo.org/records/16970401
 - Area: neuro
 - Modality: CT; MR
-- Pathology: Acute ischemic stroke with admission CT/CTA/CTP and follow-up MRI infarct masks
 - Normals included: no
 - Format: NIfTI
 - Size: 149 training cases (BIDS NIfTI)
@@ -952,13 +1072,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-isles-24
+- Page: https://hounsfieldlab.com/datasets/isles-24.html
 
 ### IXI
-- URL: https://brain-development.org/ixi-dataset/
+- What it is: Normal, healthy adult brain MRI (T1, T2, PD, MRA, diffusion)
+- Source: https://brain-development.org/ixi-dataset/
 - Area: neuro
 - Modality: MR
-- Pathology: Normal, healthy adult brain MRI (T1, T2, PD, MRA, diffusion)
 - Normals included: yes
 - Format: NIfTI
 - Size: Nearly 600 subjects; about 27 GB across T1, T2, PD, MRA, and DTI archives
@@ -971,13 +1091,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-ixi
+- Page: https://hounsfieldlab.com/datasets/ixi.html
 
 ### LERA
-- URL: https://stanford.redivis.com/datasets/0jyf-46kmqh2vf
+- What it is: Lower-extremity radiographs (foot, knee, ankle, or hip)
+- Source: https://stanford.redivis.com/datasets/0jyf-46kmqh2vf
 - Area: msk
 - Modality: DX; CR
-- Pathology: Lower-extremity radiographs (foot, knee, ankle, or hip)
 - Normals included: partial
 - Format: Check source
 - Size: 182 patients
@@ -990,13 +1110,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-lera
+- Page: https://hounsfieldlab.com/datasets/lera.html
 
 ### LIDC-IDRI
-- URL: https://www.cancerimagingarchive.net/collection/lidc-idri/
+- What it is: Lung nodules marked by four readers; includes nodules that were not cancer
+- Source: https://www.cancerimagingarchive.net/collection/lidc-idri/
 - Area: chest
 - Modality: CT; CR; DX
-- Pathology: Lung nodules marked by four readers; includes nodules that were not cancer
 - Normals included: partial
 - Format: DICOM
 - Size: 1,010 subjects
@@ -1009,13 +1129,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-lidc-idri
+- Page: https://hounsfieldlab.com/datasets/lidc-idri.html
 
 ### Merlin Abdominal CT
-- URL: https://stanford.redivis.com/datasets/exfv-e8h3kvfhs
+- What it is: Emergency abdominal and pelvic CT paired with report findings
+- Source: https://stanford.redivis.com/datasets/exfv-e8h3kvfhs
 - Area: body
 - Modality: CT
-- Pathology: Emergency abdominal and pelvic CT paired with report findings
 - Normals included: partial
 - Format: NIfTI
 - Size: 25,494 scans from 18,317 patients; about 3 TB
@@ -1028,13 +1148,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-merlin-abdominal-ct
+- Page: https://hounsfieldlab.com/datasets/merlin-abdominal-ct.html
 
 ### MIDRC
-- URL: https://data.midrc.org/
+- What it is: Medical imaging, especially chest and COVID-era collections, with clinical data and reports where contributors included them
+- Source: https://data.midrc.org/
 - Area: chest
 - Modality: CT; DX; CR; MR
-- Pathology: Medical imaging, especially chest and COVID-era collections, with clinical data and reports where contributors included them
 - Normals included: partial
 - Format: DICOM
 - Size: Portal; size depends on the collections you select
@@ -1047,13 +1167,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-midrc
+- Page: https://hounsfieldlab.com/datasets/midrc.html
 
 ### MIDRC-RICORD (1A, 1B, 1C)
-- URL: https://www.cancerimagingarchive.net/collection/midrc-ricord-1a/
+- What it is: COVID-19 chest CT and radiography, with non-COVID controls in 1B and 1C
+- Source: https://www.cancerimagingarchive.net/collection/midrc-ricord-1a/
 - Area: chest
 - Modality: CT; DX; CR
-- Pathology: COVID-19 chest CT and radiography, with non-COVID controls in 1B and 1C
 - Normals included: partial
 - Format: DICOM
 - Size: 1A: 110 CT subjects. 1B: 117 CT subjects. 1C: 361 chest radiograph subjects.
@@ -1066,13 +1186,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-midrc-ricord-1a-1b-1c
+- Page: https://hounsfieldlab.com/datasets/midrc-ricord-1a-1b-1c.html
 
 ### MIMIC-CXR
-- URL: https://physionet.org/content/mimic-cxr/
+- What it is: Emergency and inpatient chest radiographs with free-text reports, across many findings and no-finding studies
+- Source: https://physionet.org/content/mimic-cxr/
 - Area: chest
 - Modality: DX; CR
-- Pathology: Emergency and inpatient chest radiographs with free-text reports, across many findings and no-finding studies
 - Normals included: partial
 - Format: DICOM
 - Size: 377,110 images; 227,835 studies (version 2.1.0)
@@ -1085,13 +1205,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-mimic-cxr
+- Page: https://hounsfieldlab.com/datasets/mimic-cxr.html
 
 ### MRNet
-- URL: https://stanford.redivis.com/datasets/4a2c-4cpkzrn2c
+- What it is: Knee MRI exams labeled for abnormality, ACL tear, and meniscal tear
+- Source: https://stanford.redivis.com/datasets/4a2c-4cpkzrn2c
 - Area: msk
 - Modality: MR
-- Pathology: Knee MRI exams labeled for abnormality, ACL tear, and meniscal tear
 - Normals included: partial
 - Format: NumPy
 - Size: 1,370 exams; about 7.7 GB on the AIMI listing
@@ -1104,13 +1224,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-mrnet
+- Page: https://hounsfieldlab.com/datasets/mrnet.html
 
 ### MURA
-- URL: https://stanford.redivis.com/datasets/cv1a-apytk3j44
+- What it is: Musculoskeletal radiographs labeled normal or abnormal (elbow, finger, forearm, hand, humerus, shoulder, wrist)
+- Source: https://stanford.redivis.com/datasets/cv1a-apytk3j44
 - Area: msk
 - Modality: DX; CR
-- Pathology: Musculoskeletal radiographs labeled normal or abnormal (elbow, finger, forearm, hand, humerus, shoulder, wrist)
 - Normals included: yes
 - Format: PNG/JPEG
 - Size: About 3.4 GB on the AIMI Redivis listing
@@ -1123,13 +1243,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-mura
+- Page: https://hounsfieldlab.com/datasets/mura.html
 
 ### NCI Imaging Data Commons
-- URL: https://portal.imaging.datacommons.cancer.gov/collections/
+- What it is: Many cancer collections (TCGA, TCIA, CPTAC, NLST, LIDC, and others), harmonized to DICOM
+- Source: https://portal.imaging.datacommons.cancer.gov/collections/
 - Area: neuro; chest; body; breast; nuclear medicine
 - Modality: CT; MR; PT; MG; CR
-- Pathology: Many cancer collections (TCGA, TCIA, CPTAC, NLST, LIDC, and others), harmonized to DICOM
 - Normals included: partial
 - Format: DICOM
 - Size: Portal of public cancer imaging, described by NCI as over 100 TB
@@ -1142,13 +1262,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-nci-imaging-data-commons
+- Page: https://hounsfieldlab.com/datasets/nci-imaging-data-commons.html
 
 ### NLST (TCIA imaging subset)
-- URL: https://www.cancerimagingarchive.net/collection/nlst/
+- What it is: Lung-cancer screening low-dose CT, mostly without cancer, plus cancer cases
+- Source: https://www.cancerimagingarchive.net/collection/nlst/
 - Area: chest
 - Modality: CT
-- Pathology: Lung-cancer screening low-dose CT, mostly without cancer, plus cancer cases
 - Normals included: yes
 - Format: DICOM
 - Size: 26,254 subjects; CT package about 11.3 TB
@@ -1161,13 +1281,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-nlst-tcia-imaging-subset
+- Page: https://hounsfieldlab.com/datasets/nlst-tcia-imaging-subset.html
 
 ### Open POCUS
-- URL: https://stanford.redivis.com/datasets/9e5t-a8ppjpsfd
+- What it is: Lung point-of-care ultrasound, including clips with no abnormality, B-lines, and consolidation
+- Source: https://stanford.redivis.com/datasets/9e5t-a8ppjpsfd
 - Area: ultrasound
 - Modality: US
-- Pathology: Lung point-of-care ultrasound, including clips with no abnormality, B-lines, and consolidation
 - Normals included: partial
 - Format: video
 - Size: 226 adults; 1,871 clips (paper). AIMI copy is the Redivis dataset.
@@ -1180,13 +1300,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-open-pocus
+- Page: https://hounsfieldlab.com/datasets/open-pocus.html
 
 ### OpenNeuro
-- URL: https://openneuro.org/
+- What it is: Many brain MRI studies, including healthy controls and disease cohorts, in BIDS
+- Source: https://openneuro.org/
 - Area: neuro
 - Modality: MR
-- Pathology: Many brain MRI studies, including healthy controls and disease cohorts, in BIDS
 - Normals included: partial
 - Format: NIfTI
 - Size: Repository of public BIDS datasets (size is per dataset)
@@ -1199,13 +1319,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-openneuro
+- Page: https://hounsfieldlab.com/datasets/openneuro.html
 
 ### Pancreas-CT
-- URL: https://www.cancerimagingarchive.net/collection/pancreas-ct/
+- What it is: Healthy / non-cancer abdominal CT with pancreas segmentations
+- Source: https://www.cancerimagingarchive.net/collection/pancreas-ct/
 - Area: body
 - Modality: CT
-- Pathology: Healthy / non-cancer abdominal CT with pancreas segmentations
 - Normals included: yes
 - Format: DICOM
 - Size: 82 subjects
@@ -1218,13 +1338,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-pancreas-ct
+- Page: https://hounsfieldlab.com/datasets/pancreas-ct.html
 
 ### Pedi-Cranial-CT-Healthy
-- URL: https://www.cancerimagingarchive.net/collection/pedi-cranial-ct-healthy/
+- What it is: Healthy pediatric cranial CT (normative)
+- Source: https://www.cancerimagingarchive.net/collection/pedi-cranial-ct-healthy/
 - Area: neuro
 - Modality: CT
-- Pathology: Healthy pediatric cranial CT (normative)
 - Normals included: yes
 - Format: MHA
 - Size: 100 subjects; 3.2 GB
@@ -1237,13 +1357,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-pedi-cranial-ct-healthy
+- Page: https://hounsfieldlab.com/datasets/pedi-cranial-ct-healthy.html
 
 ### Pediatric-CT-SEG
-- URL: https://www.cancerimagingarchive.net/collection/pediatric-ct-seg/
+- What it is: Routine pediatric chest-abdomen-pelvis or abdomen-pelvis CT with expert organ contours
+- Source: https://www.cancerimagingarchive.net/collection/pediatric-ct-seg/
 - Area: body; chest
 - Modality: CT
-- Pathology: Routine pediatric chest-abdomen-pelvis or abdomen-pelvis CT with expert organ contours
 - Normals included: partial
 - Format: DICOM
 - Size: 359 exams; 65.7 GB
@@ -1256,13 +1376,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-pediatric-ct-seg
+- Page: https://hounsfieldlab.com/datasets/pediatric-ct-seg.html
 
 ### Prostate-MRI-US-Biopsy
-- URL: https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/
+- What it is: Prostate MRI and ultrasound fusion biopsy, including benign biopsy results
+- Source: https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/
 - Area: body; ultrasound
 - Modality: MR; US
-- Pathology: Prostate MRI and ultrasound fusion biopsy, including benign biopsy results
 - Normals included: partial
 - Format: DICOM
 - Size: 1,151 subjects
@@ -1275,13 +1395,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-prostate-mri-us-biopsy
+- Page: https://hounsfieldlab.com/datasets/prostate-mri-us-biopsy.html
 
 ### PSMA-PET-CT-Lesions
-- URL: https://www.cancerimagingarchive.net/collection/psma-pet-ct-lesions/
+- What it is: PSMA PET/CT in prostate cancer with lesion segmentations
+- Source: https://www.cancerimagingarchive.net/collection/psma-pet-ct-lesions/
 - Area: nuclear medicine; body
 - Modality: PT; CT
-- Pathology: PSMA PET/CT in prostate cancer with lesion segmentations
 - Normals included: no
 - Format: DICOM
 - Size: 378 subjects
@@ -1294,13 +1414,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-psma-pet-ct-lesions
+- Page: https://hounsfieldlab.com/datasets/psma-pet-ct-lesions.html
 
 ### QIN-SARCOMA
-- URL: https://www.cancerimagingarchive.net/collection/qin-sarcoma/
+- What it is: Soft-tissue sarcoma DCE-MRI, before and during preoperative chemoradiation
+- Source: https://www.cancerimagingarchive.net/collection/qin-sarcoma/
 - Area: body
 - Modality: MR
-- Pathology: Soft-tissue sarcoma DCE-MRI, before and during preoperative chemoradiation
 - Normals included: no
 - Format: DICOM
 - Size: 15 subjects; 10.3 GB
@@ -1313,13 +1433,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-qin-sarcoma
+- Page: https://hounsfieldlab.com/datasets/qin-sarcoma.html
 
 ### ReMIND (preoperative MRI and intraoperative ultrasound)
-- URL: https://www.cancerimagingarchive.net/collection/remind/
+- What it is: Brain tumors treated with resection, including intraoperative ultrasound
+- Source: https://www.cancerimagingarchive.net/collection/remind/
 - Area: neuro; ultrasound
 - Modality: MR; US
-- Pathology: Brain tumors treated with resection, including intraoperative ultrasound
 - Normals included: no
 - Format: DICOM
 - Size: 114 subjects
@@ -1332,13 +1452,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-remind-preoperative-mri-and-intraoperative-ultrasound
+- Page: https://hounsfieldlab.com/datasets/remind-preoperative-mri-and-intraoperative-ultrasound.html
 
 ### RSNA 2022 Cervical Spine Fracture Detection
-- URL: https://www.kaggle.com/competitions/rsna-2022-cervical-spine-fracture-detection
+- What it is: Cervical spine fractures on CT, including studies without fracture
+- Source: https://www.kaggle.com/competitions/rsna-2022-cervical-spine-fracture-detection
 - Area: msk
 - Modality: CT
-- Pathology: Cervical spine fractures on CT, including studies without fracture
 - Normals included: yes
 - Format: DICOM
 - Size: See the competition Data tab
@@ -1351,13 +1471,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-2022-cervical-spine-fracture-detection
+- Page: https://hounsfieldlab.com/datasets/rsna-2022-cervical-spine-fracture-detection.html
 
 ### RSNA 2023 Abdominal Trauma Detection
-- URL: https://www.kaggle.com/competitions/rsna-2023-abdominal-trauma-detection
+- What it is: Traumatic abdominal injury on CT, including exams without injury
+- Source: https://www.kaggle.com/competitions/rsna-2023-abdominal-trauma-detection
 - Area: body
 - Modality: CT
-- Pathology: Traumatic abdominal injury on CT, including exams without injury
 - Normals included: yes
 - Format: DICOM
 - Size: See the competition Data tab
@@ -1370,13 +1490,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-2023-abdominal-trauma-detection
+- Page: https://hounsfieldlab.com/datasets/rsna-2023-abdominal-trauma-detection.html
 
 ### RSNA 2024 Lumbar Spine Degenerative Classification
-- URL: https://www.kaggle.com/competitions/rsna-2024-lumbar-spine-degenerative-classification
+- What it is: Lumbar spine degenerative findings on MRI
+- Source: https://www.kaggle.com/competitions/rsna-2024-lumbar-spine-degenerative-classification
 - Area: msk
 - Modality: MR
-- Pathology: Lumbar spine degenerative findings on MRI
 - Normals included: partial
 - Format: DICOM
 - Size: See the competition Data tab
@@ -1389,13 +1509,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-2024-lumbar-spine-degenerative-classification
+- Page: https://hounsfieldlab.com/datasets/rsna-2024-lumbar-spine-degenerative-classification.html
 
 ### RSNA Intracranial Aneurysm Detection
-- URL: https://www.kaggle.com/competitions/rsna-intracranial-aneurysm-detection
+- What it is: Intracranial aneurysms on brain CT, including studies without an aneurysm
+- Source: https://www.kaggle.com/competitions/rsna-intracranial-aneurysm-detection
 - Area: neuro
 - Modality: CT
-- Pathology: Intracranial aneurysms on brain CT, including studies without an aneurysm
 - Normals included: yes
 - Format: DICOM
 - Size: Over 4,000 CT angiography studies (RSNA-ICA description)
@@ -1408,13 +1528,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-intracranial-aneurysm-detection
+- Page: https://hounsfieldlab.com/datasets/rsna-intracranial-aneurysm-detection.html
 
 ### RSNA Intracranial Hemorrhage Detection
-- URL: https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection
+- What it is: Acute intracranial hemorrhage subtypes on head CT, including exams without hemorrhage
+- Source: https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection
 - Area: neuro
 - Modality: CT
-- Pathology: Acute intracranial hemorrhage subtypes on head CT, including exams without hemorrhage
 - Normals included: yes
 - Format: DICOM
 - Size: Over 25,000 head CT exams (RSNA description of the 2019 challenge)
@@ -1427,13 +1547,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-intracranial-hemorrhage-detection
+- Page: https://hounsfieldlab.com/datasets/rsna-intracranial-hemorrhage-detection.html
 
 ### RSNA Pneumonia Detection Challenge
-- URL: https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge
+- What it is: Lung opacities concerning for pneumonia on chest radiographs, including exams without opacity
+- Source: https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge
 - Area: chest
 - Modality: DX; CR
-- Pathology: Lung opacities concerning for pneumonia on chest radiographs, including exams without opacity
 - Normals included: yes
 - Format: DICOM
 - Size: See the competition Data tab (DICOM export derived from NIH chest radiographs)
@@ -1446,13 +1566,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-pneumonia-detection-challenge
+- Page: https://hounsfieldlab.com/datasets/rsna-pneumonia-detection-challenge.html
 
 ### RSNA Screening Mammography Breast Cancer Detection
-- URL: https://www.kaggle.com/competitions/rsna-breast-cancer-detection
+- What it is: Screening mammography with cancer and non-cancer exams
+- Source: https://www.kaggle.com/competitions/rsna-breast-cancer-detection
 - Area: breast
 - Modality: MG
-- Pathology: Screening mammography with cancer and non-cancer exams
 - Normals included: yes
 - Format: DICOM
 - Size: See the competition Data tab
@@ -1465,13 +1585,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-screening-mammography-breast-cancer-detection
+- Page: https://hounsfieldlab.com/datasets/rsna-screening-mammography-breast-cancer-detection.html
 
 ### RSNA-MICCAI Brain Tumor Radiogenomic Classification
-- URL: https://www.kaggle.com/competitions/rsna-miccai-brain-tumor-radiogenomic-classification
+- What it is: Glioma MRI labeled for MGMT promoter methylation
+- Source: https://www.kaggle.com/competitions/rsna-miccai-brain-tumor-radiogenomic-classification
 - Area: neuro
 - Modality: MR
-- Pathology: Glioma MRI labeled for MGMT promoter methylation
 - Normals included: no
 - Format: DICOM
 - Size: See the competition Data tab (glioma MRI volumes)
@@ -1484,13 +1604,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-miccai-brain-tumor-radiogenomic-classification
+- Page: https://hounsfieldlab.com/datasets/rsna-miccai-brain-tumor-radiogenomic-classification.html
 
 ### RSNA-STR Pulmonary Embolism Detection
-- URL: https://www.kaggle.com/competitions/rsna-str-pulmonary-embolism-detection
+- What it is: Pulmonary embolism on CT pulmonary angiography, including negative studies
+- Source: https://www.kaggle.com/competitions/rsna-str-pulmonary-embolism-detection
 - Area: chest
 - Modality: CT
-- Pathology: Pulmonary embolism on CT pulmonary angiography, including negative studies
 - Normals included: yes
 - Format: DICOM
 - Size: See the competition Data tab
@@ -1503,13 +1623,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-rsna-str-pulmonary-embolism-detection
+- Page: https://hounsfieldlab.com/datasets/rsna-str-pulmonary-embolism-detection.html
 
 ### SIIM-ACR Pneumothorax Segmentation
-- URL: https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation
+- What it is: Pneumothorax on chest radiographs, with masks, including exams without pneumothorax
+- Source: https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation
 - Area: chest
 - Modality: DX; CR
-- Pathology: Pneumothorax on chest radiographs, with masks, including exams without pneumothorax
 - Normals included: yes
 - Format: DICOM
 - Size: See the competition Data tab
@@ -1522,13 +1642,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-siim-acr-pneumothorax-segmentation
+- Page: https://hounsfieldlab.com/datasets/siim-acr-pneumothorax-segmentation.html
 
 ### Soft-tissue-Sarcoma
-- URL: https://www.cancerimagingarchive.net/collection/soft-tissue-sarcoma/
+- What it is: Extremity soft-tissue sarcoma with FDG-PET/CT and MRI
+- Source: https://www.cancerimagingarchive.net/collection/soft-tissue-sarcoma/
 - Area: body; nuclear medicine
 - Modality: MR; CT; PT
-- Pathology: Extremity soft-tissue sarcoma with FDG-PET/CT and MRI
 - Normals included: no
 - Format: DICOM
 - Size: 51 subjects
@@ -1541,13 +1661,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-soft-tissue-sarcoma
+- Page: https://hounsfieldlab.com/datasets/soft-tissue-sarcoma.html
 
 ### SPADe
-- URL: https://stanford.redivis.com/datasets/ddvj-f3019dwey
+- What it is: Whole-body FDG-PET/CT for abnormality detection
+- Source: https://stanford.redivis.com/datasets/ddvj-f3019dwey
 - Area: nuclear medicine
 - Modality: PT; CT
-- Pathology: Whole-body FDG-PET/CT for abnormality detection
 - Normals included: no
 - Format: Check source
 - Size: About 135 GB on the AIMI listing
@@ -1560,13 +1680,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-spade
+- Page: https://hounsfieldlab.com/datasets/spade.html
 
 ### Spine-Mets-CT-SEG
-- URL: https://www.cancerimagingarchive.net/collection/spine-mets-ct-seg/
+- What it is: Spinal metastases with vertebral and lesion segmentations
+- Source: https://www.cancerimagingarchive.net/collection/spine-mets-ct-seg/
 - Area: msk
 - Modality: CT
-- Pathology: Spinal metastases with vertebral and lesion segmentations
 - Normals included: no
 - Format: DICOM
 - Size: 55 CT scans
@@ -1579,13 +1699,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-spine-mets-ct-seg
+- Page: https://hounsfieldlab.com/datasets/spine-mets-ct-seg.html
 
 ### Sunnybrook Cardiac Data
-- URL: https://www.cardiacatlas.org/sunnybrook-cardiac-data/
+- What it is: Cine cardiac MRI: healthy, hypertrophy, heart failure with infarction, and heart failure without infarction
+- Source: https://www.cardiacatlas.org/sunnybrook-cardiac-data/
 - Area: cardiac
 - Modality: MR
-- Pathology: Cine cardiac MRI: healthy, hypertrophy, heart failure with infarction, and heart failure without infarction
 - Normals included: partial
 - Format: DICOM
 - Size: 45 cine-MRI cases, in five zip batches (hundreds of MB each)
@@ -1598,13 +1718,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-sunnybrook-cardiac-data
+- Page: https://hounsfieldlab.com/datasets/sunnybrook-cardiac-data.html
 
 ### Thyroid Ultrasound Cine-clip
-- URL: https://stanford.redivis.com/datasets/2n5z-4m99zdpyp
+- What it is: Biopsy-confirmed thyroid nodules with cine clips, segmentations, and TI-RADS descriptors
+- Source: https://stanford.redivis.com/datasets/2n5z-4m99zdpyp
 - Area: ultrasound
 - Modality: US
-- Pathology: Biopsy-confirmed thyroid nodules with cine clips, segmentations, and TI-RADS descriptors
 - Normals included: no
 - Format: video
 - Size: 167 patients; 192 nodules; about 36 GB
@@ -1617,13 +1737,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-thyroid-ultrasound-cine-clip
+- Page: https://hounsfieldlab.com/datasets/thyroid-ultrasound-cine-clip.html
 
 ### UPENN-GBM
-- URL: https://www.cancerimagingarchive.net/collection/upenn-gbm/
+- What it is: Newly diagnosed glioblastoma, with segmentations and clinical/genomic tables
+- Source: https://www.cancerimagingarchive.net/collection/upenn-gbm/
 - Area: neuro
 - Modality: MR
-- Pathology: Newly diagnosed glioblastoma, with segmentations and clinical/genomic tables
 - Normals included: no
 - Format: DICOM; NIfTI
 - Size: 630 subjects; about 357 GB (DICOM, NIfTI, and histopathology slides)
@@ -1636,13 +1756,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-upenn-gbm
+- Page: https://hounsfieldlab.com/datasets/upenn-gbm.html
 
 ### Vestibular-Schwannoma-MC-RC
-- URL: https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-mc-rc/
+- What it is: Sporadic vestibular schwannoma, longitudinal MRI from multiple UK sites
+- Source: https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-mc-rc/
 - Area: neuro
 - Modality: MR
-- Pathology: Sporadic vestibular schwannoma, longitudinal MRI from multiple UK sites
 - Normals included: no
 - Format: DICOM
 - Size: 124 subjects
@@ -1655,13 +1775,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-vestibular-schwannoma-mc-rc
+- Page: https://hounsfieldlab.com/datasets/vestibular-schwannoma-mc-rc.html
 
 ### Vestibular-Schwannoma-SEG
-- URL: https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-seg/
+- What it is: Vestibular schwannoma treated with Gamma Knife, with contours
+- Source: https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-seg/
 - Area: neuro
 - Modality: MR
-- Pathology: Vestibular schwannoma treated with Gamma Knife, with contours
 - Normals included: no
 - Format: DICOM
 - Size: 242 subjects
@@ -1674,13 +1794,13 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-vestibular-schwannoma-seg
+- Page: https://hounsfieldlab.com/datasets/vestibular-schwannoma-seg.html
 
 ### VinDr-CXR
-- URL: https://physionet.org/content/vindr-cxr/
+- What it is: Adult chest radiographs with radiologist bounding boxes and image-level diagnoses, including no-finding exams
+- Source: https://physionet.org/content/vindr-cxr/
 - Area: chest
 - Modality: DX; CR
-- Pathology: Adult chest radiographs with radiologist bounding boxes and image-level diagnoses, including no-finding exams
 - Normals included: yes
 - Format: DICOM
 - Size: 18,000 PA radiographs (15,000 train, 3,000 test)
@@ -1693,5 +1813,5 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Status: VERIFIED
 - Added: 2026-10-18
 - Last checked: 2026-10-18
-- Page: https://hounsfieldlab.com/datasets.html#ds-vindr-cxr
+- Page: https://hounsfieldlab.com/datasets/vindr-cxr.html
 
