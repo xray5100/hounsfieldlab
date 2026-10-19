@@ -57,6 +57,12 @@
 <url><loc>https://hounsfieldlab.com/tools/ohdsi-whiterabbit.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/contilnn.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/radkev.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/tools/dcm2niix.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/tools/highdicom.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/tools/fastsurfer.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/tools/torchxrayvision.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/tools/simpleitk.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/tools/cornerstone3d.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/b-mode-and-ceus-liver.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/brainmetshare.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/breast-cancer-screening-dbt-bcs-dbt.html</loc><lastmod>2026-10-19</lastmod></url>
@@ -80,6 +86,7 @@
 <url><loc>https://hounsfieldlab.com/datasets/ixi.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/lera.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/lidc-idri.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/datasets/medical-segmentation-decathlon.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/merlin-abdominal-ct.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/midrc.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/midrc-ricord-1a-1b-1c.html</loc><lastmod>2026-10-19</lastmod></url>
@@ -88,6 +95,7 @@
 <url><loc>https://hounsfieldlab.com/datasets/mura.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/nci-imaging-data-commons.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/nlst-tcia-imaging-subset.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/datasets/nyu-fastmri.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/open-pocus.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/openneuro.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/pancreas-ct.html</loc><lastmod>2026-10-19</lastmod></url>
@@ -112,6 +120,8 @@
 <url><loc>https://hounsfieldlab.com/datasets/spine-mets-ct-seg.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/sunnybrook-cardiac-data.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/thyroid-ultrasound-cine-clip.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/datasets/totalsegmentator-ct-dataset.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/datasets/ucsf-pdgm.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/upenn-gbm.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/vestibular-schwannoma-mc-rc.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/vestibular-schwannoma-seg.html</loc><lastmod>2026-10-19</lastmod></url>

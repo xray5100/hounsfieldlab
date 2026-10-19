@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 48 open-source medical AI software tools and 59 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-13; dataset list last updated 2026-10-18.
+> Hounsfield Lab is a directory of 54 open-source medical AI software tools and 63 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-19.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -33,7 +33,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License note: Repo LICENSE is Educational Community License 2.0 (Apache 2.0 with a narrowed patent grant). Hugging Face weights (Pillar0-ChestCT, -AbdomenCT, -HeadCT, -BreastMRI) are tagged ecl-2.0.
 - Access: free public source repository
 - Last repository update: 2026-10-12 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/YalaLab/pillar-finetune, https://huggingface.co/collections/YalaLab/pillar-0
 - Page: https://hounsfieldlab.com/tools/pillar-0.html
 - Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, Duke-Breast-Cancer-MRI, LIDC-IDRI
@@ -48,7 +48,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License note: Repo LICENSE is Educational Community License 2.0.
 - Access: free public source repository
 - Last repository update: 2026-01-13 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/YalaLab/pillar-pretrain
 - Page: https://hounsfieldlab.com/tools/pillar-0-pretraining.html
 
@@ -62,7 +62,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License note: Repo LICENSE is Educational Community License 2.0.
 - Access: free public source repository
 - Last repository update: 2026-05-20 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/YalaLab/rate
 - Page: https://hounsfieldlab.com/tools/rate.html
 
@@ -75,7 +75,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2026-09-24 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/StanfordMIMI/Merlin
 - Page: https://hounsfieldlab.com/tools/merlin.html
 - Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, Pancreas-CT, Pediatric-CT-SEG
@@ -90,7 +90,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License note: Code is Apache-2.0. Weights on Hugging Face are under the Health AI Developer Foundations terms: https://developers.google.com/health-ai-developer-foundations/terms
 - Access: free public source repository
 - Last repository update: 2026-06-19 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/Google-Health/medgemma
 - Page: https://hounsfieldlab.com/tools/medgemma.html
 
@@ -104,7 +104,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License note: Repo LICENSE is Creative Commons Attribution-NonCommercial-NoDerivatives 4.0.
 - Access: free public source repository
 - Last repository update: 2025-01-07 (Stale)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/Stanford-AIMI/CheXagent
 - Page: https://hounsfieldlab.com/tools/chexagent.html
 - Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NCI Imaging Data Commons, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
@@ -118,10 +118,10 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2025-10-31 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/bowang-lab/MedRAX
 - Page: https://hounsfieldlab.com/tools/medrax.html
-- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NCI Imaging Data Commons, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
+- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation, MIDRC
 
 ### LLaVA-Med
 - What it is: Biomedical vision-language assistant for image Q&A
@@ -133,7 +133,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License note: Repo LICENSE is the Microsoft Research License Terms, covering code, models and data. Read the terms before any use beyond research.
 - Access: free public source repository
 - Last repository update: 2025-06-04 (Stale)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/microsoft/LLaVA-Med
 - Page: https://hounsfieldlab.com/tools/llava-med.html
 
@@ -147,7 +147,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License note: Code is Apache-2.0. Hugging Face adapters (ramu9703/radkev-27b, radkev-9b) are CC BY-NC-SA 4.0 for non-commercial research; gated access requires accepting those terms. Not a medical device.
 - Access: free public source repository
 - Last repository update: 2026-10-07 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/udiram/RadKev, https://huggingface.co/ramu9703/radkev-27b
 - Page: https://hounsfieldlab.com/tools/radkev.html
 
@@ -161,8 +161,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: Apache-2.0
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-19 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/Project-MONAI/MONAI
 - Page: https://hounsfieldlab.com/tools/monai.html
 - Related datasets: B-mode-and-CEUS-Liver, Prostate-MRI-US-Biopsy, ReMIND (preoperative MRI and intraoperative ultrasound), Sunnybrook Cardiac Data, COCA, EchoNet-Dynamic
@@ -175,8 +175,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: Apache-2.0
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-12 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-19 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/Project-MONAI/MONAILabel
 - Page: https://hounsfieldlab.com/tools/monai-label.html
 - Related datasets: B-mode-and-CEUS-Liver, Prostate-MRI-US-Biopsy, ReMIND (preoperative MRI and intraoperative ultrasound), EchoNet-Dynamic, Open POCUS, Thyroid Ultrasound Cine-clip
@@ -189,8 +189,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: Apache-2.0
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-16 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/MIC-DKFZ/nnUNet
 - Page: https://hounsfieldlab.com/tools/nnu-net.html
 - Related datasets: Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases, CT Colonography
@@ -203,8 +203,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: Apache-2.0
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-14 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-16 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/wasserth/TotalSegmentator
 - Page: https://hounsfieldlab.com/tools/totalsegmentator.html
 - Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, FDG-PET-CT-Lesions (autoPET), LIDC-IDRI
@@ -218,7 +218,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2025-05-07 (Stale)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/bowang-lab/MedSAM
 - Page: https://hounsfieldlab.com/tools/medsam.html
 
@@ -231,7 +231,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2025-07-11 (Stale)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/bowang-lab/MedSAM2
 - Page: https://hounsfieldlab.com/tools/medsam2.html
 
@@ -243,11 +243,11 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: Apache-2.0
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-06 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-16 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/TorchIO-project/torchio
 - Page: https://hounsfieldlab.com/tools/torchio.html
-- Related datasets: CT-ORG, ISLES'24, IXI, OpenNeuro, UPENN-GBM, Merlin Abdominal CT
+- Related datasets: CT-ORG, ISLES'24, IXI, OpenNeuro, TotalSegmentator CT dataset, UCSF-PDGM
 
 ### PyRadiomics
 - What it is: Extracts radiomics features from 2D/3D images
@@ -258,7 +258,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2025-10-27 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/AIM-Harvard/pyradiomics
 - Page: https://hounsfieldlab.com/tools/pyradiomics.html
 
@@ -271,9 +271,24 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2026-10-09 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/Noah-hjl/ContiLNN
 - Page: https://hounsfieldlab.com/tools/contilnn.html
+
+### TorchXRayVision
+- What it is: Library of chest X-ray dataset loaders and pretrained classification, segmentation and autoencoder models
+- Type: Framework
+- Modality/specialty: Radiology: chest X-ray
+- Maintainer: mlmed
+- License: Apache-2.0 (library); models vary
+- Commercial use: Verify
+- License note: LICENSE says the main library is Apache-2.0 and that licenses vary by subpackage; check each baseline model's license before use.
+- Access: free public source repository
+- Last repository update: 2026-10-18 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://github.com/mlmed/torchxrayvision
+- Page: https://hounsfieldlab.com/tools/torchxrayvision.html
+- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NCI Imaging Data Commons, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
 
 ## Tools: Neuroimaging
 
@@ -286,10 +301,10 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2024-12-18 (Stale)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/MIC-DKFZ/HD-BET
 - Page: https://hounsfieldlab.com/tools/hd-bet.html
-- Related datasets: ISLES'24, IXI, NCI Imaging Data Commons, OpenNeuro, ReMIND (preoperative MRI and intraoperative ultrasound), UPENN-GBM
+- Related datasets: ISLES'24, IXI, Medical Segmentation Decathlon, NCI Imaging Data Commons, OpenNeuro, ReMIND (preoperative MRI and intraoperative ultrasound)
 
 ### BrainChop
 - What it is: In-browser 3D MRI rendering and segmentation
@@ -300,10 +315,10 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2026-02-24 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/neuroneural/brainchop
 - Page: https://hounsfieldlab.com/tools/brainchop.html
-- Related datasets: ISLES'24, IXI, NCI Imaging Data Commons, OpenNeuro, ReMIND (preoperative MRI and intraoperative ultrasound), UPENN-GBM
+- Related datasets: ISLES'24, IXI, Medical Segmentation Decathlon, NCI Imaging Data Commons, OpenNeuro, ReMIND (preoperative MRI and intraoperative ultrasound)
 
 ### FreeSurfer
 - What it is: Neuroimaging analysis and visualization suite
@@ -314,11 +329,11 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Verify
 - License note: Repo LICENSE.txt is the FreeSurfer Software License Agreement v1.0 (MGH), a custom license.
 - Access: free public source repository
-- Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-19 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/freesurfer/freesurfer
 - Page: https://hounsfieldlab.com/tools/freesurfer.html
-- Related datasets: ISLES'24, IXI, NCI Imaging Data Commons, OpenNeuro, ReMIND (preoperative MRI and intraoperative ultrasound), UPENN-GBM
+- Related datasets: ISLES'24, IXI, Medical Segmentation Decathlon, NCI Imaging Data Commons, OpenNeuro, ReMIND (preoperative MRI and intraoperative ultrasound)
 
 ### fMRIPrep
 - What it is: Robust preprocessing pipeline for fMRI
@@ -328,8 +343,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: Apache-2.0
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-19 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/nipreps/fmriprep
 - Page: https://hounsfieldlab.com/tools/fmriprep.html
 
@@ -342,8 +357,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - License note: Repo LICENSE is BSD 3-clause unless individual files say otherwise.
 - Access: free public source repository
-- Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-18 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/dipy/dipy
 - Page: https://hounsfieldlab.com/tools/dipy.html
 
@@ -355,8 +370,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: BSD-3-Clause
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-19 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/nilearn/nilearn
 - Page: https://hounsfieldlab.com/tools/nilearn.html
 
@@ -368,10 +383,25 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: Apache-2.0
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-16 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/ANTsX/ANTsPy
 - Page: https://hounsfieldlab.com/tools/antspy.html
+
+### FastSurfer
+- What it is: Deep-learning whole-brain segmentation and cortical surface reconstruction, a fast alternative to FreeSurfer recon-all
+- Type: Neuroimaging suite
+- Modality/specialty: Neuroradiology: brain MRI
+- Maintainer: Deep-MI (DZNE)
+- License: Apache-2.0
+- Commercial use: Verify
+- License note: Repo LICENSE is Apache-2.0. The surface pipeline calls FreeSurfer binaries and needs a FreeSurfer license file (free, separate terms). The README says results are for research and not for clinical decision support.
+- Access: free public source repository
+- Last repository update: 2026-10-18 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://github.com/Deep-MI/FastSurfer
+- Page: https://hounsfieldlab.com/tools/fastsurfer.html
+- Related datasets: ISLES'24, IXI, Medical Segmentation Decathlon, NCI Imaging Data Commons, OpenNeuro, ReMIND (preoperative MRI and intraoperative ultrasound)
 
 ## Tools: Viewers & toolkits
 
@@ -384,8 +414,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - License note: Repo License.txt describes a BSD-style license with Slicer-specific extensions.
 - Access: free public source repository
-- Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-17 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/Slicer/Slicer
 - Page: https://hounsfieldlab.com/tools/3d-slicer.html
 - Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), CBIS-DDSM, CMMD, Duke-Breast-Cancer-MRI, FDG-PET-CT-Lesions (autoPET)
@@ -398,8 +428,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: MIT
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-15 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-19 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/OHIF/Viewers
 - Page: https://hounsfieldlab.com/tools/ohif-viewer.html
 - Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases
@@ -412,11 +442,11 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: Apache-2.0
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-14 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-18 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/InsightSoftwareConsortium/ITK
 - Page: https://hounsfieldlab.com/tools/itk.html
-- Related datasets: CT-ORG, ISLES'24, IXI, OpenNeuro, Merlin Abdominal CT, CT-ICH
+- Related datasets: CT-ORG, Merlin Abdominal CT, CT-ICH
 
 ### MITK
 - What it is: Medical Imaging Interaction Toolkit for building imaging applications
@@ -426,10 +456,37 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: BSD-3-Clause
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-10 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-18 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/MITK/MITK
 - Page: https://hounsfieldlab.com/tools/mitk.html
+
+### SimpleITK
+- What it is: Simplified interface to ITK for image I/O, filtering, segmentation and registration in Python, R, Java, C# and other languages
+- Type: Image toolkit
+- Modality/specialty: Medical imaging (general)
+- Maintainer: SimpleITK / Insight Software Consortium
+- License: Apache-2.0
+- Commercial use: Permissive
+- Access: free public source repository
+- Last repository update: 2026-10-15 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://github.com/SimpleITK/SimpleITK
+- Page: https://hounsfieldlab.com/tools/simpleitk.html
+- Related datasets: CT-ORG, ISLES'24, IXI, OpenNeuro, TotalSegmentator CT dataset, UCSF-PDGM
+
+### Cornerstone3D
+- What it is: JavaScript libraries for web-based medical image rendering, tools and segmentation; the imaging engine behind the OHIF Viewer
+- Type: Viewer (web)
+- Modality/specialty: Radiology DICOM
+- Maintainer: Cornerstone.js / OHIF
+- License: MIT
+- Commercial use: Permissive
+- Access: free public source repository
+- Last repository update: 2026-10-17 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://github.com/cornerstonejs/cornerstone3D
+- Page: https://hounsfieldlab.com/tools/cornerstone3d.html
 
 ## Tools: DICOM/PACS & deployment
 
@@ -442,8 +499,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - License note: Repo LICENSE is MIT except for portions listed in the file.
 - Access: free public source repository
-- Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-14 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/pydicom/pydicom
 - Page: https://hounsfieldlab.com/tools/pydicom.html
 - Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases
@@ -457,8 +514,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - License note: COPYRIGHT file is a BSD-style license from OFFIS e.V.; some bundled parts carry other notices.
 - Access: free public source repository
-- Last repository update: 2026-10-10 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-15 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/DCMTK/dcmtk
 - Page: https://hounsfieldlab.com/tools/dcmtk.html
 
@@ -471,10 +528,10 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Copyleft
 - Access: free public source repository
 - Last repository update: 2026-09-28 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/orthanc-server/orthanc-builder
 - Page: https://hounsfieldlab.com/tools/orthanc.html
-- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases
+- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), CBIS-DDSM, CMMD, CPAISD, CQ500
 
 ### mercure
 - What it is: DICOM orchestrator that routes studies to AI processing pipelines
@@ -485,7 +542,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2026-10-07 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/mercure-imaging/mercure
 - Page: https://hounsfieldlab.com/tools/mercure.html
 
@@ -497,10 +554,39 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: AGPL-3.0
 - Commercial use: Copyleft
 - Access: free public source repository
-- Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-19 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/kaapana/kaapana
 - Page: https://hounsfieldlab.com/tools/kaapana.html
+
+### dcm2niix
+- What it is: Converts DICOM to NIfTI with JSON sidecars; the standard converter in many brain MRI and BIDS pipelines
+- Type: DICOM infrastructure
+- Modality/specialty: DICOM to NIfTI (MRI, CT)
+- Maintainer: Chris Rorden (rordenlab)
+- License: BSD-style (+ bundled licenses)
+- Commercial use: Permissive
+- License note: license.txt is a BSD-style license (Chris Rorden). Bundled parts such as the NIfTI headers, miniz, OpenJPEG, CharLS, zlib and Jasper carry their own licenses. The file states the software is for research purposes only and is not a clinical tool.
+- Access: free public source repository
+- Last repository update: 2026-10-14 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://github.com/rordenlab/dcm2niix
+- Page: https://hounsfieldlab.com/tools/dcm2niix.html
+- Related datasets: CPAISD, CQ500, ISLES'24, IXI, Medical Segmentation Decathlon, NCI Imaging Data Commons
+
+### highdicom
+- What it is: High-level Python API on pydicom for reading images and writing AI results as DICOM Segmentation, Structured Report, parametric map and annotation objects
+- Type: DICOM infrastructure
+- Modality/specialty: Radiology and pathology DICOM
+- Maintainer: Imaging Data Commons (highdicom developers)
+- License: MIT
+- Commercial use: Permissive
+- Access: free public source repository
+- Last repository update: 2026-10-16 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://github.com/ImagingDataCommons/highdicom
+- Page: https://hounsfieldlab.com/tools/highdicom.html
+- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases
 
 ## Tools: Pathology
 
@@ -513,8 +599,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Verify
 - License note: Code is BSD 3-clause. LICENSE says the model weights are under a different license (see TIAToolbox pretrained-model docs).
 - Access: free public source repository
-- Last repository update: 2026-10-12 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-16 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/TissueImageAnalytics/tiatoolbox
 - Page: https://hounsfieldlab.com/tools/tiatoolbox.html
 
@@ -527,7 +613,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Copyleft
 - Access: free public source repository
 - Last repository update: 2026-08-14 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/Dana-Farber-AIOS/pathml
 - Page: https://hounsfieldlab.com/tools/pathml.html
 
@@ -540,7 +626,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Copyleft
 - Access: free public source repository
 - Last repository update: 2025-04-14 (Stale)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/mahmoodlab/CLAM
 - Page: https://hounsfieldlab.com/tools/clam.html
 
@@ -554,7 +640,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License note: Repo LICENSE and Hugging Face weights (MahmoodLab/UNI) are CC BY-NC-ND 4.0.
 - Access: free public source repository
 - Last repository update: 2025-03-26 (Stale)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/mahmoodlab/UNI
 - Page: https://hounsfieldlab.com/tools/uni.html
 
@@ -566,8 +652,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: GPL-3.0
 - Commercial use: Copyleft
 - Access: free public source repository
-- Last repository update: 2026-10-12 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-19 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/qupath/qupath
 - Page: https://hounsfieldlab.com/tools/qupath.html
 
@@ -582,7 +668,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2026-08-12 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/apache/ctakes
 - Page: https://hounsfieldlab.com/tools/apache-ctakes.html
 
@@ -595,7 +681,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2026-06-04 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/medspacy/medspacy
 - Page: https://hounsfieldlab.com/tools/medspacy.html
 
@@ -608,7 +694,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2025-12-04 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/allenai/scispacy
 - Page: https://hounsfieldlab.com/tools/scispacy.html
 
@@ -621,7 +707,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2024-08-12 (Stale)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/Georgetown-IR-Lab/QuickUMLS
 - Page: https://hounsfieldlab.com/tools/quickumls.html
 
@@ -635,8 +721,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: Apache-2.0
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-14 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-19 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/hapifhir/hapi-fhir
 - Page: https://hounsfieldlab.com/tools/hapi-fhir.html
 
@@ -648,8 +734,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: Apache-2.0
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-08-18 (Maintained)
-- Last checked: 2026-10-13
+- Last repository update: 2026-10-19 (Maintained)
+- Last checked: 2026-10-19
 - Links: https://github.com/synthetichealth/synthea
 - Page: https://hounsfieldlab.com/tools/synthea.html
 
@@ -662,7 +748,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2026-09-01 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/MIT-LCP/mimic-code
 - Page: https://hounsfieldlab.com/tools/mimic-code.html
 
@@ -675,7 +761,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2026-09-16 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/OHDSI/Atlas
 - Page: https://hounsfieldlab.com/tools/ohdsi-atlas.html
 
@@ -688,7 +774,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use: Permissive
 - Access: free public source repository
 - Last repository update: 2026-10-13 (Maintained)
-- Last checked: 2026-10-13
+- Last checked: 2026-10-19
 - Links: https://github.com/OHDSI/WhiteRabbit
 - Page: https://hounsfieldlab.com/tools/ohdsi-whiterabbit.html
 
@@ -1131,6 +1217,25 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-18
 - Page: https://hounsfieldlab.com/datasets/lidc-idri.html
 
+### Medical Segmentation Decathlon
+- What it is: Ten segmentation tasks: brain tumor, hippocampus, lung tumor, liver tumor, pancreas tumor, colon cancer, hepatic vessels, spleen, prostate, and left atrium
+- Source: https://registry.opendata.aws/msd/
+- Area: neuro; chest; body; cardiac
+- Modality: CT; MR
+- Normals included: no
+- Format: NIfTI
+- Size: Ten tasks, from 30 to 750 volumes each; test labels are not released
+- License: CC BY-SA 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Use the AWS Open Data page. The bucket s3://msd-for-monai can be listed and downloaded with the AWS CLI and --no-sign-request, so no AWS account is needed. MONAI also ships a loader for these tasks. Task descriptions are on medicaldecathlon.com.
+- Limitations: Built for a 2018 segmentation challenge, so each task targets one structure or lesion and the cohorts are small for some tasks (left atrium has 30 volumes). Test-set labels are withheld. The brain tumor task is drawn from BraTS 2016–2017 and the lung task from TCIA, so check overlap before combining with those sources. Share-alike applies if you redistribute adapted data.
+- Citation: Yes. Cite Simpson et al., A large annotated medical image dataset for the development and evaluation of segmentation algorithms (arXiv:1902.09063), and Antonelli et al., Nature Communications 2022.
+- Status: VERIFIED
+- Added: 2026-10-19
+- Last checked: 2026-10-19
+- Page: https://hounsfieldlab.com/datasets/medical-segmentation-decathlon.html
+
 ### Merlin Abdominal CT
 - What it is: Emergency abdominal and pelvic CT paired with report findings
 - Source: https://stanford.redivis.com/datasets/exfv-e8h3kvfhs
@@ -1282,6 +1387,25 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Added: 2026-10-18
 - Last checked: 2026-10-18
 - Page: https://hounsfieldlab.com/datasets/nlst-tcia-imaging-subset.html
+
+### NYU fastMRI
+- What it is: Raw k-space and reconstructed MRI from clinical knee, brain, prostate, and breast exams, built for accelerated MRI reconstruction research
+- Source: https://fastmri.med.nyu.edu/
+- Area: msk; neuro; body; breast
+- Modality: MR
+- Normals included: partial
+- Format: DICOM; HDF5
+- Size: Over 1,500 raw knee and 10,000 DICOM knee exams, 6,970 raw brain exams, 312 prostate and 300 breast exams
+- License: NYU fastMRI Dataset Sharing Agreement (internal research or education only)
+- Commercial use allowed: no
+- Access: account
+- How to access: Read the Dataset Sharing Agreement on the fastMRI page and submit the online application with your institutional affiliation and intended use. Approved users get a personal download link. Each sub-dataset has its own agreement.
+- Limitations: Internal research or education only. No redistribution, no sharing of the download link, no selling or monetizing, and no attempt to re-identify anyone; the agreement also asks you to destroy copies when your work is done. Most data are raw k-space for reconstruction, not diagnostic labels. DICOM is described for the knee set only. Not for clinical use.
+- Citation: Yes. The agreement requires citing “NYU fastMRI” and Knoll et al., Radiology: Artificial Intelligence 2020 (doi 10.1148/ryai.2020190007), plus arXiv:1811.08839.
+- Status: VERIFIED
+- Added: 2026-10-19
+- Last checked: 2026-10-19
+- Page: https://hounsfieldlab.com/datasets/nyu-fastmri.html
 
 ### Open POCUS
 - What it is: Lung point-of-care ultrasound, including clips with no abnormality, B-lines, and consolidation
@@ -1738,6 +1862,44 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Added: 2026-10-18
 - Last checked: 2026-10-18
 - Page: https://hounsfieldlab.com/datasets/thyroid-ultrasound-cine-clip.html
+
+### TotalSegmentator CT dataset
+- What it is: Routine clinical CT scans with segmentations of 117 anatomical structures (organs, bones, muscles, vessels); version 3 adds 291 pediatric CTs
+- Source: https://zenodo.org/records/22688904
+- Area: body; chest; msk
+- Modality: CT
+- Normals included: partial
+- Format: NIfTI
+- Size: 1,939 CT images (version 3.0.0); one 37.4 GB zip
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the Zenodo record and download the zip. No account is needed. The record also links a faster Dropbox copy and a 102-subject subset for a quick look. Earlier versions (1,228 images) remain on Zenodo under their own DOIs.
+- Limitations: Labels are anatomy, not disease, and the scans have no normal or abnormal label even though many pathologies are present. NIfTI, not DICOM. The segmentations were made with a model-assisted workflow, so they can carry systematic errors; version 3 fixed many label errors and vertebra mix-ups. The paper describes version 1.
+- Citation: Yes. The record asks you to cite Wasserthal et al., TotalSegmentator, Radiology: Artificial Intelligence 2023, and the Zenodo DOI 10.5281/zenodo.22688904.
+- Status: VERIFIED
+- Added: 2026-10-19
+- Last checked: 2026-10-19
+- Page: https://hounsfieldlab.com/datasets/totalsegmentator-ct-dataset.html
+
+### UCSF-PDGM
+- What it is: Preoperative diffuse glioma (WHO grade 2–4) on a standardized 3T protocol, with IDH and MGMT status, BraTS-style tumor segmentations, and diffusion and ASL perfusion
+- Source: https://www.cancerimagingarchive.net/collection/ucsf-pdgm/
+- Area: neuro
+- Modality: MR
+- Normals included: no
+- Format: NIfTI
+- Size: 495 patients (501 exams); about 142 GB
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the collection page and use the download control in the Data Access table (TCIA Data Retriever or Aspera, whichever that row names). A public Creative Commons row does not need an application. Read the Citations & Data Usage Policy tab before use. The image download uses IBM Aspera Connect.
+- Limitations: Glioma cohort, not healthy controls. TCIA states the original DICOM is not available: images are skull-stripped, co-registered to the FLAIR at 1 mm, and released as NIfTI. Six IDs turned out to be follow-up scans of other patients and were renamed in version 3. A metadata sheet maps cases to BraTS 2021 IDs, so check for overlap before combining with BraTS. Single center, single scanner vendor.
+- Citation: Yes. Cite the collection DOI 10.7937/tcia.bdgf-8v37 and Calabrese et al., Radiology: Artificial Intelligence 2022, and follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-10-19
+- Last checked: 2026-10-19
+- Page: https://hounsfieldlab.com/datasets/ucsf-pdgm.html
 
 ### UPENN-GBM
 - What it is: Newly diagnosed glioblastoma, with segmentations and clinical/genomic tables

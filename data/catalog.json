@@ -158,7 +158,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-13",
+   "last_push_utc": "2026-10-19",
    "maintainer": "Project MONAI (NVIDIA + academic)",
    "urls": [
     "https://github.com/Project-MONAI/MONAI"
@@ -175,7 +175,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-12",
+   "last_push_utc": "2026-10-19",
    "maintainer": "Project MONAI",
    "urls": [
     "https://github.com/Project-MONAI/MONAILabel"
@@ -192,7 +192,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-13",
+   "last_push_utc": "2026-10-16",
    "maintainer": "DKFZ (MIC)",
    "urls": [
     "https://github.com/MIC-DKFZ/nnUNet"
@@ -209,7 +209,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-14",
+   "last_push_utc": "2026-10-16",
    "maintainer": "J. Wasserthal",
    "urls": [
     "https://github.com/wasserth/TotalSegmentator"
@@ -294,7 +294,7 @@
    "license_note": "Repo LICENSE.txt is the FreeSurfer Software License Agreement v1.0 (MGH), a custom license.",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-13",
+   "last_push_utc": "2026-10-19",
    "maintainer": "MGH Martinos Center",
    "urls": [
     "https://github.com/freesurfer/freesurfer"
@@ -311,7 +311,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-13",
+   "last_push_utc": "2026-10-19",
    "maintainer": "NiPreps",
    "urls": [
     "https://github.com/nipreps/fmriprep"
@@ -328,7 +328,7 @@
    "license_note": "Repo LICENSE is BSD 3-clause unless individual files say otherwise.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-13",
+   "last_push_utc": "2026-10-18",
    "maintainer": "DIPY team",
    "urls": [
     "https://github.com/dipy/dipy"
@@ -345,7 +345,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-13",
+   "last_push_utc": "2026-10-19",
    "maintainer": "nilearn",
    "urls": [
     "https://github.com/nilearn/nilearn"
@@ -362,7 +362,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-13",
+   "last_push_utc": "2026-10-16",
    "maintainer": "ANTsX",
    "urls": [
     "https://github.com/ANTsX/ANTsPy"
@@ -379,7 +379,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-06",
+   "last_push_utc": "2026-10-16",
    "maintainer": "TorchIO project",
    "urls": [
     "https://github.com/TorchIO-project/torchio"
@@ -413,7 +413,7 @@
    "license_note": "Repo License.txt describes a BSD-style license with Slicer-specific extensions.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-13",
+   "last_push_utc": "2026-10-17",
    "maintainer": "Slicer community",
    "urls": [
     "https://github.com/Slicer/Slicer"
@@ -430,7 +430,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-15",
+   "last_push_utc": "2026-10-19",
    "maintainer": "OHIF",
    "urls": [
     "https://github.com/OHIF/Viewers"
@@ -447,7 +447,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-14",
+   "last_push_utc": "2026-10-18",
    "maintainer": "Insight Software Consortium",
    "urls": [
     "https://github.com/InsightSoftwareConsortium/ITK"
@@ -464,7 +464,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-10",
+   "last_push_utc": "2026-10-18",
    "maintainer": "DKFZ / MITK",
    "urls": [
     "https://github.com/MITK/MITK"
@@ -481,7 +481,7 @@
    "license_note": "Repo LICENSE is MIT except for portions listed in the file.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-13",
+   "last_push_utc": "2026-10-14",
    "maintainer": "pydicom",
    "urls": [
     "https://github.com/pydicom/pydicom"
@@ -498,7 +498,7 @@
    "license_note": "COPYRIGHT file is a BSD-style license from OFFIS e.V.; some bundled parts carry other notices.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-10",
+   "last_push_utc": "2026-10-15",
    "maintainer": "OFFIS",
    "urls": [
     "https://github.com/DCMTK/dcmtk"
@@ -549,7 +549,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-13",
+   "last_push_utc": "2026-10-19",
    "maintainer": "DKFZ",
    "urls": [
     "https://github.com/kaapana/kaapana"
@@ -566,7 +566,7 @@
    "license_note": "Code is BSD 3-clause. LICENSE says the model weights are under a different license (see TIAToolbox pretrained-model docs).",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-12",
+   "last_push_utc": "2026-10-16",
    "maintainer": "TIA Centre, Warwick",
    "urls": [
     "https://github.com/TissueImageAnalytics/tiatoolbox"
@@ -634,7 +634,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-12",
+   "last_push_utc": "2026-10-19",
    "maintainer": "QuPath team",
    "urls": [
     "https://github.com/qupath/qupath"
@@ -719,7 +719,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-14",
+   "last_push_utc": "2026-10-19",
    "maintainer": "HAPI FHIR",
    "urls": [
     "https://github.com/hapifhir/hapi-fhir"
@@ -736,7 +736,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-08-18",
+   "last_push_utc": "2026-10-19",
    "maintainer": "MITRE / Synthetic Health",
    "urls": [
     "https://github.com/synthetichealth/synthea"
@@ -826,6 +826,108 @@
    "urls": [
     "https://github.com/udiram/RadKev",
     "https://huggingface.co/ramu9703/radkev-27b"
+   ]
+  },
+  {
+   "name": "dcm2niix",
+   "slug": "dcm2niix",
+   "group": "DICOM/PACS & deployment",
+   "category": "DICOM infrastructure",
+   "modality_specialty": "DICOM to NIfTI (MRI, CT)",
+   "what_it_does": "Converts DICOM to NIfTI with JSON sidecars; the standard converter in many brain MRI and BIDS pipelines",
+   "license": "BSD-style (+ bundled licenses)",
+   "license_note": "license.txt is a BSD-style license (Chris Rorden). Bundled parts such as the NIfTI headers, miniz, OpenJPEG, CharLS, zlib and Jasper carry their own licenses. The file states the software is for research purposes only and is not a clinical tool.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-14",
+   "maintainer": "Chris Rorden (rordenlab)",
+   "urls": [
+    "https://github.com/rordenlab/dcm2niix"
+   ]
+  },
+  {
+   "name": "highdicom",
+   "slug": "highdicom",
+   "group": "DICOM/PACS & deployment",
+   "category": "DICOM infrastructure",
+   "modality_specialty": "Radiology and pathology DICOM",
+   "what_it_does": "High-level Python API on pydicom for reading images and writing AI results as DICOM Segmentation, Structured Report, parametric map and annotation objects",
+   "license": "MIT",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-16",
+   "maintainer": "Imaging Data Commons (highdicom developers)",
+   "urls": [
+    "https://github.com/ImagingDataCommons/highdicom"
+   ]
+  },
+  {
+   "name": "FastSurfer",
+   "slug": "fastsurfer",
+   "group": "Neuroimaging",
+   "category": "Neuroimaging suite",
+   "modality_specialty": "Neuroradiology: brain MRI",
+   "what_it_does": "Deep-learning whole-brain segmentation and cortical surface reconstruction, a fast alternative to FreeSurfer recon-all",
+   "license": "Apache-2.0",
+   "license_note": "Repo LICENSE is Apache-2.0. The surface pipeline calls FreeSurfer binaries and needs a FreeSurfer license file (free, separate terms). The README says results are for research and not for clinical decision support.",
+   "commercial": "Verify",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-18",
+   "maintainer": "Deep-MI (DZNE)",
+   "urls": [
+    "https://github.com/Deep-MI/FastSurfer"
+   ]
+  },
+  {
+   "name": "TorchXRayVision",
+   "slug": "torchxrayvision",
+   "group": "Segmentation & frameworks",
+   "category": "Framework",
+   "modality_specialty": "Radiology: chest X-ray",
+   "what_it_does": "Library of chest X-ray dataset loaders and pretrained classification, segmentation and autoencoder models",
+   "license": "Apache-2.0 (library); models vary",
+   "license_note": "LICENSE says the main library is Apache-2.0 and that licenses vary by subpackage; check each baseline model's license before use.",
+   "commercial": "Verify",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-18",
+   "maintainer": "mlmed",
+   "urls": [
+    "https://github.com/mlmed/torchxrayvision"
+   ]
+  },
+  {
+   "name": "SimpleITK",
+   "slug": "simpleitk",
+   "group": "Viewers & toolkits",
+   "category": "Image toolkit",
+   "modality_specialty": "Medical imaging (general)",
+   "what_it_does": "Simplified interface to ITK for image I/O, filtering, segmentation and registration in Python, R, Java, C# and other languages",
+   "license": "Apache-2.0",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-15",
+   "maintainer": "SimpleITK / Insight Software Consortium",
+   "urls": [
+    "https://github.com/SimpleITK/SimpleITK"
+   ]
+  },
+  {
+   "name": "Cornerstone3D",
+   "slug": "cornerstone3d",
+   "group": "Viewers & toolkits",
+   "category": "Viewer (web)",
+   "modality_specialty": "Radiology DICOM",
+   "what_it_does": "JavaScript libraries for web-based medical image rendering, tools and segmentation; the imaging engine behind the OHIF Viewer",
+   "license": "MIT",
+   "license_note": "",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-17",
+   "maintainer": "Cornerstone.js / OHIF",
+   "urls": [
+    "https://github.com/cornerstonejs/cornerstone3D"
    ]
   }
  ]

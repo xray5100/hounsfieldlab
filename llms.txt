@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 48 open-source medical AI software tools and 59 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-13; dataset list last updated 2026-10-18.
+> Hounsfield Lab is a directory of 54 open-source medical AI software tools and 63 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-19.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -35,48 +35,54 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 
 ## Tools: Segmentation & frameworks
 
-- [MONAI](https://hounsfieldlab.com/tools/monai.html): PyTorch-based AI toolkit for healthcare imaging (Apache-2.0; Maintained; updated 2026-10-13)
-- [MONAI Label](https://hounsfieldlab.com/tools/monai-label.html): AI-assisted image labeling and active learning; integrates with 3D Slicer and OHIF (Apache-2.0; Maintained; updated 2026-10-12)
-- [nnU-Net](https://hounsfieldlab.com/tools/nnu-net.html): Self-configuring segmentation framework (Apache-2.0; Maintained; updated 2026-10-13)
-- [TotalSegmentator](https://hounsfieldlab.com/tools/totalsegmentator.html): Segments more than 100 anatomical structures in CT and MR (Apache-2.0; Maintained; updated 2026-10-14)
+- [MONAI](https://hounsfieldlab.com/tools/monai.html): PyTorch-based AI toolkit for healthcare imaging (Apache-2.0; Maintained; updated 2026-10-19)
+- [MONAI Label](https://hounsfieldlab.com/tools/monai-label.html): AI-assisted image labeling and active learning; integrates with 3D Slicer and OHIF (Apache-2.0; Maintained; updated 2026-10-19)
+- [nnU-Net](https://hounsfieldlab.com/tools/nnu-net.html): Self-configuring segmentation framework (Apache-2.0; Maintained; updated 2026-10-16)
+- [TotalSegmentator](https://hounsfieldlab.com/tools/totalsegmentator.html): Segments more than 100 anatomical structures in CT and MR (Apache-2.0; Maintained; updated 2026-10-16)
 - [MedSAM](https://hounsfieldlab.com/tools/medsam.html): Segment Anything adapted for medical images (Apache-2.0; Stale; updated 2025-05-07)
 - [MedSAM2](https://hounsfieldlab.com/tools/medsam2.html): Promptable segmentation of 3D medical images and videos (Apache-2.0; Stale; updated 2025-07-11)
-- [TorchIO](https://hounsfieldlab.com/tools/torchio.html): Medical image loading, preprocessing and augmentation for PyTorch (Apache-2.0; Maintained; updated 2026-10-06)
+- [TorchIO](https://hounsfieldlab.com/tools/torchio.html): Medical image loading, preprocessing and augmentation for PyTorch (Apache-2.0; Maintained; updated 2026-10-16)
 - [PyRadiomics](https://hounsfieldlab.com/tools/pyradiomics.html): Extracts radiomics features from 2D/3D images (BSD-3-Clause; Maintained; updated 2025-10-27)
 - [ContiLNN](https://hounsfieldlab.com/tools/contilnn.html): Adds bidirectional liquid-neural modules along the slice axis to 2D restoration backbones; pretrained checkpoints for CT denoising, MRI super-resolution and low-count PET (Apache-2.0; Maintained; updated 2026-10-09)
+- [TorchXRayVision](https://hounsfieldlab.com/tools/torchxrayvision.html): Library of chest X-ray dataset loaders and pretrained classification, segmentation and autoencoder models (Apache-2.0 (library); models vary; Maintained; updated 2026-10-18)
 
 ## Tools: Neuroimaging
 
 - [HD-BET](https://hounsfieldlab.com/tools/hd-bet.html): Deep-learning brain extraction (skull stripping) for MRI (Apache-2.0; Stale; updated 2024-12-18)
 - [BrainChop](https://hounsfieldlab.com/tools/brainchop.html): In-browser 3D MRI rendering and segmentation (MIT; Maintained; updated 2026-02-24)
-- [FreeSurfer](https://hounsfieldlab.com/tools/freesurfer.html): Neuroimaging analysis and visualization suite (FreeSurfer License; Maintained; updated 2026-10-13)
-- [fMRIPrep](https://hounsfieldlab.com/tools/fmriprep.html): Robust preprocessing pipeline for fMRI (Apache-2.0; Maintained; updated 2026-10-13)
-- [DIPY](https://hounsfieldlab.com/tools/dipy.html): Python library for diffusion MRI, tractography and registration (BSD-3-Clause; Maintained; updated 2026-10-13)
-- [nilearn](https://hounsfieldlab.com/tools/nilearn.html): Machine learning for neuroimaging in Python (BSD-3-Clause; Maintained; updated 2026-10-13)
-- [ANTsPy](https://hounsfieldlab.com/tools/antspy.html): Python library for registration, segmentation and analysis (Apache-2.0; Maintained; updated 2026-10-13)
+- [FreeSurfer](https://hounsfieldlab.com/tools/freesurfer.html): Neuroimaging analysis and visualization suite (FreeSurfer License; Maintained; updated 2026-10-19)
+- [fMRIPrep](https://hounsfieldlab.com/tools/fmriprep.html): Robust preprocessing pipeline for fMRI (Apache-2.0; Maintained; updated 2026-10-19)
+- [DIPY](https://hounsfieldlab.com/tools/dipy.html): Python library for diffusion MRI, tractography and registration (BSD-3-Clause; Maintained; updated 2026-10-18)
+- [nilearn](https://hounsfieldlab.com/tools/nilearn.html): Machine learning for neuroimaging in Python (BSD-3-Clause; Maintained; updated 2026-10-19)
+- [ANTsPy](https://hounsfieldlab.com/tools/antspy.html): Python library for registration, segmentation and analysis (Apache-2.0; Maintained; updated 2026-10-16)
+- [FastSurfer](https://hounsfieldlab.com/tools/fastsurfer.html): Deep-learning whole-brain segmentation and cortical surface reconstruction, a fast alternative to FreeSurfer recon-all (Apache-2.0; Maintained; updated 2026-10-18)
 
 ## Tools: Viewers & toolkits
 
-- [3D Slicer](https://hounsfieldlab.com/tools/3d-slicer.html): Open platform for visualization, segmentation and image computing (Slicer License (BSD-style); Maintained; updated 2026-10-13)
-- [OHIF Viewer](https://hounsfieldlab.com/tools/ohif-viewer.html): Zero-footprint web DICOM viewer (MIT; Maintained; updated 2026-10-15)
-- [ITK](https://hounsfieldlab.com/tools/itk.html): C++/Python toolkit for segmentation and registration (Apache-2.0; Maintained; updated 2026-10-14)
-- [MITK](https://hounsfieldlab.com/tools/mitk.html): Medical Imaging Interaction Toolkit for building imaging applications (BSD-3-Clause; Maintained; updated 2026-10-10)
+- [3D Slicer](https://hounsfieldlab.com/tools/3d-slicer.html): Open platform for visualization, segmentation and image computing (Slicer License (BSD-style); Maintained; updated 2026-10-17)
+- [OHIF Viewer](https://hounsfieldlab.com/tools/ohif-viewer.html): Zero-footprint web DICOM viewer (MIT; Maintained; updated 2026-10-19)
+- [ITK](https://hounsfieldlab.com/tools/itk.html): C++/Python toolkit for segmentation and registration (Apache-2.0; Maintained; updated 2026-10-18)
+- [MITK](https://hounsfieldlab.com/tools/mitk.html): Medical Imaging Interaction Toolkit for building imaging applications (BSD-3-Clause; Maintained; updated 2026-10-18)
+- [SimpleITK](https://hounsfieldlab.com/tools/simpleitk.html): Simplified interface to ITK for image I/O, filtering, segmentation and registration in Python, R, Java, C# and other languages (Apache-2.0; Maintained; updated 2026-10-15)
+- [Cornerstone3D](https://hounsfieldlab.com/tools/cornerstone3d.html): JavaScript libraries for web-based medical image rendering, tools and segmentation; the imaging engine behind the OHIF Viewer (MIT; Maintained; updated 2026-10-17)
 
 ## Tools: DICOM/PACS & deployment
 
-- [pydicom](https://hounsfieldlab.com/tools/pydicom.html): Read, modify and write DICOM files in Python (MIT (+ noted portions); Maintained; updated 2026-10-13)
-- [DCMTK](https://hounsfieldlab.com/tools/dcmtk.html): Comprehensive set of DICOM libraries and tools (C++) (BSD-3-Clause (OFFIS); Maintained; updated 2026-10-10)
+- [pydicom](https://hounsfieldlab.com/tools/pydicom.html): Read, modify and write DICOM files in Python (MIT (+ noted portions); Maintained; updated 2026-10-14)
+- [DCMTK](https://hounsfieldlab.com/tools/dcmtk.html): Comprehensive set of DICOM libraries and tools (C++) (BSD-3-Clause (OFFIS); Maintained; updated 2026-10-15)
 - [Orthanc](https://hounsfieldlab.com/tools/orthanc.html): Lightweight DICOM server; this repo builds the Docker images and installers (AGPL-3.0; Maintained; updated 2026-09-28)
 - [mercure](https://hounsfieldlab.com/tools/mercure.html): DICOM orchestrator that routes studies to AI processing pipelines (MIT; Maintained; updated 2026-10-07)
-- [Kaapana](https://hounsfieldlab.com/tools/kaapana.html): Platform toolkit for medical imaging AI (federated, workflows) (AGPL-3.0; Maintained; updated 2026-10-13)
+- [Kaapana](https://hounsfieldlab.com/tools/kaapana.html): Platform toolkit for medical imaging AI (federated, workflows) (AGPL-3.0; Maintained; updated 2026-10-19)
+- [dcm2niix](https://hounsfieldlab.com/tools/dcm2niix.html): Converts DICOM to NIfTI with JSON sidecars; the standard converter in many brain MRI and BIDS pipelines (BSD-style (+ bundled licenses); Maintained; updated 2026-10-14)
+- [highdicom](https://hounsfieldlab.com/tools/highdicom.html): High-level Python API on pydicom for reading images and writing AI results as DICOM Segmentation, Structured Report, parametric map and annotation objects (MIT; Maintained; updated 2026-10-16)
 
 ## Tools: Pathology
 
-- [TIAToolbox](https://hounsfieldlab.com/tools/tiatoolbox.html): Computational pathology toolbox: whole-slide image I/O, stain normalization, models (BSD-3-Clause; Maintained; updated 2026-10-12)
+- [TIAToolbox](https://hounsfieldlab.com/tools/tiatoolbox.html): Computational pathology toolbox: whole-slide image I/O, stain normalization, models (BSD-3-Clause; Maintained; updated 2026-10-16)
 - [PathML](https://hounsfieldlab.com/tools/pathml.html): Tools for computational pathology (GPL-2.0; Maintained; updated 2026-08-14)
 - [CLAM](https://hounsfieldlab.com/tools/clam.html): Weakly supervised whole-slide classification (GPL-3.0; Stale; updated 2025-04-14)
 - [UNI](https://hounsfieldlab.com/tools/uni.html): Pathology foundation model (Nature Medicine) (CC BY-NC-ND 4.0; Stale; updated 2025-03-26)
-- [QuPath](https://hounsfieldlab.com/tools/qupath.html): Open-source bioimage and whole-slide analysis (GPL-3.0; Maintained; updated 2026-10-12)
+- [QuPath](https://hounsfieldlab.com/tools/qupath.html): Open-source bioimage and whole-slide analysis (GPL-3.0; Maintained; updated 2026-10-19)
 
 ## Tools: Clinical NLP
 
@@ -87,8 +93,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 
 ## Tools: EHR & data
 
-- [HAPI FHIR](https://hounsfieldlab.com/tools/hapi-fhir.html): Java API for HL7 FHIR clients and servers (Apache-2.0; Maintained; updated 2026-10-14)
-- [Synthea](https://hounsfieldlab.com/tools/synthea.html): Synthetic patient population simulator (Apache-2.0; Maintained; updated 2026-08-18)
+- [HAPI FHIR](https://hounsfieldlab.com/tools/hapi-fhir.html): Java API for HL7 FHIR clients and servers (Apache-2.0; Maintained; updated 2026-10-19)
+- [Synthea](https://hounsfieldlab.com/tools/synthea.html): Synthetic patient population simulator (Apache-2.0; Maintained; updated 2026-10-19)
 - [MIMIC code](https://hounsfieldlab.com/tools/mimic-code.html): Community code for the MIMIC databases (MIT; Maintained; updated 2026-09-01)
 - [OHDSI ATLAS](https://hounsfieldlab.com/tools/ohdsi-atlas.html): Web tool for observational analyses on OMOP data (Apache-2.0; Maintained; updated 2026-09-16)
 - [OHDSI WhiteRabbit](https://hounsfieldlab.com/tools/ohdsi-whiterabbit.html): Profiles source databases to plan ETL into OMOP (Apache-2.0; Maintained; updated 2026-10-13)
@@ -118,6 +124,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [IXI](https://hounsfieldlab.com/datasets/ixi.html): Normal, healthy adult brain MRI (T1, T2, PD, MRA, diffusion). MR; NIfTI; license CC BY-SA 3.0; access open; normals yes; VERIFIED. Source: https://brain-development.org/ixi-dataset/
 - [LERA](https://hounsfieldlab.com/datasets/lera.html): Lower-extremity radiographs (foot, knee, ankle, or hip). DX, CR; Check source; license Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals partial; VERIFIED. Source: https://stanford.redivis.com/datasets/0jyf-46kmqh2vf
 - [LIDC-IDRI](https://hounsfieldlab.com/datasets/lidc-idri.html): Lung nodules marked by four readers; includes nodules that were not cancer. CT, CR, DX; DICOM; license CC BY 3.0; access open; normals partial; VERIFIED. Source: https://www.cancerimagingarchive.net/collection/lidc-idri/
+- [Medical Segmentation Decathlon](https://hounsfieldlab.com/datasets/medical-segmentation-decathlon.html): Ten segmentation tasks: brain tumor, hippocampus, lung tumor, liver tumor, pancreas tumor, colon cancer, hepatic vessels, spleen, prostate, and left atrium. CT, MR; NIfTI; license CC BY-SA 4.0; access open; normals no; VERIFIED. Source: https://registry.opendata.aws/msd/
 - [Merlin Abdominal CT](https://hounsfieldlab.com/datasets/merlin-abdominal-ct.html): Emergency abdominal and pelvic CT paired with report findings. CT; NIfTI; license Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals partial; VERIFIED. Source: https://stanford.redivis.com/datasets/exfv-e8h3kvfhs
 - [MIDRC](https://hounsfieldlab.com/datasets/midrc.html): Medical imaging, especially chest and COVID-era collections, with clinical data and reports where contributors included them. CT, DX, CR, MR; DICOM; license University of Chicago data-use agreement (non-commercial research by default; a separate commercial agreement exists); access credentialed; normals partial; VERIFIED. Source: https://data.midrc.org/
 - [MIDRC-RICORD (1A, 1B, 1C)](https://hounsfieldlab.com/datasets/midrc-ricord-1a-1b-1c.html): COVID-19 chest CT and radiography, with non-COVID controls in 1B and 1C. CT, DX, CR; DICOM; license CC BY-NC 4.0; access open; normals partial; VERIFIED. Source: https://www.cancerimagingarchive.net/collection/midrc-ricord-1a/
@@ -126,6 +133,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [MURA](https://hounsfieldlab.com/datasets/mura.html): Musculoskeletal radiographs labeled normal or abnormal (elbow, finger, forearm, hand, humerus, shoulder, wrist). DX, CR; PNG/JPEG; license Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals yes; VERIFIED. Source: https://stanford.redivis.com/datasets/cv1a-apytk3j44
 - [NCI Imaging Data Commons](https://hounsfieldlab.com/datasets/nci-imaging-data-commons.html): Many cancer collections (TCGA, TCIA, CPTAC, NLST, LIDC, and others), harmonized to DICOM. CT, MR, PT, MG, CR; DICOM; license Mostly CC BY; a minority of files are CC-NC (each file is tagged); access open; normals partial; VERIFIED. Source: https://portal.imaging.datacommons.cancer.gov/collections/
 - [NLST (TCIA imaging subset)](https://hounsfieldlab.com/datasets/nlst-tcia-imaging-subset.html): Lung-cancer screening low-dose CT, mostly without cancer, plus cancer cases. CT; DICOM; license CC BY 4.0; access open; normals yes; VERIFIED. Source: https://www.cancerimagingarchive.net/collection/nlst/
+- [NYU fastMRI](https://hounsfieldlab.com/datasets/nyu-fastmri.html): Raw k-space and reconstructed MRI from clinical knee, brain, prostate, and breast exams, built for accelerated MRI reconstruction research. MR; DICOM, HDF5; license NYU fastMRI Dataset Sharing Agreement (internal research or education only); access account; normals partial; VERIFIED. Source: https://fastmri.med.nyu.edu/
 - [Open POCUS](https://hounsfieldlab.com/datasets/open-pocus.html): Lung point-of-care ultrasound, including clips with no abnormality, B-lines, and consolidation. US; video; license Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals partial; VERIFIED. Source: https://stanford.redivis.com/datasets/9e5t-a8ppjpsfd
 - [OpenNeuro](https://hounsfieldlab.com/datasets/openneuro.html): Many brain MRI studies, including healthy controls and disease cohorts, in BIDS. MR; NIfTI; license Per dataset, usually CC0 after a 36-month grace period (check source); access open; normals partial; VERIFIED. Source: https://openneuro.org/
 - [Pancreas-CT](https://hounsfieldlab.com/datasets/pancreas-ct.html): Healthy / non-cancer abdominal CT with pancreas segmentations. CT; DICOM; license CC BY 3.0; access open; normals yes; VERIFIED. Source: https://www.cancerimagingarchive.net/collection/pancreas-ct/
@@ -150,6 +158,8 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [Spine-Mets-CT-SEG](https://hounsfieldlab.com/datasets/spine-mets-ct-seg.html): Spinal metastases with vertebral and lesion segmentations. CT; DICOM; license CC BY 4.0; access open; normals no; VERIFIED. Source: https://www.cancerimagingarchive.net/collection/spine-mets-ct-seg/
 - [Sunnybrook Cardiac Data](https://hounsfieldlab.com/datasets/sunnybrook-cardiac-data.html): Cine cardiac MRI: healthy, hypertrophy, heart failure with infarction, and heart failure without infarction. MR; DICOM; license CC0 1.0; access open; normals partial; VERIFIED. Source: https://www.cardiacatlas.org/sunnybrook-cardiac-data/
 - [Thyroid Ultrasound Cine-clip](https://hounsfieldlab.com/datasets/thyroid-ultrasound-cine-clip.html): Biopsy-confirmed thyroid nodules with cine clips, segmentations, and TI-RADS descriptors. US; video; license Stanford AIMI research use agreement (non-commercial; commercial license sold separately); access account; normals no; VERIFIED. Source: https://stanford.redivis.com/datasets/2n5z-4m99zdpyp
+- [TotalSegmentator CT dataset](https://hounsfieldlab.com/datasets/totalsegmentator-ct-dataset.html): Routine clinical CT scans with segmentations of 117 anatomical structures (organs, bones, muscles, vessels); version 3 adds 291 pediatric CTs. CT; NIfTI; license CC BY 4.0; access open; normals partial; VERIFIED. Source: https://zenodo.org/records/22688904
+- [UCSF-PDGM](https://hounsfieldlab.com/datasets/ucsf-pdgm.html): Preoperative diffuse glioma (WHO grade 2–4) on a standardized 3T protocol, with IDH and MGMT status, BraTS-style tumor segmentations, and diffusion and ASL perfusion. MR; NIfTI; license CC BY 4.0; access open; normals no; VERIFIED. Source: https://www.cancerimagingarchive.net/collection/ucsf-pdgm/
 - [UPENN-GBM](https://hounsfieldlab.com/datasets/upenn-gbm.html): Newly diagnosed glioblastoma, with segmentations and clinical/genomic tables. MR; DICOM, NIfTI; license CC BY 4.0; access open; normals no; VERIFIED. Source: https://www.cancerimagingarchive.net/collection/upenn-gbm/
 - [Vestibular-Schwannoma-MC-RC](https://hounsfieldlab.com/datasets/vestibular-schwannoma-mc-rc.html): Sporadic vestibular schwannoma, longitudinal MRI from multiple UK sites. MR; DICOM; license CC BY 4.0; access open; normals no; VERIFIED. Source: https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-mc-rc/
 - [Vestibular-Schwannoma-SEG](https://hounsfieldlab.com/datasets/vestibular-schwannoma-seg.html): Vestibular schwannoma treated with Gamma Knife, with contours. MR; DICOM; license CC BY 4.0; access open; normals no; VERIFIED. Source: https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-seg/
