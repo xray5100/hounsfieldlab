@@ -369,6 +369,24 @@
    ]
   },
   {
+   "name": "Brain2Vec",
+   "slug": "brain2vec",
+   "group": "Neuroimaging",
+   "category": "Foundation model",
+   "modality_specialty": "Neuro: structural T1-weighted brain MRI",
+   "what_it_does": "Self-supervised 3D masked-autoencoder foundation model pretrained on 74,425 T1-weighted brain MRIs; used as a fine-tuning backbone or frozen feature extractor (e.g., brain age, disease classification)",
+   "license": "CBICA non-commercial agreement (code); CC BY-NC-ND 4.0 (weights)",
+   "license_note": "The repo LICENSE points to the UPenn CBICA non-commercial software agreement (https://www.med.upenn.edu/cbica/software-agreement-non-commercial.html). Weights on Hugging Face (cbica/Brain2Vec) are gated with manual approval and tagged CC BY-NC-ND 4.0. Inputs must be skull-stripped and linearly registered to the provided template. Paper: arXiv 2610.28411 (Oct 20, 2026).",
+   "commercial": "Non-commercial",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-22",
+   "maintainer": "UPenn CBICA (Davatzikos lab)",
+   "urls": [
+    "https://github.com/CBICA/Brain2Vec",
+    "https://huggingface.co/cbica/Brain2Vec"
+   ]
+  },
+  {
    "name": "TorchIO",
    "slug": "torchio",
    "group": "Segmentation & frameworks",
@@ -826,6 +844,24 @@
    "urls": [
     "https://github.com/udiram/RadKev",
     "https://huggingface.co/ramu9703/radkev-27b"
+   ]
+  },
+  {
+   "name": "RadFinder",
+   "slug": "radfinder",
+   "group": "Foundation models & agents",
+   "category": "Vision-language model",
+   "modality_specialty": "Radiology: 3D CT (chest, abdomen-pelvis)",
+   "what_it_does": "3D CT vision-language model for report-to-scan retrieval, prompt-based disease classification and slice-level localization; RadFinder-2610 checkpoints released Oct 22, 2026",
+   "license": "MIT (code); CC BY-NC-SA 4.0 (weights)",
+   "license_note": "Code is MIT, except files in src/rate/ vendored from YalaLab/rate, which are ECL-2.0. Hugging Face weights (lmb-freiburg/radfinder-2610-full, -refct, -public, -ctrate) are CC BY-NC-SA 4.0 and also subject to the training datasets' licenses (e.g. CT-RATE is CC BY-NC-SA 4.0). Published at MICCAI 2026.",
+   "commercial": "Non-commercial",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-22",
+   "maintainer": "University of Freiburg (LMB) / Ging et al.",
+   "urls": [
+    "https://github.com/lmb-freiburg/radfinder",
+    "https://huggingface.co/collections/lmb-freiburg/radfinder"
    ]
   }
  ]

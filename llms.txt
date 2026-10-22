@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 48 tools. Repository data snapshot: 2026-10-13. Also a directory of 59 public DICOM and NIfTI imaging datasets.
+> A directory of open-source and downloadable software for medical AI development, curated by a practicing neuroradiologist. Radiology-first, plus pathology, clinical NLP and EHR tooling. 50 tools. Repository data snapshot: 2026-10-13. Also a directory of 59 public DICOM and NIfTI imaging datasets.
 
 Badges: LIC = license (license files reviewed by hand where GitHub could not detect them); UPD = last repository push (UTC); STATUS = Maintained if updated within 12 months of the snapshot, else Stale; COMM = Permissive, Copyleft (GPL/AGPL), Non-commercial, or Verify (custom terms or separate model-weight terms). Not legal or medical advice.
 
@@ -25,6 +25,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [MedRAX](https://hounsfieldlab.com/tools/medrax.html): Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025) (Apache-2.0; Maintained)
 - [LLaVA-Med](https://hounsfieldlab.com/tools/llava-med.html): Biomedical vision-language assistant for image Q&A (Microsoft Research License; Stale)
 - [RadKev](https://hounsfieldlab.com/tools/radkev.html): Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text (Apache-2.0 (code); CC BY-NC-SA 4.0 (weights); Maintained)
+- [RadFinder](https://hounsfieldlab.com/tools/radfinder.html): 3D CT vision-language model for report-to-scan retrieval, prompt-based disease classification and slice-level localization; RadFinder-2610 checkpoints released Oct 22, 2026 (MIT (code); CC BY-NC-SA 4.0 (weights); Maintained)
 
 ## Segmentation & frameworks
 
@@ -47,6 +48,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [DIPY](https://hounsfieldlab.com/tools/dipy.html): Python library for diffusion MRI, tractography and registration (BSD-3-Clause; Maintained)
 - [nilearn](https://hounsfieldlab.com/tools/nilearn.html): Machine learning for neuroimaging in Python (BSD-3-Clause; Maintained)
 - [ANTsPy](https://hounsfieldlab.com/tools/antspy.html): Python library for registration, segmentation and analysis (Apache-2.0; Maintained)
+- [Brain2Vec](https://hounsfieldlab.com/tools/brain2vec.html): Self-supervised 3D masked-autoencoder foundation model pretrained on 74,425 T1-weighted brain MRIs; used as a fine-tuning backbone or frozen feature extractor (e.g., brain age, disease classification) (CBICA non-commercial agreement (code); CC BY-NC-ND 4.0 (weights); Maintained)
 
 ## Viewers & toolkits
 
