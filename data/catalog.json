@@ -234,6 +234,24 @@
    ]
   },
   {
+   "name": "NV-Segment-CT",
+   "slug": "nv-segment-ct",
+   "group": "Segmentation & frameworks",
+   "category": "Segmentation",
+   "modality_specialty": "Radiology: CT",
+   "what_it_does": "CT segmentation built from MONAI VISTA3D: 117 structures automatically, or 132 promptable by point or class. Research use only, not for clinical care. Needs a CUDA GPU; weights are about 872 MB",
+   "license": "Apache-2.0 (code); NVIDIA Open Model License (weights)",
+   "license_note": "Hugging Face LICENSE applies Apache-2.0 to every file except the weights. Weights (model.pt is 872 MB) are under the NVIDIA Open Model License, which says the models are commercially usable; it is a custom license, not an OSI license (https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/, last modified October 24, 2025). The model card limits use to research and says it is not for clinical use. Inference expects a CUDA GPU (Ampere or Hopper). NV-Segment-CTMR is a different, non-commercial model and is not this listing.",
+   "commercial": "Verify",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-05",
+   "maintainer": "NVIDIA",
+   "urls": [
+    "https://huggingface.co/nvidia/NV-Segment-CT",
+    "https://github.com/NVIDIA-Medtech/NV-Segment-CTMR"
+   ]
+  },
+  {
    "name": "MedSAM",
    "slug": "medsam",
    "group": "Segmentation & frameworks",

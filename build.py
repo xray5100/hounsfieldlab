@@ -48,6 +48,7 @@ LIC = {
  "FastSurfer": ("Apache-2.0","Verify","Repo LICENSE is Apache-2.0. The surface pipeline calls FreeSurfer binaries and needs a FreeSurfer license file (free, separate terms). The README says results are for research and not for clinical decision support."),
  "TorchXRayVision": ("Apache-2.0 (library); models vary","Verify","LICENSE says the main library is Apache-2.0 and that licenses vary by subpackage; check each baseline model's license before use."),
  "RadKev": ("Apache-2.0 (code); CC BY-NC-SA 4.0 (weights)","Non-commercial","Code is Apache-2.0. Hugging Face adapters (ramu9703/radkev-27b, radkev-9b) are CC BY-NC-SA 4.0 for non-commercial research; gated access requires accepting those terms. Not a medical device."),
+ "NV-Segment-CT": ("Apache-2.0 (code); NVIDIA Open Model License (weights)","Verify","Hugging Face LICENSE applies Apache-2.0 to every file except the weights. Weights (model.pt is 872 MB) are under the NVIDIA Open Model License, which says the models are commercially usable; it is a custom license, not an OSI license (https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/, last modified October 24, 2025). The model card limits use to research and says it is not for clinical use. Inference expects a CUDA GPU (Ampere or Hopper). NV-Segment-CTMR is a different, non-commercial model and is not this listing."),
 }
 
 SPDX = {"Apache-2.0","MIT","BSD-3-Clause","GPL-2.0","GPL-3.0","AGPL-3.0","ECL-2.0"}
@@ -259,16 +260,16 @@ def ds_card(d):
 # Related tools for a dataset, by area and file format. A tool with a modality set only
 # relates to datasets that include one of those modalities.
 AREA_TOOLS = {"neuro":["hd-bet","fastsurfer","freesurfer","brainchop","dcm2niix"],
- "chest":["torchxrayvision","chexagent","medrax","pillar-0","totalsegmentator"],
- "body":["totalsegmentator","merlin","pillar-0","nnu-net"],
- "msk":["totalsegmentator","nnu-net","3d-slicer"],
+ "chest":["torchxrayvision","chexagent","medrax","pillar-0","totalsegmentator","nv-segment-ct"],
+ "body":["totalsegmentator","nv-segment-ct","merlin","pillar-0","nnu-net"],
+ "msk":["totalsegmentator","nv-segment-ct","nnu-net","3d-slicer"],
  "breast":["pillar-0","nnu-net","3d-slicer"],
- "nuclear medicine":["totalsegmentator","nnu-net","3d-slicer"],
+ "nuclear medicine":["totalsegmentator","nv-segment-ct","nnu-net","3d-slicer"],
  "ultrasound":["monai","monai-label","3d-slicer"],
  "cardiac":["monai","nnu-net","3d-slicer"]}
 FORMAT_TOOLS = {"DICOM":["pydicom","highdicom","ohif-viewer","orthanc"],"NIfTI":["torchio","simpleitk","itk"]}
 TOOL_MODS = {"hd-bet":{"MR"},"fastsurfer":{"MR"},"freesurfer":{"MR"},"brainchop":{"MR"},"dcm2niix":{"MR","CT"},
- "torchxrayvision":{"DX","CR"},"chexagent":{"DX","CR"},"medrax":{"DX","CR"},"pillar-0":{"CT","MR"},"merlin":{"CT"},"totalsegmentator":{"CT","MR"}}
+ "torchxrayvision":{"DX","CR"},"chexagent":{"DX","CR"},"medrax":{"DX","CR"},"pillar-0":{"CT","MR"},"merlin":{"CT"},"totalsegmentator":{"CT","MR"},"nv-segment-ct":{"CT"}}
 TOOL_SLUGS = set()
 
 def tools_for_dataset(d):

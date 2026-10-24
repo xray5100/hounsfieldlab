@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 56 open-source medical AI software tools and 66 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-21.
+> Hounsfield Lab is a directory of 57 open-source medical AI software tools and 66 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-21.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -40,6 +40,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [MONAI Label](https://hounsfieldlab.com/tools/monai-label.html): AI-assisted image labeling and active learning; integrates with 3D Slicer and OHIF (Apache-2.0; Maintained; updated 2026-10-19)
 - [nnU-Net](https://hounsfieldlab.com/tools/nnu-net.html): Self-configuring segmentation framework (Apache-2.0; Maintained; updated 2026-10-16)
 - [TotalSegmentator](https://hounsfieldlab.com/tools/totalsegmentator.html): Segments more than 100 anatomical structures in CT and MR (Apache-2.0; Maintained; updated 2026-10-16)
+- [NV-Segment-CT](https://hounsfieldlab.com/tools/nv-segment-ct.html): CT segmentation built from MONAI VISTA3D: 117 structures automatically, or 132 promptable by point or class. Research use only, not for clinical care. Needs a CUDA GPU; weights are about 872 MB (Apache-2.0 (code); NVIDIA Open Model License (weights); Maintained; updated 2026-10-05)
 - [MedSAM](https://hounsfieldlab.com/tools/medsam.html): Segment Anything adapted for medical images (Apache-2.0; Stale; updated 2025-05-07)
 - [MedSAM2](https://hounsfieldlab.com/tools/medsam2.html): Promptable segmentation of 3D medical images and videos (Apache-2.0; Stale; updated 2025-07-11)
 - [TorchIO](https://hounsfieldlab.com/tools/torchio.html): Medical image loading, preprocessing and augmentation for PyTorch (Apache-2.0; Maintained; updated 2026-10-16)

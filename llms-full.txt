@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 56 open-source medical AI software tools and 66 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-21.
+> Hounsfield Lab is a directory of 57 open-source medical AI software tools and 66 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-21.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -221,6 +221,21 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/wasserth/TotalSegmentator
 - Page: https://hounsfieldlab.com/tools/totalsegmentator.html
+- Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, FDG-PET-CT-Lesions (autoPET), LIDC-IDRI
+
+### NV-Segment-CT
+- What it is: CT segmentation built from MONAI VISTA3D: 117 structures automatically, or 132 promptable by point or class. Research use only, not for clinical care. Needs a CUDA GPU; weights are about 872 MB
+- Type: Segmentation
+- Modality/specialty: Radiology: CT
+- Maintainer: NVIDIA
+- License: Apache-2.0 (code); NVIDIA Open Model License (weights)
+- Commercial use: Verify
+- License note: Hugging Face LICENSE applies Apache-2.0 to every file except the weights. Weights (model.pt is 872 MB) are under the NVIDIA Open Model License, which says the models are commercially usable; it is a custom license, not an OSI license (https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/, last modified October 24, 2025). The model card limits use to research and says it is not for clinical use. Inference expects a CUDA GPU (Ampere or Hopper). NV-Segment-CTMR is a different, non-commercial model and is not this listing.
+- Access: free public source repository
+- Last repository update: 2026-10-05 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://huggingface.co/nvidia/NV-Segment-CT, https://github.com/NVIDIA-Medtech/NV-Segment-CTMR
+- Page: https://hounsfieldlab.com/tools/nv-segment-ct.html
 - Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, FDG-PET-CT-Lesions (autoPET), LIDC-IDRI
 
 ### MedSAM
@@ -460,7 +475,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/OHIF/Viewers
 - Page: https://hounsfieldlab.com/tools/ohif-viewer.html
-- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases
+- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), CBIS-DDSM, CMMD, CPAISD, CQ500
 
 ### ITK
 - What it is: C++/Python toolkit for segmentation and registration
@@ -474,7 +489,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/InsightSoftwareConsortium/ITK
 - Page: https://hounsfieldlab.com/tools/itk.html
-- Related datasets: CT-ORG, Merlin Abdominal CT, CT-ICH
+- Related datasets: CT-ICH
 
 ### MITK
 - What it is: Medical Imaging Interaction Toolkit for building imaging applications
@@ -501,7 +516,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/SimpleITK/SimpleITK
 - Page: https://hounsfieldlab.com/tools/simpleitk.html
-- Related datasets: CFB-GBM, CT-ORG, ISLES'24, IXI, OpenNeuro, TotalSegmentator CT dataset
+- Related datasets: CFB-GBM, CT-ORG, ISLES'24, IXI, OpenNeuro, UCSD-BMETS-Longitudinal
 
 ### Cornerstone3D
 - What it is: JavaScript libraries for web-based medical image rendering, tools and segmentation; the imaging engine behind the OHIF Viewer
