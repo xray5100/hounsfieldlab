@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 54 open-source medical AI software tools and 66 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-21.
+> Hounsfield Lab is a directory of 56 open-source medical AI software tools and 66 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-21.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -136,6 +136,20 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/microsoft/LLaVA-Med
 - Page: https://hounsfieldlab.com/tools/llava-med.html
+
+### RadFinder
+- What it is: 3D CT vision-language model for report-to-scan retrieval, prompt-based disease classification and slice-level localization; RadFinder-2610 checkpoints released Oct 22, 2026
+- Type: Vision-language model
+- Modality/specialty: Radiology: 3D CT (chest, abdomen-pelvis)
+- Maintainer: University of Freiburg (LMB) / Ging et al.
+- License: MIT (code); CC BY-NC-SA 4.0 (weights)
+- Commercial use: Non-commercial
+- License note: Code is MIT, except files in src/rate/ vendored from YalaLab/rate, which are ECL-2.0. Hugging Face weights (lmb-freiburg/radfinder-2610-full, -refct, -public, -ctrate) are CC BY-NC-SA 4.0 and also subject to the training datasets' licenses (e.g. CT-RATE is CC BY-NC-SA 4.0). Published at MICCAI 2026.
+- Access: free public source repository
+- Last repository update: 2026-10-22 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://github.com/lmb-freiburg/radfinder, https://huggingface.co/collections/lmb-freiburg/radfinder
+- Page: https://hounsfieldlab.com/tools/radfinder.html
 
 ### RadKev
 - What it is: Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text
@@ -387,6 +401,20 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/ANTsX/ANTsPy
 - Page: https://hounsfieldlab.com/tools/antspy.html
+
+### Brain2Vec
+- What it is: Self-supervised 3D masked-autoencoder foundation model pretrained on 74,425 T1-weighted brain MRIs; used as a fine-tuning backbone or frozen feature extractor (e.g., brain age, disease classification)
+- Type: Foundation model
+- Modality/specialty: Neuro: structural T1-weighted brain MRI
+- Maintainer: UPenn CBICA (Davatzikos lab)
+- License: CBICA non-commercial agreement (code); CC BY-NC-ND 4.0 (weights)
+- Commercial use: Non-commercial
+- License note: The repo LICENSE points to the UPenn CBICA non-commercial software agreement (https://www.med.upenn.edu/cbica/software-agreement-non-commercial.html). Weights on Hugging Face (cbica/Brain2Vec) are gated with manual approval and tagged CC BY-NC-ND 4.0. Inputs must be skull-stripped and linearly registered to the provided template. Paper: arXiv 2610.28411 (Oct 20, 2026).
+- Access: free public source repository
+- Last repository update: 2026-10-22 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://github.com/CBICA/Brain2Vec, https://huggingface.co/cbica/Brain2Vec
+- Page: https://hounsfieldlab.com/tools/brain2vec.html
 
 ### FastSurfer
 - What it is: Deep-learning whole-brain segmentation and cortical surface reconstruction, a fast alternative to FreeSurfer recon-all

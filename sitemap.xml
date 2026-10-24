@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://hounsfieldlab.com/</loc><lastmod>2026-10-24</lastmod></url>
-<url><loc>https://hounsfieldlab.com/directory.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/directory.html</loc><lastmod>2026-10-24</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets.html</loc><lastmod>2026-10-24</lastmod></url>
 <url><loc>https://hounsfieldlab.com/pipeline-orthanc-mercure.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/about.html</loc><lastmod>2026-10-19</lastmod></url>
@@ -17,6 +17,7 @@
 <url><loc>https://hounsfieldlab.com/tools/chexagent.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/medrax.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/llava-med.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/tools/radfinder.html</loc><lastmod>2026-10-24</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/monai.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/monai-label.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/nnu-net.html</loc><lastmod>2026-10-19</lastmod></url>
@@ -30,6 +31,7 @@
 <url><loc>https://hounsfieldlab.com/tools/dipy.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/nilearn.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/antspy.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://hounsfieldlab.com/tools/brain2vec.html</loc><lastmod>2026-10-24</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/torchio.html</loc><lastmod>2026-10-24</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/pyradiomics.html</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://hounsfieldlab.com/tools/3d-slicer.html</loc><lastmod>2026-10-19</lastmod></url>
