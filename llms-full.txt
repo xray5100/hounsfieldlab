@@ -1481,7 +1481,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Commercial use allowed: yes
 - Access: open
 - How to access: Open the NIH Clinical Center Box folder and download the image archives, the label CSV, and the bounding-box CSV. No account is needed. Google Cloud also hosts a copy as a public dataset.
-- Limitations: Labels were text-mined from reports by NLP and are estimated to be more than 90% accurate, so expect label noise. The reports themselves are not released. Only a small subset has bounding boxes. Images are 8-bit PNG, not DICOM. Single institution. Many images are follow-up studies of the same patients, so split by patient ID.
+- Limitations: Labels were text-mined from reports by NLP and are estimated to be more than 90% accurate, so expect label noise. The reports themselves are not released. Only a small subset has bounding boxes. Images are PNG, not DICOM. Single institution. Many images are follow-up studies of the same patients, so split by patient ID.
 - Citation: Yes. The terms ask you to link the NIH download site, cite Wang et al., ChestX-ray8, IEEE CVPR 2017, and acknowledge the NIH Clinical Center as the data provider.
 - Status: VERIFIED
 - Added: 2026-10-26
