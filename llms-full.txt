@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 57 open-source medical AI software tools and 66 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-21.
+> Hounsfield Lab is a directory of 57 open-source medical AI software tools and 68 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-26.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -36,7 +36,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/YalaLab/pillar-finetune, https://huggingface.co/collections/YalaLab/pillar-0
 - Page: https://hounsfieldlab.com/tools/pillar-0.html
-- Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, Duke-Breast-Cancer-MRI, LIDC-IDRI
+- Related datasets: AMOS (abdominal multi-organ segmentation), C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, Duke-Breast-Cancer-MRI
 
 ### Pillar-0 pretraining
 - What it is: Vision-language pretraining code for Pillar-0
@@ -78,7 +78,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/StanfordMIMI/Merlin
 - Page: https://hounsfieldlab.com/tools/merlin.html
-- Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, Pancreas-CT, Pediatric-CT-SEG
+- Related datasets: AMOS (abdominal multi-organ segmentation), C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, Pancreas-CT
 
 ### MedGemma
 - What it is: Google's open medical model family; repo has notebooks and code
@@ -107,7 +107,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/Stanford-AIMI/CheXagent
 - Page: https://hounsfieldlab.com/tools/chexagent.html
-- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NCI Imaging Data Commons, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
+- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NCI Imaging Data Commons, NIH ChestX-ray14, CheXpert Plus, RSNA Pneumonia Detection Challenge
 
 ### MedRAX
 - What it is: Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025)
@@ -121,7 +121,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/bowang-lab/MedRAX
 - Page: https://hounsfieldlab.com/tools/medrax.html
-- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation, MIDRC
+- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NIH ChestX-ray14, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
 
 ### LLaVA-Med
 - What it is: Biomedical vision-language assistant for image Q&A
@@ -207,7 +207,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/MIC-DKFZ/nnUNet
 - Page: https://hounsfieldlab.com/tools/nnu-net.html
-- Related datasets: Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases, CT Colonography
+- Related datasets: AMOS (abdominal multi-organ segmentation), Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases
 
 ### TotalSegmentator
 - What it is: Segments more than 100 anatomical structures in CT and MR
@@ -221,7 +221,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/wasserth/TotalSegmentator
 - Page: https://hounsfieldlab.com/tools/totalsegmentator.html
-- Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, FDG-PET-CT-Lesions (autoPET), LIDC-IDRI
+- Related datasets: AMOS (abdominal multi-organ segmentation), C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, FDG-PET-CT-Lesions (autoPET)
 
 ### NV-Segment-CT
 - What it is: CT segmentation built from MONAI VISTA3D: 117 structures automatically, or 132 promptable by point or class. Research use only, not for clinical care. Needs a CUDA GPU; weights are about 872 MB
@@ -236,7 +236,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://huggingface.co/nvidia/NV-Segment-CT, https://github.com/NVIDIA-Medtech/NV-Segment-CTMR
 - Page: https://hounsfieldlab.com/tools/nv-segment-ct.html
-- Related datasets: C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, FDG-PET-CT-Lesions (autoPET), LIDC-IDRI
+- Related datasets: AMOS (abdominal multi-organ segmentation), C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, FDG-PET-CT-Lesions (autoPET)
 
 ### MedSAM
 - What it is: Segment Anything adapted for medical images
@@ -276,7 +276,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/TorchIO-project/torchio
 - Page: https://hounsfieldlab.com/tools/torchio.html
-- Related datasets: CFB-GBM, CT-ORG, ISLES'24, IXI, OpenNeuro, TotalSegmentator CT dataset
+- Related datasets: AMOS (abdominal multi-organ segmentation), CFB-GBM, CT-ORG, ISLES'24, IXI, OpenNeuro
 
 ### PyRadiomics
 - What it is: Extracts radiomics features from 2D/3D images
@@ -317,7 +317,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/mlmed/torchxrayvision
 - Page: https://hounsfieldlab.com/tools/torchxrayvision.html
-- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NCI Imaging Data Commons, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
+- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NCI Imaging Data Commons, NIH ChestX-ray14, CheXpert Plus, RSNA Pneumonia Detection Challenge
 
 ## Tools: Neuroimaging
 
@@ -516,7 +516,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-10-19
 - Links: https://github.com/SimpleITK/SimpleITK
 - Page: https://hounsfieldlab.com/tools/simpleitk.html
-- Related datasets: CFB-GBM, CT-ORG, ISLES'24, IXI, OpenNeuro, UCSD-BMETS-Longitudinal
+- Related datasets: AMOS (abdominal multi-organ segmentation), CFB-GBM, CT-ORG, ISLES'24, IXI, OpenNeuro
 
 ### Cornerstone3D
 - What it is: JavaScript libraries for web-based medical image rendering, tools and segmentation; the imaging engine behind the OHIF Viewer
@@ -822,6 +822,25 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Page: https://hounsfieldlab.com/tools/ohdsi-whiterabbit.html
 
 ## DICOM datasets
+
+### AMOS (abdominal multi-organ segmentation)
+- What it is: Multi-center abdominal CT and MRI from patients with a range of diseases, with voxel labels for 15 abdominal organs
+- Source: https://zenodo.org/records/7262581
+- Area: body
+- Modality: CT; MR
+- Normals included: partial
+- Format: NIfTI
+- Size: 500 CT and 100 MRI scans (240 train, 120 validation, 240 test); one 24.2 GB zip
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the Zenodo record (DOI 10.5281/zenodo.7262581) and download amos22.zip and the metadata CSV. No account is needed. The record links separate Zenodo records for the unlabeled CT and MRI scans.
+- Limitations: Labels are organ anatomy (spleen, kidneys, gallbladder, esophagus, liver, stomach, aorta, IVC, pancreas, adrenals, duodenum, bladder, prostate/uterus), not disease, and scans are not labeled normal or abnormal. NIfTI in the nnU-Net folder layout, not DICOM. Built for the MICCAI 2022 AMOS challenge; confirm which splits carry labels before you benchmark. Organ sizes are long-tailed, so small structures such as the adrenals are hard.
+- Citation: Yes. Cite Ji et al., AMOS: A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation, NeurIPS 2022 (arXiv:2206.08023), and the Zenodo DOI 10.5281/zenodo.7262581. CC BY 4.0 requires attribution.
+- Status: VERIFIED
+- Added: 2026-10-26
+- Last checked: 2026-10-26
+- Page: https://hounsfieldlab.com/datasets/amos-abdominal-multi-organ-segmentation.html
 
 ### B-mode-and-CEUS-Liver
 - What it is: Focal liver lesions on B-mode and contrast-enhanced ultrasound
@@ -1449,6 +1468,25 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Added: 2026-10-18
 - Last checked: 2026-10-18
 - Page: https://hounsfieldlab.com/datasets/nci-imaging-data-commons.html
+
+### NIH ChestX-ray14
+- What it is: Frontal chest radiographs with 14 text-mined thoracic finding labels (such as effusion, nodule, pneumothorax) plus No Finding
+- Source: https://nihcc.app.box.com/v/ChestXray-NIHCC
+- Area: chest
+- Modality: DX
+- Normals included: yes
+- Format: PNG
+- Size: 112,120 images from 30,805 patients
+- License: NIH Clinical Center terms (no use restrictions; attribution required)
+- Commercial use allowed: yes
+- Access: open
+- How to access: Open the NIH Clinical Center Box folder and download the image archives, the label CSV, and the bounding-box CSV. No account is needed. Google Cloud also hosts a copy as a public dataset.
+- Limitations: Labels were text-mined from reports by NLP and are estimated to be more than 90% accurate, so expect label noise. The reports themselves are not released. Only a small subset has bounding boxes. Images are 8-bit PNG, not DICOM. Single institution. Many images are follow-up studies of the same patients, so split by patient ID.
+- Citation: Yes. The terms ask you to link the NIH download site, cite Wang et al., ChestX-ray8, IEEE CVPR 2017, and acknowledge the NIH Clinical Center as the data provider.
+- Status: VERIFIED
+- Added: 2026-10-26
+- Last checked: 2026-10-26
+- Page: https://hounsfieldlab.com/datasets/nih-chestx-ray14.html
 
 ### NLST (TCIA imaging subset)
 - What it is: Lung-cancer screening low-dose CT, mostly without cancer, plus cancer cases

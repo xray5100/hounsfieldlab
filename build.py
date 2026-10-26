@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Static site generator for Hounsfield Lab. Run: python3 build.py"""
-import csv, json, re, html
+import csv, json, os, re, html
 from urllib.parse import quote
 from datetime import date
 from pathlib import Path
@@ -71,7 +71,10 @@ def card_html(t,i,prefix=""):
 def slug(s): return re.sub(r'-+','-',re.sub(r'[^a-z0-9]+','-',s.lower())).strip('-')
 
 def load():
-    csv_path=next((p for p in (Path('/workspace/medai/catalog.csv'), ROOT/'medai'/'catalog.csv') if p.exists()), None)
+    # data/catalog.json is the source of truth. A private catalog.csv is used only when
+    # HL_CATALOG_CSV points at it, so a stale local copy cannot drop published tools.
+    env=os.environ.get('HL_CATALOG_CSV')
+    csv_path=Path(env) if env else None
     if csv_path is None:
         # Published snapshot, used when the private catalog.csv is not on this machine.
         tools=json.loads((ROOT/'data'/'catalog.json').read_text())['tools']
@@ -151,9 +154,10 @@ def tool_page(t, tools, datasets):
         {"@type":"ListItem","position":2,"name":"Directory","item":f"{SITE_URL}/directory.html"},
         {"@type":"ListItem","position":3,"name":t["group"],"item":f"{SITE_URL}/directory.html?group={quote(t['group'])}"},
         {"@type":"ListItem","position":4,"name":t["name"],"item":f"{SITE_URL}/tools/{t['slug']}.html"}]}
-    title=f'{t["name"]}: {t["category"]} for {t["modality_specialty"]} · Hounsfield Lab'
-    if len(title)>90: title=f'{t["name"].split(" (")[0]}: open-source {t["category"].lower()} for {t["modality_specialty"]} · Hounsfield Lab'
-    return head(title, desc[:300], f'tools/{t["slug"]}.html', root, extra=jsonld(ld)+jsonld(bc))+f'''
+    tn=t["name"].split(" (")[0]
+    title=fit_title(f'{t["name"]}: {t["category"]} for {t["modality_specialty"]}', f'{tn}: {t["category"]} for {t["modality_specialty"]}', f'{tn}: open-source {t["category"].lower()}', tn)
+    desc=fit_desc(desc, f'{t["name"]}: {t["what_it_does"]}. License {t["license"]}.', f'{tn}: {t["what_it_does"]}.')
+    return head(title, desc, f'tools/{t["slug"]}.html', root, extra=jsonld(ld)+jsonld(bc))+f'''
 <section><div class="wrap prose"><nav class="crumb" aria-label="Breadcrumb"><a href="../directory.html">Directory</a> › <a href="../directory.html?group={quote(t["group"])}">{E(t["group"])}</a> › <span aria-current="page">{E(t["name"])}</span></nav>
 <h1 class="tt">{E(t["name"])}</h1><p class="lead">{E(t["what_it_does"])}</p>{badges(t)}
 <dl style="margin-top:22px"><dt>What it is</dt><dd>{E(t["category"])} ({E(t["group"])})</dd><dt>Modality</dt><dd>{E(t["modality_specialty"])}</dd><dt>Maintainer</dt><dd>{E(t["maintainer"])}</dd><dt>License</dt><dd>{E(t["license"])}</dd><dt>Commercial use</dt><dd>{E(t["commercial"])}</dd><dt>Access</dt><dd>Free, public source repository (see links below)</dd><dt>Last update</dt><dd>{E(t["last_push_utc"])} (last repository push, UTC; {t["maintenance"]})</dd><dt>Last checked</dt><dd>{SNAPSHOT.isoformat()}</dd><dt>Limitations</dt><dd>Listed for research and development reference. Hounsfield Lab has not tested its clinical performance; check the project’s own documentation for intended use and regulatory status.</dd></dl>
@@ -296,6 +300,18 @@ def ds_lic_url(l):
 ACCESS_LABEL = {"open":"Open download, no account","account":"Free account and data-use terms required","credentialed":"Credentialed access under a data-use agreement"}
 COMM_LABEL = {"yes":"Allowed by the license, with its attribution terms","no":"Not allowed under the free terms","check":"Mixed or unclear; check the source"}
 
+SUFFIX = " · Hounsfield Lab"
+def fit_title(*cands, n=65):
+    """First candidate that fits in n characters with the site suffix; else the shortest, bare."""
+    for c in cands:
+        if len(c+SUFFIX)<=n: return c+SUFFIX
+    return min(cands, key=len) if len(min(cands, key=len))<=n else trim(min(cands, key=len), n)
+
+def fit_desc(*cands, n=160):
+    for c in cands:
+        if len(c)<=n: return c
+    return trim(cands[-1], n)
+
 def trim(t, n=200):
     return t if len(t)<=n else t[:n].rsplit(" ",1)[0].rstrip(",;:.")+"…"
 
@@ -303,9 +319,14 @@ def ds_url(d): return f"{SITE_URL}/datasets/{d['slug']}.html"
 
 def dataset_page(d, datasets, tools_by_slug):
     root="../"; areas=", ".join(AREA_LABEL[a] for a in d["areas"]); mods=", ".join(d["modalities"])
-    title=f'{d["name"]}: {", ".join(d["modalities"][:3])} {" / ".join(AREA_LABEL[a] for a in d["areas"][:2]).lower()} imaging dataset · Hounsfield Lab'
-    if len(title)>90: title=f'{d["name"].split(" (")[0]}: {", ".join(d["modalities"][:3])} imaging dataset · Hounsfield Lab'
-    desc=trim(f'{d["name"]}: {d["pathology"]}. {", ".join(d["formats"])}. License: {d["license"]}. {ACCESS_LABEL[d["access"]]}.', 240)
+    nm=d["name"]; short=nm.split(" (")[0]; m3=", ".join(d["modalities"][:3]); a1=AREA_LABEL[d["areas"][0]].lower()
+    title=fit_title(f'{nm}: {m3} {a1} imaging dataset', f'{nm}: {m3} imaging dataset', f'{short}: {m3} imaging dataset', f'{short} imaging dataset', short)
+    lic_short=re.split(r' \(|; ', d["license"])[0]; fm=", ".join(d["formats"])
+    if d["commercial"]=="no" and "NC" not in lic_short and "non-commercial" not in lic_short.lower(): lic_short+=" (non-commercial)"
+    desc=fit_desc(f'{nm}: {d["pathology"]}. {fm}. License: {d["license"]}. {ACCESS_LABEL[d["access"]]}.',
+                  f'{nm}: {d["pathology"]}. {fm}. License: {lic_short}. {ACCESS_LABEL[d["access"]]}.',
+                  f'{nm}: {d["pathology"]}. License: {lic_short}.',
+                  f'{nm}: {d["pathology"]}.')
     norm={"yes":"Yes","no":"No","partial":"Partial (mixed or unlabeled)"}[d["normals"]]
     status=("Verified: source page reviewed by Hounsfield Lab" if d["status"]=="VERIFIED" else UNVERIFIED_WARNING)
     warn="" if d["status"]=="VERIFIED" else f'<p class="warnbox">{E(UNVERIFIED_WARNING)}</p>'
@@ -360,7 +381,7 @@ def datasets_page(datasets):
     cards="".join(ds_card(d) for d in sorted(datasets, key=lambda d: d["name"].lower()))
     updated=max(max(d["date_added"],d["date_last_checked"]) for d in datasets)
     n_open=sum(d["access"]=="open" for d in datasets); n_comm=sum(d["commercial"]=="yes" for d in datasets)
-    return head(f"Public DICOM and NIfTI imaging datasets for radiology AI ({len(datasets)} listed) · Hounsfield Lab", desc, "datasets.html", "", extra=jsonld(ld)+jsonld(bc))+f'''
+    return head("Public DICOM and NIfTI datasets for radiology AI · Hounsfield Lab", desc, "datasets.html", "", extra=jsonld(ld)+jsonld(bc))+f'''
 <section><div class="wrap prose"><h1 class="h2">DICOM datasets</h1>
 <p class="note updated">{len(datasets)} datasets · {n_open} open download · {n_comm} with commercial-use licenses · Last updated {pretty_date(updated)}</p>
 <p class="lead">A directory of public DICOM, and a few closely related NIfTI, collections for radiologists and researchers training imaging models.</p>
@@ -438,19 +459,19 @@ def main():
     tiles="".join(f'<a class="card tile" href="directory.html?group={quote(g)}"><h3>{E(g)}</h3><span class="n">n = {n}</span></a>' for g,n in counts.items())
     pages={}
     org={'@context':'https://schema.org','@type':'Organization','name':'Hounsfield Lab','url':SITE_URL+'/','logo':SITE_URL+'/assets/icon-512.png','description':'Open-source medical AI directory, curated by a practicing neuroradiologist.'}
-    pages['index.html']=head('Hounsfield Lab · Open-source medical AI tools and DICOM datasets directory',f'A neuroradiologist-curated directory of {len(tools)} open-source medical AI tools and {len(datasets)} public DICOM imaging datasets, with license, access and maintenance status at a glance.','', '', extra=jsonld(org)+jsonld({'@context':'https://schema.org','@type':'WebSite','name':'Hounsfield Lab','url':SITE_URL+'/','description':'Open-source medical AI directory, curated by a practicing neuroradiologist.','potentialAction':{'@type':'SearchAction','target':{'@type':'EntryPoint','urlTemplate':SITE_URL+'/directory.html?q={search_term_string}'},'query-input':'required name=search_term_string'}}))+f'''
+    pages['index.html']=head('Hounsfield Lab: open-source medical AI tools and DICOM datasets',f'A neuroradiologist-curated directory of {len(tools)} open-source medical AI tools and {len(datasets)} public DICOM imaging datasets, with license, access and maintenance status.','', '', extra=jsonld(org)+jsonld({'@context':'https://schema.org','@type':'WebSite','name':'Hounsfield Lab','url':SITE_URL+'/','description':'Open-source medical AI directory, curated by a practicing neuroradiologist.','potentialAction':{'@type':'SearchAction','target':{'@type':'EntryPoint','urlTemplate':SITE_URL+'/directory.html?q={search_term_string}'},'query-input':'required name=search_term_string'}}))+f'''
 <div class="hero"><div class="wrap"><div class="curator">Curated by a practicing neuroradiologist</div><h1>Open-source medical AI, measured like a lab value.</h1><p>A clinician-curated directory of downloadable models, toolkits and infrastructure for building medical AI, with license, update and maintenance status at a glance.</p><p class="cta"><a class="btn" href="directory.html">Browse {len(tools)} tools</a> <a class="btn ghost" href="datasets.html">DICOM datasets</a> <a class="btn ghost" href="pipeline-orthanc-mercure.html">See a pipeline guide</a></p></div></div>
 <section><div class="wrap"><h2>Featured: Pillar-0</h2><div class="feature"><div><p><strong>An open radiology foundation model from YalaLab.</strong> Pretrained on 42,990 abdomen-pelvis CTs, 86,411 chest CTs, 14,348 head CTs and 11,543 breast MRIs, with RATE, an LLM-based framework that extracts labels for 366 radiologic findings from reports. The authors release code, weights and evaluation tools.</p><p><a href="https://yalalab.github.io/pillar-0/" target="_blank" rel="noopener">Project page</a> · <a href="https://arxiv.org/abs/2511.17803" target="_blank" rel="noopener">Paper</a> · <a href="https://huggingface.co/collections/YalaLab/pillar-0" target="_blank" rel="noopener">Weights</a></p></div><div>{badges(pillar)}<p style="margin-top:16px"><a class="btn" href="tools/pillar-0.html">View details</a></p></div></div></div></section>
 <section><div class="wrap"><h2>Browse by category</h2><div class="grid cats">{tiles}</div></div></section>
 <section><div class="wrap"><h2>DICOM datasets</h2><p>{len(datasets)} public DICOM and NIfTI collections for training and evaluation, with the license, who can download, and whether normals are included. Recently added:</p><ul class="links recent">{recent_ds_li}</ul><p class="cta"><a class="btn" href="datasets.html">Browse {len(datasets)} DICOM datasets</a></p></div></section>'''+newsletter('')+foot('')
-    pages['directory.html']=head('Open-source medical AI tools directory: filter by license, modality and status · Hounsfield Lab',f'Filter {len(tools)} open-source medical AI tools by category, modality, license and maintenance status.','directory.html','', extra=jsonld({'@context':'https://schema.org','@type':'ItemList','name':'Open-source medical AI tools','numberOfItems':len(tools),'itemListElement':[{'@type':'ListItem','position':i+1,'name':t['name'],'url':f"{SITE_URL}/tools/{t['slug']}.html"} for i,t in enumerate(tools)]}))+'''
+    pages['directory.html']=head('Open-source medical AI tools directory · Hounsfield Lab',f'Filter {len(tools)} open-source medical AI tools by category, modality, license and maintenance status.','directory.html','', extra=jsonld({'@context':'https://schema.org','@type':'ItemList','name':'Open-source medical AI tools','numberOfItems':len(tools),'itemListElement':[{'@type':'ListItem','position':i+1,'name':t['name'],'url':f"{SITE_URL}/tools/{t['slug']}.html"} for i,t in enumerate(tools)]}))+'''
 <section><div class="wrap"><h1 class="h2">Open-source medical AI directory</h1><p class="note">STATUS: “Maintained” = repo updated within 12 months of the '''+SNAP_TXT+''' snapshot. COMM: “Permissive” = permissive open-source license; “Copyleft” = GPL/AGPL obligations; “Non-commercial” = license forbids commercial use; “Verify” = custom terms or separate weight terms. Always read the license yourself. Imaging datasets are listed on the <a href="datasets.html">DICOM datasets</a> page.</p>
 <div class="filters"><input id="q" type="search" placeholder="Search tools, maintainers…" aria-label="Search"><select id="group" aria-label="Category"><option value="">All categories</option></select><select id="modality" aria-label="Modality"><option value="">All modalities</option></select><select id="commercial" aria-label="License type"><option value="">Any license type</option></select><select id="maintenance" aria-label="Status"><option value="">Any status</option></select><button class="btn ghost small" id="reset" type="button">Reset</button></div>
 <div class="count" id="count" aria-live="polite">'''+f'{len(tools)} of {len(tools)} tools'+'''</div><div class="grid" id="list">'''+''.join(card_html(t,i) for i,t in enumerate(tools))+'''</div><p id="empty" class="note" hidden>No tools match these filters.</p></div></section>'''+foot('','<script>initDirectory()</script>')
     pages['suggest.html']=head('Suggest a tool · Hounsfield Lab','Suggest an open-source medical AI tool or a correction for the Hounsfield Lab directory.','suggest.html','')+'''
 <section><div class="wrap prose"><h1 class="h2">Suggest a tool or a correction</h1><p>Know an open-source or downloadable medical AI tool we should list, or spotted an error? Tell us. Every submission is reviewed by hand before anything is published. For an imaging dataset, use the <a href="datasets.html#suggest">dataset form</a>.</p>
 <form class="live-form stack" action="'''+FORM_ENDPOINT+'''" method="post" data-endpoint="'''+FORM_ENDPOINT+'''"><input type="hidden" name="_subject" value="Hounsfield Lab: tool suggestion"><input type="hidden" name="form" value="suggest"><div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><label>Tool name<input type="text" name="tool_name" required maxlength="200"></label><label>Repository or download URL<input name="url" type="url" placeholder="https://github.com/…" required></label><label>Type<select name="kind"><option>New tool</option><option>Correction to a listing</option></select></label><label>Why it’s useful / what to fix<textarea name="notes" rows="5" maxlength="4000"></textarea></label><label>Your email (optional, only if you want a reply)<input name="email" type="email" autocomplete="email"></label><button class="btn" type="submit">Submit suggestion</button><p class="note">By submitting you agree to our <a href="privacy.html">privacy notice</a>.</p><p class="note formmsg" role="status" aria-live="polite"></p></form></div></section>'''+foot('')
-    pages['contact.html']=head('Contact · Hounsfield Lab','Contact Hounsfield Lab with questions, partnership ideas or feedback.','contact.html','')+'''
+    pages['contact.html']=head('Contact · Hounsfield Lab','Contact Hounsfield Lab with questions, corrections, partnership ideas or feedback about the open-source medical AI tool and dataset directory.','contact.html','')+'''
 <section><div class="wrap prose"><h1 class="h2">Contact</h1><p>Questions, feedback, or partnership ideas? Send a message and we’ll get back to you if you include an email address. To suggest a tool, use the <a href="suggest.html">suggestion form</a>. To suggest a dataset, use the <a href="datasets.html#suggest">dataset form</a>.</p>
 <form class="live-form stack" action="'''+FORM_ENDPOINT+'''" method="post" data-endpoint="'''+FORM_ENDPOINT+'''"><input type="hidden" name="_subject" value="Hounsfield Lab: contact message"><input type="hidden" name="form" value="contact"><div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
 <label>Name<input type="text" name="name" autocomplete="name" required maxlength="200"></label><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Message<textarea name="message" rows="6" required maxlength="5000"></textarea></label>
@@ -463,13 +484,13 @@ def main():
 <li><strong>Clear labels:</strong> any sponsored content is always marked as sponsored.</li></ul>
 <div class="signup" style="margin-top:24px"><h2>Subscribe</h2>{bh_embed()}<p class="note">Unsubscribe anytime with the link in every email. See our <a href="privacy.html">privacy notice</a>.</p></div>
 <p style="margin-top:22px"><a class="btn ghost" href="{ARCHIVE_URL}" target="_blank" rel="noopener">Browse the archive →</a></p></div></section>'''+foot('')
-    pages['privacy.html']=head('Privacy · Hounsfield Lab','How Hounsfield Lab handles information you submit through its forms.','privacy.html','')+'''
+    pages['privacy.html']=head('Privacy · Hounsfield Lab','How Hounsfield Lab handles information you submit through its contact, suggestion and newsletter forms, and which third-party services process it.','privacy.html','')+'''
 <section><div class="wrap prose"><h1 class="h2">Privacy notice</h1><p class="note">Last updated: October 18, 2026 (dataset directory added)</p>
-<h3>What we collect</h3><p>This site has no accounts or analytics of its own. We only receive information you choose to send through the Contact, Suggest a tool, or Suggest a dataset forms, or the newsletter signup: the fields you fill in (for example name, email, message, tool or dataset name, and URL).</p>
-<h3>How forms are processed</h3><p>Form submissions are delivered to us by email through <a href="https://formsubmit.co/" target="_blank" rel="noopener">FormSubmit</a>, a third-party form service, which processes the data to deliver it. The site itself is hosted on GitHub Pages, which may log basic technical data such as IP addresses for security and operations.</p>
-<h3>How we use it</h3><p>We use form submissions only to review tool and dataset suggestions and corrections and to reply to you. A dataset suggestion is not published automatically. We don’t sell your information, and a form submission never adds you to the newsletter.</p>\n<h3>Newsletter</h3><p>Newsletter signups are handled by <a href=\"https://www.beehiiv.com/\" target=\"_blank\" rel=\"noopener\">beehiiv</a>, which stores your email address and sends the newsletter on our behalf. The signup form is loaded from beehiiv. See <a href=\"https://www.beehiiv.com/privacy\" target=\"_blank\" rel=\"noopener\">beehiiv’s privacy policy</a>. You can unsubscribe anytime using the link at the bottom of every issue.</p>
-<h3>Retention and your choices</h3><p>We keep submissions only as long as needed to handle them. To ask us to delete something you sent, use the <a href="contact.html">contact form</a>.</p>
-<h3>Please don’t send patient information</h3><p>These forms aren’t for protected health information, images, or any identifiable patient data. Don’t send DICOM files.</p></div></section>'''+foot('')
+<h2 class="h3">What we collect</h2><p>This site has no accounts or analytics of its own. We only receive information you choose to send through the Contact, Suggest a tool, or Suggest a dataset forms, or the newsletter signup: the fields you fill in (for example name, email, message, tool or dataset name, and URL).</p>
+<h2 class="h3">How forms are processed</h2><p>Form submissions are delivered to us by email through <a href="https://formsubmit.co/" target="_blank" rel="noopener">FormSubmit</a>, a third-party form service, which processes the data to deliver it. The site itself is hosted on GitHub Pages, which may log basic technical data such as IP addresses for security and operations.</p>
+<h2 class="h3">How we use it</h2><p>We use form submissions only to review tool and dataset suggestions and corrections and to reply to you. A dataset suggestion is not published automatically. We don’t sell your information, and a form submission never adds you to the newsletter.</p>\n<h2 class="h3">Newsletter</h2><p>Newsletter signups are handled by <a href=\"https://www.beehiiv.com/\" target=\"_blank\" rel=\"noopener\">beehiiv</a>, which stores your email address and sends the newsletter on our behalf. The signup form is loaded from beehiiv. See <a href=\"https://www.beehiiv.com/privacy\" target=\"_blank\" rel=\"noopener\">beehiiv’s privacy policy</a>. You can unsubscribe anytime using the link at the bottom of every issue.</p>
+<h2 class="h3">Retention and your choices</h2><p>We keep submissions only as long as needed to handle them. To ask us to delete something you sent, use the <a href="contact.html">contact form</a>.</p>
+<h2 class="h3">Please don’t send patient information</h2><p>These forms aren’t for protected health information, images, or any identifiable patient data. Don’t send DICOM files.</p></div></section>'''+foot('')
     for p in ['pipeline-orthanc-mercure.html','about.html']:
         src=(ROOT/'content'/p).read_text()
         title,desc=src.split('\n',2)[:2]
@@ -477,6 +498,16 @@ def main():
     pub_ds=[{**{k:d[k] for k in DATASET_FIELDS}, "slug":d["slug"]} for d in datasets]
     json.dump({"areas":AREAS,"datasets":pub_ds}, open(ROOT/'data'/'datasets.json','w'), indent=1, ensure_ascii=False)
     pages['datasets.html']=datasets_page(datasets)
+    PAGE_TYPES={'about.html':('AboutPage','About'),'contact.html':('ContactPage','Contact'),'suggest.html':('WebPage','Suggest a tool'),
+        'newsletter.html':('WebPage','Newsletter'),'privacy.html':('WebPage','Privacy'),'pipeline-orthanc-mercure.html':('TechArticle','Pipeline guide')}
+    for p,(typ,crumb) in PAGE_TYPES.items():
+        t_=re.search(r'<title>(.*?)</title>',pages[p]).group(1); d_=re.search(r'<meta name="description" content="(.*?)"',pages[p]).group(1)
+        ld={'@context':'https://schema.org','@type':typ,'name':html.unescape(t_).replace(SUFFIX,''),'description':html.unescape(d_),'url':f'{SITE_URL}/{p}',
+            'isPartOf':{'@type':'WebSite','name':'Hounsfield Lab','url':SITE_URL+'/'}}
+        if typ=='TechArticle': ld['headline']=ld['name']
+        bc={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':SITE_URL+'/'},
+            {'@type':'ListItem','position':2,'name':crumb,'item':f'{SITE_URL}/{p}'}]}
+        pages[p]=pages[p].replace('<link rel="stylesheet"',jsonld(ld)+jsonld(bc)+'<link rel="stylesheet"',1)
     for p,h in pages.items(): emit(p,h)
     urls=['','directory.html','datasets.html','pipeline-orthanc-mercure.html','about.html','suggest.html','contact.html','privacy.html','newsletter.html']+[f'tools/{t["slug"]}.html' for t in tools]+[f'datasets/{d["slug"]}.html' for d in sorted(datasets,key=lambda d:d["name"].lower())]
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{SITE_URL}/{u}</loc><lastmod>{LASTMOD[u]}</lastmod></url>\n' for u in urls)+'</urlset>\n')
