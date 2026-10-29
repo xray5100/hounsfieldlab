@@ -166,6 +166,24 @@
    ]
   },
   {
+   "name": "MedVTok",
+   "slug": "medvtok",
+   "group": "Foundation models & agents",
+   "category": "Foundation model",
+   "modality_specialty": "Multimodal: 2D images and 3D CT/MRI volumes (9 modalities incl. X-ray, ultrasound, pathology)",
+   "what_it_does": "General-purpose medical visual tokenizer that encodes 2D images and 3D volumes into one token space (global features, patch tokens and latents) for classification, retrieval, segmentation, synthesis, VQA and report generation; trained on over 28M images and 70K volumes",
+   "license": "MIT",
+   "license_note": "Repo LICENSE and the Hugging Face model card (massaki75/medvtok, public, not gated, checkpoint downloaded with hf download) state MIT. Training uses features from several expert encoders and public datasets that carry their own terms. Paper: arXiv 2610.35842 (Oct 26, 2026).",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-27",
+   "maintainer": "Ma, Ji, Ning, Liu et al. (Masaaki-75)",
+   "urls": [
+    "https://github.com/Masaaki-75/medvtok",
+    "https://huggingface.co/massaki75/medvtok"
+   ]
+  },
+  {
    "name": "MONAI",
    "slug": "monai",
    "group": "Segmentation & frameworks",
@@ -249,6 +267,25 @@
    "urls": [
     "https://huggingface.co/nvidia/NV-Segment-CT",
     "https://github.com/NVIDIA-Medtech/NV-Segment-CTMR"
+   ]
+  },
+  {
+   "name": "SlimFormer++",
+   "slug": "slimformer-plus-plus",
+   "group": "Segmentation & frameworks",
+   "category": "Segmentation",
+   "modality_specialty": "Radiology: 3D CT, MRI, ultrasound",
+   "what_it_does": "Lightweight (5.98M-parameter) 3D segmentation network packaged as an nnU-Net v2 trainer, with pretrained weights for ACDC (cardiac MRI), AbdomenCT-1K and AMOS2022 CT and a 3D Slicer extension for 15 abdominal organs in CT",
+   "license": "SlimFormer++ Noncommercial Research License 1.0",
+   "license_note": "Repo LICENSE permits noncommercial scientific research only; commercial use, including products and paid consulting, needs separate written permission. Third-party parts stay Apache-2.0. The Slicer extension code (WHHHHHY822/SlicerSlimFormerPlusPlus) is Apache-2.0 but its model weights follow the noncommercial license. Requires Linux, an NVIDIA GPU and CUDA 12.6 to build. Paper: arXiv 2610.25488.",
+   "commercial": "Non-commercial",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-10-24",
+   "maintainer": "Hong, Zhang, Liu, Mo, Ye (University of Exeter)",
+   "urls": [
+    "https://github.com/WHHHHHY822/SlimFormerPlusPlus",
+    "https://github.com/WHHHHHY822/SlicerSlimFormerPlusPlus",
+    "https://huggingface.co/Yang0822/SlimFormerPlusPlus-AMOS2022-CT"
    ]
   },
   {
@@ -412,10 +449,10 @@
    "modality_specialty": "Neuro: structural T1-weighted brain MRI",
    "what_it_does": "Self-supervised 3D masked-autoencoder foundation model pretrained on 74,425 T1-weighted brain MRIs; used as a fine-tuning backbone or frozen feature extractor (e.g., brain age, disease classification)",
    "license": "CBICA non-commercial agreement (code); CC BY-NC-ND 4.0 (weights)",
-   "license_note": "The repo LICENSE points to the UPenn CBICA non-commercial software agreement (https://www.med.upenn.edu/cbica/software-agreement-non-commercial.html). Weights on Hugging Face (cbica/Brain2Vec) are gated with manual approval and tagged CC BY-NC-ND 4.0. Inputs must be skull-stripped and linearly registered to the provided template. Paper: arXiv 2610.28411 (Oct 20, 2026).",
+   "license_note": "The repo LICENSE points to the UPenn CBICA non-commercial software agreement (https://www.med.upenn.edu/cbica/software-agreement-non-commercial.html). Weights on Hugging Face (cbica/Brain2Vec) are gated with manual approval and tagged CC BY-NC-ND 4.0. Inputs must be skull-stripped and linearly registered to the provided template; the repo added a preprocessing pipeline for this on Oct 27, 2026 (NiChart_DLMUSE skull-stripping, then FSL flirt). Paper: arXiv 2610.28411 (Oct 20, 2026).",
    "commercial": "Non-commercial",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-22",
+   "last_push_utc": "2026-10-27",
    "maintainer": "UPenn CBICA (Davatzikos lab)",
    "urls": [
     "https://github.com/CBICA/Brain2Vec",
@@ -586,7 +623,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-07",
+   "last_push_utc": "2026-10-28",
    "maintainer": "mercure (NYU origin)",
    "urls": [
     "https://github.com/mercure-imaging/mercure"
@@ -910,7 +947,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-16",
+   "last_push_utc": "2026-10-27",
    "maintainer": "Imaging Data Commons (highdicom developers)",
    "urls": [
     "https://github.com/ImagingDataCommons/highdicom"
@@ -978,7 +1015,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-17",
+   "last_push_utc": "2026-10-29",
    "maintainer": "Cornerstone.js / OHIF",
    "urls": [
     "https://github.com/cornerstonejs/cornerstone3D"

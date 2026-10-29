@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 57 open-source medical AI software tools and 68 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-26.
+> Hounsfield Lab is a directory of 59 open-source medical AI software tools and 68 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-10-19; dataset list last updated 2026-10-26.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -151,6 +151,20 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Links: https://github.com/lmb-freiburg/radfinder, https://huggingface.co/collections/lmb-freiburg/radfinder
 - Page: https://hounsfieldlab.com/tools/radfinder.html
 
+### MedVTok
+- What it is: General-purpose medical visual tokenizer that encodes 2D images and 3D volumes into one token space (global features, patch tokens and latents) for classification, retrieval, segmentation, synthesis, VQA and report generation; trained on over 28M images and 70K volumes
+- Type: Foundation model
+- Modality/specialty: Multimodal: 2D images and 3D CT/MRI volumes (9 modalities incl. X-ray, ultrasound, pathology)
+- Maintainer: Ma, Ji, Ning, Liu et al. (Masaaki-75)
+- License: MIT
+- Commercial use: Permissive
+- License note: Repo LICENSE and the Hugging Face model card (massaki75/medvtok, public, not gated, checkpoint downloaded with hf download) state MIT. Training uses features from several expert encoders and public datasets that carry their own terms. Paper: arXiv 2610.35842 (Oct 26, 2026).
+- Access: free public source repository
+- Last repository update: 2026-10-27 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://github.com/Masaaki-75/medvtok, https://huggingface.co/massaki75/medvtok
+- Page: https://hounsfieldlab.com/tools/medvtok.html
+
 ### RadKev
 - What it is: Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text
 - Type: Foundation model
@@ -237,6 +251,20 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Links: https://huggingface.co/nvidia/NV-Segment-CT, https://github.com/NVIDIA-Medtech/NV-Segment-CTMR
 - Page: https://hounsfieldlab.com/tools/nv-segment-ct.html
 - Related datasets: AMOS (abdominal multi-organ segmentation), C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, FDG-PET-CT-Lesions (autoPET)
+
+### SlimFormer++
+- What it is: Lightweight (5.98M-parameter) 3D segmentation network packaged as an nnU-Net v2 trainer, with pretrained weights for ACDC (cardiac MRI), AbdomenCT-1K and AMOS2022 CT and a 3D Slicer extension for 15 abdominal organs in CT
+- Type: Segmentation
+- Modality/specialty: Radiology: 3D CT, MRI, ultrasound
+- Maintainer: Hong, Zhang, Liu, Mo, Ye (University of Exeter)
+- License: SlimFormer++ Noncommercial Research License 1.0
+- Commercial use: Non-commercial
+- License note: Repo LICENSE permits noncommercial scientific research only; commercial use, including products and paid consulting, needs separate written permission. Third-party parts stay Apache-2.0. The Slicer extension code (WHHHHHY822/SlicerSlimFormerPlusPlus) is Apache-2.0 but its model weights follow the noncommercial license. Requires Linux, an NVIDIA GPU and CUDA 12.6 to build. Paper: arXiv 2610.25488.
+- Access: free public source repository
+- Last repository update: 2026-10-24 (Maintained)
+- Last checked: 2026-10-19
+- Links: https://github.com/WHHHHHY822/SlimFormerPlusPlus, https://github.com/WHHHHHY822/SlicerSlimFormerPlusPlus, https://huggingface.co/Yang0822/SlimFormerPlusPlus-AMOS2022-CT
+- Page: https://hounsfieldlab.com/tools/slimformer-plus-plus.html
 
 ### MedSAM
 - What it is: Segment Anything adapted for medical images
@@ -424,9 +452,9 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Maintainer: UPenn CBICA (Davatzikos lab)
 - License: CBICA non-commercial agreement (code); CC BY-NC-ND 4.0 (weights)
 - Commercial use: Non-commercial
-- License note: The repo LICENSE points to the UPenn CBICA non-commercial software agreement (https://www.med.upenn.edu/cbica/software-agreement-non-commercial.html). Weights on Hugging Face (cbica/Brain2Vec) are gated with manual approval and tagged CC BY-NC-ND 4.0. Inputs must be skull-stripped and linearly registered to the provided template. Paper: arXiv 2610.28411 (Oct 20, 2026).
+- License note: The repo LICENSE points to the UPenn CBICA non-commercial software agreement (https://www.med.upenn.edu/cbica/software-agreement-non-commercial.html). Weights on Hugging Face (cbica/Brain2Vec) are gated with manual approval and tagged CC BY-NC-ND 4.0. Inputs must be skull-stripped and linearly registered to the provided template; the repo added a preprocessing pipeline for this on Oct 27, 2026 (NiChart_DLMUSE skull-stripping, then FSL flirt). Paper: arXiv 2610.28411 (Oct 20, 2026).
 - Access: free public source repository
-- Last repository update: 2026-10-22 (Maintained)
+- Last repository update: 2026-10-27 (Maintained)
 - Last checked: 2026-10-19
 - Links: https://github.com/CBICA/Brain2Vec, https://huggingface.co/cbica/Brain2Vec
 - Page: https://hounsfieldlab.com/tools/brain2vec.html
@@ -526,7 +554,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: MIT
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-17 (Maintained)
+- Last repository update: 2026-10-29 (Maintained)
 - Last checked: 2026-10-19
 - Links: https://github.com/cornerstonejs/cornerstone3D
 - Page: https://hounsfieldlab.com/tools/cornerstone3d.html
@@ -584,7 +612,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: MIT
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-07 (Maintained)
+- Last repository update: 2026-10-28 (Maintained)
 - Last checked: 2026-10-19
 - Links: https://github.com/mercure-imaging/mercure
 - Page: https://hounsfieldlab.com/tools/mercure.html
@@ -625,7 +653,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - License: MIT
 - Commercial use: Permissive
 - Access: free public source repository
-- Last repository update: 2026-10-16 (Maintained)
+- Last repository update: 2026-10-27 (Maintained)
 - Last checked: 2026-10-19
 - Links: https://github.com/ImagingDataCommons/highdicom
 - Page: https://hounsfieldlab.com/tools/highdicom.html
