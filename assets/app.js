@@ -42,7 +42,7 @@ document.getElementById('count').textContent=`${n} of ${cards.length} datasets`;
 const u=new URLSearchParams();keys.forEach(k=>f[k]&&u.set(k,f[k]));f.q&&u.set('q',f.q);history.replaceState(null,'',u.toString()?'?'+u:location.pathname)}
 render()}
 document.querySelectorAll('form.live-form').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const msg=f.querySelector('.formmsg'),btn=f.querySelector('button[type=submit]');
-if(f.querySelector('[name=_honey]').value){msg.textContent='Thanks!';return}
+if(f.querySelector('[name=botcheck]').checked){msg.textContent='Thanks!';return}
 btn.disabled=true;msg.textContent='Sending…';
 try{const r=await fetch(f.dataset.endpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));
 if(r.ok&&String(j.success)==='true'){f.reset();f.classList.add('sent');msg.textContent='Thank you! Your message was received.'}else throw 0}
