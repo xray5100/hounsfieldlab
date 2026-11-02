@@ -2,7 +2,7 @@
 
 Static site (plain HTML/CSS/JS). No build tooling is needed to serve it.
 
-- Tool data source: `/workspace/medai/catalog.csv`, with manual license overrides in `build.py` (`LIC`). If that file is absent, `build.py` rebuilds the tool pages from `data/catalog.json`. `SNAPSHOT` in `build.py` is the date repository metadata (last push, license) was last refreshed.
+- Tool data source: `/workspace/medai/catalog.csv`, with manual license overrides in `build.py` (`LIC`). If that file is absent, `build.py` rebuilds the tool pages from `data/catalog.json`. `SNAPSHOT` in `build.py` is the date repository metadata (last push, license) was last refreshed. Refresh it with `python3 tools/refresh_repos.py YYYY-MM-DD`, then set `SNAPSHOT` to the same date and rebuild.
 - Dataset data source: `datasets.csv`. Regenerate everything with `python3 build.py`: `index.html`, `directory.html`, `datasets.html`, `datasets/*.html` (one page per dataset), `suggest.html`, `about.html`, the pipeline page, `tools/*.html`, `data/catalog.json`, `data/datasets.json`, `sitemap.xml`, `robots.txt`, `llms.txt`, `llms-full.txt`.
 - The build is idempotent. A page's sitemap `lastmod` only moves to today when that page's HTML changes; unchanged pages keep the date from the previous `sitemap.xml`. Pages for tools or datasets removed from the source data are deleted.
 - Related tools on dataset pages (and related datasets on tool pages) come from `AREA_TOOLS`, `FORMAT_TOOLS` and `TOOL_MODS` in `build.py`.
