@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 59 open-source medical AI software tools and 71 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-02; dataset list last updated 2026-11-04.
+> Hounsfield Lab is a directory of 60 open-source medical AI software tools and 71 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-02; dataset list last updated 2026-11-04.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -178,6 +178,20 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-11-02
 - Links: https://github.com/udiram/RadKev, https://huggingface.co/ramu9703/radkev-27b
 - Page: https://hounsfieldlab.com/tools/radkev.html
+
+### HoloCT
+- What it is: 3D CT foundation model that takes a CT volume (NIfTI, Hounsfield units) and a text prompt for lesion screening, VQA, report generation and language-guided segmentation, returning 3D masks as evidence for its findings; HoloCT-4B and HoloCT-8B checkpoints on Hugging Face (Nov 2026)
+- Type: Vision-language model
+- Modality/specialty: Radiology: 3D CT
+- Maintainer: Alibaba DAMO Academy / Xie et al.
+- License: MIT
+- Commercial use: Permissive
+- License note: Repo LICENSE and both Hugging Face model cards (Alibaba-DAMO-Academy/HoloCT-4B and HoloCT-8B, public, not gated) state MIT for code and weights. THIRD_PARTY_NOTICES lists components from Med3DVLM (MIT), MONAI VISTA (Apache-2.0) and Transformers/Qwen3-VL (Apache-2.0). Training data (HoloDATA) draws on 73 public datasets with their own terms plus clinical cohorts. Needs an NVIDIA GPU with bfloat16. Paper: arXiv 2611.06471 (Nov 4, 2026).
+- Access: free public source repository
+- Last repository update: 2026-11-05 (Maintained)
+- Last checked: 2026-11-02
+- Links: https://github.com/alibaba-damo-academy/HoloCT, https://huggingface.co/Alibaba-DAMO-Academy/HoloCT-4B, https://huggingface.co/Alibaba-DAMO-Academy/HoloCT-8B
+- Page: https://hounsfieldlab.com/tools/holoct.html
 
 ## Tools: Segmentation & frameworks
 

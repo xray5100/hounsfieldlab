@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 59 open-source medical AI software tools and 71 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-02; dataset list last updated 2026-11-04.
+> Hounsfield Lab is a directory of 60 open-source medical AI software tools and 71 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-02; dataset list last updated 2026-11-04.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -34,6 +34,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [RadFinder](https://hounsfieldlab.com/tools/radfinder.html): 3D CT vision-language model for report-to-scan retrieval, prompt-based disease classification and slice-level localization; RadFinder-2610 checkpoints released Oct 22, 2026 (MIT (code); CC BY-NC-SA 4.0 (weights); Maintained; updated 2026-10-22)
 - [MedVTok](https://hounsfieldlab.com/tools/medvtok.html): General-purpose medical visual tokenizer that encodes 2D images and 3D volumes into one token space (global features, patch tokens and latents) for classification, retrieval, segmentation, synthesis, VQA and report generation; trained on over 28M images and 70K volumes (MIT; Maintained; updated 2026-10-27)
 - [RadKev](https://hounsfieldlab.com/tools/radkev.html): Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text (Apache-2.0 (code); CC BY-NC-SA 4.0 (weights); Maintained; updated 2026-10-07)
+- [HoloCT](https://hounsfieldlab.com/tools/holoct.html): 3D CT foundation model that takes a CT volume (NIfTI, Hounsfield units) and a text prompt for lesion screening, VQA, report generation and language-guided segmentation, returning 3D masks as evidence for its findings; HoloCT-4B and HoloCT-8B checkpoints on Hugging Face (Nov 2026) (MIT; Maintained; updated 2026-11-05)
 
 ## Tools: Segmentation & frameworks
 

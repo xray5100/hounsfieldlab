@@ -275,7 +275,7 @@ AREA_TOOLS = {"neuro":["hd-bet","fastsurfer","freesurfer","brainchop","dcm2niix"
  "cardiac":["monai","nnu-net","3d-slicer"]}
 FORMAT_TOOLS = {"DICOM":["pydicom","highdicom","ohif-viewer","orthanc"],"NIfTI":["torchio","simpleitk","itk"]}
 TOOL_MODS = {"hd-bet":{"MR"},"fastsurfer":{"MR"},"freesurfer":{"MR"},"brainchop":{"MR"},"dcm2niix":{"MR","CT"},
- "torchxrayvision":{"DX","CR"},"chexagent":{"DX","CR"},"medrax":{"DX","CR"},"pillar-0":{"CT","MR"},"merlin":{"CT"},"totalsegmentator":{"CT","MR"},"nv-segment-ct":{"CT"}}
+ "torchxrayvision":{"DX","CR"},"chexagent":{"DX","CR"},"medrax":{"DX","CR"},"pillar-0":{"CT","MR"},"merlin":{"CT"},"totalsegmentator":{"CT","MR"},"nv-segment-ct":{"CT"},"holoct":{"CT"}}
 TOOL_SLUGS = set()
 
 def tools_for_dataset(d):

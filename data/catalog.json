@@ -920,6 +920,25 @@
    ]
   },
   {
+   "name": "HoloCT",
+   "slug": "holoct",
+   "group": "Foundation models & agents",
+   "category": "Vision-language model",
+   "modality_specialty": "Radiology: 3D CT",
+   "what_it_does": "3D CT foundation model that takes a CT volume (NIfTI, Hounsfield units) and a text prompt for lesion screening, VQA, report generation and language-guided segmentation, returning 3D masks as evidence for its findings; HoloCT-4B and HoloCT-8B checkpoints on Hugging Face (Nov 2026)",
+   "license": "MIT",
+   "license_note": "Repo LICENSE and both Hugging Face model cards (Alibaba-DAMO-Academy/HoloCT-4B and HoloCT-8B, public, not gated) state MIT for code and weights. THIRD_PARTY_NOTICES lists components from Med3DVLM (MIT), MONAI VISTA (Apache-2.0) and Transformers/Qwen3-VL (Apache-2.0). Training data (HoloDATA) draws on 73 public datasets with their own terms plus clinical cohorts. Needs an NVIDIA GPU with bfloat16. Paper: arXiv 2611.06471 (Nov 4, 2026).",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-11-05",
+   "maintainer": "Alibaba DAMO Academy / Xie et al.",
+   "urls": [
+    "https://github.com/alibaba-damo-academy/HoloCT",
+    "https://huggingface.co/Alibaba-DAMO-Academy/HoloCT-4B",
+    "https://huggingface.co/Alibaba-DAMO-Academy/HoloCT-8B"
+   ]
+  },
+  {
    "name": "dcm2niix",
    "slug": "dcm2niix",
    "group": "DICOM/PACS & deployment",
