@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 60 open-source medical AI software tools and 71 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-02; dataset list last updated 2026-11-04.
+> Hounsfield Lab is a directory of 60 open-source medical AI software tools and 71 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-09; dataset list last updated 2026-11-04.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -29,24 +29,24 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [Merlin](https://hounsfieldlab.com/tools/merlin.html): 3D vision-language model for CT that uses structured EHR and report supervision (MIT; Maintained; updated 2026-09-24)
 - [MedGemma](https://hounsfieldlab.com/tools/medgemma.html): Google's open medical model family; repo has notebooks and code (Apache-2.0 (code); Maintained; updated 2026-06-19)
 - [CheXagent](https://hounsfieldlab.com/tools/chexagent.html): Foundation model for chest X-ray interpretation (CC BY-NC-ND 4.0; Stale; updated 2025-01-07)
-- [MedRAX](https://hounsfieldlab.com/tools/medrax.html): Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025) (Apache-2.0; Stale; updated 2025-10-31)
+- [MedRAX](https://hounsfieldlab.com/tools/medrax.html): Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025) (Apache-2.0; Maintained; updated 2026-11-05)
 - [LLaVA-Med](https://hounsfieldlab.com/tools/llava-med.html): Biomedical vision-language assistant for image Q&A (Microsoft Research License; Stale; updated 2025-06-04)
 - [RadFinder](https://hounsfieldlab.com/tools/radfinder.html): 3D CT vision-language model for report-to-scan retrieval, prompt-based disease classification and slice-level localization; RadFinder-2610 checkpoints released Oct 22, 2026 (MIT (code); CC BY-NC-SA 4.0 (weights); Maintained; updated 2026-10-22)
 - [MedVTok](https://hounsfieldlab.com/tools/medvtok.html): General-purpose medical visual tokenizer that encodes 2D images and 3D volumes into one token space (global features, patch tokens and latents) for classification, retrieval, segmentation, synthesis, VQA and report generation; trained on over 28M images and 70K volumes (MIT; Maintained; updated 2026-10-27)
 - [RadKev](https://hounsfieldlab.com/tools/radkev.html): Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text (Apache-2.0 (code); CC BY-NC-SA 4.0 (weights); Maintained; updated 2026-10-07)
-- [HoloCT](https://hounsfieldlab.com/tools/holoct.html): 3D CT foundation model that takes a CT volume (NIfTI, Hounsfield units) and a text prompt for lesion screening, VQA, report generation and language-guided segmentation, returning 3D masks as evidence for its findings; HoloCT-4B and HoloCT-8B checkpoints on Hugging Face (Nov 2026) (MIT; Maintained; updated 2026-11-05)
+- [HoloCT](https://hounsfieldlab.com/tools/holoct.html): 3D CT foundation model that takes a CT volume (NIfTI, Hounsfield units) and a text prompt for lesion screening, VQA, report generation and language-guided segmentation, returning 3D masks as evidence for its findings; HoloCT-4B and HoloCT-8B checkpoints on Hugging Face (Nov 2026) (MIT; Maintained; updated 2026-11-07)
 
 ## Tools: Segmentation & frameworks
 
-- [MONAI](https://hounsfieldlab.com/tools/monai.html): PyTorch-based AI toolkit for healthcare imaging (Apache-2.0; Maintained; updated 2026-10-30)
+- [MONAI](https://hounsfieldlab.com/tools/monai.html): PyTorch-based AI toolkit for healthcare imaging (Apache-2.0; Maintained; updated 2026-11-06)
 - [MONAI Label](https://hounsfieldlab.com/tools/monai-label.html): AI-assisted image labeling and active learning; integrates with 3D Slicer and OHIF (Apache-2.0; Maintained; updated 2026-10-29)
-- [nnU-Net](https://hounsfieldlab.com/tools/nnu-net.html): Self-configuring segmentation framework (Apache-2.0; Maintained; updated 2026-10-30)
-- [TotalSegmentator](https://hounsfieldlab.com/tools/totalsegmentator.html): Segments more than 100 anatomical structures in CT and MR (Apache-2.0; Maintained; updated 2026-10-22)
+- [nnU-Net](https://hounsfieldlab.com/tools/nnu-net.html): Self-configuring segmentation framework (Apache-2.0; Maintained; updated 2026-11-05)
+- [TotalSegmentator](https://hounsfieldlab.com/tools/totalsegmentator.html): Segments more than 100 anatomical structures in CT and MR (Apache-2.0; Maintained; updated 2026-11-04)
 - [NV-Segment-CT](https://hounsfieldlab.com/tools/nv-segment-ct.html): CT segmentation built from MONAI VISTA3D: 117 structures automatically, or 132 promptable by point or class. Research use only, not for clinical care. Needs a CUDA GPU; weights are about 872 MB (Apache-2.0 (code); NVIDIA Open Model License (weights); Maintained; updated 2026-10-05)
 - [SlimFormer++](https://hounsfieldlab.com/tools/slimformer-plus-plus.html): Lightweight (5.98M-parameter) 3D segmentation network packaged as an nnU-Net v2 trainer, with pretrained weights for ACDC (cardiac MRI), AbdomenCT-1K and AMOS2022 CT and a 3D Slicer extension for 15 abdominal organs in CT (SlimFormer++ Noncommercial Research License 1.0; Maintained; updated 2026-10-24)
 - [MedSAM](https://hounsfieldlab.com/tools/medsam.html): Segment Anything adapted for medical images (Apache-2.0; Stale; updated 2025-05-07)
 - [MedSAM2](https://hounsfieldlab.com/tools/medsam2.html): Promptable segmentation of 3D medical images and videos (Apache-2.0; Stale; updated 2025-07-11)
-- [TorchIO](https://hounsfieldlab.com/tools/torchio.html): Medical image loading, preprocessing and augmentation for PyTorch (Apache-2.0; Maintained; updated 2026-11-02)
+- [TorchIO](https://hounsfieldlab.com/tools/torchio.html): Medical image loading, preprocessing and augmentation for PyTorch (Apache-2.0; Maintained; updated 2026-11-05)
 - [PyRadiomics](https://hounsfieldlab.com/tools/pyradiomics.html): Extracts radiomics features from 2D/3D images (BSD-3-Clause; Stale; updated 2025-10-27)
 - [ContiLNN](https://hounsfieldlab.com/tools/contilnn.html): Adds bidirectional liquid-neural modules along the slice axis to 2D restoration backbones; pretrained checkpoints for CT denoising, MRI super-resolution and low-count PET (Apache-2.0; Maintained; updated 2026-10-09)
 - [TorchXRayVision](https://hounsfieldlab.com/tools/torchxrayvision.html): Library of chest X-ray dataset loaders and pretrained classification, segmentation and autoencoder models (Apache-2.0 (library); models vary; Maintained; updated 2026-10-18)
@@ -55,51 +55,51 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 
 - [HD-BET](https://hounsfieldlab.com/tools/hd-bet.html): Deep-learning brain extraction (skull stripping) for MRI (Apache-2.0; Stale; updated 2024-12-18)
 - [BrainChop](https://hounsfieldlab.com/tools/brainchop.html): In-browser 3D MRI rendering and segmentation (MIT; Maintained; updated 2026-02-24)
-- [FreeSurfer](https://hounsfieldlab.com/tools/freesurfer.html): Neuroimaging analysis and visualization suite (FreeSurfer License; Maintained; updated 2026-11-02)
-- [fMRIPrep](https://hounsfieldlab.com/tools/fmriprep.html): Robust preprocessing pipeline for fMRI (Apache-2.0; Maintained; updated 2026-10-28)
-- [DIPY](https://hounsfieldlab.com/tools/dipy.html): Python library for diffusion MRI, tractography and registration (BSD-3-Clause; Maintained; updated 2026-11-02)
-- [nilearn](https://hounsfieldlab.com/tools/nilearn.html): Machine learning for neuroimaging in Python (BSD-3-Clause; Maintained; updated 2026-10-29)
-- [ANTsPy](https://hounsfieldlab.com/tools/antspy.html): Python library for registration, segmentation and analysis (Apache-2.0; Maintained; updated 2026-10-27)
-- [Brain2Vec](https://hounsfieldlab.com/tools/brain2vec.html): Self-supervised 3D masked-autoencoder foundation model pretrained on 74,425 T1-weighted brain MRIs; used as a fine-tuning backbone or frozen feature extractor (e.g., brain age, disease classification) (CBICA non-commercial agreement (code); CC BY-NC-ND 4.0 (weights); Maintained; updated 2026-11-02)
-- [FastSurfer](https://hounsfieldlab.com/tools/fastsurfer.html): Deep-learning whole-brain segmentation and cortical surface reconstruction, a fast alternative to FreeSurfer recon-all (Apache-2.0; Maintained; updated 2026-10-30)
+- [FreeSurfer](https://hounsfieldlab.com/tools/freesurfer.html): Neuroimaging analysis and visualization suite (FreeSurfer License; Maintained; updated 2026-11-09)
+- [fMRIPrep](https://hounsfieldlab.com/tools/fmriprep.html): Robust preprocessing pipeline for fMRI (Apache-2.0; Maintained; updated 2026-11-09)
+- [DIPY](https://hounsfieldlab.com/tools/dipy.html): Python library for diffusion MRI, tractography and registration (BSD-3-Clause; Maintained; updated 2026-11-09)
+- [nilearn](https://hounsfieldlab.com/tools/nilearn.html): Machine learning for neuroimaging in Python (BSD-3-Clause; Maintained; updated 2026-11-04)
+- [ANTsPy](https://hounsfieldlab.com/tools/antspy.html): Python library for registration, segmentation and analysis (Apache-2.0; Maintained; updated 2026-11-09)
+- [Brain2Vec](https://hounsfieldlab.com/tools/brain2vec.html): Self-supervised 3D masked-autoencoder foundation model pretrained on 74,425 T1-weighted brain MRIs; used as a fine-tuning backbone or frozen feature extractor (e.g., brain age, disease classification) (CBICA non-commercial agreement (code); CC BY-NC-ND 4.0 (weights); Maintained; updated 2026-11-06)
+- [FastSurfer](https://hounsfieldlab.com/tools/fastsurfer.html): Deep-learning whole-brain segmentation and cortical surface reconstruction, a fast alternative to FreeSurfer recon-all (Apache-2.0; Maintained; updated 2026-11-09)
 
 ## Tools: Viewers & toolkits
 
-- [3D Slicer](https://hounsfieldlab.com/tools/3d-slicer.html): Open platform for visualization, segmentation and image computing (Slicer License (BSD-style); Maintained; updated 2026-11-02)
-- [OHIF Viewer](https://hounsfieldlab.com/tools/ohif-viewer.html): Zero-footprint web DICOM viewer (MIT; Maintained; updated 2026-11-02)
-- [ITK](https://hounsfieldlab.com/tools/itk.html): C++/Python toolkit for segmentation and registration (Apache-2.0; Maintained; updated 2026-11-02)
-- [MITK](https://hounsfieldlab.com/tools/mitk.html): Medical Imaging Interaction Toolkit for building imaging applications (BSD-3-Clause; Maintained; updated 2026-10-21)
-- [SimpleITK](https://hounsfieldlab.com/tools/simpleitk.html): Simplified interface to ITK for image I/O, filtering, segmentation and registration in Python, R, Java, C# and other languages (Apache-2.0; Maintained; updated 2026-11-01)
-- [Cornerstone3D](https://hounsfieldlab.com/tools/cornerstone3d.html): JavaScript libraries for web-based medical image rendering, tools and segmentation; the imaging engine behind the OHIF Viewer (MIT; Maintained; updated 2026-11-02)
+- [3D Slicer](https://hounsfieldlab.com/tools/3d-slicer.html): Open platform for visualization, segmentation and image computing (Slicer License (BSD-style); Maintained; updated 2026-11-09)
+- [OHIF Viewer](https://hounsfieldlab.com/tools/ohif-viewer.html): Zero-footprint web DICOM viewer (MIT; Maintained; updated 2026-11-09)
+- [ITK](https://hounsfieldlab.com/tools/itk.html): C++/Python toolkit for segmentation and registration (Apache-2.0; Maintained; updated 2026-11-09)
+- [MITK](https://hounsfieldlab.com/tools/mitk.html): Medical Imaging Interaction Toolkit for building imaging applications (BSD-3-Clause; Maintained; updated 2026-11-06)
+- [SimpleITK](https://hounsfieldlab.com/tools/simpleitk.html): Simplified interface to ITK for image I/O, filtering, segmentation and registration in Python, R, Java, C# and other languages (Apache-2.0; Maintained; updated 2026-11-09)
+- [Cornerstone3D](https://hounsfieldlab.com/tools/cornerstone3d.html): JavaScript libraries for web-based medical image rendering, tools and segmentation; the imaging engine behind the OHIF Viewer (MIT; Maintained; updated 2026-11-09)
 
 ## Tools: DICOM/PACS & deployment
 
-- [pydicom](https://hounsfieldlab.com/tools/pydicom.html): Read, modify and write DICOM files in Python (MIT (+ noted portions); Maintained; updated 2026-11-01)
-- [DCMTK](https://hounsfieldlab.com/tools/dcmtk.html): Comprehensive set of DICOM libraries and tools (C++) (BSD-3-Clause (OFFIS); Maintained; updated 2026-10-15)
-- [Orthanc](https://hounsfieldlab.com/tools/orthanc.html): Lightweight DICOM server; this repo builds the Docker images and installers (AGPL-3.0; Maintained; updated 2026-11-02)
-- [mercure](https://hounsfieldlab.com/tools/mercure.html): DICOM orchestrator that routes studies to AI processing pipelines (MIT; Maintained; updated 2026-10-28)
-- [Kaapana](https://hounsfieldlab.com/tools/kaapana.html): Platform toolkit for medical imaging AI (federated, workflows) (AGPL-3.0; Maintained; updated 2026-11-02)
-- [dcm2niix](https://hounsfieldlab.com/tools/dcm2niix.html): Converts DICOM to NIfTI with JSON sidecars; the standard converter in many brain MRI and BIDS pipelines (BSD-style (+ bundled licenses); Maintained; updated 2026-10-31)
-- [highdicom](https://hounsfieldlab.com/tools/highdicom.html): High-level Python API on pydicom for reading images and writing AI results as DICOM Segmentation, Structured Report, parametric map and annotation objects (MIT; Maintained; updated 2026-11-02)
+- [pydicom](https://hounsfieldlab.com/tools/pydicom.html): Read, modify and write DICOM files in Python (MIT (+ noted portions); Maintained; updated 2026-11-08)
+- [DCMTK](https://hounsfieldlab.com/tools/dcmtk.html): Comprehensive set of DICOM libraries and tools (C++) (BSD-3-Clause (OFFIS); Maintained; updated 2026-11-07)
+- [Orthanc](https://hounsfieldlab.com/tools/orthanc.html): Lightweight DICOM server; this repo builds the Docker images and installers (AGPL-3.0; Maintained; updated 2026-11-06)
+- [mercure](https://hounsfieldlab.com/tools/mercure.html): DICOM orchestrator that routes studies to AI processing pipelines (MIT; Maintained; updated 2026-11-09)
+- [Kaapana](https://hounsfieldlab.com/tools/kaapana.html): Platform toolkit for medical imaging AI (federated, workflows) (AGPL-3.0; Maintained; updated 2026-11-09)
+- [dcm2niix](https://hounsfieldlab.com/tools/dcm2niix.html): Converts DICOM to NIfTI with JSON sidecars; the standard converter in many brain MRI and BIDS pipelines (BSD-style (+ bundled licenses); Maintained; updated 2026-11-06)
+- [highdicom](https://hounsfieldlab.com/tools/highdicom.html): High-level Python API on pydicom for reading images and writing AI results as DICOM Segmentation, Structured Report, parametric map and annotation objects (MIT; Maintained; updated 2026-11-04)
 
 ## Tools: Pathology
 
-- [TIAToolbox](https://hounsfieldlab.com/tools/tiatoolbox.html): Computational pathology toolbox: whole-slide image I/O, stain normalization, models (BSD-3-Clause; Maintained; updated 2026-11-01)
+- [TIAToolbox](https://hounsfieldlab.com/tools/tiatoolbox.html): Computational pathology toolbox: whole-slide image I/O, stain normalization, models (BSD-3-Clause; Maintained; updated 2026-11-08)
 - [PathML](https://hounsfieldlab.com/tools/pathml.html): Tools for computational pathology (GPL-2.0; Maintained; updated 2026-08-14)
 - [CLAM](https://hounsfieldlab.com/tools/clam.html): Weakly supervised whole-slide classification (GPL-3.0; Stale; updated 2025-04-14)
 - [UNI](https://hounsfieldlab.com/tools/uni.html): Pathology foundation model (Nature Medicine) (CC BY-NC-ND 4.0; Stale; updated 2025-03-26)
-- [QuPath](https://hounsfieldlab.com/tools/qupath.html): Open-source bioimage and whole-slide analysis (GPL-3.0; Maintained; updated 2026-10-27)
+- [QuPath](https://hounsfieldlab.com/tools/qupath.html): Open-source bioimage and whole-slide analysis (GPL-3.0; Maintained; updated 2026-11-08)
 
 ## Tools: Clinical NLP
 
-- [Apache cTAKES](https://hounsfieldlab.com/tools/apache-ctakes.html): NLP platform for clinical text (Apache-2.0; Maintained; updated 2026-08-12)
+- [Apache cTAKES](https://hounsfieldlab.com/tools/apache-ctakes.html): NLP platform for clinical text (Apache-2.0; Maintained; updated 2026-11-04)
 - [medspaCy](https://hounsfieldlab.com/tools/medspacy.html): Clinical NLP library built on spaCy (MIT; Maintained; updated 2026-06-04)
 - [scispaCy](https://hounsfieldlab.com/tools/scispacy.html): spaCy pipelines and models for biomedical text (Apache-2.0; Maintained; updated 2025-12-04)
 - [QuickUMLS](https://hounsfieldlab.com/tools/quickumls.html): Medical concept extraction and UMLS linking (MIT; Stale; updated 2024-08-12)
 
 ## Tools: EHR & data
 
-- [HAPI FHIR](https://hounsfieldlab.com/tools/hapi-fhir.html): Java API for HL7 FHIR clients and servers (Apache-2.0; Maintained; updated 2026-11-02)
+- [HAPI FHIR](https://hounsfieldlab.com/tools/hapi-fhir.html): Java API for HL7 FHIR clients and servers (Apache-2.0; Maintained; updated 2026-11-09)
 - [Synthea](https://hounsfieldlab.com/tools/synthea.html): Synthetic patient population simulator (Apache-2.0; Maintained; updated 2026-10-21)
 - [MIMIC code](https://hounsfieldlab.com/tools/mimic-code.html): Community code for the MIMIC databases (MIT; Maintained; updated 2026-09-01)
 - [OHDSI ATLAS](https://hounsfieldlab.com/tools/ohdsi-atlas.html): Web tool for observational analyses on OMOP data (Apache-2.0; Maintained; updated 2026-09-16)

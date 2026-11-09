@@ -123,8 +123,8 @@
    "license": "Apache-2.0",
    "license_note": "",
    "commercial": "Permissive",
-   "maintenance": "Stale",
-   "last_push_utc": "2025-10-31",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-11-05",
    "maintainer": "Bo Wang Lab",
    "urls": [
     "https://github.com/bowang-lab/MedRAX"
@@ -194,7 +194,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-30",
+   "last_push_utc": "2026-11-06",
    "maintainer": "Project MONAI (NVIDIA + academic)",
    "urls": [
     "https://github.com/Project-MONAI/MONAI"
@@ -228,7 +228,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-30",
+   "last_push_utc": "2026-11-05",
    "maintainer": "DKFZ (MIC)",
    "urls": [
     "https://github.com/MIC-DKFZ/nnUNet"
@@ -245,7 +245,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-22",
+   "last_push_utc": "2026-11-04",
    "maintainer": "J. Wasserthal",
    "urls": [
     "https://github.com/wasserth/TotalSegmentator"
@@ -367,7 +367,7 @@
    "license_note": "Repo LICENSE.txt is the FreeSurfer Software License Agreement v1.0 (MGH), a custom license.",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-09",
    "maintainer": "MGH Martinos Center",
    "urls": [
     "https://github.com/freesurfer/freesurfer"
@@ -384,7 +384,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-28",
+   "last_push_utc": "2026-11-09",
    "maintainer": "NiPreps",
    "urls": [
     "https://github.com/nipreps/fmriprep"
@@ -401,7 +401,7 @@
    "license_note": "Repo LICENSE is BSD 3-clause unless individual files say otherwise.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-09",
    "maintainer": "DIPY team",
    "urls": [
     "https://github.com/dipy/dipy"
@@ -418,7 +418,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-29",
+   "last_push_utc": "2026-11-04",
    "maintainer": "nilearn",
    "urls": [
     "https://github.com/nilearn/nilearn"
@@ -435,7 +435,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-27",
+   "last_push_utc": "2026-11-09",
    "maintainer": "ANTsX",
    "urls": [
     "https://github.com/ANTsX/ANTsPy"
@@ -452,7 +452,7 @@
    "license_note": "The repo LICENSE points to the UPenn CBICA non-commercial software agreement (https://www.med.upenn.edu/cbica/software-agreement-non-commercial.html). Weights on Hugging Face (cbica/Brain2Vec) are gated with manual approval and tagged CC BY-NC-ND 4.0. Inputs must be skull-stripped and linearly registered to the provided template; the repo added a preprocessing pipeline for this on Oct 27, 2026 (NiChart_DLMUSE skull-stripping, then FSL flirt). Paper: arXiv 2610.28411 (Oct 20, 2026).",
    "commercial": "Non-commercial",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-06",
    "maintainer": "UPenn CBICA (Davatzikos lab)",
    "urls": [
     "https://github.com/CBICA/Brain2Vec",
@@ -470,7 +470,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-05",
    "maintainer": "TorchIO project",
    "urls": [
     "https://github.com/TorchIO-project/torchio"
@@ -504,7 +504,7 @@
    "license_note": "Repo License.txt describes a BSD-style license with Slicer-specific extensions.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-09",
    "maintainer": "Slicer community",
    "urls": [
     "https://github.com/Slicer/Slicer"
@@ -521,7 +521,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-09",
    "maintainer": "OHIF",
    "urls": [
     "https://github.com/OHIF/Viewers"
@@ -538,7 +538,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-09",
    "maintainer": "Insight Software Consortium",
    "urls": [
     "https://github.com/InsightSoftwareConsortium/ITK"
@@ -555,7 +555,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-21",
+   "last_push_utc": "2026-11-06",
    "maintainer": "DKFZ / MITK",
    "urls": [
     "https://github.com/MITK/MITK"
@@ -572,7 +572,7 @@
    "license_note": "Repo LICENSE is MIT except for portions listed in the file.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-01",
+   "last_push_utc": "2026-11-08",
    "maintainer": "pydicom",
    "urls": [
     "https://github.com/pydicom/pydicom"
@@ -589,7 +589,7 @@
    "license_note": "COPYRIGHT file is a BSD-style license from OFFIS e.V.; some bundled parts carry other notices.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-15",
+   "last_push_utc": "2026-11-07",
    "maintainer": "OFFIS",
    "urls": [
     "https://github.com/DCMTK/dcmtk"
@@ -606,7 +606,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-06",
    "maintainer": "Orthanc team",
    "urls": [
     "https://github.com/orthanc-server/orthanc-builder"
@@ -623,7 +623,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-28",
+   "last_push_utc": "2026-11-09",
    "maintainer": "mercure (NYU origin)",
    "urls": [
     "https://github.com/mercure-imaging/mercure"
@@ -640,7 +640,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-09",
    "maintainer": "DKFZ",
    "urls": [
     "https://github.com/kaapana/kaapana"
@@ -657,7 +657,7 @@
    "license_note": "Code is BSD 3-clause. LICENSE says the model weights are under a different license (see TIAToolbox pretrained-model docs).",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-01",
+   "last_push_utc": "2026-11-08",
    "maintainer": "TIA Centre, Warwick",
    "urls": [
     "https://github.com/TissueImageAnalytics/tiatoolbox"
@@ -725,7 +725,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-27",
+   "last_push_utc": "2026-11-08",
    "maintainer": "QuPath team",
    "urls": [
     "https://github.com/qupath/qupath"
@@ -742,7 +742,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-08-12",
+   "last_push_utc": "2026-11-04",
    "maintainer": "Apache Software Foundation",
    "urls": [
     "https://github.com/apache/ctakes"
@@ -810,7 +810,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-09",
    "maintainer": "HAPI FHIR",
    "urls": [
     "https://github.com/hapifhir/hapi-fhir"
@@ -930,7 +930,7 @@
    "license_note": "Repo LICENSE and both Hugging Face model cards (Alibaba-DAMO-Academy/HoloCT-4B and HoloCT-8B, public, not gated) state MIT for code and weights. THIRD_PARTY_NOTICES lists components from Med3DVLM (MIT), MONAI VISTA (Apache-2.0) and Transformers/Qwen3-VL (Apache-2.0). Training data (HoloDATA) draws on 73 public datasets with their own terms plus clinical cohorts. Needs an NVIDIA GPU with bfloat16. Paper: arXiv 2611.06471 (Nov 4, 2026).",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-05",
+   "last_push_utc": "2026-11-07",
    "maintainer": "Alibaba DAMO Academy / Xie et al.",
    "urls": [
     "https://github.com/alibaba-damo-academy/HoloCT",
@@ -949,7 +949,7 @@
    "license_note": "license.txt is a BSD-style license (Chris Rorden). Bundled parts such as the NIfTI headers, miniz, OpenJPEG, CharLS, zlib and Jasper carry their own licenses. The file states the software is for research purposes only and is not a clinical tool.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-31",
+   "last_push_utc": "2026-11-06",
    "maintainer": "Chris Rorden (rordenlab)",
    "urls": [
     "https://github.com/rordenlab/dcm2niix"
@@ -966,7 +966,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-04",
    "maintainer": "Imaging Data Commons (highdicom developers)",
    "urls": [
     "https://github.com/ImagingDataCommons/highdicom"
@@ -983,7 +983,7 @@
    "license_note": "Repo LICENSE is Apache-2.0. The surface pipeline calls FreeSurfer binaries and needs a FreeSurfer license file (free, separate terms). The README says results are for research and not for clinical decision support.",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-30",
+   "last_push_utc": "2026-11-09",
    "maintainer": "Deep-MI (DZNE)",
    "urls": [
     "https://github.com/Deep-MI/FastSurfer"
@@ -1017,7 +1017,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-01",
+   "last_push_utc": "2026-11-09",
    "maintainer": "SimpleITK / Insight Software Consortium",
    "urls": [
     "https://github.com/SimpleITK/SimpleITK"
@@ -1034,7 +1034,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-02",
+   "last_push_utc": "2026-11-09",
    "maintainer": "Cornerstone.js / OHIF",
    "urls": [
     "https://github.com/cornerstonejs/cornerstone3D"
