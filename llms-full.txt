@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 60 open-source medical AI software tools and 71 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-09; dataset list last updated 2026-11-04.
+> Hounsfield Lab is a directory of 60 open-source medical AI software tools and 73 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-09; dataset list last updated 2026-11-11.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -881,7 +881,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite Ji et al., AMOS: A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation, NeurIPS 2022 (arXiv:2206.08023), and the Zenodo DOI 10.5281/zenodo.7262581. CC BY 4.0 requires attribution.
 - Status: VERIFIED
 - Added: 2026-10-26
-- Last checked: 2026-10-26
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/amos-abdominal-multi-organ-segmentation.html
 
 ### B-mode-and-CEUS-Liver
@@ -900,7 +900,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/b-mode-and-ceus-liver.html
 
 ### BrainMetShare
@@ -919,7 +919,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. DOI 10.71718/z66c-qr59, as printed on the AIMI BrainMetShare page.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/brainmetshare.html
 
 ### Breast-Cancer-Screening-DBT (BCS-DBT)
@@ -938,7 +938,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/breast-cancer-screening-dbt-bcs-dbt.html
 
 ### Burdenko-GBM-Progression
@@ -957,7 +957,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy. Imaging access is governed by the NIH policy, not only by CC BY.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/burdenko-gbm-progression.html
 
 ### C4KC-KiTS
@@ -976,7 +976,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/c4kc-kits.html
 
 ### CBIS-DDSM
@@ -995,7 +995,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/cbis-ddsm.html
 
 ### CFB-GBM
@@ -1014,7 +1014,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page (10.7937/v9pn-2f72, version 4) and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-21
-- Last checked: 2026-10-21
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/cfb-gbm.html
 
 ### CheXpert Plus
@@ -1033,7 +1033,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/chexpert-plus.html
 
 ### CMMD
@@ -1052,7 +1052,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/cmmd.html
 
 ### COCA
@@ -1071,7 +1071,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. DOI 10.71718/ge5g-ds80, as printed on the AIMI COCA page.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/coca.html
 
 ### Colorectal-Liver-Metastases
@@ -1090,7 +1090,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/colorectal-liver-metastases.html
 
 ### CPAISD
@@ -1109,7 +1109,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite Umerenkov, Kudin, Peksheva, and Pavlov, CPAISD, Zenodo, https://doi.org/10.5281/zenodo.10892316
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/cpaisd.html
 
 ### CQ500
@@ -1128,7 +1128,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite Chilamkurthy et al., Deep learning algorithms for detection of critical findings in head CT scans, The Lancet 2018, and the CC BY-NC-SA 4.0 license.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/cq500.html
 
 ### CT Colonography
@@ -1147,7 +1147,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/ct-colonography.html
 
 ### CT-ICH
@@ -1166,7 +1166,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the PhysioNet CT-ICH record (Hssayeni et al.) for the version you download.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/ct-ich.html
 
 ### CT-ORG
@@ -1185,7 +1185,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/ct-org.html
 
 ### Duke-Breast-Cancer-MRI
@@ -1204,7 +1204,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/duke-breast-cancer-mri.html
 
 ### EchoNet-Dynamic
@@ -1223,7 +1223,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/echonet-dynamic.html
 
 ### FDG-PET-CT-Lesions (autoPET)
@@ -1242,7 +1242,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/fdg-pet-ct-lesions-autopet.html
 
 ### Healthy-Total-Body-CTs
@@ -1261,7 +1261,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page (10.7937/nc7z-4f76, version 3) and follow the TCIA Data Usage Policy. Imaging access is governed by the NIH policy, not only by CC BY.
 - Status: VERIFIED
 - Added: 2026-10-21
-- Last checked: 2026-10-21
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/healthy-total-body-cts.html
 
 ### INSPECT
@@ -1280,7 +1280,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/inspect.html
 
 ### ISLES'24
@@ -1299,7 +1299,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite Riedel et al., ISLES'24, Zenodo. https://doi.org/10.5281/zenodo.16970401
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/isles-24.html
 
 ### IXI
@@ -1318,8 +1318,27 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Acknowledge the IXI dataset, https://brain-development.org/ixi-dataset/ (EPSRC GR/S21533/02).
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/ixi.html
+
+### LDCT-and-Projection-data
+- What it is: Non-contrast head CT for acute cognitive or motor deficit, low-dose non-contrast chest CT for lung-nodule screening, and contrast-enhanced abdominal CT for liver metastases. Pathology annotations and patient age are in the clinical spreadsheet.
+- Source: https://www.cancerimagingarchive.net/collection/ldct-and-projection-data/
+- Area: neuro; chest; body
+- Modality: CT
+- Normals included: partial
+- Format: DICOM
+- Size: 299 subjects; about 1.29 TB. Version 8 download table: chest 256.81 GB (99 subjects), liver 604.12 GB (100 subjects), head 462.77 GB (99 subjects), phantom 1.8 GB (1 subject). The collection text still describes 100 chest scans.
+- License: Chest, liver, and phantom images CC BY 4.0; head images under the NIH Controlled Data Access Policy
+- Commercial use allowed: check
+- Access: credentialed
+- How to access: Head images can reconstruct a face, so they are not an open download. Follow the NIH Controlled Data Access Policy link on the collection page and complete that request before using the head manifest with the TCIA Data Retriever. Chest, liver, and phantom images, and the clinical spreadsheet, are public Creative Commons rows. Open the collection page and use the download control in the Data Access table (TCIA Data Retriever). Those rows do not need an application. Read the Citations & Data Usage Policy tab before use.
+- Limitations: Do not assume the whole collection is CC BY. Chest, liver, and phantom images are CC BY 4.0, which allows commercial use with attribution. Head images are under the NIH Controlled Data Access Policy because a face could be reconstructed. The clinical spreadsheet is CC BY 4.0. The Matlab DICOM-CT-PD dictionary and reader on the same table are CC BY 3.0. Version 8 (updated 2026-11-09) corrected 8 chest lesion coordinates in the clinical spreadsheet and clarified the manual; the snapshots were not changed. Very large. Built for reconstruction and denoising research. Each case includes DICOM images and DICOM-CT-PD projection data at the routine dose and at a simulated lower dose (25% for head and abdomen, 10% for chest). Reconstructions are filtered back projection only. The page includes low-dose reconstructed images for the Siemens SOMATOM Definition Flash cases. Scanners named on the page are the Siemens SOMATOM Definition Flash and the GE Lightspeed VCT. These are mixed clinical exams, not a healthy-volunteer set. Check the clinical spreadsheet before treating a case as normal.
+- Citation: Yes. McCollough C, Chen B, Holmes III D, Duan X, Yu Z, Yu L, Leng S, Fletcher J (2020). Low Dose CT Image and Projection Data (LDCT-and-Projection-data) (Version 8). The Cancer Imaging Archive. https://doi.org/10.7937/9npb-2637 . Also cite Moen TR et al., Medical Physics 2020, https://doi.org/10.1002/mp.14594 . Acknowledge NIBIB grants EB017095 and EB017185. Follow the TCIA Data Usage Policy.
+- Status: VERIFIED
+- Added: 2026-11-11
+- Last checked: 2026-11-11
+- Page: https://hounsfieldlab.com/datasets/ldct-and-projection-data.html
 
 ### LERA
 - What it is: Lower-extremity radiographs (foot, knee, ankle, or hip)
@@ -1337,7 +1356,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/lera.html
 
 ### LIDC-IDRI
@@ -1356,7 +1375,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/lidc-idri.html
 
 ### MAMA-MIAAI (Here We Go Again)
@@ -1375,7 +1394,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite Schwarzhans et al., MAMA-MIAAI - Here We Go Again, PhysioNet version 1.0.0, DOI 10.13026/w6wc-jh81, and the MAMA-MIA paper named on that page (Garrucho et al., Scientific Data 2025). CC BY-NC-SA 4.0 requires attribution and share-alike.
 - Status: VERIFIED
 - Added: 2026-11-04
-- Last checked: 2026-11-04
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/mama-miaai-here-we-go-again.html
 
 ### Medical Segmentation Decathlon
@@ -1394,7 +1413,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite Simpson et al., A large annotated medical image dataset for the development and evaluation of segmentation algorithms (arXiv:1902.09063), and Antonelli et al., Nature Communications 2022.
 - Status: VERIFIED
 - Added: 2026-10-19
-- Last checked: 2026-10-19
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/medical-segmentation-decathlon.html
 
 ### Merlin Abdominal CT
@@ -1413,7 +1432,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Blankemeier et al., and the Redivis DOI 10.57761/jgnb-5m88.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/merlin-abdominal-ct.html
 
 ### MIDRC
@@ -1432,7 +1451,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Acknowledge MIDRC in presentations and papers, using the wording on https://www.midrc.org/midrc-acknowledgements
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/midrc.html
 
 ### MIDRC-RICORD (1A, 1B, 1C)
@@ -1451,7 +1470,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/midrc-ricord-1a-1b-1c.html
 
 ### MIMIC-CXR
@@ -1470,7 +1489,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Johnson et al., MIMIC-CXR Database (version 2.1.0), PhysioNet. https://doi.org/10.13026/4jqj-jw95
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/mimic-cxr.html
 
 ### MRNet
@@ -1489,7 +1508,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/mrnet.html
 
 ### MURA
@@ -1508,7 +1527,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/mura.html
 
 ### NCI Imaging Data Commons
@@ -1527,7 +1546,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite IDC and the underlying collection.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/nci-imaging-data-commons.html
 
 ### NIH ChestX-ray14
@@ -1546,7 +1565,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. The terms ask you to link the NIH download site, cite Wang et al., ChestX-ray8, IEEE CVPR 2017, and acknowledge the NIH Clinical Center as the data provider.
 - Status: VERIFIED
 - Added: 2026-10-26
-- Last checked: 2026-10-26
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/nih-chestx-ray14.html
 
 ### NLST (TCIA imaging subset)
@@ -1565,7 +1584,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy. Also cite the NLST trial when you use the cohort.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/nlst-tcia-imaging-subset.html
 
 ### NYU fastMRI
@@ -1584,7 +1603,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. The agreement requires citing “NYU fastMRI” and Knoll et al., Radiology: Artificial Intelligence 2020 (doi 10.1148/ryai.2020190007), plus arXiv:1811.08839.
 - Status: VERIFIED
 - Added: 2026-10-19
-- Last checked: 2026-10-19
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/nyu-fastmri.html
 
 ### Open POCUS
@@ -1603,7 +1622,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI. The companion paper is Kumar et al., POCUS Journal 2026.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/open-pocus.html
 
 ### OpenNeuro
@@ -1622,7 +1641,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the version DOI. A HowToAcknowledge field, when present, is the authors’ requested wording. CC0 itself does not legally require attribution.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/openneuro.html
 
 ### Pancreas-CT
@@ -1641,7 +1660,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/pancreas-ct.html
 
 ### Pedi-Cranial-CT-Healthy
@@ -1660,7 +1679,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/pedi-cranial-ct-healthy.html
 
 ### Pediatric-CT-SEG
@@ -1679,7 +1698,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/pediatric-ct-seg.html
 
 ### Prostate-MRI-US-Biopsy
@@ -1698,7 +1717,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/prostate-mri-us-biopsy.html
 
 ### PROTEAS brain metastases dataset
@@ -1717,7 +1736,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite Flouri et al., A longitudinal MRI dataset of brain metastases with tumor segmentations, clinical and radiomic data, Scientific Data, https://doi.org/10.1038/s41597-025-06131-0 , and the Zenodo version DOI 10.5281/zenodo.23171182. CC BY 4.0 requires attribution.
 - Status: VERIFIED
 - Added: 2026-11-04
-- Last checked: 2026-11-04
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/proteas-brain-metastases-dataset.html
 
 ### PSMA-PET-CT-Lesions
@@ -1736,7 +1755,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/psma-pet-ct-lesions.html
 
 ### QIN-SARCOMA
@@ -1755,7 +1774,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy. Also acknowledge U01 CA154602.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/qin-sarcoma.html
 
 ### ReMIND (preoperative MRI and intraoperative ultrasound)
@@ -1774,7 +1793,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/remind-preoperative-mri-and-intraoperative-ultrasound.html
 
 ### RSNA 2022 Cervical Spine Fracture Detection
@@ -1793,7 +1812,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the RSNA 2022 cervical spine fracture competition. Check the rules page for the requested wording.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/rsna-2022-cervical-spine-fracture-detection.html
 
 ### RSNA 2023 Abdominal Trauma Detection
@@ -1812,7 +1831,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the RSNA 2023 abdominal trauma competition. Check the rules page for the requested wording.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/rsna-2023-abdominal-trauma-detection.html
 
 ### RSNA 2024 Lumbar Spine Degenerative Classification
@@ -1831,7 +1850,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the RSNA 2024 lumbar spine competition. Check the rules page for the requested wording.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/rsna-2024-lumbar-spine-degenerative-classification.html
 
 ### RSNA Intracranial Aneurysm Detection
@@ -1850,7 +1869,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the Radiological Society of North America Intracranial Aneurysm Detection (RSNA-ICA) Dataset, July 2025. https://doi.org/10.1148/dataset.ica.2025 . Also cite Correia de Verdier et al., The RSNA Intracranial Aneurysm (RSNA-ICA) Dataset, https://arxiv.org/abs/2610.01135 .
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-11-04
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/rsna-intracranial-aneurysm-detection.html
 
 ### RSNA Intracranial Hemorrhage Detection
@@ -1869,7 +1888,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Flanders et al., Construction of a Machine Learning Dataset through Collaboration: The RSNA 2019 Brain CT Hemorrhage Challenge. Radiology: Artificial Intelligence. https://doi.org/10.1148/ryai.2020190211
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/rsna-intracranial-hemorrhage-detection.html
 
 ### RSNA Knee Abnormality Detection (2026)
@@ -1888,7 +1907,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the RSNA 2026 Knee Abnormality Detection AI Challenge. Check the rules page for the requested wording. Challenge page: https://www.rsna.org/artificial-intelligence/ai-image-challenge/knee-mri-ai-challenge
 - Status: VERIFIED
 - Added: 2026-11-04
-- Last checked: 2026-11-04
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/rsna-knee-abnormality-detection-2026.html
 
 ### RSNA Pneumonia Detection Challenge
@@ -1907,7 +1926,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the RSNA Pneumonia Detection Challenge and the NIH ChestX-ray paper it builds on.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/rsna-pneumonia-detection-challenge.html
 
 ### RSNA Screening Mammography Breast Cancer Detection
@@ -1926,7 +1945,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the RSNA screening mammography competition. Check the rules page for the requested wording.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/rsna-screening-mammography-breast-cancer-detection.html
 
 ### RSNA-MICCAI Brain Tumor Radiogenomic Classification
@@ -1945,7 +1964,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the RSNA-MICCAI brain tumor competition and its dataset paper. Check the rules page for the requested wording.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/rsna-miccai-brain-tumor-radiogenomic-classification.html
 
 ### RSNA-STR Pulmonary Embolism Detection
@@ -1964,7 +1983,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the RSNA-STR PE competition. Check the rules page for the requested wording.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/rsna-str-pulmonary-embolism-detection.html
 
 ### SIIM-ACR Pneumothorax Segmentation
@@ -1983,7 +2002,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the SIIM-ACR pneumothorax segmentation challenge. Check the rules page for the requested wording.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/siim-acr-pneumothorax-segmentation.html
 
 ### Soft-tissue-Sarcoma
@@ -2002,7 +2021,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/soft-tissue-sarcoma.html
 
 ### SPADe
@@ -2021,7 +2040,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/spade.html
 
 ### Spine-Mets-CT-SEG
@@ -2040,7 +2059,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/spine-mets-ct-seg.html
 
 ### Sunnybrook Cardiac Data
@@ -2059,8 +2078,27 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Requested, not required by CC0. Radau et al., Evaluation Framework for Algorithms Segmenting Short Axis Cardiac MRI. The MIDAS Journal. http://hdl.handle.net/10380/3070
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-21
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/sunnybrook-cardiac-data.html
+
+### TAIR Multimodal Imaging Dataset for Cerebrovascular Disease
+- What it is: CTA and MRA, plus paired X-ray fluoroscopy video, collected during routine critical care at multiple centers. Released by Kitware and the University of North Carolina at Chapel Hill through the ARPA-H AIR program for cerebrovascular disease research.
+- Source: https://tair.kitware.com/clinical-data/
+- Area: neuro
+- Modality: CT; MR; XA
+- Normals included: partial
+- Format: NIfTI; MP4
+- Size: First release (3 Nov 2026): 500 CTA/MRA studies and 150 fluoroscopy datasets, in one zip of about 70 GB. The clinical-data page lists a planned final release on 30 Dec 2027 of 2,000 CTA/MRA studies and 1,250 fluoroscopy datasets. The 4 Nov 2026 announcement describes a full collection of 2,500 CTA/MRA datasets and 1,500 fluoroscopy recordings. Segmented, centerlined, and annotated models (VTK, NIfTI, OpenUSD, and JSON; the clinical-data page lists 100 CTA/MRA models, 50 fluoroscopy datasets, and one population shape model) are announced for December 2026 and are not in the first zip.
+- License: CC BY 4.0
+- Commercial use allowed: yes
+- Access: open
+- How to access: Install the AWS CLI. No AWS account is needed. Download the zip from the clinical-data page, or run: aws s3 cp s3://multimodal-imaging-for-cerebrovascular-disease/tair-project-data.zip . --no-sign-request . The same bucket can be listed by numeric patient prefix. Allow about 70 GB of disk space. Kitware and UNC-Chapel Hill announced the release on 4 Nov 2026.
+- Limitations: NIfTI and MP4, not DICOM, so DICOM header metadata is not in this release. CTA and MRA are NIfTI. Fluoroscopy is MP4. The publisher states that the scans were defaced, PHI was removed from metadata, and burned-in text was removed from the fluoroscopy. This is the first of four planned releases, so the counts will change. The first release has no labels or segmentations. The source pages do not say whether any study is free of cerebrovascular disease, so this is not listed as a normal-control set. The clinical-data page describes a permissive license for academic, government, and commercial use. The 4 Nov 2026 Kitware announcement names that license as CC BY 4.0 and says citation is required. Relevant to head and neck CTA work on large-vessel occlusion, aneurysm, and stenosis.
+- Citation: Yes. Lee YZ, de Siqueira Bucci AC, Ho J, Paniagua B, Vicory J, Ravikumar S, Nagler M, Webb JB, Clipp RB. TAIR: Multimodal Imaging Dataset for Cerebrovascular Disease. 2026, v1.0, AWS Registry of Open Data.
+- Status: VERIFIED
+- Added: 2026-11-11
+- Last checked: 2026-11-11
+- Page: https://hounsfieldlab.com/datasets/tair-multimodal-imaging-dataset-for-cerebrovascular-disease.html
 
 ### Thyroid Ultrasound Cine-clip
 - What it is: Biopsy-confirmed thyroid nodules with cine clips, segmentations, and TI-RADS descriptors
@@ -2078,7 +2116,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the dataset DOI or the citation block on the Redivis page, and name Stanford AIMI.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/thyroid-ultrasound-cine-clip.html
 
 ### TotalSegmentator CT dataset
@@ -2097,7 +2135,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. The record asks you to cite Wasserthal et al., TotalSegmentator, Radiology: Artificial Intelligence 2023, and the Zenodo DOI 10.5281/zenodo.22688904.
 - Status: VERIFIED
 - Added: 2026-10-19
-- Last checked: 2026-10-19
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/totalsegmentator-ct-dataset.html
 
 ### UCSD-BMETS-Longitudinal
@@ -2116,7 +2154,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page (10.7937/5ejb-9g94) and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-21
-- Last checked: 2026-10-21
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/ucsd-bmets-longitudinal.html
 
 ### UCSF-PDGM
@@ -2135,7 +2173,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI 10.7937/tcia.bdgf-8v37 and Calabrese et al., Radiology: Artificial Intelligence 2022, and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-19
-- Last checked: 2026-10-19
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/ucsf-pdgm.html
 
 ### UPENN-GBM
@@ -2154,7 +2192,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/upenn-gbm.html
 
 ### Vestibular-Schwannoma-MC-RC
@@ -2173,7 +2211,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/vestibular-schwannoma-mc-rc.html
 
 ### Vestibular-Schwannoma-SEG
@@ -2192,7 +2230,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the collection DOI on the TCIA page and follow the TCIA Data Usage Policy.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/vestibular-schwannoma-seg.html
 
 ### VinDr-CXR
@@ -2211,6 +2249,6 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Citation: Yes. Cite the PhysioNet record and the VinDr-CXR paper named on that page. PhysioNet also asks you to contribute code with publications that use the data.
 - Status: VERIFIED
 - Added: 2026-10-18
-- Last checked: 2026-10-18
+- Last checked: 2026-11-11
 - Page: https://hounsfieldlab.com/datasets/vindr-cxr.html
 
