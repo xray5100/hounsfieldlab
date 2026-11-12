@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 60 open-source medical AI software tools and 73 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-09; dataset list last updated 2026-11-11.
+> Hounsfield Lab is a directory of 61 open-source medical AI software tools and 73 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-09; dataset list last updated 2026-11-11.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -250,6 +250,21 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Links: https://github.com/wasserth/TotalSegmentator
 - Page: https://hounsfieldlab.com/tools/totalsegmentator.html
 - Related datasets: AMOS (abdominal multi-organ segmentation), C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, FDG-PET-CT-Lesions (autoPET)
+
+### TotalSpineSeg
+- What it is: Two-stage nnU-Net tool that segments and individually labels every vertebra and intervertebral disc plus the spinal cord and canal, using an odd/even vertebra scheme and landmark discs (C2-C3, C7-T1, T12-L1, L5-S) to avoid fused or split vertebrae; works on localizers and short-FOV scans; peer-reviewed in European Radiology (Nov 7, 2026)
+- Type: Segmentation
+- Modality/specialty: Radiology: spine MRI (any contrast), CT
+- Maintainer: NeuroPoly (Polytechnique Montreal) / Warszawer, Molinier et al.
+- License: LGPL-3.0
+- Commercial use: Copyleft
+- License note: Repo LICENSE is GNU LGPL v3. Trained nnU-Net weights (r20260730) are GitHub release assets in the same repository and are downloaded on first run; no separate weight license is stated. Trained on 1,404 MRIs; the paper reports 96.22% vertebral identification on localizer MRI and 92.87% on CT. Paper: European Radiology, doi:10.1007/s00330-026-13008-2.
+- Access: free public source repository
+- Last repository update: 2026-08-10 (Maintained)
+- Last checked: 2026-11-09
+- Links: https://github.com/neuropoly/totalspineseg, https://link.springer.com/article/10.1007/s00330-026-13008-2
+- Page: https://hounsfieldlab.com/tools/totalspineseg.html
+- Related datasets: Spine-Mets-CT-SEG, TotalSegmentator CT dataset, MRNet, NYU fastMRI, RSNA 2022 Cervical Spine Fracture Detection, RSNA 2024 Lumbar Spine Degenerative Classification
 
 ### NV-Segment-CT
 - What it is: CT segmentation built from MONAI VISTA3D: 117 structures automatically, or 132 promptable by point or class. Research use only, not for clinical care. Needs a CUDA GPU; weights are about 872 MB
