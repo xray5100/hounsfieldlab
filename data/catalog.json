@@ -194,7 +194,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-06",
+   "last_push_utc": "2026-11-13",
    "maintainer": "Project MONAI (NVIDIA + academic)",
    "urls": [
     "https://github.com/Project-MONAI/MONAI"
@@ -228,7 +228,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-05",
+   "last_push_utc": "2026-11-12",
    "maintainer": "DKFZ (MIC)",
    "urls": [
     "https://github.com/MIC-DKFZ/nnUNet"
@@ -245,7 +245,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-04",
+   "last_push_utc": "2026-11-16",
    "maintainer": "J. Wasserthal",
    "urls": [
     "https://github.com/wasserth/TotalSegmentator"
@@ -347,14 +347,15 @@
    "category": "Neuro preprocessing",
    "modality_specialty": "Neuroradiology: brain MRI",
    "what_it_does": "Deep-learning brain extraction (skull stripping) for MRI",
-   "license": "Apache-2.0",
-   "license_note": "",
+   "license": "Apache-2.0 (code); CC BY 4.0 (weights)",
+   "license_note": "Code is Apache-2.0. Pretrained weights (release_v1.5.0.zip, used by HD-BET v2) are hosted on Zenodo record 14445620 (doi:10.5281/zenodo.14445620) under CC BY 4.0 and download automatically on first run; cite the HD-BET paper if you use them. The weight license was documented in the repository on Nov 11, 2026.",
    "commercial": "Permissive",
-   "maintenance": "Stale",
-   "last_push_utc": "2024-12-18",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-11-11",
    "maintainer": "DKFZ (MIC)",
    "urls": [
-    "https://github.com/MIC-DKFZ/HD-BET"
+    "https://github.com/MIC-DKFZ/HD-BET",
+    "https://zenodo.org/records/14445620"
    ]
   },
   {
@@ -385,7 +386,7 @@
    "license_note": "Repo LICENSE.txt is the FreeSurfer Software License Agreement v1.0 (MGH), a custom license.",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-14",
    "maintainer": "MGH Martinos Center",
    "urls": [
     "https://github.com/freesurfer/freesurfer"
@@ -402,7 +403,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-11",
    "maintainer": "NiPreps",
    "urls": [
     "https://github.com/nipreps/fmriprep"
@@ -419,7 +420,7 @@
    "license_note": "Repo LICENSE is BSD 3-clause unless individual files say otherwise.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-16",
    "maintainer": "DIPY team",
    "urls": [
     "https://github.com/dipy/dipy"
@@ -436,7 +437,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-04",
+   "last_push_utc": "2026-11-16",
    "maintainer": "nilearn",
    "urls": [
     "https://github.com/nilearn/nilearn"
@@ -453,7 +454,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-13",
    "maintainer": "ANTsX",
    "urls": [
     "https://github.com/ANTsX/ANTsPy"
@@ -488,7 +489,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-05",
+   "last_push_utc": "2026-11-13",
    "maintainer": "TorchIO project",
    "urls": [
     "https://github.com/TorchIO-project/torchio"
@@ -522,7 +523,7 @@
    "license_note": "Repo License.txt describes a BSD-style license with Slicer-specific extensions.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-16",
    "maintainer": "Slicer community",
    "urls": [
     "https://github.com/Slicer/Slicer"
@@ -539,7 +540,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-16",
    "maintainer": "OHIF",
    "urls": [
     "https://github.com/OHIF/Viewers"
@@ -556,7 +557,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-16",
    "maintainer": "Insight Software Consortium",
    "urls": [
     "https://github.com/InsightSoftwareConsortium/ITK"
@@ -573,7 +574,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-06",
+   "last_push_utc": "2026-11-14",
    "maintainer": "DKFZ / MITK",
    "urls": [
     "https://github.com/MITK/MITK"
@@ -590,7 +591,7 @@
    "license_note": "Repo LICENSE is MIT except for portions listed in the file.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-08",
+   "last_push_utc": "2026-11-15",
    "maintainer": "pydicom",
    "urls": [
     "https://github.com/pydicom/pydicom"
@@ -607,7 +608,7 @@
    "license_note": "COPYRIGHT file is a BSD-style license from OFFIS e.V.; some bundled parts carry other notices.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-07",
+   "last_push_utc": "2026-11-16",
    "maintainer": "OFFIS",
    "urls": [
     "https://github.com/DCMTK/dcmtk"
@@ -624,7 +625,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-06",
+   "last_push_utc": "2026-11-12",
    "maintainer": "Orthanc team",
    "urls": [
     "https://github.com/orthanc-server/orthanc-builder"
@@ -641,7 +642,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-16",
    "maintainer": "mercure (NYU origin)",
    "urls": [
     "https://github.com/mercure-imaging/mercure"
@@ -658,7 +659,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-16",
    "maintainer": "DKFZ",
    "urls": [
     "https://github.com/kaapana/kaapana"
@@ -675,7 +676,7 @@
    "license_note": "Code is BSD 3-clause. LICENSE says the model weights are under a different license (see TIAToolbox pretrained-model docs).",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-08",
+   "last_push_utc": "2026-11-16",
    "maintainer": "TIA Centre, Warwick",
    "urls": [
     "https://github.com/TissueImageAnalytics/tiatoolbox"
@@ -743,7 +744,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-08",
+   "last_push_utc": "2026-11-13",
    "maintainer": "QuPath team",
    "urls": [
     "https://github.com/qupath/qupath"
@@ -828,7 +829,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-16",
    "maintainer": "HAPI FHIR",
    "urls": [
     "https://github.com/hapifhir/hapi-fhir"
@@ -967,7 +968,7 @@
    "license_note": "license.txt is a BSD-style license (Chris Rorden). Bundled parts such as the NIfTI headers, miniz, OpenJPEG, CharLS, zlib and Jasper carry their own licenses. The file states the software is for research purposes only and is not a clinical tool.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-06",
+   "last_push_utc": "2026-11-16",
    "maintainer": "Chris Rorden (rordenlab)",
    "urls": [
     "https://github.com/rordenlab/dcm2niix"
@@ -984,7 +985,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-04",
+   "last_push_utc": "2026-11-16",
    "maintainer": "Imaging Data Commons (highdicom developers)",
    "urls": [
     "https://github.com/ImagingDataCommons/highdicom"
@@ -1001,7 +1002,7 @@
    "license_note": "Repo LICENSE is Apache-2.0. The surface pipeline calls FreeSurfer binaries and needs a FreeSurfer license file (free, separate terms). The README says results are for research and not for clinical decision support.",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-16",
    "maintainer": "Deep-MI (DZNE)",
    "urls": [
     "https://github.com/Deep-MI/FastSurfer"
@@ -1035,7 +1036,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-16",
    "maintainer": "SimpleITK / Insight Software Consortium",
    "urls": [
     "https://github.com/SimpleITK/SimpleITK"
@@ -1052,7 +1053,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-09",
+   "last_push_utc": "2026-11-16",
    "maintainer": "Cornerstone.js / OHIF",
    "urls": [
     "https://github.com/cornerstonejs/cornerstone3D"
