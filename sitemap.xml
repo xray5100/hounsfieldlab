@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://hounsfieldlab.com/</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/directory.html</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://hounsfieldlab.com/datasets.html</loc><lastmod>2026-11-16</lastmod></url>
+<url><loc>https://hounsfieldlab.com/datasets.html</loc><lastmod>2026-11-18</lastmod></url>
 <url><loc>https://hounsfieldlab.com/pipeline-orthanc-mercure.html</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/about.html</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/suggest.html</loc><lastmod>2026-11-16</lastmod></url>
@@ -122,7 +122,7 @@
 <url><loc>https://hounsfieldlab.com/datasets/rsna-2022-cervical-spine-fracture-detection.html</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/rsna-2023-abdominal-trauma-detection.html</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/rsna-2024-lumbar-spine-degenerative-classification.html</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://hounsfieldlab.com/datasets/rsna-intracranial-aneurysm-detection.html</loc><lastmod>2026-11-16</lastmod></url>
+<url><loc>https://hounsfieldlab.com/datasets/rsna-intracranial-aneurysm-detection.html</loc><lastmod>2026-11-18</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/rsna-intracranial-hemorrhage-detection.html</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/rsna-knee-abnormality-detection-2026.html</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/rsna-pneumonia-detection-challenge.html</loc><lastmod>2026-11-16</lastmod></url>
@@ -133,7 +133,7 @@
 <url><loc>https://hounsfieldlab.com/datasets/soft-tissue-sarcoma.html</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/spade.html</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/spine-mets-ct-seg.html</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://hounsfieldlab.com/datasets/sunnybrook-cardiac-data.html</loc><lastmod>2026-11-16</lastmod></url>
+<url><loc>https://hounsfieldlab.com/datasets/sunnybrook-cardiac-data.html</loc><lastmod>2026-11-18</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/tair-multimodal-imaging-dataset-for-cerebrovascular-disease.html</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/thyroid-ultrasound-cine-clip.html</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://hounsfieldlab.com/datasets/totalsegmentator-ct-dataset.html</loc><lastmod>2026-11-16</lastmod></url>
