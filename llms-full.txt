@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 61 open-source medical AI software tools and 73 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-16; dataset list last updated 2026-11-11.
+> Hounsfield Lab is a directory of 63 open-source medical AI software tools and 73 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-16; dataset list last updated 2026-11-11.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -107,7 +107,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-11-16
 - Links: https://github.com/Stanford-AIMI/CheXagent
 - Page: https://hounsfieldlab.com/tools/chexagent.html
-- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NCI Imaging Data Commons, NIH ChestX-ray14, CheXpert Plus, RSNA Pneumonia Detection Challenge
+- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NIH ChestX-ray14, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
 
 ### MedRAX
 - What it is: Reasoning agent for chest X-rays that orchestrates multiple CXR models (ICML 2025)
@@ -193,6 +193,21 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Links: https://github.com/alibaba-damo-academy/HoloCT, https://huggingface.co/Alibaba-DAMO-Academy/HoloCT-4B, https://huggingface.co/Alibaba-DAMO-Academy/HoloCT-8B
 - Page: https://hounsfieldlab.com/tools/holoct.html
 
+### Neuro-VL
+- What it is: Neuroimaging vision-language model (Neuro-VL-8B-Thinking, Qwen3-8B language model with an HLIP visual encoder) that reads complete MRI and CT exams, converses about findings, drafts reports with reasoning traces and compares serial exams; trained on nearly 1 million clinical neuroimaging studies from 450,000 patients; released with the NeuroBench benchmark
+- Type: Vision-language model
+- Modality/specialty: Neuroradiology: brain MRI and head CT
+- Maintainer: University of Michigan MLiNS Lab (Zhao, Hollon et al.)
+- License: CC BY-NC-SA 4.0
+- Commercial use: Non-commercial
+- License note: Repo LICENSE and the Hugging Face model card (mlinslab/neuro-vl-8b-thinking, about 34 GB) are CC BY-NC-SA 4.0, non-commercial research only. The weights are gated: you must log in and accept the conditions, and requests are approved manually. The NeuroBench evaluation code (MLNeurosurg/neurobench) is Apache-2.0 and the NeuroBench dataset is CC BY-NC-SA 4.0. Paper: arXiv 2611.15094 (Nov 11, 2026).
+- Access: free public source repository
+- Last repository update: 2026-11-13 (Maintained)
+- Last checked: 2026-11-16
+- Links: https://github.com/MLNeurosurg/neuro-vl, https://huggingface.co/mlinslab/neuro-vl-8b-thinking, https://arxiv.org/abs/2611.15094
+- Page: https://hounsfieldlab.com/tools/neuro-vl.html
+- Related datasets: CFB-GBM, CPAISD, CQ500, ISLES'24, IXI, Medical Segmentation Decathlon
+
 ## Tools: Segmentation & frameworks
 
 ### MONAI
@@ -221,7 +236,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-11-16
 - Links: https://github.com/Project-MONAI/MONAILabel
 - Page: https://hounsfieldlab.com/tools/monai-label.html
-- Related datasets: B-mode-and-CEUS-Liver, Prostate-MRI-US-Biopsy, ReMIND (preoperative MRI and intraoperative ultrasound), EchoNet-Dynamic, Open POCUS, Thyroid Ultrasound Cine-clip
+- Related datasets: B-mode-and-CEUS-Liver, Prostate-MRI-US-Biopsy, EchoNet-Dynamic, Open POCUS, Thyroid Ultrasound Cine-clip
 
 ### nnU-Net
 - What it is: Self-configuring segmentation framework
@@ -265,6 +280,21 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Links: https://github.com/neuropoly/totalspineseg, https://link.springer.com/article/10.1007/s00330-026-13008-2
 - Page: https://hounsfieldlab.com/tools/totalspineseg.html
 - Related datasets: Spine-Mets-CT-SEG, TotalSegmentator CT dataset, MRNet, NYU fastMRI, RSNA 2022 Cervical Spine Fracture Detection, RSNA 2024 Lumbar Spine Degenerative Classification
+
+### CXAS
+- What it is: Chest X-ray anatomy segmentation (Mask2Former models: 187 frontal and 177 lateral classes) plus 132 named landmarks and landmark-based measurements such as cardiothoracic ratio, costophrenic angle, Cobb angle and the Haller index, in mm for DICOM input; cxas_idc writes one multi-segment DICOM SEG and a TID 1500 SR per radiograph; trained on PAXRay++ CT-projected radiographs
+- Type: Segmentation
+- Modality/specialty: Radiology: chest radiographs (frontal and lateral)
+- Maintainer: Constantin Seibold et al.
+- License: MIT
+- Commercial use: Permissive
+- License note: Repo LICENSE.txt is MIT, and the README states MIT for code and model weights. Weights are public, not gated, on Hugging Face (cmseibold/cxas-models and cmseibold/cxr-landmarks, both tagged MIT) and are tag-pinned and SHA-256 checked on download. v0.1.0 (Nov 13, 2026) added the new models, landmarks and DICOM SEG/SR output; v0.1.3 (Nov 14) fixed landmark measurements under NumPy 2. As of Nov 19, PyPI lists 0.1.2 as the latest version; the 0.1.3 Docker images pin NumPy 1.26. The README states it is a research tool, not a medical device. Papers: BMVC 2022 (PAXRay) and arXiv 2306.03934.
+- Access: free public source repository
+- Last repository update: 2026-11-14 (Maintained)
+- Last checked: 2026-11-16
+- Links: https://github.com/ConstantinSeibold/ChestXRayAnatomySegmentation, https://huggingface.co/cmseibold/cxas-models
+- Page: https://hounsfieldlab.com/tools/cxas.html
+- Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NIH ChestX-ray14, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
 
 ### NV-Segment-CT
 - What it is: CT segmentation built from MONAI VISTA3D: 117 structures automatically, or 132 promptable by point or class. Research use only, not for clinical care. Needs a CUDA GPU; weights are about 872 MB
@@ -574,7 +604,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-11-16
 - Links: https://github.com/SimpleITK/SimpleITK
 - Page: https://hounsfieldlab.com/tools/simpleitk.html
-- Related datasets: AMOS (abdominal multi-organ segmentation), CFB-GBM, CT-ORG, ISLES'24, IXI, MAMA-MIAAI (Here We Go Again)
+- Related datasets: AMOS (abdominal multi-organ segmentation), CT-ORG, MAMA-MIAAI (Here We Go Again), Merlin Abdominal CT, CT-ICH
 
 ### Cornerstone3D
 - What it is: JavaScript libraries for web-based medical image rendering, tools and segmentation; the imaging engine behind the OHIF Viewer
