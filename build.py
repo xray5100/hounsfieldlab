@@ -10,7 +10,7 @@ BEEHIIV_FORM = "ac9b5485-be11-4149-9a23-58c583248e6a"
 ARCHIVE_URL = "https://hounsfieldlab.beehiiv.com"
 FORM_ENDPOINT = "https://api.web3forms.com/submit"  # Web3Forms
 W3F_KEY = "9ab769a2-b3a6-4d3d-a287-1261fafbc278"
-SNAPSHOT = date(2026, 11, 16)  # repository metadata refreshed from the GitHub API
+SNAPSHOT = date(2026, 11, 23)  # repository metadata refreshed from the GitHub API
 TODAY = date.today()
 ROOT = Path(__file__).parent
 E = html.escape
@@ -157,7 +157,9 @@ def tool_page(t, tools, datasets):
         {"@type":"ListItem","position":3,"name":t["group"],"item":f"{SITE_URL}/directory.html?group={quote(t['group'])}"},
         {"@type":"ListItem","position":4,"name":t["name"],"item":f"{SITE_URL}/tools/{t['slug']}.html"}]}
     tn=t["name"].split(" (")[0]
-    title=fit_title(f'{t["name"]}: {t["category"]} for {t["modality_specialty"]}', f'{tn}: {t["category"]} for {t["modality_specialty"]}', f'{tn}: open-source {t["category"].lower()}', tn)
+    cat,mod=t["category"],t["modality_specialty"]
+    full=[] if redundant(cat,mod) else [f'{t["name"]}: {cat} for {mod}', f'{tn}: {cat} for {mod}']
+    title=fit_title(*full, f'{tn}: open-source {lc(cat)}', f'{tn}: {cat}', tn)
     desc=fit_desc(desc, f'{t["name"]}: {t["what_it_does"]}. License {t["license"]}.', f'{tn}: {t["what_it_does"]}.')
     return head(title, desc, f'tools/{t["slug"]}.html', root, extra=jsonld(ld)+jsonld(bc))+f'''
 <section><div class="wrap prose"><nav class="crumb" aria-label="Breadcrumb"><a href="../directory.html">Directory</a> › <a href="../directory.html?group={quote(t["group"])}">{E(t["group"])}</a> › <span aria-current="page">{E(t["name"])}</span></nav>
@@ -303,6 +305,15 @@ ACCESS_LABEL = {"open":"Open download, no account","account":"Free account and d
 COMM_LABEL = {"yes":"Allowed by the license, with its attribution terms","no":"Not allowed under the free terms","check":"Mixed or unclear; check the source"}
 
 SUFFIX = " · Hounsfield Lab"
+def lc(t):
+    """Lowercase ordinary words but keep acronyms and mixed-case tokens (DICOM, AI, CT/MRI, MRI)."""
+    return " ".join(w if any(ch.isupper() for ch in w[1:]) else w.lower() for w in t.split(" "))
+
+def redundant(cat, mod):
+    """True when the category and modality repeat a word (e.g. 'Clinical NLP for Clinical text')."""
+    words=lambda x:{w for w in re.findall(r"[a-z]{3,}", x.lower())}
+    return bool(words(cat) & words(mod))
+
 def fit_title(*cands, n=65):
     """First candidate that fits in n characters with the site suffix; else the shortest, bare."""
     for c in cands:
