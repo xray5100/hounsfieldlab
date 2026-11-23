@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 63 open-source medical AI software tools and 73 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-23; dataset list last updated 2026-11-11.
+> Hounsfield Lab is a directory of 64 open-source medical AI software tools and 73 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-23; dataset list last updated 2026-11-11.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -36,6 +36,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - [RadKev](https://hounsfieldlab.com/tools/radkev.html): Open-weight radiology decision models (9B and 27B adapters) that score fixed-choice radiology questions in one forward pass without generating text (Apache-2.0 (code); CC BY-NC-SA 4.0 (weights); Maintained; updated 2026-10-07)
 - [HoloCT](https://hounsfieldlab.com/tools/holoct.html): 3D CT foundation model that takes a CT volume (NIfTI, Hounsfield units) and a text prompt for lesion screening, VQA, report generation and language-guided segmentation, returning 3D masks as evidence for its findings; HoloCT-4B and HoloCT-8B checkpoints on Hugging Face (Nov 2026) (MIT; Maintained; updated 2026-11-07)
 - [Neuro-VL](https://hounsfieldlab.com/tools/neuro-vl.html): Neuroimaging vision-language model (Neuro-VL-8B-Thinking, Qwen3-8B language model with an HLIP visual encoder) that reads complete MRI and CT exams, converses about findings, drafts reports with reasoning traces and compares serial exams; trained on nearly 1 million clinical neuroimaging studies from 450,000 patients; released with the NeuroBench benchmark (CC BY-NC-SA 4.0; Maintained; updated 2026-11-13)
+- [LingSante-3.1-air-VL](https://hounsfieldlab.com/tools/lingsante-3-1-air-vl.html): Natively multimodal mixture-of-experts vision-language model (124B total parameters, 5.5B active per token, 256K context) built on Ling-3.0-flash-VL, for medical imaging reports (for example chest X-ray findings and impression), multimodal health assessment, medical search and evidence synthesis, and medical GUI agents; research model, not a medical device. Recommended serving is SGLang on 4× 141GB-class GPUs (TP4) or 8× 80GB H100s (TP8); a vLLM fork is also available (MIT; Maintained; updated 2026-11-22)
 
 ## Tools: Segmentation & frameworks
 

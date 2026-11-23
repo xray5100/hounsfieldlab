@@ -215,7 +215,8 @@
    "maintainer": "Project MONAI",
    "urls": [
     "https://github.com/Project-MONAI/MONAILabel"
-   ]
+   ],
+   "security_note": "Versions up to 0.8.5 have a critical path-traversal flaw ([CVE-2026-133968](https://osv.dev/vulnerability/CVE-2026-133968), CVSS 9.8) in the datastore and session upload endpoints that allows remote file writes and code execution; authentication is off by default, and it has been exploited in the wild. Upgrade to [0.8.6](https://github.com/Project-MONAI/MONAILabel/releases/tag/0.8.6) or later (released Nov 21, 2026; requires Python 3.11+), don't expose the server to untrusted networks, enable authentication, and run it as an unprivileged user."
   },
   {
    "name": "nnU-Net",
@@ -992,6 +993,23 @@
     "https://github.com/MLNeurosurg/neuro-vl",
     "https://huggingface.co/mlinslab/neuro-vl-8b-thinking",
     "https://arxiv.org/abs/2611.15094"
+   ]
+  },
+  {
+   "name": "LingSante-3.1-air-VL",
+   "slug": "lingsante-3-1-air-vl",
+   "group": "Foundation models & agents",
+   "category": "Vision-language model",
+   "modality_specialty": "Multimodal healthcare: medical imaging reports (e.g. chest X-ray), skin, diet, and medical reports",
+   "what_it_does": "Natively multimodal mixture-of-experts vision-language model (124B total parameters, 5.5B active per token, 256K context) built on Ling-3.0-flash-VL, for medical imaging reports (for example chest X-ray findings and impression), multimodal health assessment, medical search and evidence synthesis, and medical GUI agents; research model, not a medical device. Recommended serving is SGLang on 4\u00d7 141GB-class GPUs (TP4) or 8\u00d7 80GB H100s (TP8); a vLLM fork is also available",
+   "license": "MIT",
+   "license_note": "The Hugging Face model card (inclusionAI/LingSante-3.1-air-VL) lists MIT for the repository. The card states it is a research model and not a medical device; outputs may be incomplete or inaccurate and must not substitute for professional medical advice, diagnosis, or treatment.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-11-22",
+   "maintainer": "Ant Group healthcare team (inclusionAI)",
+   "urls": [
+    "https://huggingface.co/inclusionAI/LingSante-3.1-air-VL"
    ]
   },
   {

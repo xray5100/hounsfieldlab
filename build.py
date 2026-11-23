@@ -14,6 +14,21 @@ SNAPSHOT = date(2026, 11, 23)  # repository metadata refreshed from the GitHub A
 TODAY = date.today()
 ROOT = Path(__file__).parent
 E = html.escape
+MD_LINK = re.compile(r'\[([^\]]+)\]\((https://[^)]+)\)')
+
+def md_links(text):
+    """Escape text and turn markdown [label](https://...) into HTML links."""
+    out, pos = [], 0
+    for m in MD_LINK.finditer(text):
+        out.append(E(text[pos:m.start()]))
+        out.append(f'<a href="{E(m.group(2))}" target="_blank" rel="noopener">{E(m.group(1))}</a>')
+        pos = m.end()
+    out.append(E(text[pos:]))
+    return ''.join(out)
+
+def md_links_plain(text):
+    return MD_LINK.sub(lambda m: f"{m.group(1)} ({m.group(2)})", text)
+
 
 GROUPS = {
  "Foundation models & agents": ["Foundation model","Agent","Vision-language model","Evaluation / report labeling"],
@@ -139,6 +154,7 @@ def tool_page(t, tools, datasets):
     root="../"; desc=f'{t["name"]}: {t["what_it_does"]}. License {t["license"]}, last updated {t["last_push_utc"]}.'
     links="".join(f'<li><a href="{E(u)}" target="_blank" rel="noopener">{E(u.replace("https://",""))}</a></li>' for u in t['urls'])
     note=f'<p class="note"><strong>License review:</strong> {E(t["license_note"])}</p>' if t['license_note'] else ''
+    sec=f'<p class="note"><strong>Security:</strong> {md_links(t["security_note"])}</p>' if t.get('security_note') else ''
     warn='' if t['commercial']=='Permissive' else '<p class="note">Commercial use: read the project’s license (and any model-weight terms) yourself before relying on it. This isn’t legal advice.</p>'
     rel=[x for x in tools if x['group']==t['group'] and x is not t][:6]
     related="".join(f'<li><a href="{x["slug"]}.html">{E(x["name"])}</a>: {E(x["what_it_does"])}</li>' for x in rel)
@@ -163,7 +179,7 @@ def tool_page(t, tools, datasets):
     desc=fit_desc(desc, f'{t["name"]}: {t["what_it_does"]}. License {t["license"]}.', f'{tn}: {t["what_it_does"]}.')
     return head(title, desc, f'tools/{t["slug"]}.html', root, extra=jsonld(ld)+jsonld(bc))+f'''
 <section><div class="wrap prose"><nav class="crumb" aria-label="Breadcrumb"><a href="../directory.html">Directory</a> › <a href="../directory.html?group={quote(t["group"])}">{E(t["group"])}</a> › <span aria-current="page">{E(t["name"])}</span></nav>
-<h1 class="tt">{E(t["name"])}</h1><p class="lead">{E(t["what_it_does"])}</p>{badges(t)}
+<h1 class="tt">{E(t["name"])}</h1><p class="lead">{E(t["what_it_does"])}</p>{badges(t)}{sec}
 <dl style="margin-top:22px"><dt>What it is</dt><dd>{E(t["category"])} ({E(t["group"])})</dd><dt>Modality</dt><dd>{E(t["modality_specialty"])}</dd><dt>Maintainer</dt><dd>{E(t["maintainer"])}</dd><dt>License</dt><dd>{E(t["license"])}</dd><dt>Commercial use</dt><dd>{E(t["commercial"])}</dd><dt>Access</dt><dd>Free, public source repository (see links below)</dd><dt>Last update</dt><dd>{E(t["last_push_utc"])} (last repository push, UTC; {t["maintenance"]})</dd><dt>Last checked</dt><dd>{SNAPSHOT.isoformat()}</dd><dt>Limitations</dt><dd>Listed for research and development reference. Hounsfield Lab has not tested its clinical performance; check the project’s own documentation for intended use and regulatory status.</dd></dl>
 <h2 class="h3">Links</h2><ul class="links">{links}</ul>{note}{warn}
 <h2 class="h3">Related tools in {E(t["group"])}</h2><ul class="links">{related}</ul>{ds_html}
@@ -195,6 +211,7 @@ def write_llms(tools, datasets):
     full="".join(f"## Tools: {g}\n\n"+"".join(
         f"### {t['name']}\n- What it is: {t['what_it_does']}\n- Type: {t['category']}\n- Modality/specialty: {t['modality_specialty']}\n- Maintainer: {t['maintainer']}\n"
         f"- License: {t['license']}\n- Commercial use: {t['commercial']}\n"+(f"- License note: {t['license_note']}\n" if t['license_note'] else "")+
+        (f"- Security: {md_links_plain(t['security_note'])}\n" if t.get('security_note') else "")+
         f"- Access: free public source repository\n- Last repository update: {t['last_push_utc']} ({t['maintenance']})\n- Last checked: {SNAPSHOT}\n- Links: {', '.join(t['urls'])}\n- Page: {SITE_URL}/tools/{t['slug']}.html\n"
         +("- Related datasets: "+", ".join(d['name'] for d in datasets_for_tool(t['slug'],datasets))+"\n" if datasets_for_tool(t['slug'],datasets) else "")+"\n" for t in tools if t['group']==g) for g in GROUPS)
     ds_full="".join(
@@ -268,7 +285,7 @@ def ds_card(d):
 # Related tools for a dataset, by area and file format. A tool with a modality set only
 # relates to datasets that include one of those modalities.
 AREA_TOOLS = {"neuro":["hd-bet","fastsurfer","freesurfer","brainchop","neuro-vl","dcm2niix"],
- "chest":["torchxrayvision","cxas","chexagent","medrax","pillar-0","totalsegmentator","nv-segment-ct"],
+ "chest":["torchxrayvision","cxas","chexagent","medrax","pillar-0","totalsegmentator","nv-segment-ct","lingsante-3-1-air-vl"],
  "body":["totalsegmentator","nv-segment-ct","merlin","pillar-0","nnu-net"],
  "msk":["totalsegmentator","totalspineseg","nv-segment-ct","nnu-net","3d-slicer"],
  "breast":["pillar-0","nnu-net","3d-slicer"],
@@ -277,7 +294,7 @@ AREA_TOOLS = {"neuro":["hd-bet","fastsurfer","freesurfer","brainchop","neuro-vl"
  "cardiac":["monai","nnu-net","3d-slicer"]}
 FORMAT_TOOLS = {"DICOM":["pydicom","highdicom","ohif-viewer","orthanc"],"NIfTI":["torchio","simpleitk","itk"]}
 TOOL_MODS = {"hd-bet":{"MR"},"fastsurfer":{"MR"},"freesurfer":{"MR"},"brainchop":{"MR"},"dcm2niix":{"MR","CT"},
- "torchxrayvision":{"DX","CR"},"chexagent":{"DX","CR"},"medrax":{"DX","CR"},"pillar-0":{"CT","MR"},"merlin":{"CT"},"totalsegmentator":{"CT","MR"},"totalspineseg":{"CT","MR"},"nv-segment-ct":{"CT"},"holoct":{"CT"},"cxas":{"DX","CR"},"neuro-vl":{"CT","MR"}}
+ "torchxrayvision":{"DX","CR"},"chexagent":{"DX","CR"},"medrax":{"DX","CR"},"pillar-0":{"CT","MR"},"merlin":{"CT"},"totalsegmentator":{"CT","MR"},"totalspineseg":{"CT","MR"},"nv-segment-ct":{"CT"},"holoct":{"CT"},"cxas":{"DX","CR"},"neuro-vl":{"CT","MR"},"lingsante-3-1-air-vl":{"DX","CR"}}
 TOOL_SLUGS = set()
 
 def tools_for_dataset(d):
@@ -454,7 +471,13 @@ def main():
     tools=load(); (ROOT/'data').mkdir(exist_ok=True); (ROOT/'tools').mkdir(exist_ok=True); (ROOT/'datasets').mkdir(exist_ok=True)
     TOOL_SLUGS.update(t['slug'] for t in tools); tools_by_slug={t['slug']:t for t in tools}
     datasets=load_datasets()
-    pub=[{k:t[k] for k in ('name','slug','group','category','modality_specialty','what_it_does','license','license_note','commercial','maintenance','last_push_utc','maintainer','urls')} for t in tools]
+    keys=('name','slug','group','category','modality_specialty','what_it_does','license','license_note','commercial','maintenance','last_push_utc','maintainer','urls')
+    pub=[]
+    for t in tools:
+        row={k:t[k] for k in keys}
+        if t.get('security_note'):
+            row['security_note']=t['security_note']
+        pub.append(row)
     json.dump({"groups":list(GROUPS),"tools":pub},open(ROOT/'data/catalog.json','w'),indent=1)
     for t in tools: emit(f'tools/{t["slug"]}.html', tool_page(t,tools,datasets))
     for d in datasets: emit(f'datasets/{d["slug"]}.html', dataset_page(d,datasets,tools_by_slug))

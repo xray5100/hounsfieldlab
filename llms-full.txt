@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 63 open-source medical AI software tools and 73 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-23; dataset list last updated 2026-11-11.
+> Hounsfield Lab is a directory of 64 open-source medical AI software tools and 73 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-23; dataset list last updated 2026-11-11.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -208,6 +208,21 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Page: https://hounsfieldlab.com/tools/neuro-vl.html
 - Related datasets: CFB-GBM, CPAISD, CQ500, ISLES'24, IXI, Medical Segmentation Decathlon
 
+### LingSante-3.1-air-VL
+- What it is: Natively multimodal mixture-of-experts vision-language model (124B total parameters, 5.5B active per token, 256K context) built on Ling-3.0-flash-VL, for medical imaging reports (for example chest X-ray findings and impression), multimodal health assessment, medical search and evidence synthesis, and medical GUI agents; research model, not a medical device. Recommended serving is SGLang on 4× 141GB-class GPUs (TP4) or 8× 80GB H100s (TP8); a vLLM fork is also available
+- Type: Vision-language model
+- Modality/specialty: Multimodal healthcare: medical imaging reports (e.g. chest X-ray), skin, diet, and medical reports
+- Maintainer: Ant Group healthcare team (inclusionAI)
+- License: MIT
+- Commercial use: Permissive
+- License note: The Hugging Face model card (inclusionAI/LingSante-3.1-air-VL) lists MIT for the repository. The card states it is a research model and not a medical device; outputs may be incomplete or inaccurate and must not substitute for professional medical advice, diagnosis, or treatment.
+- Access: free public source repository
+- Last repository update: 2026-11-22 (Maintained)
+- Last checked: 2026-11-23
+- Links: https://huggingface.co/inclusionAI/LingSante-3.1-air-VL
+- Page: https://hounsfieldlab.com/tools/lingsante-3-1-air-vl.html
+- Related datasets: NIH ChestX-ray14, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation, MIMIC-CXR, VinDr-CXR
+
 ## Tools: Segmentation & frameworks
 
 ### MONAI
@@ -231,6 +246,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Maintainer: Project MONAI
 - License: Apache-2.0
 - Commercial use: Permissive
+- Security: Versions up to 0.8.5 have a critical path-traversal flaw (CVE-2026-133968 (https://osv.dev/vulnerability/CVE-2026-133968), CVSS 9.8) in the datastore and session upload endpoints that allows remote file writes and code execution; authentication is off by default, and it has been exploited in the wild. Upgrade to 0.8.6 (https://github.com/Project-MONAI/MONAILabel/releases/tag/0.8.6) or later (released Nov 21, 2026; requires Python 3.11+), don't expose the server to untrusted networks, enable authentication, and run it as an unprivileged user.
 - Access: free public source repository
 - Last repository update: 2026-11-22 (Maintained)
 - Last checked: 2026-11-23
