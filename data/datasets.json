@@ -1469,6 +1469,46 @@
    "date_added": "2026-11-11",
    "date_last_checked": "2026-11-11",
    "slug": "ldct-and-projection-data"
+  },
+  {
+   "name": "A Paired Head CT-MRI Dataset for Cross-Modality Image Synthesis",
+   "url": "https://zenodo.org/records/17486320",
+   "area": "neuro",
+   "modality": "CT; MR",
+   "pathology": "Paired preoperative head CT and MRI from 120 neurosurgical patients (pituitary tumors, meningiomas, vestibular schwannomas, and cerebrovascular disease), released for MRI-to-CT image synthesis and skull-base planning",
+   "normals": "no",
+   "format": "NIfTI",
+   "size": "120 adult patients (74 female, 46 male, ages 18-77): 60 pituitary tumors, 20 meningiomas, 20 vestibular schwannomas, and 20 cerebrovascular diseases. Zenodo v1 lists 40.1 GB: pituitary-tumor.zip 26.7 GB, meningioma.zip 4.5 GB, vestibular-schwannoma.zip 4.5 GB, cerebrovascular-disease.zip 4.4 GB, and participants.xlsx 21.8 kB. CT slice thickness is 0.5-0.625 mm, with a soft kernel (CT-BRAIN) and a sharp kernel (CT-BONE) for every patient. MRI slice thickness is 0.6-1 mm. Contrast-enhanced T1-weighted 3D MPRAGE is included for all 120 patients. Non-contrast T1-weighted MRI is included only for the 60 pituitary-tumor patients.",
+   "license": "CC BY 4.0",
+   "commercial": "yes",
+   "access": "open",
+   "how_to_access": "Open the Zenodo record and download the four disease zip files plus participants.xlsx. No registration. Version v1 was published 30 October 2025 (DOI 10.5281/zenodo.17486320; concept DOI 10.5281/zenodo.17486319). The Scientific Data descriptor, published 25 November 2026, is https://doi.org/10.1038/s41597-026-08901-w .",
+   "limitations": "No healthy controls. All 120 patients have one of the four neurosurgical diagnoses. NIfTI only, converted from PACS DICOM with MRIcroGL, so the DICOM headers are not in the release. Single-center study at the First Affiliated Hospital of Sun Yat-sen University. The paper states that participants consented to public release of the de-identified data, that the Ethics Committee of Clinical Research and Animal Trials approved the study [2025(782-1)], and that names, dates of birth, medical record numbers, and acquisition dates were removed from the DICOM metadata before conversion. MRI was N4 bias-corrected with ANTsPy. CT background, including the pillow and the scanner table, was removed. CT and MRI were rigidly registered and resampled to 0.5 mm isotropic. The paper states that faces were defaced with PyDeface, using the mask from the contrast-enhanced T1-weighted scan on the other series. The Zenodo preview of cerebrovascular-disease.zip contains macOS __MACOSX/._ metadata files and a .DS_Store that can be ignored. MRI is Siemens 3T 3D MPRAGE only. There is no T2 or FLAIR. CT scanners were Toshiba, GE, Siemens, and Philips. Intended for MRI-to-CT synthesis and for skull-base and neurosurgical planning. The Scientific Data article is CC BY-NC-ND 4.0; that is the article license, not the dataset license.",
+   "citation": "Yes. Cite Yiheng Tan, Jing Zhao, Jiaming Wang, Yuping Sun, Chuyang Ye, Jax Luo, Fan Zhang, Wenya Linda Bi, Reinoud P. H. Bokkers, and Shun Yao. A Paired Head CT-MRI Dataset for Cross-Modality Image Synthesis. Scientific Data (2026). https://doi.org/10.1038/s41597-026-08901-w . The article lists Tan, Zhao, and Wang as equal contributors and Yao as corresponding author. Also cite Yao, S., Tan, Y. & Wang, J. A Paired Head CT-MRI Dataset for Cross-Modality Image Synthesis. Zenodo https://doi.org/10.5281/zenodo.17486320 (2025). CC BY 4.0 requires attribution.",
+   "status": "VERIFIED",
+   "date_added": "2026-11-25",
+   "date_last_checked": "2026-11-25",
+   "slug": "a-paired-head-ct-mri-dataset-for-cross-modality-image-synthesis"
+  },
+  {
+   "name": "CT4Harmonization-Multicentric",
+   "url": "https://www.cancerimagingarchive.net/collection/ct4harmonization-multicentric/",
+   "area": "body",
+   "modality": "CT",
+   "pathology": "Anthropomorphic 3D-printed CT phantom (thorax, liver, and test patterns) with two liver cysts, a metastasis, and a hemangioma, plus ground-truth liver-lesion masks, for scanner harmonization",
+   "normals": "no",
+   "format": "DICOM",
+   "size": "TCIA Version 2 table, updated 2026-11-20: 1 subject, 1,378 studies, 2,756 series, 467,224 images, 252.38 GB (DICOM CT and DICOM SEG). The methods text says 649 CT scans on 13 scanners from 4 manufacturers at 8 institutions were reconstructed into 1,378 CT series. The abstract instead says 268 image series at a 10 mGy dose plus an additional 1,378 image series at additional doses. The linked code repository describes the same 1,378 CT image series from 649 scans.",
+   "license": "CC BY 4.0",
+   "commercial": "yes",
+   "access": "open",
+   "how_to_access": "Open the collection page and use the Download control in the Version 2 Data Access table. The page says download requires the TCIA Data Retriever. A public CC BY 4.0 row does not need an application. Read the Citations & Data Usage Policy tab before use. Version 2 was updated 2026-11-20. Data DOI https://doi.org/10.7937/m0pb-bh69 . Preprint https://doi.org/10.48550/ARXIV.2507.01539 . Code for resampling and registration is at https://github.com/medgift/Harmonization-Dataset . The collection page also links https://github.com/QA4IQI/qa4iqi.github.io for loading the raw DICOM.",
+   "limitations": "Physical phantom, not patients, so there is no protected health information and no normal human subjects. For scanner harmonization and robustness benchmarking, not clinical diagnosis. Very large download (252.38 GB). Version 2 (2026-11-20) corrected two issues: Center H2 liver segmentations (100 series) were misaligned with the H2 CT images and were regenerated to match that geometry (the H2 CT images were not changed), and missing CT slices were restored in three series (B2_14_FBP#05, 1 slice; D1_1_DL#03, 1 slice; H1_6_IR#04, 6 slices), so each of those series is now complete at 343 slices. Series instance UIDs were changed. Study instance UIDs were not. The Data Access table (1,378 studies and 2,756 series) does not match the methods sentence of 1,378 series from 649 scans, or the abstract's 268 plus 1,378 image series. DICOM files were not preprocessed, so spacing and position still differ by scanner. Scans were repeated at 1, 3, 6, 10, and 14 mGy, with iterative reconstruction, filtered back projection, and, on two scanners, deep-learning reconstruction.",
+   "citation": "Yes. Cite Amirian, M., Bach, M., Jimenez del Toro, O., Aberle, C., Schaer, R., Andrearczyk, V., Maestrati, J., Flouris, K., Obmann, M., Dromain, C., Dufour, B., Poletti, P., von Tengg-Kobligk, H., Alkadhi, H., Konukoglu, E., Müller, H., Stieltjes, B., Depeursinge, A. (2025). A Multi-Centric Anthropomorphic 3D CT Phantom-Based Benchmark Dataset for Harmonization (CT4Harmonization-Multicentric) (Version 2) [dataset]. The Cancer Imaging Archive. https://doi.org/10.7937/m0pb-bh69 . Follow the TCIA Data Usage Policy. The page's publication citation is Amirian, M., Bach, M., Jimenez-del-Toro, O., Aberle, C., Schaer, R., Andrearczyk, V., Maestrati, J.-F., Asiain, M. M., Flouris, K., Obmann, M., Dromain, C., Dufour, B., Poletti, P.-A. A., von Tengg-Kobligk, H., Hügli, R., Kretzschmar, M., Alkadhi, H., Konukoglu, E., Müller, H., Stieltjes, B., Depeursinge, A. (2025). A Multi-Centric Anthropomorphic 3D CT Phantom-Based Benchmark Dataset for Harmonization (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2507.01539 .",
+   "status": "VERIFIED",
+   "date_added": "2026-11-25",
+   "date_last_checked": "2026-11-25",
+   "slug": "ct4harmonization-multicentric"
   }
  ]
 }
