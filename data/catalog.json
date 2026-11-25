@@ -194,7 +194,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-13",
+   "last_push_utc": "2026-11-23",
    "maintainer": "Project MONAI (NVIDIA + academic)",
    "urls": [
     "https://github.com/Project-MONAI/MONAI"
@@ -211,11 +211,12 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-29",
+   "last_push_utc": "2026-11-22",
    "maintainer": "Project MONAI",
    "urls": [
     "https://github.com/Project-MONAI/MONAILabel"
-   ]
+   ],
+   "security_note": "Versions up to 0.8.5 have a critical path-traversal flaw ([CVE-2026-133968](https://osv.dev/vulnerability/CVE-2026-133968), CVSS 9.8) in the datastore and session upload endpoints that allows remote file writes and code execution; authentication is off by default, and it has been exploited in the wild. Upgrade to [0.8.6](https://github.com/Project-MONAI/MONAILabel/releases/tag/0.8.6) or later (released Nov 21, 2026; requires Python 3.11+), don't expose the server to untrusted networks, enable authentication, and run it as an unprivileged user."
   },
   {
    "name": "nnU-Net",
@@ -228,7 +229,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-12",
+   "last_push_utc": "2026-11-22",
    "maintainer": "DKFZ (MIC)",
    "urls": [
     "https://github.com/MIC-DKFZ/nnUNet"
@@ -245,7 +246,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-20",
    "maintainer": "J. Wasserthal",
    "urls": [
     "https://github.com/wasserth/TotalSegmentator"
@@ -262,11 +263,29 @@
    "license_note": "Repo LICENSE is GNU LGPL v3. Trained nnU-Net weights (r20260730) are GitHub release assets in the same repository and are downloaded on first run; no separate weight license is stated. Trained on 1,404 MRIs; the paper reports 96.22% vertebral identification on localizer MRI and 92.87% on CT. Paper: European Radiology, doi:10.1007/s00330-026-13008-2.",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-08-10",
+   "last_push_utc": "2026-11-21",
    "maintainer": "NeuroPoly (Polytechnique Montreal) / Warszawer, Molinier et al.",
    "urls": [
     "https://github.com/neuropoly/totalspineseg",
     "https://link.springer.com/article/10.1007/s00330-026-13008-2"
+   ]
+  },
+  {
+   "name": "CXAS",
+   "slug": "cxas",
+   "group": "Segmentation & frameworks",
+   "category": "Segmentation",
+   "modality_specialty": "Radiology: chest radiographs (frontal and lateral)",
+   "what_it_does": "Chest X-ray anatomy segmentation (Mask2Former models: 187 frontal and 177 lateral classes) plus 132 named landmarks and landmark-based measurements such as cardiothoracic ratio, costophrenic angle, Cobb angle and the Haller index, in mm for DICOM input; cxas_idc writes one multi-segment DICOM SEG and a TID 1500 SR per radiograph; trained on PAXRay++ CT-projected radiographs",
+   "license": "MIT",
+   "license_note": "Repo LICENSE.txt is MIT, and the README states MIT for code and model weights. Weights are public, not gated, on Hugging Face (cmseibold/cxas-models and cmseibold/cxr-landmarks, both tagged MIT) and are tag-pinned and SHA-256 checked on download. v0.1.0 (Nov 13, 2026) added the new models, landmarks and DICOM SEG/SR output; v0.1.3 (Nov 14) fixed landmark measurements under NumPy 2. As of Nov 19, PyPI lists 0.1.2 as the latest version; the 0.1.3 Docker images pin NumPy 1.26. The README states it is a research tool, not a medical device. Papers: BMVC 2022 (PAXRay) and arXiv 2306.03934.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-11-14",
+   "maintainer": "Constantin Seibold et al.",
+   "urls": [
+    "https://github.com/ConstantinSeibold/ChestXRayAnatomySegmentation",
+    "https://huggingface.co/cmseibold/cxas-models"
    ]
   },
   {
@@ -298,7 +317,7 @@
    "license_note": "Repo LICENSE permits noncommercial scientific research only; commercial use, including products and paid consulting, needs separate written permission. Third-party parts stay Apache-2.0. The Slicer extension code (WHHHHHY822/SlicerSlimFormerPlusPlus) is Apache-2.0 but its model weights follow the noncommercial license. Requires Linux, an NVIDIA GPU and CUDA 12.6 to build. Paper: arXiv 2610.25488.",
    "commercial": "Non-commercial",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-24",
+   "last_push_utc": "2026-11-21",
    "maintainer": "Hong, Zhang, Liu, Mo, Ye (University of Exeter)",
    "urls": [
     "https://github.com/WHHHHHY822/SlimFormerPlusPlus",
@@ -369,7 +388,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-02-24",
+   "last_push_utc": "2026-11-23",
    "maintainer": "neuroneural",
    "urls": [
     "https://github.com/neuroneural/brainchop"
@@ -386,7 +405,7 @@
    "license_note": "Repo LICENSE.txt is the FreeSurfer Software License Agreement v1.0 (MGH), a custom license.",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-14",
+   "last_push_utc": "2026-11-21",
    "maintainer": "MGH Martinos Center",
    "urls": [
     "https://github.com/freesurfer/freesurfer"
@@ -403,7 +422,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-11",
+   "last_push_utc": "2026-11-20",
    "maintainer": "NiPreps",
    "urls": [
     "https://github.com/nipreps/fmriprep"
@@ -420,7 +439,7 @@
    "license_note": "Repo LICENSE is BSD 3-clause unless individual files say otherwise.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-19",
    "maintainer": "DIPY team",
    "urls": [
     "https://github.com/dipy/dipy"
@@ -437,7 +456,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-20",
    "maintainer": "nilearn",
    "urls": [
     "https://github.com/nilearn/nilearn"
@@ -454,7 +473,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-13",
+   "last_push_utc": "2026-11-18",
    "maintainer": "ANTsX",
    "urls": [
     "https://github.com/ANTsX/ANTsPy"
@@ -471,7 +490,7 @@
    "license_note": "The repo LICENSE points to the UPenn CBICA non-commercial software agreement (https://www.med.upenn.edu/cbica/software-agreement-non-commercial.html). Weights on Hugging Face (cbica/Brain2Vec) are gated with manual approval and tagged CC BY-NC-ND 4.0. Inputs must be skull-stripped and linearly registered to the provided template; the repo added a preprocessing pipeline for this on Oct 27, 2026 (NiChart_DLMUSE skull-stripping, then FSL flirt). Paper: arXiv 2610.28411 (Oct 20, 2026).",
    "commercial": "Non-commercial",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-06",
+   "last_push_utc": "2026-11-18",
    "maintainer": "UPenn CBICA (Davatzikos lab)",
    "urls": [
     "https://github.com/CBICA/Brain2Vec",
@@ -523,7 +542,7 @@
    "license_note": "Repo License.txt describes a BSD-style license with Slicer-specific extensions.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-22",
    "maintainer": "Slicer community",
    "urls": [
     "https://github.com/Slicer/Slicer"
@@ -540,7 +559,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-23",
    "maintainer": "OHIF",
    "urls": [
     "https://github.com/OHIF/Viewers"
@@ -557,7 +576,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-23",
    "maintainer": "Insight Software Consortium",
    "urls": [
     "https://github.com/InsightSoftwareConsortium/ITK"
@@ -574,7 +593,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-14",
+   "last_push_utc": "2026-11-23",
    "maintainer": "DKFZ / MITK",
    "urls": [
     "https://github.com/MITK/MITK"
@@ -591,7 +610,7 @@
    "license_note": "Repo LICENSE is MIT except for portions listed in the file.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-15",
+   "last_push_utc": "2026-11-21",
    "maintainer": "pydicom",
    "urls": [
     "https://github.com/pydicom/pydicom"
@@ -625,7 +644,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-12",
+   "last_push_utc": "2026-11-20",
    "maintainer": "Orthanc team",
    "urls": [
     "https://github.com/orthanc-server/orthanc-builder"
@@ -642,7 +661,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-23",
    "maintainer": "mercure (NYU origin)",
    "urls": [
     "https://github.com/mercure-imaging/mercure"
@@ -659,7 +678,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-23",
    "maintainer": "DKFZ",
    "urls": [
     "https://github.com/kaapana/kaapana"
@@ -676,7 +695,7 @@
    "license_note": "Code is BSD 3-clause. LICENSE says the model weights are under a different license (see TIAToolbox pretrained-model docs).",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-20",
    "maintainer": "TIA Centre, Warwick",
    "urls": [
     "https://github.com/TissueImageAnalytics/tiatoolbox"
@@ -744,7 +763,7 @@
    "license_note": "",
    "commercial": "Copyleft",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-13",
+   "last_push_utc": "2026-11-23",
    "maintainer": "QuPath team",
    "urls": [
     "https://github.com/qupath/qupath"
@@ -811,8 +830,8 @@
    "license": "MIT",
    "license_note": "",
    "commercial": "Permissive",
-   "maintenance": "Stale",
-   "last_push_utc": "2024-08-12",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-11-17",
    "maintainer": "Georgetown IR Lab",
    "urls": [
     "https://github.com/Georgetown-IR-Lab/QuickUMLS"
@@ -829,7 +848,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-23",
    "maintainer": "HAPI FHIR",
    "urls": [
     "https://github.com/hapifhir/hapi-fhir"
@@ -846,7 +865,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-10-21",
+   "last_push_utc": "2026-11-20",
    "maintainer": "MITRE / Synthetic Health",
    "urls": [
     "https://github.com/synthetichealth/synthea"
@@ -958,6 +977,42 @@
    ]
   },
   {
+   "name": "Neuro-VL",
+   "slug": "neuro-vl",
+   "group": "Foundation models & agents",
+   "category": "Vision-language model",
+   "modality_specialty": "Neuroradiology: brain MRI and head CT",
+   "what_it_does": "Neuroimaging vision-language model (Neuro-VL-8B-Thinking, Qwen3-8B language model with an HLIP visual encoder) that reads complete MRI and CT exams, converses about findings, drafts reports with reasoning traces and compares serial exams; trained on nearly 1 million clinical neuroimaging studies from 450,000 patients; released with the NeuroBench benchmark",
+   "license": "CC BY-NC-SA 4.0",
+   "license_note": "Repo LICENSE and the Hugging Face model card (mlinslab/neuro-vl-8b-thinking, about 34 GB) are CC BY-NC-SA 4.0, non-commercial research only. The weights are gated: you must log in and accept the conditions, and requests are approved manually. The NeuroBench evaluation code (MLNeurosurg/neurobench) is Apache-2.0 and the NeuroBench dataset is CC BY-NC-SA 4.0. Paper: arXiv 2611.15094 (Nov 11, 2026).",
+   "commercial": "Non-commercial",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-11-13",
+   "maintainer": "University of Michigan MLiNS Lab (Zhao, Hollon et al.)",
+   "urls": [
+    "https://github.com/MLNeurosurg/neuro-vl",
+    "https://huggingface.co/mlinslab/neuro-vl-8b-thinking",
+    "https://arxiv.org/abs/2611.15094"
+   ]
+  },
+  {
+   "name": "LingSante-3.1-air-VL",
+   "slug": "lingsante-3-1-air-vl",
+   "group": "Foundation models & agents",
+   "category": "Vision-language model",
+   "modality_specialty": "Multimodal healthcare: medical imaging reports (e.g. chest X-ray), skin, diet, and medical reports",
+   "what_it_does": "Natively multimodal mixture-of-experts vision-language model (124B total parameters, 5.5B active per token, 256K context) built on Ling-3.0-flash-VL, for medical imaging reports (for example chest X-ray findings and impression), multimodal health assessment, medical search and evidence synthesis, and medical GUI agents; research model, not a medical device. Recommended serving is SGLang on 4\u00d7 141GB-class GPUs (TP4) or 8\u00d7 80GB H100s (TP8); a vLLM fork is also available",
+   "license": "MIT",
+   "license_note": "The Hugging Face model card (inclusionAI/LingSante-3.1-air-VL) lists MIT for the repository. The card states it is a research model and not a medical device; outputs may be incomplete or inaccurate and must not substitute for professional medical advice, diagnosis, or treatment.",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-11-22",
+   "maintainer": "Ant Group healthcare team (inclusionAI)",
+   "urls": [
+    "https://huggingface.co/inclusionAI/LingSante-3.1-air-VL"
+   ]
+  },
+  {
    "name": "dcm2niix",
    "slug": "dcm2niix",
    "group": "DICOM/PACS & deployment",
@@ -968,7 +1023,7 @@
    "license_note": "license.txt is a BSD-style license (Chris Rorden). Bundled parts such as the NIfTI headers, miniz, OpenJPEG, CharLS, zlib and Jasper carry their own licenses. The file states the software is for research purposes only and is not a clinical tool.",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-20",
    "maintainer": "Chris Rorden (rordenlab)",
    "urls": [
     "https://github.com/rordenlab/dcm2niix"
@@ -985,7 +1040,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-21",
    "maintainer": "Imaging Data Commons (highdicom developers)",
    "urls": [
     "https://github.com/ImagingDataCommons/highdicom"
@@ -1002,7 +1057,7 @@
    "license_note": "Repo LICENSE is Apache-2.0. The surface pipeline calls FreeSurfer binaries and needs a FreeSurfer license file (free, separate terms). The README says results are for research and not for clinical decision support.",
    "commercial": "Verify",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-23",
    "maintainer": "Deep-MI (DZNE)",
    "urls": [
     "https://github.com/Deep-MI/FastSurfer"
@@ -1036,7 +1091,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-22",
    "maintainer": "SimpleITK / Insight Software Consortium",
    "urls": [
     "https://github.com/SimpleITK/SimpleITK"
@@ -1053,7 +1108,7 @@
    "license_note": "",
    "commercial": "Permissive",
    "maintenance": "Maintained",
-   "last_push_utc": "2026-11-16",
+   "last_push_utc": "2026-11-22",
    "maintainer": "Cornerstone.js / OHIF",
    "urls": [
     "https://github.com/cornerstonejs/cornerstone3D"
