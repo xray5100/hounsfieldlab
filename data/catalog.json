@@ -289,6 +289,43 @@
    ]
   },
   {
+   "name": "IMPACT-Seg",
+   "slug": "impact-seg",
+   "group": "Segmentation & frameworks",
+   "category": "Segmentation",
+   "modality_specialty": "Radiology / radiotherapy: CT, cone-beam CT and MRI",
+   "what_it_does": "Segments 126 anatomical structures (organs, lung lobes, heart chambers and great vessels, every vertebra and rib by level, bones, trunk muscles and head-and-neck organs at risk) with the same network on planning CT, cone-beam CT and MRI, with no modality flag; 2.5D and 3D residual-encoder U-Nets (five folds each) plus a coarse body-region model, trained on 8,290 harmonized CT, real and simulated CBCT and MRI volumes; its decoder features also serve as a multimodal registration similarity. Runs as KonfAI apps (pip install impact_seg_konfai) or a 3D Slicer extension",
+   "license": "Apache-2.0",
+   "license_note": "Repo LICENSE is Apache-2.0, and the Hugging Face model repo (HCedric/IMPACTSeg) is tagged Apache-2.0 with LICENSE and NOTICE files; weights are public, not gated. The released training dataset (Hugging Face datasets/HCedric/IMPACTSeg) combines public datasets that keep their own licenses, several of them non-commercial, so check those terms before commercial use of models trained on it. The README states research use only, not a clinically validated device. Paper: arXiv 2611.32903 (Nov 24, 2026).",
+   "commercial": "Verify",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-11-25",
+   "maintainer": "C\u00e9dric H\u00e9mon, Valentin Boussot et al.",
+   "urls": [
+    "https://github.com/HEMONCedric/IMPACTSeg",
+    "https://huggingface.co/HCedric/IMPACTSeg",
+    "https://arxiv.org/abs/2611.32903"
+   ]
+  },
+  {
+   "name": "FlashSegmentator",
+   "slug": "flashsegmentator",
+   "group": "Segmentation & frameworks",
+   "category": "Segmentation",
+   "modality_specialty": "Radiology: CT and MR (TotalSegmentator total and total_mr tasks)",
+   "what_it_does": "High-throughput inference pipeline for TotalSegmentator's total (CT, 117 structures) and total_mr (MRI, 50 structures) tasks, built on FastSegmentator: loads the models once per folder, batches sliding-window patches across studies, pipelines CPU and GPU work, post-processes on the GPU and uses static-shape torch.compile; the same TotalSegmentator weights with no retraining. The authors report 3,782 CT/h on a GH200 (57.7x the official CLI) and 270 CT/h on a T4, with Dice equivalent to the reference for all 117 CT and 50 MRI structures",
+   "license": "Apache-2.0",
+   "license_note": "Repo LICENSE is Apache-2.0 (a fork of bowang-lab/FastSegmentator, also Apache-2.0; NOTICE attributes the upstream code). It ships no weights of its own: it runs TotalSegmentator's pretrained weights, which the README says are subject to TotalSegmentator's license terms. The README labels it research code, work in progress, covering only the total and total_mr tasks. Optional --body_crop is faster but changes the output slightly, so it is off by default. Paper: arXiv 2611.32208 (Nov 24, 2026).",
+   "commercial": "Permissive",
+   "maintenance": "Maintained",
+   "last_push_utc": "2026-11-20",
+   "maintainer": "Yosuke Yamagishi et al.",
+   "urls": [
+    "https://github.com/yamagishi0824/FlashSegmentator",
+    "https://arxiv.org/abs/2611.32208"
+   ]
+  },
+  {
    "name": "NV-Segment-CT",
    "slug": "nv-segment-ct",
    "group": "Segmentation & frameworks",

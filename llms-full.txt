@@ -1,6 +1,6 @@
 # Hounsfield Lab
 
-> Hounsfield Lab is a directory of 64 open-source medical AI software tools and 75 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-23; dataset list last updated 2026-11-25.
+> Hounsfield Lab is a directory of 66 open-source medical AI software tools and 75 public DICOM and NIfTI imaging datasets, curated by a practicing neuroradiologist. Radiology first, plus pathology, clinical NLP and EHR tooling. Tool repository metadata last refreshed 2026-11-23; dataset list last updated 2026-11-25.
 
 Key facts:
 - Tool entries record license, commercial-use class, last repository push (UTC) and maintenance status.
@@ -312,6 +312,35 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Page: https://hounsfieldlab.com/tools/cxas.html
 - Related datasets: LIDC-IDRI, MIDRC-RICORD (1A, 1B, 1C), NIH ChestX-ray14, CheXpert Plus, RSNA Pneumonia Detection Challenge, SIIM-ACR Pneumothorax Segmentation
 
+### IMPACT-Seg
+- What it is: Segments 126 anatomical structures (organs, lung lobes, heart chambers and great vessels, every vertebra and rib by level, bones, trunk muscles and head-and-neck organs at risk) with the same network on planning CT, cone-beam CT and MRI, with no modality flag; 2.5D and 3D residual-encoder U-Nets (five folds each) plus a coarse body-region model, trained on 8,290 harmonized CT, real and simulated CBCT and MRI volumes; its decoder features also serve as a multimodal registration similarity. Runs as KonfAI apps (pip install impact_seg_konfai) or a 3D Slicer extension
+- Type: Segmentation
+- Modality/specialty: Radiology / radiotherapy: CT, cone-beam CT and MRI
+- Maintainer: Cédric Hémon, Valentin Boussot et al.
+- License: Apache-2.0
+- Commercial use: Verify
+- License note: Repo LICENSE is Apache-2.0, and the Hugging Face model repo (HCedric/IMPACTSeg) is tagged Apache-2.0 with LICENSE and NOTICE files; weights are public, not gated. The released training dataset (Hugging Face datasets/HCedric/IMPACTSeg) combines public datasets that keep their own licenses, several of them non-commercial, so check those terms before commercial use of models trained on it. The README states research use only, not a clinically validated device. Paper: arXiv 2611.32903 (Nov 24, 2026).
+- Access: free public source repository
+- Last repository update: 2026-11-25 (Maintained)
+- Last checked: 2026-11-23
+- Links: https://github.com/HEMONCedric/IMPACTSeg, https://huggingface.co/HCedric/IMPACTSeg, https://arxiv.org/abs/2611.32903
+- Page: https://hounsfieldlab.com/tools/impact-seg.html
+- Related datasets: AMOS (abdominal multi-organ segmentation), C4KC-KiTS, Colorectal-Liver-Metastases, CT Colonography, CT-ORG, CT4Harmonization-Multicentric
+
+### FlashSegmentator
+- What it is: High-throughput inference pipeline for TotalSegmentator's total (CT, 117 structures) and total_mr (MRI, 50 structures) tasks, built on FastSegmentator: loads the models once per folder, batches sliding-window patches across studies, pipelines CPU and GPU work, post-processes on the GPU and uses static-shape torch.compile; the same TotalSegmentator weights with no retraining. The authors report 3,782 CT/h on a GH200 (57.7x the official CLI) and 270 CT/h on a T4, with Dice equivalent to the reference for all 117 CT and 50 MRI structures
+- Type: Segmentation
+- Modality/specialty: Radiology: CT and MR (TotalSegmentator total and total_mr tasks)
+- Maintainer: Yosuke Yamagishi et al.
+- License: Apache-2.0
+- Commercial use: Permissive
+- License note: Repo LICENSE is Apache-2.0 (a fork of bowang-lab/FastSegmentator, also Apache-2.0; NOTICE attributes the upstream code). It ships no weights of its own: it runs TotalSegmentator's pretrained weights, which the README says are subject to TotalSegmentator's license terms. The README labels it research code, work in progress, covering only the total and total_mr tasks. Optional --body_crop is faster but changes the output slightly, so it is off by default. Paper: arXiv 2611.32208 (Nov 24, 2026).
+- Access: free public source repository
+- Last repository update: 2026-11-20 (Maintained)
+- Last checked: 2026-11-23
+- Links: https://github.com/yamagishi0824/FlashSegmentator, https://arxiv.org/abs/2611.32208
+- Page: https://hounsfieldlab.com/tools/flashsegmentator.html
+
 ### NV-Segment-CT
 - What it is: CT segmentation built from MONAI VISTA3D: 117 structures automatically, or 132 promptable by point or class. Research use only, not for clinical care. Needs a CUDA GPU; weights are about 872 MB
 - Type: Segmentation
@@ -620,7 +649,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-11-23
 - Links: https://github.com/SimpleITK/SimpleITK
 - Page: https://hounsfieldlab.com/tools/simpleitk.html
-- Related datasets: AMOS (abdominal multi-organ segmentation), CT-ORG, MAMA-MIAAI (Here We Go Again), Merlin Abdominal CT, CT-ICH
+- Related datasets: MAMA-MIAAI (Here We Go Again), CT-ICH
 
 ### Cornerstone3D
 - What it is: JavaScript libraries for web-based medical image rendering, tools and segmentation; the imaging engine behind the OHIF Viewer
@@ -733,7 +762,7 @@ Badges: LIC = license (license files reviewed by hand where GitHub could not det
 - Last checked: 2026-11-23
 - Links: https://github.com/ImagingDataCommons/highdicom
 - Page: https://hounsfieldlab.com/tools/highdicom.html
-- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), C4KC-KiTS, CBIS-DDSM, CMMD, Colorectal-Liver-Metastases
+- Related datasets: B-mode-and-CEUS-Liver, Breast-Cancer-Screening-DBT (BCS-DBT), CBIS-DDSM, CMMD, CPAISD, CQ500
 
 ## Tools: Pathology
 

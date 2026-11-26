@@ -286,7 +286,7 @@ def ds_card(d):
 # relates to datasets that include one of those modalities.
 AREA_TOOLS = {"neuro":["hd-bet","fastsurfer","freesurfer","brainchop","neuro-vl","dcm2niix"],
  "chest":["torchxrayvision","cxas","chexagent","medrax","pillar-0","totalsegmentator","nv-segment-ct","lingsante-3-1-air-vl"],
- "body":["totalsegmentator","nv-segment-ct","merlin","pillar-0","nnu-net"],
+ "body":["totalsegmentator","nv-segment-ct","impact-seg","merlin","pillar-0","nnu-net"],
  "msk":["totalsegmentator","totalspineseg","nv-segment-ct","nnu-net","3d-slicer"],
  "breast":["pillar-0","nnu-net","3d-slicer"],
  "nuclear medicine":["totalsegmentator","nv-segment-ct","nnu-net","3d-slicer"],
@@ -294,7 +294,7 @@ AREA_TOOLS = {"neuro":["hd-bet","fastsurfer","freesurfer","brainchop","neuro-vl"
  "cardiac":["monai","nnu-net","3d-slicer"]}
 FORMAT_TOOLS = {"DICOM":["pydicom","highdicom","ohif-viewer","orthanc"],"NIfTI":["torchio","simpleitk","itk"]}
 TOOL_MODS = {"hd-bet":{"MR"},"fastsurfer":{"MR"},"freesurfer":{"MR"},"brainchop":{"MR"},"dcm2niix":{"MR","CT"},
- "torchxrayvision":{"DX","CR"},"chexagent":{"DX","CR"},"medrax":{"DX","CR"},"pillar-0":{"CT","MR"},"merlin":{"CT"},"totalsegmentator":{"CT","MR"},"totalspineseg":{"CT","MR"},"nv-segment-ct":{"CT"},"holoct":{"CT"},"cxas":{"DX","CR"},"neuro-vl":{"CT","MR"},"lingsante-3-1-air-vl":{"DX","CR"}}
+ "torchxrayvision":{"DX","CR"},"chexagent":{"DX","CR"},"medrax":{"DX","CR"},"pillar-0":{"CT","MR"},"merlin":{"CT"},"totalsegmentator":{"CT","MR"},"totalspineseg":{"CT","MR"},"nv-segment-ct":{"CT"},"holoct":{"CT"},"cxas":{"DX","CR"},"neuro-vl":{"CT","MR"},"lingsante-3-1-air-vl":{"DX","CR"},"impact-seg":{"CT","MR"}}
 TOOL_SLUGS = set()
 
 def tools_for_dataset(d):
